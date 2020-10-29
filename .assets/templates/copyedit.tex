@@ -1,0 +1,72 @@
+%!TEX TS-program = xelatex
+\documentclass[11pt]{scrartcl}
+\usepackage{kpfonts}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{verbose,letterpaper,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+
+\input{../.assets/templates/pandoc}
+
+\usepackage[hang,flushmargin]{footmisc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+\pagestyle{plain}
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+% At last:
+% The document itself!:
+
+% After filling in all these blanks above, or erasing them
+% where they are not needed, Pandoc has finished writing the
+% famous LaTeX *preamble* for your document.
+% Now comes the all-important command \begin{document}
+% which as you can see, will be paired with an \end{document} at the end.
+% Pandoc knows whether you have a title, and has already
+% specified what it is; if so, it demands that the title be rendered.
+% Pandoc knows whether you want a table of contents, you
+% specify this on the command line.
+% Then, after fiddling with alignments, there comes the real
+% business: pandoc slaps its rendering of your text in the place of
+% the variable `body`
+% It then concludes the document it has been writing.
+
+\begin{document}
+
+
+$if(title)$
+\maketitle
+$endif$
+
+{\small
+$for(creators)$
+\textsc{$creators.givennames$\,$creators.familyname$}\\
+$endfor$
+}
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+
+$if(alignment)$
+\begin{$alignment$}
+$endif$
+
+$body$
+
+%$if(alignment)$
+\end{$alignment$}
+$endif$
+
+
+\end{document}
