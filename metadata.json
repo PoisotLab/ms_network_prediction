@@ -1,15 +1,32 @@
 {
-  "title": "Some notes on population dynamics",
+  "title": "A Roadmap Toward Prediction of Ecological Networks Across Space",
   "license": "CC-BY",
   "language": "en",
   "creators": [
     {
-      "affiliations": ["Université de Montréal", "Québec Centre for Biodiversity Sciences"],
+      "affiliations": [
+        "Université de Montréal",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Strydom",
+      "givennames": "Tanya",
+      "orcid": "0000-0001-6067-1349"
+    },
+    {
+      "affiliations": [
+        "Université de Montréal",
+        "Québec Centre for Biodiversity Sciences"
+      ],
       "familyname": "Poisot",
       "givennames": "Timothée",
+      "email": "timothee.poisot@umontreal.ca",
       "orcid": "0000-0002-0735-5184"
     }
+
   ],
-  "description": "This document is intended purely as a demo for the manuscript building system.",
-  "keywords": ["population dynamics", "differential equations", "community ecology"]
-}
+  "description": "The abstract goes here.",
+  "keywords": [
+    "population dynamics",
+    "differential equations",
+    "community ecology"
+  ]}
