@@ -54,6 +54,10 @@
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
+- Point1
+- Point2
+- Ref1, Ref2
+
 ## What is the spatial scale suitable for the prediction of species interactions?
 
 # Giving a temporal component to network predictions requires forecasting
