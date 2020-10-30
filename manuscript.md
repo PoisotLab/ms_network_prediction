@@ -55,6 +55,9 @@
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
 ## What is the spatial scale suitable for the prediction of species interactions?
+- Out-of-sample validation remains one of the central challenges of developing a forecasting model. The short answer is that true validation is impossible outside of waiting to test our forecast against reality. This reality has short-term iterative 
+- How do we test a model’s performance with data we have? Crossvalidation (see how do we validate a predictive model) or iterative learning on time-series data. 
+- Dietze et al -  Near-term adaptive forecasting (2019)
 
 # Giving a temporal component to network predictions requires forecasting
 
