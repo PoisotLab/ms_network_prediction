@@ -38,6 +38,14 @@
 
 ## How do we predict how species that have never co-occurred will interact?
 
+*Traits matching*: Functional traits can be used as a proxy for the inference of interactions because, well, ecological interactions require some kind of match between functional traits. However these data are lacking, especially for large scale analyses. 
+
+*Phylogenetic inertia*: Because niche conservatism is a thing, the phylogenetic inertia of functional traits could help us infer the trait data that are missing. However, its efficacy could depend on the spatial scale of analysis since the phylogenetic signal present on a metaweb is lost on local webs.
+
+*Network-based methods*: We can use latent traits of the species (i.e. unmeasured traits inferred from the known network) to predict missing interactions. However, these methods are sensitive to sampling biases and can only be used for species for which we have interaction data.
+
+*The probabilistic approach*: We can combine local traits distributions, local abundances and Everything Else™ to infer the probability of interaction at a regional scale as a result of local observations.
+
 ## What does interaction strength mean?
 
 ## How are interaction strengths actually inferred? 
