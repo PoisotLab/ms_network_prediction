@@ -9,6 +9,8 @@
 ## Why do we need to predict interactions between species?
 
 ## Why predict networks before interactions?
+- Emergent phenomena, like the composition of ecological communities, do not have causes that occur on any one scale. Combination of bottom-up and top-down effects. 
+- Levins and Lewontin, ref 2
 
 ## What is currently limiting our ability to predict network structure?
 
