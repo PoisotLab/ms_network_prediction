@@ -65,5 +65,8 @@
 ## How can we validate a forecast, and would hindcasting help?
 
 ## What ecological knowledge would forecasting bring?
+- Better predict how climate change will alter biodiversity structure and composition. 
+- Structure: Will climate change impact the distribution of network properties (e.g. connectance), altering ecosystem functioning and community stability?
+- Composition: What is the role of climate vs species interactions on species range shift? (refer to example in Box 1: pollinators following plant range instead of climate or competition preventing species to follow their suitable climate?)
 
 # References
