@@ -34,6 +34,8 @@
 
 **Box 2: Machine Learning Illustration**
 
+- text goes here
+
 ## What is a species interaction?
 
 ## How do we predict how species that have never co-occurred will interact?
