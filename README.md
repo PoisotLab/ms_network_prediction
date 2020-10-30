@@ -5,7 +5,7 @@
 - [ ] How to do the collaborative writing thing... So pull requests(?)
 - [ ] Edit `metadata.json` - add author details (low priority) 
 
-## How to add referencefs
+## How to add references
 
 - We use [Zotero](https://www.zotero.org/) for references management - in order to get access to the shared library, give your username to Tim
 - We use the [Better BibTeX](https://retorque.re/zotero-better-bibtex/) plugin for citation key generations
