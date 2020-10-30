@@ -20,6 +20,8 @@
 
 ## What are the most important properties of networks to predict?
 
+- text goes here
+
 ## What is the added value of using machine learning?
 
 ## How do we fit a predictive model?
