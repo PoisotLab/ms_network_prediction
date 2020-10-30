@@ -1,12 +1,23 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
 
 ## What is the paper about?
 
-- Point 1
-- Point 2
-- Refs
+Networks underpin our understanding of many ecological processes
+[@Pascual2006EcoNet; @Heleno2014EcoNet], with our interest now switching to
+networks in space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and to the
+search for general rules across types of networks [@Ings2009EcoNet;
+@MacDonald2020RevLin; @Brose2006AllSca].
+
+Ecological systems, especially complex adaptive ones, are entering their “long
+now”, so we need a roadmap for both understanding, prediction, and forecasting 
+
+this is what this paper achieves
 
 ## Who would benefit from it?
 
