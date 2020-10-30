@@ -1,17 +1,18 @@
 ## TODO
 
-- [ ] Edit `metadata.json` - add author details
 - [ ] Add references to Zotero
+- [ ] How to update ref list
+- [ ] How to do the collaborative writing thing... So pull requests(?)
+- [ ] Edit `metadata.json` - add author details (low priority) 
 
 ## MS formats
 
-[master_pdf]: https://poisotlab.github.io/ms_network_prediction/ms_network_prediction.pdf
 [master_tex]: https://poisotlab.github.io/ms_network_prediction/ms_network_prediction.tex
 [master_html]: https://poisotlab.github.io/ms_network_prediction/index.html
 
-|                 |            HTML            |             PDF            |        LaTeX source        |
-|-----------------|:--------------------------:|:--------------------------:|:---------------------------:|
-| `manuscript.md`| [:blue_book:][master_html] | [:notebook_with_decorative_cover:][master_pdf] | [:notebook:][master_tex] |
+|                 |            HTML            |        LaTeX source        |
+|-----------------|:--------------------------:|:---------------------------:|
+| `manuscript.md`| [:blue_book:][master_html]  | [:notebook:][master_tex] |
 
 ## Outline and Task Assignments
 
