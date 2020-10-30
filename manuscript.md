@@ -12,6 +12,8 @@
 
 ## What is currently limiting our ability to predict network structure?
 
+Text goes here
+
 ## What is currently enabling our ability to predict network structure?
 
 ![TODO](figures/conceptual.png){#fig:conceptual}
