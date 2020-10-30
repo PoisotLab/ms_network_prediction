@@ -1,43 +1,69 @@
-# The model
+# Meta
 
-This is a citation: @HampAnde15 -- we can also have citations in brackets
-[@HampAnde15].
+**BOX 1: Biological Examples**
 
-## Lists
+## What is the paper about?
 
-1. one fish
-2. two fish
-3. red fish
-4. blue fish
+## Who would benefit from it?
 
-# Methods
+## Why do we need to predict interactions between species?
 
-There is an equation, which we can cite with {@eq:eq1}.
+## Why predict networks before interactions?
 
-$$J'(p) = \frac{1}{\text{log}(S)}\times\left(-\sum p \text{log}(p)\right)$$ {#eq:eq1}
+## What is currently limiting our ability to predict network structure?
 
-# Tables
+## What is currently enabling our ability to predict network structure?
 
-We can do tables:
+![TODO](figures/conceptual.png){#fig:conceptual}
 
-| Column 1 | Column 2 |
-| -------- | --------:|
-| c1       |       c2 |
+# A primer on predictive (network) ecology
 
-# Figures
+## What are the most important properties of networks to predict?
 
-![This is the legend of the figure](figures/biomes.png){#fig:biomes}
+## What is the added value of using machine learning?
 
-We can refer to +@fig:biomes.
+## How do we fit a predictive model?
 
-# Code?
+## How do we validate a predictive model?
 
-Yes
+## How do we propagate uncertainty through a predictive model?
 
-~~~ julia
-for i in eachindex(x)
-  x[i] = zero(eltype(x)) # Don't do that
-end
-~~~
+## How do we determine what interaction networks are feasible?
+
+# Interactions
+
+**Box 2: Machine Learning Illustration**
+
+## What is a species interaction?
+
+## How do we predict how species that have never co-occurred will interact?
+
+## What does interaction strength mean?
+
+## How are interaction strengths actually inferred? 
+
+## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+
+# Network predictions must have a spatial component
+
+**Everything is connected figure**
+
+## How much do networks vary over space?
+
+## How do we predict what the species pool at a particular location is?
+
+## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
+
+## What is the spatial scale suitable for the prediction of species interactions?
+
+# Giving a temporal component to network predictions requires forecasting
+
+**Box 3: Forecasting**
+
+## What data do we need to turn a predictive model into a forecasting model?
+
+## How can we validate a forecast, and would hindcasting help?
+
+## What ecological knowledge would forecasting bring?
 
 # References
