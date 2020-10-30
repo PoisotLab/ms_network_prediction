@@ -59,6 +59,7 @@
 # Giving a temporal component to network predictions requires forecasting
 
 **Box 3: Forecasting**
+here is where my box would go, if i had one
 
 ## What data do we need to turn a predictive model into a forecasting model?
 
