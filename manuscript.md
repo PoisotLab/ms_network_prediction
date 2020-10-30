@@ -24,6 +24,10 @@
 
 ## How do we fit a predictive model?
 
+- Point 1
+- Point 2
+- Ref1, Ref2
+
 ## How do we validate a predictive model?
 
 ## How do we propagate uncertainty through a predictive model?
