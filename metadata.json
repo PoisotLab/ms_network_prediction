@@ -14,6 +14,15 @@
     },
     {
       "affiliations": [
+        "McGill University",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Catchen",
+      "givennames": "Michael David",
+      "orcid": "0000-0002-6506-6487"
+    },
+    {
+      "affiliations": [
         "Université de Montréal",
         "Québec Centre for Biodiversity Sciences"
       ],
@@ -22,7 +31,6 @@
       "email": "timothee.poisot@umontreal.ca",
       "orcid": "0000-0002-0735-5184"
     }
-
   ],
   "description": "The abstract goes here.",
   "keywords": [
