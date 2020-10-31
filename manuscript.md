@@ -20,7 +20,12 @@
 
 ## What are the most important properties of networks to predict?
 
-- text goes here
+Networks enclose a wealth of data that are explanatory for many types of interactions and are informative for the understanding of a wide range of ecological fenomena. Consequently, we should focus our attention in which of the structural properties of the network would support or reject our hypothesis . 
+Connectance... 
+
+Connectance [Tim]
+
+Delmas et al , (2018);  Frost  et al, (2019)
 
 ## What is the added value of using machine learning?
 
