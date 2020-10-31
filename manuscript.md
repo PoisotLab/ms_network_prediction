@@ -44,6 +44,13 @@
 
 ## Could we use hypergraphs and multi-layer networks to predict more interactions? 
 
+There is a huge quantity of issues in ecology that involve complex interactions and require being properly analyzed to predict how they will change over time. Some interactions include facilitation, construction of niches, zoonoses, vector-borne diseases, among others. Hypergraphs are the generalization of a graph that allows us to have a broad and manageable approach to complex interactions. Although networks or graphics have taken us closer to the understanding of complex interactions, they can be better predicted by the wealth of the hypergraphic, we can explore various interactions in a manageable way and predict unknown links or relationships between entities based on existing ones.
+
+Usefulness of multi-layer networks from an ecological point of view: we can get access to more ecological mechanisms, like dispersal [Tim]
+
+Golubski (2016) Ecological networks over the edge; Carletti (2020); one of Shai Pilosof’s paper, Hutchinson paper , Albert paper
+
+
 # Network predictions must have a spatial component
 
 **Everything is connected figure**
