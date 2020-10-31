@@ -15,7 +15,8 @@ search for general rules across types of networks [@Ings2009EcoNet;
 @MacDonald2020RevLin; @Brose2006AllSca].
 
 Ecological systems, especially complex adaptive ones, are entering their “long
-now”, so we need a roadmap for both understanding, prediction, and forecasting 
+now”, so we need a roadmap for both understanding, prediction, and forecasting
+@Carpenter2002EcoFut
 
 this is what this paper achieves
 
