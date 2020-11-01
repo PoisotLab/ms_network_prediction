@@ -28,6 +28,11 @@
 
 ## How do we propagate uncertainty through a predictive model?
 
+- Bayesian paradigm produces a posterior distribution as an output for each model. For each model in a chain, sample the inputs from the posterior of the input models.
+- Ensemble modeling 
+- Monte-Carlo and other stochastic / simulation approaches
+References: Peters and Herrick (2004)?, Parysow et al. (2000), Benke et al. (2018)
+
 ## How do we determine what interaction networks are feasible?
 
 # Interactions
