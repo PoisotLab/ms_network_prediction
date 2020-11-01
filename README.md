@@ -10,14 +10,17 @@
 
 ## MS formats
 
-[master_tex]: https://poisotlab.github.io/ms_network_prediction/ms_network_prediction.tex
-[master_html]: https://poisotlab.github.io/ms_network_prediction/index.html
+
+
+[master_draft]: https://poisotlab.github.io/ms_network_prediction/ms_network_prediction-copyedit.pdf
+[master_preprint]: https://poisotlab.github.io/ms_network_prediction/ms_network_prediction-preprint.pdf
+[master_html]: https://poisotlab.github.io/ms_network_prediction/
 
 |                 |            HTML            |        LaTeX source        |
 |-----------------|:--------------------------:|:---------------------------:|
 | `manuscript.md`| [:blue_book:][master_html]  | [:notebook:][master_tex] |
 
-## Outline and Task Assignments
+## Original google doc (with core points for all questions)
 
 [link](https://docs.google.com/document/d/11nR25KtaiusAFkq4NFGnuihsQQN6c0xX-dZskIlQQn0/edit?usp=sharing) to original GoogleDoc
 
