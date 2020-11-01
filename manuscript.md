@@ -22,6 +22,10 @@
 
 ## What is the added value of using machine learning?
 
+- Machine learning is fast, efficient, accurate, flexible and enables us to identify hidden relationships among large amounts of data. 
+- Promises of scientific machine learning, a novel and very powerful method that combines mechanistic models and machine learning. Scientific machine learning may require less data than standard machine learning methods. 
+References: Olden et al. (2008), Rackauckas et al. (submitted) 
+
 ## How do we fit a predictive model?
 
 ## How do we validate a predictive model?
