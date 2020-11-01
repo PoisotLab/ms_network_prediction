@@ -14,6 +14,11 @@
 
 ## What is currently enabling our ability to predict network structure?
 
+- The rise in computing power and efficiency, along with recent advances and applications of machine learning and other powerful methods in ecology, enables researchers to tackle a broad range of ecological problems almost unaccessible a decade ago. 
+- Intensive species sampling, thanks to citizen science, satellite remote sensing, and automated sampling, has given us extensive biodiversity data sets which we can use, with the few species interactions data at our disposal, to make surprisingly accurate predictions of network structure. 
+
+References: Christin et al. (2020), Stephenson (2020)
+
 ![TODO](figures/conceptual.png){#fig:conceptual}
 
 # A primer on predictive (network) ecology
