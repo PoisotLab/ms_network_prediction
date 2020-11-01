@@ -1,0 +1,50 @@
+%!TEX TS-program = xelatex
+\documentclass[11pt]{article}
+
+\input{../.assets/templates/_common}
+\input{../.assets/templates/_pandoc}
+
+\geometry{verbose,letterpaper,tmargin=2.2cm,bmargin=2.2cm,lmargin=2.2cm,rmargin=5cm}
+
+\pagestyle{plain}
+
+\begin{document}
+
+{\LARGE\bfseries ${ title }}
+
+\vskip 2em
+
+{\small
+${ for(authors) }
+${ it.givennames }\,${ it.familyname }\,%
+\textsuperscript{${ for(it.affilcode) }${ it.affilcode }${ sep },${ endfor }${ if(it.email) },*${ endif }}%
+${ sep },
+${ endfor }
+}
+
+\vskip 1em
+
+{\small
+${ for(institutions) }
+\textsuperscript{${ it.id }}\,${ it.name }
+${ sep }, 
+${ endfor }
+\\
+${ for(authors) }
+${ if(it.email) }
+\textsuperscript{*}\,\,\texttt{${ it.email }}
+${ endif }
+${ endfor }
+}
+
+\vskip 2em
+
+${ if(description) }
+\textbf{Abstract:}\,${ description }
+${ endif }
+
+\vskip 2em
+
+${ body }
+
+\end{document}
