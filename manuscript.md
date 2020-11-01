@@ -66,4 +66,22 @@
 
 ## What ecological knowledge would forecasting bring?
 
+
+## Glossary
+| Term                        | Definition |
+|-----------------------------|------------|
+| Metaweb                     |            |
+| Inference                   |            |
+| Prediction                  |            |
+| Forecasting                 |            |
+| Hindcasting                 |            |
+| Hyper-graphs                |            |
+| Machine learning            |            |
+| Supervised machine learning |            |
+| Deep learning               |            |
+| Interactions                |            |
+| Network structure           |            |
+|                             |            |
+|                             |            |
+|                             |            |
 # References
