@@ -49,6 +49,9 @@
 **Everything is connected figure**
 
 ## How much do networks vary over space?
+They do (Species pool/richness vary in space; Intrasp variation; Environment can influence interactions)
+
+Actually, not so much (Ecological network share similar structure (connectance, link distribution); Species conserve role; etc) 
 
 ## How do we predict what the species pool at a particular location is?
 
