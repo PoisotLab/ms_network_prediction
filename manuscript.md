@@ -6,21 +6,28 @@ bibliography: [references.bib]
 
 ## Why should we predict and forecast species interaction networks?
 
-Networks underpin our understanding of key ecological processes
-[@Pascual2006EcoNet; @Heleno2014EcoNet], and in the recent years our interest
-has shifted towards understanding their structure over space
-[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul]. But despite the importance of
-understanding this structure, the raw data to do it, *i.e.* exhaustive lists of
-species interactions at sampled locations, remains extremely scarce. This is,
-quite simply, because sampling ecological interactions is extremely difficult
-[@Jordano2016SamNet], and this defficiency in sampling of interactions can lead
-to biases in our estimate of the sampling of network structure
-[@deAguiar2019RevBia]. As many ecological systems are entering their "long now"
-[@Carpenter2002EcoFut], where contemporary actions will have long-term,
-low-predictibility consequences, it is a moral imperative to develop a roadmap
-that would enable prediction (for the present) and forecasting (for the future)
-of network structure, and of the processes it encodes [@McCann2007ProBio;
-@Seibold2018NecMul; @Thompson2012FooWeb].
+Networks of species interactionss underpin our understanding of key ecological
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they have initially
+be used to describe the interactions *within* a community, our interest in the
+last decade has shifted towards understanding their structure and their
+variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and
+established network ecology as an important emerging component of biogeography
+and macroecology. But our understanding of network structure, and in particular
+across space, is limited by availability of data. Characterizing a network
+requires an exhaustive list of species interactions at the sampled location, and
+these data remain extremely scarce. This is because sampling ecological
+interactions is extremely difficult [@Jordano2016SamNet]; in turn, the
+difficulty of sampling interactions can lead to biases in our estimate of the
+sampling of network structure [@deAguiar2019RevBia]. As many ecological systems,
+ecological networks have entered their "long now" [@Carpenter2002EcoFut], where
+contemporary actions will have long-term, low-predictibility consequences,
+sometimes over centuries [@Burkle2013PlaInt]. It is therfore imperative to
+develop a roadmap that would enable prediction (for the present) and forecasting
+(for the future) of network structure [@McCann2007ProBio; @Seibold2018NecMul],
+of the processes it encodes [@Thompson2012FooWeb], that can account for the
+spatial, temporal, and climate change dimensions [@Burkle2011FutPla]. In this
+paper, we adopt a question-driven approach to identify opportunities,
+roadblocks, and tools that are part of this research agenda.
 
 ## Who would benefit from it?
 
