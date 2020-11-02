@@ -49,9 +49,23 @@
 **Everything is connected figure**
 
 ## How much do networks vary over space?
-They do (Species pool/richness vary in space; Intrasp variation; Environment can influence interactions)
 
-Actually, not so much (Ecological network share similar structure (connectance, link distribution); Species conserve role; etc) 
+
+**P2** 
+Variation in interaction networks over space arises through changes in species composition and realised interactions [@Poisot2012TheDis].
+
+"These changes are the results of local processes" [@Poisot2015BeySpe]
+How network structure may change on macroecological scale [@Baiser2019EcoRul]
+Some empirical studies [@Baiser2012GeoVar, @Cirtwill2015LatGra]
+
+
+**P1** 
+A lot of early ecological network research have focused on finding generalities in network structure across systems [@Dunne2006TheNet].
+
+Species Richness -> Connectance -> Everything else! [@Macdonald2020RevThe, @Brose2004UniSpa]
+Species role are conserved over spatial scale [@Baker2014SpeRol]
+Functional role composition did not change across space [@Dehling2020SimCom]
+Food webs shared a common structural backbone [@Mora2018IdeCom]
 
 ## How do we predict what the species pool at a particular location is?
 
