@@ -55,6 +55,10 @@
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
 ## What is the spatial scale suitable for the prediction of species interactions?
+*Whose interaction are you looking for?* The spatial scale of interactions vary with species behaviour, size, phenological characteristics, and also with phylogenetic resolution (whether we are investigating individual-based networks or food webs, for example). Having that in mind, we can think of “small scale” and “large scale” as a property relative to the overall system we are investigating.  
+*Small scale, if time-specific.* Small scale would focus on interactions that occur at individual and population levels, and therefore are much more prone to variability. In this sense, the spatial scale of prediction would have to be sufficient to capture life-range variation (both in the environment and in the species pool). The downside is that it would probably require a lot of high quality training data. As we gain on precision, we would lose on generality.  
+*Large scale, when phenology is irrelevant.* When investigating interactions between species and higher levels, the evolutionary timescale takes place. This means that population and individual variation “average out”, and now spatial scale can be large enough to capture steep environmental changes, extinctions and species turnover. The downside is that it would be cool only at large temporal scales too, as it would ignore ongoing population dynamics. As we gain on generality, we would lose on precision.  
+[@Bartomeus2016ComFra; @Trojelsgaard2016EcoNeta]
 
 # Giving a temporal component to network predictions requires forecasting
 
