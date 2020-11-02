@@ -2,23 +2,25 @@
 bibliography: [references.bib]
 ---
 
-# Meta
-
 **BOX 1: Biological Examples**
 
-## What is the paper about?
+## Why should we predict and forecast species interaction networks?
 
-Networks underpin our understanding of many ecological processes
-[@Pascual2006EcoNet; @Heleno2014EcoNet], with our interest now switching to
-networks in space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and to the
-search for general rules across types of networks [@Ings2009EcoNet;
-@MacDonald2020RevLin; @Brose2006AllSca].
-
-Ecological systems, especially complex adaptive ones, are entering their “long
-now”, so we need a roadmap for both understanding, prediction, and forecasting
-@Carpenter2002EcoFut
-
-this is what this paper achieves
+Networks underpin our understanding of key ecological processes
+[@Pascual2006EcoNet; @Heleno2014EcoNet], and in the recent years our interest
+has shifted towards understanding their structure over space
+[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul]. But despite the importance of
+understanding this structure, the raw data to do it, *i.e.* exhaustive lists of
+species interactions at sampled locations, remains extremely scarce. This is,
+quite simply, because sampling ecological interactions is extremely difficult
+[@Jordano2016SamNet], and this defficiency in sampling of interactions can lead
+to biases in our estimate of the sampling of network structure
+[@deAguiar2019RevBia]. As many ecological systems are entering their "long now"
+[@Carpenter2002EcoFut], where contemporary actions will have long-term,
+low-predictibility consequences, it is a moral imperative to develop a roadmap
+that would enable prediction (for the present) and forecasting (for the future)
+of network structure, and of the processes it encodes [@McCann2007ProBio;
+@Seibold2018NecMul; @Thompson2012FooWeb].
 
 ## Who would benefit from it?
 
