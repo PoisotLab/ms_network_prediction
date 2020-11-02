@@ -7,7 +7,16 @@
 ## Who would benefit from it?
 
 ## Why do we need to predict interactions between species?
-.1
+
+**Point 1: we don’t have data, don’t pretend we do!**  
+*Eltonian shortfall.* We don’t have much data about species interactions, so predictions could help fill in the gaps. 
+*Co-occurrence is not interaction.* Please stop piling species on distribution models and saying they account for interactions!
+**Point 2: our planet is changing and the predictions can help us understand what’s going to happen**
+*Things are changing.* Interactions change over time from anthropological impact, climate change, etc.
+*Applications.* We use our knowledge about species interaction to understand from the production of food and the conservation of freshwater, to the understanding of emerging diseases. As we know better about these interactions and how they are going to change, we have enough arguments to communicate to decision makers and the scientific community what future risks await us and how to mitigate them.
+
+TODO - rethink references
+
 ## Why predict networks before interactions?
 
 ## What is currently limiting our ability to predict network structure?
