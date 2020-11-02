@@ -39,6 +39,9 @@
 ## How do we predict how species that have never co-occurred will interact?
 
 ## What does interaction strength mean?
+- Insert text here
+- Insert text here
+- Refs, Refs
 
 ## How are interaction strengths actually inferred? 
 
