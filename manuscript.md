@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -42,14 +46,35 @@
 
 ## How are interaction strengths actually inferred? 
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
-There is a huge quantity of issues in ecology that involve complex interactions and require being properly analyzed to predict how they will change over time. Some interactions include facilitation, construction of niches, zoonoses, vector-borne diseases, among others. Hypergraphs are the generalization of a graph that allows us to have a broad and manageable approach to complex interactions. Although networks or graphics have taken us closer to the understanding of complex interactions, they can be better predicted by the wealth of the hypergraphic, we can explore various interactions in a manageable way and predict unknown links or relationships between entities based on existing ones.
-
-Usefulness of multi-layer networks from an ecological point of view: we can get access to more ecological mechanisms, like dispersal [Tim]
-
-Golubski (2016) Ecological networks over the edge; Carletti (2020); one of Shai Pilosof’s paper, Hutchinson paper , Albert paper
-
+The web of life is built by a variety of interactions that can vary over time
+and space; these interactions include facilitation, niche construction,
+zoonoses, vector-borne diseases, among others [@Garcia-Callejas2018MulInt],
+which all share the fact that interactions between species are themselves
+interacting. One mathematical tool to describe these situations is hypergraphs:
+hypergraphs are the generalization of a graph, allowing a broad and manageable
+approach to complex interactions. @Golubski2011ModMod were among the first to
+show that interaction modifiers are themselves interacting, which makes the
+complexity of ecological networks explode. Investigating hypergraphical
+interactions can be more important than previously thought, as they can reveal
+the importance of species within a network based on *indirect* interactions
+[@Golubski2016EcoNet]. An additional degree of complexity is introduced by
+multi-layer networks [@Hutchinson2019SeeFor]. Multi-layer networks offer links
+across "variants" of the networks, which can be patches, timepoints,
+environments, etc. As @Pilosof2017MulNat suggest, ecological networks are
+intrinsically multi-layers, as they are shaped by evolution, dispersal,
+environmental heterogeneity, among others. *Prima facie*, increasing the
+dimensionality of the object we need to predict (the multiple layers rather than
+a single network) may make the problem complicated. But multi-layer networks
+encode ecological constraints -- of dispersal, of evolution, and of niche
+suitability. One question that is worth investigating is whether the multi-layer
+structure of ecological networks may *improve* the predictibility of
+interactions. Indeed, this is the case for social networks [@Jalili2017LinPre;
+@Najari2019LinPre; @Yasami2018NovMul]. In short, although simple networks have
+captured a great deal of the complexity of interactions, exploring more
+intricate ways in which species interact might require that we make room for
+hypergraphs and multi-layer networks in our predictive framework.
 
 # Network predictions must have a spatial component
 
