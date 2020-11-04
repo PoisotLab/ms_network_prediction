@@ -36,7 +36,21 @@
 
 ## What is a species interaction?
 
-text goes here
+The coexistence of species does not necessarily preclude that they will
+interact [@Blanchet2020CooNot], however (at least for *direct* interactions) 
+we would require species to co-occur in space and time [@Walther2010ComEco].  
+The intrinsically diverse and complex nature of species interactions 
+[something we could address in the glossary perhaps?] makes 
+it difficult to accurately describe and collect data that are accurate and 
+comprehensive. However, a *mechanistic* understanding of what 
+determines if and how species will interact can be leveraged when trying to 
+predict interactions when data are incomplete or missing.
+
+* Do we continue on a tangent about the 'ecological aspect' - so in a way
+  introducing but not stepping on the toes of the next points
+* Or do we do a swivel and go with how we mathematically would go about 
+  describing an interaction - which I guess would entail discussing the potential value that an interaction could take? 
+
 
 ## How do we predict how species that have never co-occurred will interact?
 
