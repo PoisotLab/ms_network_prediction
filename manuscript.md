@@ -25,9 +25,19 @@
 ## How do we fit a predictive model?
 
 ## How do we validate a predictive model?
-Why do validation? Historically, ecologists have used information criteria (AIC, BIC, MDL, ...many more) to determine which of a set of competing models provide the “best” explanation for a set of data, based around the heuristic that good models maximize the ratio of information provided by the model to information encoded within the model.  
-In the context of making good predictions, we are interested in validation to prevent overfitting and determine which model is most likely to make correct predictions in the future. For the purposes of prediction, crossvalidation is the better option as it directly tests predictive capacity on “unseen” data. Various forms of crossvalidation exist (k-fold, monte carlo, etc.)---often comes down to computation time limits.  Out of sample prediction is ‘better’ for validation but requires new data.
-Bishop 2006? 
+
+- What is validation?
+- Out of sample prediction is the ideal, but often not possible.
+- Why do validation?
+- How is validation different or not different than model selection?
+- Why is crossvalidation a better choice for model validation and selection than information criteria in a predictive context?
+- Bishop 2006, Gelman 2020 --- Bayesian Workflow
+
+
+(older stuff)
+
+Historically, ecologists have used information criteria (AIC, BIC, MDL, ...many more) to determine which of a set of competing models provide the “best” explanation for a set of data, based around the heuristic that good models maximize the ratio of information provided by the model to information encoded within the model. In the context of making good predictions, we are interested in validation to prevent overfitting and determine which model is most likely to make correct predictions in the future. For the purposes of prediction, crossvalidation is the better option as it directly tests predictive capacity on “unseen” data.
+Various forms of crossvalidation exist (k-fold, monte carlo, etc.)---often comes down to computation time limits.  
 
 ## How do we propagate uncertainty through a predictive model?
 
@@ -43,9 +53,9 @@ Bishop 2006?
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
