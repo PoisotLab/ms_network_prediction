@@ -8,9 +8,16 @@
 
 ## Why do we need to predict interactions between species?
 
-## Why predict networks before interactions?
-- Emergent phenomena, like the composition of ecological communities, do not have causes that occur on any one scale. Combination of bottom-up and top-down effects. 
-- Levins and Lewontin, ref 2
+## Why predict networks and interactions at the same time?
+
+Ecological networks are quite sparse [connectance paper?]---composed of a set of interactions, but also a larger set of non-interactions.
+If we aim to predict the structure of networks from the "bottom-up"---
+by considering each pairwise combination of $S$ different species---we are left with $S^2$ interaction values to estimate. Instead, we can use our existing understanding of the structure of ecological networks to widdle down the set of feasible adjacency matrices, thereby reducing the amount of information we must predict, and making the problem of predicting interactions less daunting.
+
+The processes that structure ecological networks do not occur at the scale of interactions---there are also processes at the network level which  limit what interactions are possible.
+
+The realized structure of a network is the synthesis of the interactions forming the basis for network structure, and the network structure refining the possible interactions. "Part makes whole, and whole makes part" [levinsLewontin]
+
 
 ## What is currently limiting our ability to predict network structure?
 
@@ -42,9 +49,9 @@
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
