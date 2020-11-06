@@ -54,7 +54,7 @@ zoonoses, vector-borne diseases, among others [@Garcia-Callejas2018MulInt],
 which all share the fact that interactions between species are themselves
 interacting. One mathematical tool to describe these situations is hypergraphs:
 hypergraphs are the generalization of a graph, allowing a broad and manageable
-approach to complex interactions. @Golubski2011ModMod were among the first to
+approach to complex interactions [@Carletti2020]. @Golubski2011ModMod were among the first to
 show that interaction modifiers are themselves interacting, which makes the
 complexity of ecological networks explode. Investigating hypergraphical
 interactions can be more important than previously thought, as they can reveal
