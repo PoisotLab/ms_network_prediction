@@ -54,14 +54,14 @@ zoonoses, vector-borne diseases, among others [@Garcia-Callejas2018MulInt],
 which all share the fact that interactions between species are themselves
 interacting. One mathematical tool to describe these situations is hypergraphs:
 hypergraphs are the generalization of a graph, allowing a broad and manageable
-approach to complex interactions [@Carletti2020]. @Golubski2011ModMod were among the first to
-show that interaction modifiers are themselves interacting, which makes the
-complexity of ecological networks explode. Investigating hypergraphical
-interactions can be more important than previously thought, as they can reveal
-the importance of species within a network based on *indirect* interactions
-[@Golubski2016EcoNet]. An additional degree of complexity is introduced by
-multi-layer networks [@Hutchinson2019SeeFor]. Multi-layer networks offer links
-across "variants" of the networks, which can be patches, timepoints,
+approach to complex interactions [@Carletti2020DynSys]. @Golubski2011ModMod were
+among the first to show that interaction modifiers are themselves interacting,
+which makes the complexity of ecological networks explode. Investigating
+hypergraphical interactions can be more important than previously thought, as
+they can reveal the importance of species within a network based on *indirect*
+interactions [@Golubski2016EcoNet]. An additional degree of complexity is
+introduced by multi-layer networks [@Hutchinson2019SeeFor]. Multi-layer networks
+offer links across "variants" of the networks, which can be patches, timepoints,
 environments, etc. As @Pilosof2017MulNat suggest, ecological networks are
 intrinsically multi-layers, as they are shaped by evolution, dispersal,
 environmental heterogeneity, among others. *Prima facie*, increasing the
