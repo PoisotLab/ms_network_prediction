@@ -6,9 +6,9 @@ bibliography: [references.bib]
 
 ## Why should we predict and forecast species interaction networks?
 
-Networks of species interactionss underpin our understanding of key ecological
+Networks of species interactions underpin our understanding of key ecological
 processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they have initially
-be used to describe the interactions *within* a community, our interest in the
+been used to describe the interactions *within* a community, our interest in the
 last decade has shifted towards understanding their structure and their
 variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and
 established network ecology as an important emerging component of biogeography
@@ -20,8 +20,8 @@ interactions is extremely difficult [@Jordano2016SamNet]; in turn, the
 difficulty of sampling interactions can lead to biases in our estimate of the
 sampling of network structure [@deAguiar2019RevBia]. As many ecological systems,
 ecological networks have entered their "long now" [@Carpenter2002EcoFut], where
-contemporary actions will have long-term, low-predictibility consequences,
-sometimes over centuries [@Burkle2013PlaInt]. It is therfore imperative to
+contemporary actions will have long-term, low-predictability consequences,
+sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to
 develop a roadmap that would enable prediction (for the present) and forecasting
 (for the future) of network structure [@McCann2007ProBio; @Seibold2018NecMul],
 of the processes it encodes [@Thompson2012FooWeb], that can account for the
@@ -65,9 +65,9 @@ roadblocks, and tools that are part of this research agenda.
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
