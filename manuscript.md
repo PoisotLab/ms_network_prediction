@@ -13,13 +13,13 @@ last decade has shifted towards understanding their structure and their
 variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and
 established network ecology as an important emerging component of biogeography
 and macroecology. But our understanding of network structure, and in particular
-across space, is limited by availability of data. Characterizing a network
+across space, is limited by the availability of data. Characterizing a network
 requires an exhaustive list of species interactions at the sampled location, and
 these data remain extremely scarce. This is because sampling ecological
 interactions is extremely difficult [@Jordano2016SamNet]; in turn, the
-difficulty of sampling interactions can lead to biases in our estimate of the
-sampling of network structure [@deAguiar2019RevBia]. As many ecological systems,
-ecological networks have entered their "long now" [@Carpenter2002EcoFut], where
+difficulty of sampling interactions can lead to biases in our estimate of
+network structure [@deAguiar2019RevBia]. As many ecological systems, ecological
+networks have entered their "long now" [@Carpenter2002EcoFut], where
 contemporary actions will have long-term, low-predictability consequences,
 sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to
 develop a roadmap that would enable prediction (for the present) and forecasting
