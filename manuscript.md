@@ -43,7 +43,7 @@ from species richness alone [@MacDonald2020RevLin] allow to derive distributions
 of network properties for a given species richness. Connectance is defined as
 $L/S^2$ in unipartite networks, and $L/(S_1\times S_2)$ in bipartite networks,
 and therefore can be measured from the number of links and the species richness
-only -- because it can be derived from coarse data and is informative om both
+only -- because it can be derived from coarse data and is informative on both
 the ecology and structure of the network, we argue that predictions of
 connectance are most likely to be immediately useful, and easy to formulate.
 
