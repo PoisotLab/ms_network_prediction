@@ -8,12 +8,9 @@
 
 ## Why do we need to predict interactions between species?
 
-**Point 1: we don’t have data, don’t pretend we do!**  
-*Eltonian shortfall.* We don’t have much data about species interactions, so predictions could help fill in the gaps. 
-*Co-occurrence is not interaction.* Please stop piling species on distribution models and saying they account for interactions!
-**Point 2: our planet is changing and the predictions can help us understand what’s going to happen**
-*Things are changing.* Interactions change over time from anthropological impact, climate change, etc.
-*Applications.* We use our knowledge about species interaction to understand from the production of food and the conservation of freshwater, to the understanding of emerging diseases. As we know better about these interactions and how they are going to change, we have enough arguments to communicate to decision makers and the scientific community what future risks await us and how to mitigate them.
+As ecosystems are build up by thousands of interconnected species that interact directly or through elements from their common environment; these interactions form complex networks that structure ecological communities and maintain ecosystem functions.  [Albrecht et al 2018, Landi et al 2018]. Hypotheses about how those interactions occur require a large amount of data... (Point 1? ).  [Kindsvater 2018]. 
+It is well known that ecosystem functions lead to services that are related to basic issues of health and the economy of humans, like pathogens transmission, food security, or the availability of freshwater. But with a changing world that includes a high rate of biodiversity loss, land transformation, and the worldwide increase in temperature, researchers are worried about how to protect human lives and improve life quality in different countries,  having into account the measure of the change in the world in the following years. Using reliable current data for making predictions about how ecosystems will change over time, will give us stronger arguments that could be communicated to decision-makers and the scientific community about what are future environmental risks awaiting and how to mitigate them.[ Running 2020] 
+
 
 TODO - rethink references
 
