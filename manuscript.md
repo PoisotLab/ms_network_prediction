@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -18,7 +22,30 @@
 
 # A primer on predictive (network) ecology
 
-## What are the most important properties of networks to predict?
+## What is the most important property of a network to predict?
+
+Networks enclose a wealth of data that are explanatory for many types of
+interactions and are informative for the understanding of a wide range of
+ecological phenomena [@Delmas2018AnaEco]. This might make the task of network
+structure prediction look daunting, as the number of properties to predict can
+be immense. Yet there are two arguments to justify focusing on a single
+property, namely connectance, the proportion of the interaction matrix filled
+with interactions. First, connectance is ecologically informative. It ties into
+resilience to invasion [@Baiser2010ConDet; @Smith-Ramesh2016GloSyn], can
+increase robustness to extinction in food webs [@Dunne2002NetStr], and decrease
+it in mutualistic networks[@Vieira2015SimSto], and relate to stability
+[@Landi2018ComSta]. Second, most (if not all) network properties co-vary with
+connectance [*e.g.* @Poisot2014WheEco]. @Dunne2002FooStr emphasize that most
+network properties respond to network size (species richness) and connectance.
+Diversity estimates can provide good baselines [@Jenkins2013GloPat] for species
+richness over space; furthermore, recent advances in predicting the connectance
+from species richness alone [@MacDonald2020RevLin] allow to derive distributions
+of network properties for a given species richness. Connectance is defined as
+$L/S^2$ in unipartite networks, and $L/(S_1\times S_2)$ in bipartite networks,
+and therefore can be measured from the number of links and the species richness
+only -- because it can be derived from coarse data and is informative on both
+the ecology and structure of the network, we argue that predictions of
+connectance are most likely to be immediately useful, and easy to formulate.
 
 ## What is the added value of using machine learning?
 
