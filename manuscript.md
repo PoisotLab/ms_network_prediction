@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -12,7 +16,29 @@
 
 ## What is currently limiting our ability to predict network structure?
 
-Text goes here
+* As this will probably play a part in up setting the tone/concept for the ms 
+I guess it makes sense to make sure we address the need for ‘tools’ (as 
+granted by the all seeing light of ML) That being said might be nice to bring 
+in a general point for each section - if at all possible...
+
+The scarcity of data on species interactions is certainly one of the biggest 
+barriers in predicting network structure. Machine learning methods, especially deep 
+learning methods, need a lot of data. Compounding the scarcity of data the 
+data that are available are biased toward food webs and select mutualistic 
+networks, and could prove to be a limiting factor when trying to understand or
+predict networks of *other* interaction types. A better understanding of how 
+different types of networks differ from each another would serve as a starting 
+point, although this in itself could be a potential hurdle 
+[@Michalska-Smith2019TelEco].
+
+The scale at which we are able to predict networks are currently limited to 
+the resolution of the data available. Regarding levels of organisation our 
+understanding of individual based networks is still in its infancy 
+[@Guimaraes2020StrEco] and acts as a 'lower-limit' at which we 
+would be able to predict networks. On the note of scale, the resolution of 
+environmental (or landscape) data would also limit our ability to predict 
+networks at finer scales, although current trends in e.g. remote sensing would 
+suggest that with time this would become less of a hindrance.
 
 ## What is currently enabling our ability to predict network structure?
 
