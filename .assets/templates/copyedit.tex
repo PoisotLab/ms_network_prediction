@@ -1,93 +1,47 @@
 %!TEX TS-program = xelatex
-\documentclass[11pt]{scrartcl}
-\usepackage{kpfonts}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage[english]{babel}
-\usepackage{geometry}
-\geometry{verbose,letterpaper,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
-\usepackage{setspace}
+\documentclass[12pt]{article}
+
+${ _common() }
+${ _pandoc() }
+
+\geometry{verbose,letterpaper,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=4.5cm}
 \usepackage{lineno}
-
-\input{../.assets/templates/pandoc}
-
-\usepackage[hang,flushmargin]{footmisc}
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\usepackage[nolists,noheads]{endfloat}
 
 \pagestyle{plain}
 
-$if(title)$
-\title{$title$}
-$endif$
-$if(date)$
-\date{$date$}
-$endif$
-
-% At last:
-% The document itself!:
-
-% After filling in all these blanks above, or erasing them
-% where they are not needed, Pandoc has finished writing the
-% famous LaTeX *preamble* for your document.
-% Now comes the all-important command \begin{document}
-% which as you can see, will be paired with an \end{document} at the end.
-% Pandoc knows whether you have a title, and has already
-% specified what it is; if so, it demands that the title be rendered.
-% Pandoc knows whether you want a table of contents, you
-% specify this on the command line.
-% Then, after fiddling with alignments, there comes the real
-% business: pandoc slaps its rendering of your text in the place of
-% the variable `body`
-% It then concludes the document it has been writing.
-
 \begin{document}
 
+{\large\bfseries ${ title }}
+\vskip 5em
+${ if(description) }
+\textbf{Abstract: }${ description }
+${ endif }
+\vfill
+Last revision: \emph{\today}
 
-$if(title)$
-\maketitle
-$endif$
+\clearpage
 
-{\small
-$for(authors)$
-\textsc{$authors.givennames$\,$authors.familyname$} ($for(authors.affilcode)$$authors.affilcode$${ sep },$endfor$$if(authors.email)$,*$endif$)\\
-$endfor$
-}
+\section{Authors}
 
-{\small
-$for(institutions)$
-($institutions.id$)\,$institutions.name$\\
-$endfor$
-$for(authors)$
-$if(authors.email)$
-(*)\,\texttt{$authors.email$}\\
-$endif$
-$endfor$
-}
+${ authors:_list_authors()[\\] }
 
-$if(toc)$
-\tableofcontents
-$endif$
+\section{Affiliations}
 
-$if(description)$
-\begin{abstract}
-$description$
-\end{abstract}
-$endif$
+${ institutions:_list_institutions()[\\] }\\
 
-$if(alignment)$
-\begin{$alignment$}
-$endif$
+\section{Correspondance}
+
+${ for(authors) }
+${ if(it.email) }
+\textsuperscript{*}\,\,\texttt{${ it.email }}
+${ endif }
+${ endfor }
 
 \clearpage
 \linenumbers
 \doublespacing
 
-$body$
-
-$if(alignment)$
-\end{$alignment$}
-$endif$
+${ body }
 
 \end{document}

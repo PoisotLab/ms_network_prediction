@@ -4,9 +4,33 @@ bibliography: [references.bib]
 
 # Meta
 
+
 **BOX 1: Biological Examples**
 
-## What is the paper about?
+## Why should we predict and forecast species interaction networks?
+
+Networks of species interactions underpin our understanding of key ecological
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they have initially
+been used to describe the interactions *within* a community, our interest in the
+last decade has shifted towards understanding their structure and their
+variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and
+established network ecology as an important emerging component of biogeography
+and macroecology. But our understanding of network structure, and in particular
+across space, is limited by the availability of data. Characterizing a network
+requires an exhaustive list of species interactions at the sampled location, and
+these data remain extremely scarce. This is because sampling ecological
+interactions is extremely difficult [@Jordano2016SamNet]; in turn, the
+difficulty of sampling interactions can lead to biases in our estimate of
+network structure [@deAguiar2019RevBia]. As many ecological systems, ecological
+networks have entered their "long now" [@Carpenter2002EcoFut], where
+contemporary actions will have long-term, low-predictability consequences,
+sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to
+develop a roadmap that would enable prediction (for the present) and forecasting
+(for the future) of network structure [@McCann2007ProBio; @Seibold2018NecMul],
+of the processes it encodes [@Thompson2012FooWeb], that can account for the
+spatial, temporal, and climate change dimensions [@Burkle2011FutPla]. In this
+paper, we adopt a question-driven approach to identify opportunities,
+roadblocks, and tools that are part of this research agenda.
 
 ## Who would benefit from it?
 
@@ -68,9 +92,9 @@ suggest that with time this would become less of a hindrance.
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
