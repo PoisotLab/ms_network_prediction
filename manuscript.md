@@ -26,11 +26,13 @@
 
 ## How do we validate a predictive model?
 
-- What is validation?
-- Out of sample prediction is the ideal, but often not possible.
-- Why do validation?
-- How is validation different or not different than model selection?
-- Why is crossvalidation a better choice for model validation and selection than information criteria in a predictive context?
+After we fit a model, we inevitably want to see how "good" it is--- typically in the context of _model comparison_, where we aim to see which of a competing set of models provides the best explanation for a data set.
+A naive initial approach is to simply compute the average error between
+the model's prediction and the true data we have, and choose the model with the smallest error---however this approach inevitably results in _overfitting_.
+One approach to avoid overfitting is using information criteria (e.g. AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around the heuristic that good models maximize the ratio of information provided by the model to the number of parameters it has. However, when the intended use-case of a model is prediction, _crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation methods divide the original dataset into two---one which is used to fit the model (called the _training_ set) and one used to validate its predictive accuracy on the data that is hasn't "seen" yet (called the _test_ set).
+This procedure is often repeated for different subdivisions of the dataset. One powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers each data points uniquely as a test set, enabling sensitivity analysis. However, these methods are typically limited by the ensuing computation time requirements.
+
+- Out of sample prediction is ideal, but often not possible.
 - Bishop 2006, Gelman 2020 --- Bayesian Workflow
 
 
