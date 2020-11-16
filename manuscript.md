@@ -30,7 +30,7 @@
 
 ## How do we determine what interaction networks are feasible?
 
-text goes here
+Many approaches to understand the relationship between ecological network structure and feasibility. These can be divided into structural and dynamic approaches. Structural approaches [@allesinaStabilityCriteriaComplex2012] only consider the topology of the metaweb (although the criteria for “structural” stability models was originally derived from fixed-point stability criteria for the generalized LV model). Dynamical approaches consider the dynamics of energy flow in a food-web [@delmasSimulationsBiomassDynamics2017]. Further ‘stability’ and ‘feasibility’ have different dimensions---resilience to environmental change, extinction, etc [@dominguez-garciaUnveilingDimensionsStability2019].
 
 # Interactions
 
@@ -42,9 +42,9 @@ text goes here
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
