@@ -30,7 +30,16 @@
 
 ## How do we determine what interaction networks are feasible?
 
-Many approaches to understand the relationship between ecological network structure and feasibility. These can be divided into structural and dynamic approaches. Structural approaches [@allesinaStabilityCriteriaComplex2012] only consider the topology of the metaweb (although the criteria for “structural” stability models was originally derived from fixed-point stability criteria for the generalized LV model). Dynamical approaches consider the dynamics of energy flow in a food-web [@delmasSimulationsBiomassDynamics2017]. Further ‘stability’ and ‘feasibility’ have different dimensions---resilience to environmental change, extinction, etc [@dominguez-garciaUnveilingDimensionsStability2019].
+For several decades, ecologists have aimed to understand how complex ecological networks persist through time. May's original work on
+the diversity-stability "paradox" considered purely random networks of interactions.
+
+We know that ecological networks are not structured randomly.
+Some properties, like connectance, are highly predictable [@macdonaldRevisitingLinksSpeciesScaling2020]. 
+
+SVD-entropy, allesina, niche-model, cascade model]
+
+
+These can be divided into structural and dynamic approaches. Structural approaches [@allesinaStabilityCriteriaComplex2012] only consider the topology of the metaweb (although the criteria for “structural” stability models was originally derived from fixed-point stability criteria for the generalized LV model). Dynamical approaches consider the dynamics of energy flow in a food-web [@delmasSimulationsBiomassDynamics2017]. Further ‘stability’ and ‘feasibility’ have different dimensions---resilience to environmental change, extinction, etc [@dominguez-garciaUnveilingDimensionsStability2019].
 
 # Interactions
 
