@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -37,7 +41,7 @@ However, in the natural world we observe networks of interactions that consist o
 As a result, understanding what aspects of the neutral assumptions of May's model are incorrect has branched many investigations into the relationship between ecological network structure and persistence [@Allesina2012StaCri].
 These assumptions can be split into dynamical assumptions and topological assumptions.
 
-On the topological side, we know that ecological networks are not structured randomly. Some properties, like connectance, are highly predictable [@macdonaldRevisitingLinksSpeciesScaling2020]. Various generative models of food-webs have been shown to fit empirical networks more effectively than random models.
+On the topological side, we know that ecological networks are not structured randomly. Some properties, like connectance, are highly predictable [@MacDonald2020RevLin]. Various generative models of food-webs have been shown to fit empirical networks more effectively than random models.
 These typically rely on _network embeddings_---where each node (species) in the network is assigned a value in a latent space, and the resulting network topology is generated stochastically based on properties of the position of nodes in that latent space. Generative network models have long used allometry as a single-dimensional latent space---naturally we want to extend this to traits in general [@Allesina2008GenMod].
 
 The second approach to understand stability is through _dynamics_.
