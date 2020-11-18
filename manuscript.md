@@ -30,16 +30,21 @@
 
 ## How do we determine what interaction networks are feasible?
 
-For several decades, ecologists have aimed to understand how complex ecological networks persist through time. May's original work on
-the diversity-stability "paradox" considered purely random networks of interactions.
+For several decades, ecologists have aimed to understand how networks of many interacting species persist through time.
+The diversity-stability "paradox", first explored by May [@May1974StaCom], shows that under a neutral set of assumptions, ecological networks should become decreasingly stable as the number of species increases.
+However, in the natural world we observe networks of interactions that consist of far more species than May's model predicts [@Albouy2019MarFis].
 
-We know that ecological networks are not structured randomly.
-Some properties, like connectance, are highly predictable [@macdonaldRevisitingLinksSpeciesScaling2020]. 
+As a result, understanding what aspects of the neutral assumptions of May's model are incorrect has branched many investigations into the relationship between ecological network structure and persistence [@Allesina2012StaCri].
+These assumptions can be split into dynamical assumptions and topological assumptions.
 
-SVD-entropy, allesina, niche-model, cascade model]
+On the topological side, we know that ecological networks are not structured randomly. Some properties, like connectance, are highly predictable [@macdonaldRevisitingLinksSpeciesScaling2020]. Various generative models of food-webs have been shown to fit empirical networks more effectively than random models.
+These typically rely on _network embeddings_---where each node (species) in the network is assigned a value in a latent space, and the resulting network topology is generated stochastically based on properties of the position of nodes in that latent space. Generative network models have long used allometry as a single-dimensional latent space---naturally we want to extend this to traits in general [@Allesina2008GenMod].
 
+The second approach to understand stability is through _dynamics_.
+Early models of community dynamics (Lotka-Volterra, MacArthurs Consumer-Resource Model) rely on the assumption of linear interaction effects. However, models of bioenergetic community dynamics have shown promise in basing our understanding of dynamics in food-webs, where the functional response of one species on another is grounded in the understood relationship between allometry and metabolism [@Delmas2017SimBio].
 
-These can be divided into structural and dynamic approaches. Structural approaches [@allesinaStabilityCriteriaComplex2012] only consider the topology of the metaweb (although the criteria for “structural” stability models was originally derived from fixed-point stability criteria for the generalized LV model). Dynamical approaches consider the dynamics of energy flow in a food-web [@delmasSimulationsBiomassDynamics2017]. Further ‘stability’ and ‘feasibility’ have different dimensions---resilience to environmental change, extinction, etc [@dominguez-garciaUnveilingDimensionsStability2019].
+An additional consideration is that "stability" and "feasibility" have different dimensions---resilience to environmental change, extinction, etc [@Dominguez-Garcia2019UnvDim].
+
 
 # Interactions
 
