@@ -33,7 +33,15 @@ roadblocks, and tools that are part of this research agenda.
 
 ## Why do we need to predict interactions between species?
 
-## Why predict networks before interactions?
+## Why predict networks and interactions at the same time?
+
+Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a set of interactions, but also a larger set of non-interactions.
+If we aim to predict the structure of networks from the "bottom-up"---
+by considering each pairwise combination of $S$ different species---we are left with $S^2$ interaction values to estimate. Instead, we can use our existing understanding of the mechanisms that structure ecological networks to widdle down the set of feasible adjacency matrices, thereby reducing the amount of information we must predict, and making the problem of predicting interactions less daunting.
+
+The processes that structure ecological networks do not only occur at the scale of interactions---there are also processes at the network level which  limit what interactions are possible.
+The realized structure of a network is the synthesis of the interactions forming the basis for network structure, and the network structure refining the possible interactions---"Part makes whole, and whole makes part" [@Levins1987DiaBio].
+
 
 ## What is currently limiting our ability to predict network structure?
 
