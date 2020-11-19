@@ -34,20 +34,46 @@ bibliography: [references.bib]
 
 ## How do we determine what interaction networks are feasible?
 
-For several decades, ecologists have aimed to understand how networks of many interacting species persist through time.
-The diversity-stability "paradox", first explored by May [@May1974StaCom], shows that under a neutral set of assumptions, ecological networks should become decreasingly stable as the number of species increases.
-However, in the natural world we observe networks of interactions that consist of far more species than May's model predicts [@Albouy2019MarFis].
+For several decades, ecologists have aimed to understand how networks of 
+many interacting species persist through time. The diversity-stability 
+"paradox", first explored by May [@May1974StaCom], shows that under a 
+neutral set of assumptions, ecological networks should become decreasingly 
+stable as the number of species increases. However, in the natural world 
+we observe networks of interactions that consist of far more species than 
+May's model predicts [@Albouy2019MarFis].
 
-As a result, understanding what aspects of the neutral assumptions of May's model are incorrect has branched many investigations into the relationship between ecological network structure and persistence [@Allesina2012StaCri].
-These assumptions can be split into dynamical assumptions and topological assumptions.
+As a result, understanding what aspects of the neutral assumptions of 
+May's model are incorrect has branched many investigations into the relationship between ecological network structure and persistence 
+[@Allesina2012StaCri]. These assumptions can be split into dynamical 
+assumptions and topological assumptions.
 
-On the topological side, we know that ecological networks are not structured randomly. Some properties, like connectance, are highly predictable [@MacDonald2020RevLin]. Various generative models of food-webs have been shown to fit empirical networks more effectively than random models.
-These typically rely on _network embeddings_---where each node (species) in the network is assigned a value in a latent space, and the resulting network topology is generated stochastically based on properties of the position of nodes in that latent space. Generative network models have long used allometry as a single-dimensional latent space---naturally we want to extend this to traits in general [@Allesina2008GenMod].
+On the topological side, we know that ecological networks are not 
+structured randomly. Some properties, like connectance, are highly 
+predictable [@MacDonald2020RevLin]. Various generative models of food-webs 
+have been shown to fit empirical networks more effectively than random 
+models. These typically rely on _network embeddings_---where each node 
+(species) in the network is assigned a value in a latent space, and the 
+resulting network topology is generated stochastically based on properties 
+of the position of nodes in that latent space. Generative network models 
+have long used allometry as a single-dimensional latent space---naturally 
+we want to extend this to traits in general [@Allesina2008GenMod].
 
 The second approach to understand stability is through _dynamics_.
-Early models of community dynamics (Lotka-Volterra, MacArthurs Consumer-Resource Model) rely on the assumption of linear interaction effects. However, models of bioenergetic community dynamics have shown promise in basing our understanding of dynamics in food-webs, where the functional response of one species on another is grounded in the understood relationship between allometry and metabolism [@Delmas2017SimBio].
+Early models of community dynamics (Lotka-Volterra, MacArthurs 
+Consumer-Resource Model) rely on the assumption of linear interaction 
+effects. However, models of bioenergetic community dynamics have shown 
+promise in basing our understanding of dynamics in food-webs, where the 
+functional response of one species on another is grounded in the 
+understood relationship between allometry and metabolism 
+[@Delmas2017SimBio].
 
-An additional consideration is that "stability" and "feasibility" have different dimensions---resilience to environmental change, extinction, etc [@Dominguez-Garcia2019UnvDim].
+An additional consideration is the multidimensional nature of "stability" 
+and "feasibility" e.g resilience to environmental change vs extinctions 
+[@Dominguez-Garcia2019UnvDim] and how these different disturbances will 
+propagate along the various level of organisations within a network 
+[@Kefi2019AdvOur], as well as their effect over space such as considering 
+meta-communities and the affect of dispersal/linkages between them in 
+dampening these effects e.g building on the work of @Gravel2016StaCom.
 
 
 # Interactions
