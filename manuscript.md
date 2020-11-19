@@ -39,9 +39,10 @@
 ## How do we predict how species that have never co-occurred will interact?
 
 ## What does interaction strength mean?
-- Insert text here
-- Insert text here
-- Refs, Refs
+
+Subsequent to the prediction of interaction itself comes the prediction of interaction strength. Interaction strength, unlike the qualitative presence/absence interaction, is quantified. It can be seen as its relative importance [@Heleno2014EcoNet] or the direct effect of one species on another over time [@Wootten1997EstTes]. It can be measured by a multitude of different metrics, generally depending on the type of interaction, whether it is at the individual link level or the ecosystem level and the study objectives [@Berlow2004IntStr, Wootten2005MeaInt]. Nonetheless, it is frequently reported as a frequency of interaction or as a flux of biomass [@Heleno2014EcoNet]. One recurring observation throughout many studies is that networks are often composed of many weak links and few strong links [@Berlow2004IntStr]. Even though empirical estimation of interaction strength is crucial [@Novak2008EstNon], it remains a hard task from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt]. Its inference is thus a key step, as the distribution of interaction strength within communities governs their stability [@Neutel2002StaReaa, @Ruiter1995EnePat] and also influence ecosystem functions [@Duffy2002BioEco, @Montoya2003FooWeb]. To do so, the framework provided by the interaction strength seen as an energy flow might be well suited for our pipeline because they can be derived from relatively easily accesible data like body size, abundance and metabolic rates [@Berlow2004IntStr]. It could also possibly allow an integration with the Biodiversity-Ecosystem Functioning (BEF) framework [@Barnes2018EneFlua].
+
+**I would argue for a certain homogenization of interaction strength between different types of network (interaction) to make comparison/analysis easier. Relevant? How? **
 
 ## How are interaction strengths actually inferred? 
 
