@@ -26,20 +26,19 @@
 
 ## How do we validate a predictive model?
 
-After we fit a model, we inevitably want to see how "good" it is--- typically in the context of _model comparison_, where we aim to see which of a competing set of models provides the best explanation for a data set.
+After we fit a model, we inevitably want to see how "good" it is.
+
+One of the contexts for validation is _model comparison_, where we aim to see which of a competing set of models provides the best explanation for a data set.
 A naive initial approach is to simply compute the average error between
 the model's prediction and the true data we have, and choose the model with the smallest error---however this approach inevitably results in _overfitting_.
-One approach to avoid overfitting is using information criteria (e.g. AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around the heuristic that good models maximize the ratio of information provided by the model to the number of parameters it has. However, when the intended use-case of a model is prediction, _crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation methods divide the original dataset into two---one which is used to fit the model (called the _training_ set) and one used to validate its predictive accuracy on the data that is hasn't "seen" yet (called the _test_ set).
+One approach to avoid overfitting is using information criteria (e.g. AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around the heuristic that good models maximize the ratio of information provided by the model to the number of parameters it has.
+
+However, when the intended use-case of a model is prediction, the relevant form of validation is _predictive accuracy_.
+
+ _crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation methods divide the original dataset into two---one which is used to fit the model (called the _training_ set) and one used to validate its predictive accuracy on the data that is hasn't "seen" yet (called the _test_ set).
 This procedure is often repeated for different subdivisions of the dataset. One powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers each data points uniquely as a test set, enabling sensitivity analysis. However, these methods are typically limited by the ensuing computation time requirements.
 
-- Out of sample prediction is ideal, but often not possible.
-- Bishop 2006, Gelman 2020 --- Bayesian Workflow
-
-
-(older stuff)
-
-Historically, ecologists have used information criteria (AIC, BIC, MDL, ...many more) to determine which of a set of competing models provide the “best” explanation for a set of data, based around the heuristic that good models maximize the ratio of information provided by the model to information encoded within the model. In the context of making good predictions, we are interested in validation to prevent overfitting and determine which model is most likely to make correct predictions in the future. For the purposes of prediction, crossvalidation is the better option as it directly tests predictive capacity on “unseen” data.
-Various forms of crossvalidation exist (k-fold, monte carlo, etc.)---often comes down to computation time limits.  
+Bishop 2006, Gelman 2020 (Bayesian Workflow),
 
 ## How do we propagate uncertainty through a predictive model?
 
