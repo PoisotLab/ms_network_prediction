@@ -61,17 +61,18 @@
 ## Box 3: From Models to Prediction to Forecasting
 
 In ecology, quantitative models have long been descriptive rather than predictive  [@Evans2012PreEco].
-Yet, the need for predictive models remains clear to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
+Yet, the need for predictive ecology remains clear to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
 The terms "prediction" and "forecasting" are often used interchangably.
+
 
 Models are used for many purposes, however all models share some common properties.
 Any model can be thought of as a function $f$, which maps inputs $x$ and parameters $\theta$ to predicted output states $y$. However, the approaches taken to define $f$ vary.
 
-Various methods of partitioning the types of models have been made [@Breiman2000TwoSch; @McElreath2020StaRet]. Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
 
-Phenomenalogical vs. mechanistic.
-
-Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$.
+Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco].
+The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$.
 
 How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
 
