@@ -8,11 +8,31 @@
 
 ## Why do we need to predict interactions between species?
 
-As ecosystems are build up by thousands of interconnected species that interact directly or through elements from their common environment; these interactions form complex networks that structure ecological communities and maintain ecosystem functions.  [Albrecht et al 2018, Landi et al 2018]. Hypotheses about how those interactions occur require a large amount of data... (Point 1? ).  [Kindsvater 2018]. 
-It is well known that ecosystem functions lead to services that are related to basic issues of health and the economy of humans, like pathogens transmission, food security, or the availability of freshwater. But with a changing world that includes a high rate of biodiversity loss, land transformation, and the worldwide increase in temperature, researchers are worried about how to protect human lives and improve life quality in different countries,  having into account the measure of the change in the world in the following years. Using reliable current data for making predictions about how ecosystems will change over time, will give us stronger arguments that could be communicated to decision-makers and the scientific community about what are future environmental risks awaiting and how to mitigate them.[ Running 2020] 
+Ecosystems are build up by a set of species that interact directly or indirectly through elements from their common environment. These interactions form complex networks that structure ecological communities and maintain ecosystem functions[@Landi2018ComSta; Albrecht et al 2018]. The understanding of interactions is
+therefore crucial for ecosystem management, but also for many other aspects of
+biodiversity. For instance, it is well known that ecosystem functions lead to
+services that are related to basic issues of health and the economy of humans, like pathogens transmission, food security, or the availability of freshwater. But with a changing world that includes a high rate of biodiversity loss, land transformation, and the worldwide increase in temperature, researchers are worried about how to protect human lives and improve life quality in different countries, having into account the measure of the change in the world in the following years.  
 
+However, we are far from having a comprehensive knowledge about biodiversity,
+especially regarding ecological interactions. Although we have seen a growing
+number of records for species occurrences, this growth is much slower for
+ecological interactions, especially because interactions are hard to capture and
+because of forbidden links [@Jordano2016SamNet]. This knowledge gap motivated a
+variety of approaches to deal with interactions in ecological research based on
+assumptions that are not always true, such as the correlation between
+co-occurrence and interaction. Although sometimes this is a valid simplification
+to model communities, it is known that co-occurrence is only one of the elements
+necessary for an interaction to occur [@Blanchet2020CooNot]. Other elements that
+contribute to the realization of an interaction are abundance and traits
+matching in space and time, and the combination of these elements allow us to
+infer potential from realized interactions and empirical data about populations
+[@Poisot2016StrPro]. 
 
-TODO - rethink references
+Because interactions carry a lot of ecological and evolutive information about
+biodiversity, predicted links can help us to have a more complete framework to
+understand processes and future rearrangements of nature. Moreover,
+using reliable current data for making predictions about how ecosystems will change over time will give us stronger arguments that could be communicated to decision-makers and the scientific community about what are future environmental risks awaiting and how to mitigate them [Kindsvater 2018].
+
 
 ## Why predict networks before interactions?
 
