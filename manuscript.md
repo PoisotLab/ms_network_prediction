@@ -50,28 +50,9 @@
 
 ## How much do networks vary over space?
 
-Networks can vary either in their structural properties (e.g. changes in connectance or degree distribution) or in their composition (e.g. changes in nodes and links identity). Interestingly, variation in the structural properties of ecological networks tend to respond mostly to changes in the size of the network. First, the number of links in ecological networks scales with the number of species [@MacDonald2020RevLin; @Brose2004UniSpa]. Second, connectance and size are driving the rest of the structural properties of ecological networks [@Poisot2014WheEco; @Dunne2002FooStr; @Riede2010ScaFoo]. So, network properties do vary in space, but this variation is mainly explained by the spatial variation in species richness.
+Networks can vary either in their structural properties (e.g. changes in connectance or degree distribution) or in their composition (e.g. changes in nodes and links identity). Interestingly, variation in the structural properties of ecological networks tend to respond mostly to changes in the size of the network. First, the number of links in ecological networks scales with the number of species [@MacDonald2020RevLin; @Brose2004UniSpa]. Second, connectance and size are driving the rest of the structural properties of ecological networks [@Poisot2014WheEco; @Dunne2002FooStr; @Riede2010ScaFoo].
 
-On a lower level, species turnover in space obviously results in changes in the composition of ecological networks. But, this is not the only reason networks composition varies [@Poisot2015BeySpe]. Intraspecific variations can result in interaction turnovers without changes in species composition [ADD REF]. Similarly, changes in species abundances can lead to variation in interactions [ADD REF].
-
-
-Finding generalities in network structures have been central in ecological network theory [@Dunne2006TheNet]. One interesting fact about ecological network is how most of its structural properties can be predicted using species richness. On the one part, the number of links in ecological networks tends to scale with the number of species either following a beta-binomial model or a power-law [@Macdonald2020RevTeh, @Brose2004UniSpa]. Meaning that the connectance of a model can usually be predicted solely from the number of species. On the other hand, connectance is degree distribution (i.e. how interactions are distributed across species). This means that network structure tends to vary 
-
-**P2** 
-Variation in interaction networks over space arises through changes in species composition and realised interactions [@Poisot2012TheDis].
-
-"These changes are the results of local processes" [@Poisot2015BeySpe]
-How network structure may change on macroecological scale [@Baiser2019EcoRul]
-Some empirical studies [@Baiser2012GeoVar, @Cirtwill2015LatGra]
-
-
-**P1** 
-A lot of early ecological network research have focused on finding generalities in network structure across systems [@Dunne2006TheNet].
-
-Species Richness -> Connectance -> Everything else! [@Macdonald2020RevThe, @Brose2004UniSpa]
-Species role are conserved over spatial scale [@Baker2015SpeRol]
-Functional role composition did not change across space [@Dehling2020SimCom]
-Food webs shared a common structural backbone [@Mora2018IdeCom]
+On a lower level, species turnover in space obviously results in changes in the composition of ecological networks. But, this is not the only reason networks composition varies [@Poisot2015BeySpe]. Intraspecific variations can result in interaction turnovers without changes in species composition [@Bolnick2011]. Similarly, changes in species abundances can lead to variation in interactions strengths [@Canard2014EmpEvi; @Vazquez2007SpeAbu]. The variation in the abiotic environment and indirect interactions [@Golubski2016EcoNet] are also likely to modify the occurrence and strength of individual interactions. Still, despite important species and interaction turnovers, ecological networks tend to share a common backbone [@Mora2018IdeCom] and functional composition [@Dehling2020SimCom]. In all, ecological networks do vary considerably when looking at the identities of individual species and interactions, but overall, the functional composition and structure of networks is quite constant in space.
 
 ## How do we predict what the species pool at a particular location is?
 
