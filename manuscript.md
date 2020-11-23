@@ -54,9 +54,13 @@
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
-- Point1
-- Point2
-- Ref1, Ref2
+- Ecological interactions shape species distributions at both local and broad
+  spatial scales, and including them in SDM models generally improves predictive
+  performance.
+- Category of approaches to account for interactions in SDM models include
+  integrating pairwise dependences, using surrogates for biotic-interaction
+  gradients, and hybridizing SDMs with dynamic models
+- (Araújo & Luoto, 2007), (Wisz et al., 2013)
 
 ## What is the spatial scale suitable for the prediction of species interactions?
 
