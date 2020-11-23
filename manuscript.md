@@ -52,9 +52,14 @@
 
 ## How do we predict what the species pool at a particular location is?
 
-- Point1
-- Point2
-- Ref1, Ref2
+- Species presence/absence at a particular site can be predicted using species
+  distribution models (SDMs) based on known occurrences and environmental
+  conditions at these locations, such as climate and land cover (abiotic
+  filter). (Guisan & Thuiller, 2005), (Elith et al., 2006)
+- Community assemblage at a particular site, which forms the species pool, can
+  be predicted either by combining independent single-species SDMs
+  (stacked-SDMs) or by directly modelling the entire species assemblage and
+  multiple species at the same time (joint SDMs) (Norberg et al., 2019)
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
