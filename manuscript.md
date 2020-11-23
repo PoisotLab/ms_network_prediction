@@ -24,9 +24,22 @@
 
 ## How do we fit a predictive model?
 
-- Point 1
-- Point 2
-- Ref1, Ref2
+- A predictive (supervised) ML model is trained on a dataset containing features
+  and labels, generally split into a training and validation subset. The model
+  learns to predict the labels from the training subset, then the fit is
+  evaluated on the validation set. Depending on the type of model, the
+  validation step is part of the training and the model will keep learning until
+  it reaches a certain threshold based on the loss function.
+- Fitting and adjusting the model can be done by adjusting the model parameters
+  depending on the type of model (layer compositions and network structures for
+  neural networks, number of trees and splits for tree-based models).
+- Studies with ML models predicting interactions, but not network properties:
+  species traits used to predict interactions and infer trait-matching rules
+  (Desjardins-Proulx et al., 2017; Pichler et al., 2020), automated discovery of
+  food webs (Bohan et al., 2011), reconstruction of ecological networks using
+  next-generation sequencing data (Bohan et al., 2017), network inference from
+  presence-absence data (Sander et al., 2017)
+- Ref 1, ref 2: Christin et al., 2019
 
 ## How do we validate a predictive model?
 
