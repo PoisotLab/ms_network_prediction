@@ -42,9 +42,9 @@ bibliography: [references.bib]
 
 Interactions between species can be manifested in a multitude of ways e.g. different 
 types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted 
-between only a pair of species e.g indirect interactions [ref]. The common thread 
+between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread 
 between these multiple forms of interactions is that *at least* one of the species is 
-affected by the interaction, this can be either positively or negatively [ref]. Combine 
+affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio]. Combine 
 this high 'diversity' of interaction types with the sheer number of potential 
 interactions that *could* occur in a community and it is understandable why attempting 
 to sample species interaction empirically is a considerable task. However, inferring 
@@ -76,7 +76,7 @@ As listed by [@Jordano2016ChaEco], these types of interaction may take many
 forms, where positive interactions could for example be mutualism, 
 commensalism and symbiosis and negative interactions be predation, herbivory
 and parasitism.
-
+ 
 ## How do we predict how species that have never co-occurred will interact?
 
 ## What does interaction strength mean?
