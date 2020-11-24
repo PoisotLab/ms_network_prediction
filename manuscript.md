@@ -41,9 +41,8 @@
 ## What does interaction strength mean?
 
 ## How are interaction strengths actually inferred?
-- Insert text here
-- Insert text here
-- Refs, Refs
+
+There are many ways to infer interaction strength, whether it is empirically or theoretically. 
 
 ## Could we use hypergraphs and multi-layer networks to predict more interactions? 
 
