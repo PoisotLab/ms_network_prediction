@@ -50,23 +50,25 @@ interactions that *could* occur in a community and it is understandable why atte
 to sample species interaction empirically is a considerable task. However, inferring 
 interactions through proxies and other frameworks could prove to be promising 
 [@Morales-Castilla2015InfBio], and requires representing (and constraining?) 
-interaction networks in a variety of ways.
+interaction networks in a variety of ways, primarily graphs or matrices.
+
+In a graph, each species is represented as a node and each interaction as an edge
+[@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
+representation of the interaction. When using a matrix format we can uses two 
+approaches, namely bipartite networks where we have two interacting species guilds 
+and have one guild be represented by rows and the other by columns e.g. hosts and 
+parasites or we can use unipartite networks where each species *appears* twice - 
+both as a row and column species. For a presence/absence interaction network, the 
+matrix is filled with 1 and 0 representing an interaction and an
+absence of interaction respectfully [@Dunne2006NetStr]. 
 
 The representation of species interactions or interaction networks in the
 form of graphs and matrices is quite effective for their description and analysis.
-It allows the calculation of many network properties (do we list some?), which
-some of can even be use to help the prediction of further interactions,
+It allows the calculation of many network properties (particularly pertaining to structure), 
+some of which can even be use to help the prediction of further interactions,
 by for example applying a constraint on the possible number of links based on
 the number of species present [@MacDonald2020RevLin].
 
-In a graph, each species is represented as a node and each interaction as an edge
-[@Delmas2018AnaEco, @Pascual2006EcoNet], whereas two nodes linked by
-and edge represents a species interaction. When the matrix format is used,
-each row represents a consumer species and each column represents a 
-ressource species. For a presence/absence interaction network, the 
-matrix is filled with 1 and 0 representing an interaction and an
-absence of interaction respectfully [@Dunne2006NetStr]. 
- 
  (older stuff)
 
 Species interaction encompass every action occurring between any set
