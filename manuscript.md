@@ -38,9 +38,27 @@
 
 ## How do we predict how species that have never co-occurred will interact?
 
-*Traits matching*: Functional traits can be used as a proxy for the inference of interactions because, well, ecological interactions require some kind of match between functional traits. However these data are lacking, especially for large scale analyses. 
+The probability of the realization of an ecological interaction depend on
+co-occurrence in space and time, abundance and traits matching
+[@Poisot2014SpeWhy; @Pichler2019MacLea]. Given two species that co-occur, a
+neutral approach to probabilistic interactions would be based on abundances and
+"neutralize" the effect of traits matching [@Canard2012EmeStr]. In this case we
+can infer the probability of an interaction to occur by chance, just because two
+species are abundant enough to bump into each other, and should be a good
+parameter against which we could test other factors that limit the realization
+of an interaction.   
 
-*Phylogenetic inertia*: Because niche conservatism is a thing, the phylogenetic inertia of functional traits could help us infer the trait data that are missing. However, its efficacy could depend on the spatial scale of analysis since the phylogenetic signal present on a metaweb is lost on local webs.
+However, some proxies can be used to make more accurate predictions of potential
+ecological interactions. For instance, functional traits are good such proxies
+because they are highly selected by ecological interactions and determine
+forbidden links (such as the mechanical impossibility of a bird to consume seeds
+larger than its beak). The fact that functional traits suffer some kind of
+selective pressure and because niches tend to be conserved throughout a
+phylogenetic tree, ecological interactions also tend to be conserved, and
+therefore we could also use phylogenies to infer pairs of co-occurring species
+that could potentially interact [@Gomez2010EcoInt]. In fact, the contribution of
+interactions to the phylogenetic match between species is consistent even
+through scales [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].  
 
 *Network-based methods*: We can use latent traits of the species (i.e. unmeasured traits inferred from the known network) to predict missing interactions. However, these methods are sensitive to sampling biases and can only be used for species for which we have interaction data.
 
