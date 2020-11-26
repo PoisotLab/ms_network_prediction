@@ -48,8 +48,8 @@ affected by the interaction, this can be either positively or negatively [@Moral
 this high 'diversity' of interaction types with the sheer number of potential 
 interactions that *could* occur in a community and it is understandable why attempting 
 to sample species interaction empirically is a considerable task. However, inferring 
-interactions through proxies and other frameworks could prove to be promising 
-[@Morales-Castilla2015InfBio], and requires representing (and constraining?) 
+interactions through proxies like traits, phylogenies, geographical data and other frameworks 
+could prove to be promising [@Morales-Castilla2015InfBio]. But doing so requires representing (and constraining?) 
 interaction networks in a variety of ways, primarily graphs or matrices.
 
 In a graph, each species is represented as a node and each interaction as an edge
@@ -60,7 +60,7 @@ and have one guild be represented by rows and the other by columns e.g. hosts an
 parasites or we can use unipartite networks where each species *appears* twice - 
 both as a row and column species. For a presence/absence interaction network, the 
 matrix is filled with 1 and 0 representing an interaction and an
-absence of interaction respectfully [@Dunne2006NetStr]. 
+absence of interaction respectively [@Dunne2006NetStr]. 
 
 The representation of species interactions or interaction networks in the
 form of graphs and matrices is quite effective for their description and analysis.
