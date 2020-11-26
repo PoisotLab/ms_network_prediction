@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -52,14 +56,34 @@
 
 ## How do we predict what the species pool at a particular location is?
 
-- Species presence/absence at a particular site can be predicted using species
-  distribution models (SDMs) based on known occurrences and environmental
-  conditions at these locations, such as climate and land cover (abiotic
-  filter). (Guisan & Thuiller, 2005), (Elith et al., 2006)
-- Community assemblage at a particular site, which forms the species pool, can
-  be predicted either by combining independent single-species SDMs
-  (stacked-SDMs) or by directly modelling the entire species assemblage and
-  multiple species at the same time (joint SDMs) (Norberg et al., 2019)
+The next step in the predictive approach we put forward, starting with networks,
+then interactions, is to focus on species themselves, which form the species
+fool. The species present at a particular site who can interact form the species
+pool of the network. In biogeography, species presence/absence at a particular
+site can be predicted using species distribution models (SDMs) based on known
+occurrences and environmental conditions at these locations, such as climate and
+land cover (abiotic filter) [@Guisan2005PreSpe, @Elith2006NovMet].
+Including interactions, therefore the biotic filter, in SDMs will be discussed
+in the next section. 
+
+Community assemblage at a particular site, which forms the species pool, can be
+predicted either by combining independent single-species SDMs (stacked-SDMs) or
+by directly modelling the entire species assemblage and multiple species at the
+same time (joint SDMs) [@Norberg2019ComEva]. Building on the JSDM framework,
+hierarchical modeling of species communities was also suggested
+[@Ovaskainen2017HowMak], although the advantage of the latter is more to capture
+the processes that structure communities than to achieve better predictions. An
+interesting approach was put forward by [@Guisan2011SesNew] in spatially
+explicit species assemblage modeling (SESAM) is to constrain the SDM predictions
+using macro-ecological models. Properties such as species richness can be used
+to constrain assemblage predictions from stacked species distribution models
+[@DAmen2015UsiSpe]. Similarly, the next step we envision here, in light of the
+framework we proposed earlier, is to constrain distribution predictions using
+network properties. Specifically, the probabilistic view of networks could be
+useful here: probabilistic species pool has been suggested earlier
+[@Karger2016DelPro], and probabilistic networks used to predict distributions
+can generated better predictions for species distributions
+[@Staniczenko2017LinMac; @Blanchet2020CoOcc].
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
