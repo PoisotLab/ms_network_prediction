@@ -1,3 +1,7 @@
+---
+bibliography: [references.bib]
+---
+
 # Meta
 
 **BOX 1: Biological Examples**
@@ -24,22 +28,37 @@
 
 ## How do we fit a predictive model?
 
-- A predictive (supervised) ML model is trained on a dataset containing features
-  and labels, generally split into a training and validation subset. The model
-  learns to predict the labels from the training subset, then the fit is
-  evaluated on the validation set. Depending on the type of model, the
-  validation step is part of the training and the model will keep learning until
-  it reaches a certain threshold based on the loss function.
-- Fitting and adjusting the model can be done by adjusting the model parameters
-  depending on the type of model (layer compositions and network structures for
-  neural networks, number of trees and splits for tree-based models).
-- Studies with ML models predicting interactions, but not network properties:
-  species traits used to predict interactions and infer trait-matching rules
-  (Desjardins-Proulx et al., 2017; Pichler et al., 2020), automated discovery of
-  food webs (Bohan et al., 2011), reconstruction of ecological networks using
-  next-generation sequencing data (Bohan et al., 2017), network inference from
-  presence-absence data (Sander et al., 2017)
-- Ref 1, ref 2: Christin et al., 2019
+In machine learning, a predictive (supervised) model is trained on a dataset
+containing an outcome variable which we want to predict (also called label,
+response, or dependent variable) and predictor variables (also called features,
+descriptors, or independent variables) [@Kuhn2013AppPre; @KuhnTidMod]. Before
+fitting the model, the dataset will generally be split into a training and
+validation subset. The model learns to predict the outcome from the training
+subset, then the fit and model performance are evaluated on the validation set
+[@Christin2020GoiFur]. Depending on the type of model, the validation step is
+part of the training and the model will keep learning until it reaches a certain
+threshold based on the loss function. Fitting and adjusting the model can be
+done by adjusting the model parameters depending on the type of model (layer
+compositions and network structures for neural networks, number of trees and
+splits for tree-based models).
+
+Another important step in predictive modeling is feature engineering, i.e.
+adjusting and reworking the predictors to enable models to better uncover
+predictor-response relationships [@Kuhn2019FeaEng]. It is also important to
+consider that fitting a predictive model must be placed in a bigger frame with
+some more steps. For instance, some other general phases of the modeling process
+are: exploratory data analysis, model tuning and selection, and model evaluation
+[@KuhnTidMod]. Model validation will be discussed in the next section.
+
+Many studies have used machine learning models specifically with ecological
+interactions. Relevant examples include species traits used to predict
+interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
+@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
+reconstruction of ecological networks using next-generation sequencing data
+[@Bohan2017NexGlo], and network inference from presence-absence data
+[@Sander2017EcoNet]. However, few studies have ever used predictive ML models on
+network properties, such as connectance as mentioned earlier, rather than
+interactions.
 
 ## How do we validate a predictive model?
 
