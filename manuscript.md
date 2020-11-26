@@ -50,7 +50,7 @@ interactions that *could* occur in a community and it is understandable why atte
 to sample species interaction empirically is a considerable task. However, inferring 
 interactions through proxies like traits, phylogenies, geographical data and other frameworks 
 could prove to be promising [@Morales-Castilla2015InfBio]. But doing so requires representing (and constraining?) 
-interaction networks in a variety of ways, primarily graphs or matrices.
+interaction networks in a variety of ways first, primarily graphs or matrices.
 
 In a graph, each species is represented as a node and each interaction as an edge
 [@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
