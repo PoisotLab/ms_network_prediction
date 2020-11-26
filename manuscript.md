@@ -40,9 +40,9 @@
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
@@ -55,9 +55,7 @@
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
 ## What is the spatial scale suitable for the prediction of species interactions?
-- Out-of-sample validation remains one of the central challenges of developing a forecasting model. The short answer is that true validation is impossible outside of waiting to test our forecast against reality. This reality has short-term iterative 
-- How do we test a model’s performance with data we have? Crossvalidation (see how do we validate a predictive model) or iterative learning on time-series data. 
-- Dietze et al -  Near-term adaptive forecasting (2019)
+
 
 # Giving a temporal component to network predictions requires forecasting
 
@@ -65,7 +63,32 @@
 
 ## What data do we need to turn a predictive model into a forecasting model?
 
-## How can we validate a forecast, and would hindcasting help?
+## How can we validate a forecast?
+
+
+Often the purpose of building a model to predict how a system will behave in the future is to inform _present_ action [@Dietze]. Yet, the nature of forecasting---trying to predict the future---is that you can only know if a forecast "works" once it is too late to change it. Therefore, we want to maximize the chance a forecasting model is right.
+
+Methods for model validation can be applied to forecasting context.
+Crossvalidation (see _How do we validate a predictive model?_) can be used for forecasting.
+A model can iteratively be trained on data, adding time series
+
+Hindcasting based on known observations.
+However, these all rely on existing time-series of data, which is collected in
+past conditions that may not persist into the future.
+
+
+
+The future is uncertain. Any system we wish to forecast will undergo only one of many possible scenarios (see _Forecasting Box_), yet we can only observe the realized outcome of the system under the scenario that actually unfolds.
+It is therefore impossible to assess the quality of a forecasting model in scenarios that remain hypothetical.
+If the goal is to maximize the probability that reality will fall within the forecast's estimates, forecasts should incorporate as much uncertainty about the future scenario as possible.
+One way to do this is _ensemble modeling_ which combines forecasts from  multiple different models.
+However, as we increase the amount of uncertainty we incorporate into a forecasting model, the resolution of the forecast's predictions shrinks,
+and therefore the modeler be mindful of the trade-off between resolution and accuracy in any forecasting model (see _Forecasting Box_).
+A forecast inherently has a _resolution limit_ in space, time, and  organization.
+For example, one could never hope to predict the precise abundance of every species on Earth on every day hundreds of years into the future.
+However, a lower resolution forecast, like primary production will be at a maximum in the summer, is likely to be true. but at some point.
+
+
 
 ## What ecological knowledge would forecasting bring?
 
