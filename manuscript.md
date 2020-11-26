@@ -48,9 +48,9 @@ affected by the interaction, this can be either positively or negatively [@Moral
 this high 'diversity' of interaction types with the sheer number of potential 
 interactions that *could* occur in a community and it is understandable why attempting 
 to sample species interaction empirically is a considerable task. However, inferring 
-interactions through proxies like traits, phylogenies, geographical data and other frameworks 
-could prove to be promising [@Morales-Castilla2015InfBio]. But doing so requires representing (and constraining?) 
-interaction networks in a variety of ways first, primarily graphs or matrices.
+interactions through proxies such as traits, phylogenies, geographical data and other frameworks 
+could prove to be promising [@Morales-Castilla2015InfBio]. This requires viewing (and constraining?) 
+interaction networks in a variety of ways, such as using graphs or matrices.
 
 In a graph, each species is represented as a node and each interaction as an edge
 [@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
@@ -69,15 +69,6 @@ some of which can even be use to help the prediction of further interactions,
 by for example applying a constraint on the possible number of links based on
 the number of species present [@MacDonald2020RevLin].
 
- (older stuff)
-
-Species interaction encompass every action occurring between any set
-of two species (or more?) which can be declined into two main types: 
-positive and negative interactions (also neutral?) [@Morales-Castilla2015InfBio].
-As listed by [@Jordano2016ChaEco], these types of interaction may take many
-forms, where positive interactions could for example be mutualism, 
-commensalism and symbiosis and negative interactions be predation, herbivory
-and parasitism.
  
 ## How do we predict how species that have never co-occurred will interact?
 
