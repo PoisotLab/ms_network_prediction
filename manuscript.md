@@ -60,13 +60,13 @@ that could potentially interact [@Gomez2010EcoInt]. In fact, the contribution of
 interactions to the phylogenetic match between species is consistent even
 through scales [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].  
 
-A final family of models that gained interest in recent years are the
+A final family of methods that gained interest in recent years are the
 network-based models. These models use the existing set of interactions to
 identify the unmeasured traits (i.e. latent traits) driving the network
 structure [@Becker2020PreWil]. Species positioned closely in the network should
 interact with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. As
-for functional traits, these unmeasured latent traits have evolved, and thus
-phylogenies can be used to further inform these models [@Rossberg2006FooWeb;
+for functional traits, phylogenies can inform these models because these
+unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
 @Elmasri2020HieBay]. These network-based models are unfortunatly sensitive to
 sampling biases and limited to prediction for species for which we already have
 interaction data [@Becker2020PreWil].
