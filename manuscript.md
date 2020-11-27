@@ -1,7 +1,3 @@
----
-bibliography: [references.bib]
----
-
 # Meta
 
 **BOX 1: Biological Examples**
@@ -56,34 +52,40 @@ bibliography: [references.bib]
 
 ## How do we predict what the species pool at a particular location is?
 
-The next step in the predictive approach we put forward, starting with networks,
-then interactions, is to focus on species themselves, which form the species
-fool. The species present at a particular site who can interact form the species
-pool of the network. In biogeography, species presence/absence at a particular
-site can be predicted using species distribution models (SDMs) based on known
-occurrences and environmental conditions at these locations, such as climate and
-land cover (abiotic filter) [@Guisan2005PreSpe, @Elith2006NovMet].
-Including interactions, therefore the biotic filter, in SDMs will be discussed
-in the next section. 
+The next step in the predictive approach we put forward, starting with networks
+prediction, then interactions, is to focus on species themselves. The species
+present at a particular site who can interact form the species pool of the
+network. A common approach in biogeography to predict whether a species will be
+present or absent at specific sites is to use species distribution models (SDMs)
+based on known occurrences and environmental conditions at these locations, such
+as climate and land cover (abiotic filter) [@Guisan2005PreSpe,
+@Elith2006NovMet]. Including interactions or co-occurrences in SDMs, therefore
+the biotic filter, generally improves predictive performance [@Wisz2013RolBio]
+(discussed in more details in the next section).
 
-Community assemblage at a particular site, which forms the species pool, can be
-predicted either by combining independent single-species SDMs (stacked-SDMs) or
-by directly modelling the entire species assemblage and multiple species at the
-same time (joint SDMs) [@Norberg2019ComEva]. Building on the JSDM framework,
-hierarchical modeling of species communities was also suggested
-[@Ovaskainen2017HowMak], although the advantage of the latter is more to capture
-the processes that structure communities than to achieve better predictions. An
-interesting approach was put forward by [@Guisan2011SesNew] in spatially
-explicit species assemblage modeling (SESAM) is to constrain the SDM predictions
-using macro-ecological models. Properties such as species richness can be used
-to constrain assemblage predictions from stacked species distribution models
-[@DAmen2015UsiSpe]. Similarly, the next step we envision here, in light of the
-framework we proposed earlier, is to constrain distribution predictions using
-network properties. Specifically, the probabilistic view of networks could be
-useful here: probabilistic species pool has been suggested earlier
-[@Karger2016DelPro], and probabilistic networks used to predict distributions
-can generated better predictions for species distributions
-[@Staniczenko2017LinMac; @Blanchet2020CoOcc].
+Several approaches have been proposed for multi-species predictions, as is
+required for the species pool. Community assemblage at a particular site can be
+predicted either by combining independent single-species SDMs (stacked-SDMs,
+SSDMs) or by directly modelling the entire species assemblage and multiple
+species at the same time (joint SDMs, JSDMs) [@Norberg2019ComEva]. Building on
+the JSDM framework, hierarchical modeling of species communities was also
+suggested [@Ovaskainen2017HowMak], and has the advantage of capturing processes
+that structure communities. An interesting approach, put forward by
+@Guisan2011SesNew with spatially explicit species assemblage modeling (SESAM),
+is to constrain the SDM predictions using macro-ecological models. Properties
+such as species richness can be used to constrain assemblage predictions from
+stacked species distribution models [@DAmen2015UsiSpe]. Similarly, the next step
+we envision here, in light of the framework we proposed earlier, is to constrain
+distribution predictions using network properties. This would also build on
+previous calls to adopt a probabilistic view: there have been calls for a
+probabilistic species pool [@Karger2016DelPro], and more importantly including
+interactions through Bayesian networks and propagating conditional dependencies
+has generated better range predictions [@Staniczenko2017LinMac].
+@Blanchet2020CooNot argue that this is more mathematically explicit about the
+relation between species, thus avoiding some confusion between interactions and
+co-occurrences, but that it is also technically challenging and requires prior
+knowledge of the interactions. This could potentially be solved through our
+framework of predicting networks first, interactions next, and finally species.
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
