@@ -85,7 +85,7 @@ properties (e.g. connectance)? If so, which regions or species groups need
 special conservation efforts? These overarching questions are yet to be answered
 [but see @Albouy2013FroPro; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
 that this roadmap towards forecasting ecological networks provide useful
-guidelines to ultimatly being able to predict more accuratly how climate change
+guidelines to ultimatly be able to predict more accuratly how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
 
 # References
