@@ -54,11 +54,75 @@
 
 ## How could predictions for individual species, such as those used by IPBES/IUCN, be improved by considering ecological interactions?
 
-## What is the spatial scale suitable for the prediction of species interactions?
-*Whose interaction are you looking for?* The spatial scale of interactions vary with species behaviour, size, phenological characteristics, and also with phylogenetic resolution (whether we are investigating individual-based networks or food webs, for example). Having that in mind, we can think of “small scale” and “large scale” as a property relative to the overall system we are investigating.  
-*Small scale, if time-specific.* Small scale would focus on interactions that occur at individual and population levels, and therefore are much more prone to variability. In this sense, the spatial scale of prediction would have to be sufficient to capture life-range variation (both in the environment and in the species pool). The downside is that it would probably require a lot of high quality training data. As we gain on precision, we would lose on generality.  
-*Large scale, when phenology is irrelevant.* When investigating interactions between species and higher levels, the evolutionary timescale takes place. This means that population and individual variation “average out”, and now spatial scale can be large enough to capture steep environmental changes, extinctions and species turnover. The downside is that it would be cool only at large temporal scales too, as it would ignore ongoing population dynamics. As we gain on generality, we would lose on precision.  
-[@Bartomeus2016ComFra; @Trojelsgaard2016EcoNeta]
+## What is the spatial scale suitable for the prediction of species interactions?  
+
+If we trace the mechanisms that result in a given interaction to the smallest
+scale, we can end up looking at genes interacting with each other resulting in
+fluctuation of genomes and phenotypes across populations of a given species. At
+a planetary scale, however, interactions can seem too similar because individual
+differences are grouped together at coarser resolutions. Additionally, there is
+a trade-off when we combine different taxonomic and spatial scales: assessing
+interactions between higher taxonomic levels at a microscale level ignores
+individual plasticity, while individual-level interactions at a macroscale
+tangents to stochasticity. Another component the interplay between scale and
+interactions is *time*. Different timeframes enclosure different dynamics
+[@Trojelsgaard2016EcoNeta]. For example, an observation made in a timeframe too
+short can capture an opportunistic interaction, which, by definition, does not
+frequently occur. If the time considered is too long, it will involve the
+evolutionary history of species, adaptation and co-evolution. The spatial scale
+is connected to the phylogenetic and time scales in the sense that individuals
+are highly affected by the present, local environmental variables, while species
+and clades have their evolutionary history defined by historical series of
+events. Therefore, what should be the appropriate spatial scale for the
+prediction of species interactions?  
+
+As described above (PR #20), we can use different proxies to predict potential
+interactions. The choice of such proxies should be theoretically linked to the
+spatial scale we are using in our prediction [@Wiens1989SpaSca]. For example,
+@Bartomeus2016ComFra describe how functional traits influence the structure of
+ecological networks in three different ways: they are selected by the
+environmental conditions, they alter the probability of interactions and finally
+they determine the interaction functioning. The environmental filtering occurs
+at a continental level, subsetting species from the regional pool to co-occur
+locally. At this level we can not predict interactions properly, since we are
+only assessing the probability that two species would occur at the same place. A
+continental spatial scale in this case means that the total extent includes
+all the species distribution limits, and the samples can include more than one
+population.  
+
+At a second level we can use morphological traits of co-occurring species to
+assess the probability of interaction between them [@Bartomeus2016ComFra]. This
+means that we are considering processes that act on a timescale large enough to
+shape the population, but too small to shape its evolution. This translates at a
+spatial extent that does not necessarily capture the entire distribution of a
+given set of species, with a resolution that is sufficient to capture the
+phenotypical variability of the species. At this intermediate scale, we can
+infer interactions through the phylogenetic similarity (or match) between
+species, assuming their functional traits and the interactions themselves are
+phylogenetically conserved [@Gomez2010EcoInt]. In fact, if the niche is a
+property of the species and it is phylogenetically conserved as well, we can
+think of the probability that one species will interact with another as the
+"amount" of niche superposition between them. This logic also applies when we
+want to evaluate potential interactions for bipartite networks and identify
+species that can replace one another inside each set
+[@Desjardins-Proulx2017EcoInt].  
+
+At an even smaller scale, behavioural traits would help us model interactions
+efficiency [@Bartomeus2016ComFra], and take a step closer to realized
+interactions. At this point, we would need a good amount of good quality
+training data to model potential interactions. The spatial resolution in this
+case should be fine enough to capture foraging area, and sometimes natural
+history variation inside a population, and that would make our model more
+precise, but much less generalizable. At this scale the abundance is also
+important, as it modulates the probability of encounter along with behaviour
+[@Wells2013SpeInt].  
+
+Finally, ecological interactions can potentially be predicted at regional and
+local scales as long as spatial resolution and extension are adequate to capture
+the right variability of the data to be learned from. It is also fundamental to
+have consistency among the variables used: life-history traits, for instance, are
+variables that act at short timeframes and will add stochasticity to models
+that predict interactions at coarse resolution, and vice-versa.  
 
 # Giving a temporal component to network predictions requires forecasting
 
