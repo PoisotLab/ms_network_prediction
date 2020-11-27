@@ -27,9 +27,11 @@
 ## How do we validate a predictive model?
 
 ## How do we propagate uncertainty through a predictive model?
-Bayesian paradigm produces a posterior distribution as an output for each model. For each model in a chain, sample the inputs from the posterior of the input models.
-Ensemble modeling 
-Monte-Carlo and other stochastic / simulation approaches
+
+In order to predict networks across space, we need to combine multiple models together.
+The Bayesian paradigm provides a convenient solution to this---if we have a chain of models where each model feeds into the next, we can sample from the posterior of the input models.
+A different approach is _ensemble modeling_ which combines the predictions made be several models, where each model is predicting the same thing.
+
 Peters and Herrick (2004)?, Parysow et al. (2000), Benke et al. (2018)
 
 ## How do we determine what interaction networks are feasible?
@@ -44,9 +46,9 @@ Peters and Herrick (2004)?, Parysow et al. (2000), Benke et al. (2018)
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
