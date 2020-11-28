@@ -42,7 +42,15 @@
 
 ## How are interaction strengths actually inferred?
 
-There are many ways to infer interaction strength, whether it is empirically or theoretically. 
+**General discussion of interaction strength inference method**
+- Interaction strength can either be infered empirically or theoretically [@Berlow2004IntStr]. Theoretical inference can be more mechanistic or with the Lotka-Volterra framework.
+- Theoretical methods which have already been done are for example based on foraging theory [@Petchey2008], more physical/functionnal theory [@Portalier2018, ]
+- Over different approaches to infer interaction strength, body-size or predator-prey body-size ratios have largerly been used as a predictor [@]
+
+**Method we suggest**
+- I would suggest to go, in general, with the inference of energy fluxes since it can be done with relatively accessible data like body-sizes, metabolic rates and abundances [@Berlow2004IntStr. Barnes2018EneFlua], thus probably being the easiest framework to work with and integrate in this immense pipeline.
+- Could it be based on how @Barnes2018EneFlua do it, but since I doubt we will have individual-based information, just start at the species-level? 
+- At the same time, some variable like metabolic rates can vary dependin on the stage of life of a species?
 
 ## Could we use hypergraphs and multi-layer networks to predict more interactions? 
 
