@@ -28,6 +28,12 @@
 
 ## How do we propagate uncertainty through a predictive model?
 
+In order to predict networks across space, we need to combine multiple models---one which predicts what the species pool will be at a given location, and one to predict what interaction networks composed from this species pool are likely (see _conceptual figure_).
+Both of these models contain uncertainty.
+The Bayesian paradigm provides a convenient solution to this---if we have a chain of models where each model feeds into the next, we can sample from the posterior of the input models.
+A different approach is _ensemble modeling_ which combines the predictions made be several models, where each model is predicting the same thing.
+
+
 TO DO:
 - Bayesian paradigm produces a posterior distribution as an output for each model. For each model in a chain, sample the inputs from the posterior of the input models.
 - Ensemble modeling
