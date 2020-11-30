@@ -8,8 +8,7 @@
 
 ## Why do we need to predict interactions between species?
 
-Ecosystems are build up by a set of species that interact directly or indirectly through elements from their common environment. These interactions form complex networks that structure ecological communities and maintain ecosystem functions[@Landi2018ComSta; Albrecht et al 2018]. The understanding of interactions is
-therefore crucial for ecosystem management, but also for many other aspects of
+Ecosystems are build up by a set of species that interact directly or indirectly through elements from their common environment. These interactions form complex networks that structure ecological communities and maintain ecosystem functions [@Landi2018ComSta; @Albrecht2018PlaAni]. The understanding of interactions is therefore crucial for ecosystem management, but also for many other aspects of
 biodiversity. For instance, it is well known that ecosystem functions lead to
 services that are related to basic issues of health and the economy of humans, like pathogens transmission, food security, or the availability of freshwater. But with a changing world that includes a high rate of biodiversity loss, land transformation, and the worldwide increase in temperature, researchers are worried about how to protect human lives and improve life quality in different countries, having into account the measure of the change in the world in the following years.  
 
@@ -31,7 +30,7 @@ infer potential from realized interactions and empirical data about populations
 Because interactions carry a lot of ecological and evolutive information about
 biodiversity, predicted links can help us to have a more complete framework to
 understand processes and future rearrangements of nature. Moreover,
-using reliable current data for making predictions about how ecosystems will change over time will give us stronger arguments that could be communicated to decision-makers and the scientific community about what are future environmental risks awaiting and how to mitigate them [Kindsvater 2018].
+using reliable current data for making predictions about how ecosystems will change over time will give us stronger arguments that could be communicated to decision-makers and the scientific community about what are future environmental risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
 
 
 ## Why predict networks before interactions?
