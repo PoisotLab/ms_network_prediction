@@ -52,6 +52,8 @@
 - Could it be based on how @Barnes2018EneFlua do it, but since I doubt we will have individual-based information, just start at the species-level? 
 - At the same time, some variable like metabolic rates can vary dependin on the stage of life of a species?
 
+Not sure I understand the ATN model from @Berlow2009: They mesure interaction strength of a species as the difference of biomass in that species when another species is removed?
+
 ## Could we use hypergraphs and multi-layer networks to predict more interactions? 
 
 # Network predictions must have a spatial component
