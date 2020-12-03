@@ -6,7 +6,30 @@ bibliography: [references.bib]
 
 **BOX 1: Biological Examples**
 
-## What is the paper about?
+## Why should we predict and forecast species interaction networks?
+
+Networks of species interactions underpin our understanding of key ecological
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they have initially
+been used to describe the interactions *within* a community, our interest in the
+last decade has shifted towards understanding their structure and their
+variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and
+established network ecology as an important emerging component of biogeography
+and macroecology. But our understanding of network structure, and in particular
+across space, is limited by the availability of data. Characterizing a network
+requires an exhaustive list of species interactions at the sampled location, and
+these data remain extremely scarce. This is because sampling ecological
+interactions is extremely difficult [@Jordano2016SamNet]; in turn, the
+difficulty of sampling interactions can lead to biases in our estimate of
+network structure [@deAguiar2019RevBia]. As many ecological systems, ecological
+networks have entered their "long now" [@Carpenter2002EcoFut], where
+contemporary actions will have long-term, low-predictability consequences,
+sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to
+develop a roadmap that would enable prediction (for the present) and forecasting
+(for the future) of network structure [@McCann2007ProBio; @Seibold2018NecMul],
+of the processes it encodes [@Thompson2012FooWeb], that can account for the
+spatial, temporal, and climate change dimensions [@Burkle2011FutPla]. In this
+paper, we adopt a question-driven approach to identify opportunities,
+roadblocks, and tools that are part of this research agenda.
 
 ## Who would benefit from it?
 
@@ -48,12 +71,54 @@ change over time will give us stronger arguments that could be communicated
 to decision-makers and the scientific community about what are future environmental 
 risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
 
+## Why predict networks and interactions at the same time?
 
-## Why predict networks before interactions?
+Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a set of interactions, but also a larger set of non-interactions.
+If we aim to predict the structure of networks from the "bottom-up"---
+by considering each pairwise combination of $S$ different species---we are left with $S^2$ interaction values to estimate. Instead, we can use our existing understanding of the mechanisms that structure ecological networks to widdle down the set of feasible adjacency matrices, thereby reducing the amount of information we must predict, and making the problem of predicting interactions less daunting.
+
+The processes that structure ecological networks do not only occur at the scale of interactions---there are also processes at the network level which  limit what interactions are possible.
+The realized structure of a network is the synthesis of the interactions forming the basis for network structure, and the network structure refining the possible interactions---"Part makes whole, and whole makes part" [@Levins1987DiaBio].
 
 ## What is currently limiting our ability to predict network structure?
 
 ## What is currently enabling our ability to predict network structure?
+
+The acquisition of biodiversity and environmental data has tremendously 
+increased over the past decades thanks to the rise of citizen science 
+[@Dickinson2010CitSci] and of novel technology [@Stephenson2020TecAdv], 
+including wireless sensors [@Porter2005WirSen], DNA monitoring 
+[@Creer2016EcoSF], and satellite remote sensing [@Skidmore2015AgrBio; @Lausch2016LinEar]. 
+Standard practices in data integration and quality control [@Kissling2018BuiEss] and in 
+Next-generation biomonitoring [NGB; @Makiola2020KeyQue] are being set, with favorable 
+consequences on our ability to make reliable predictions of many ecosystem properties 
+and components. Open access databases, such as [GBIF](https://www.gbif.org/) (for biodiversity data), 
+[NCBI](https://www.ncbi.nlm.nih.gov/) (for taxonomic and genomics data), 
+[TreeBASE](https://www.treebase.org/treebase-web/home.html) (for phylogenetics data), 
+[CESTE](https://icestes.github.io/) [@Jeliazkov2020GloDat] (for metacommunity ecology 
+and species traits data), and [WorldClim](https://www.worldclim.org/data/bioclim.html) 
+(for bioclimatic data) contain millions of high-quality data that can be integrated and 
+used to monitor and model biodiversity at the global scale. Regarding species interactions 
+data, [Mangal](https://mangal.io/#/) is perhaps the most comprehensive open database of 
+published ecological networks [@Poisot2016ManMak], whereas 
+[GloBI](https://www.globalbioticinteractions.org/about) is an extensive database 
+of realized and potential species interactions [@Poelen2014GloBio].
+
+The rise of computing power, along with recent advances in machine learning techniques 
+and applications (see @Christin2019AppDee for the use of deep learning in ecology), 
+enable us to manipulate a very large number of data from different sources. Accurate 
+predictions of ecological networks across space can thus be generated by integrating 
+various high-quality, open access datasets, such as the ones archived in the abovementioned 
+databases, if we use predictive methods appropriately. Moreover, ongoing developments in 
+the field of artificial intelligence are aimed at using deep learning more efficiently in 
+low-data regimes [e.g. @Antoniou2018DatAug] and with unbalanced datasets [@Chawla2010DatMin]. 
+Considering the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of data 
+of species interactions, the prediction of ecological networks will undoubtedly benefit from these improvements. 
+The advancement of prediction techniques coupled with a movement towards standardising data 
+collection protocols (e.g. @Perez-Harguindeguy2013NewHan for plant functional traits) and  
+metadata (e.g. [DarwinCore](https://www.tdwg.org)), which would facilitate interoperability and 
+integration of datasets, as well as a growing interest at the government level [@Scholes2012BuiGlo] 
+paints a positive picture for the prediction of networks in the coming years.
 
 ![TODO](figures/conceptual.png){#fig:conceptual}
 
@@ -81,9 +146,9 @@ risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred? 
+## How are interaction strengths actually inferred?
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions? 
+## Could we use hypergraphs and multi-layer networks to predict more interactions?
 
 # Network predictions must have a spatial component
 
