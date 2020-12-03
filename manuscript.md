@@ -2,10 +2,22 @@
 
 **BOX 1: Biological Examples**
 
+1. Pollinator-Plant conservation  
+   Most flowering plant rely on animal pollinators for reproduction. The
+   persistance of many rare plants is therefore dependent on the presence and
+   abundance of these pollinator species. Because these focal plants are rare,
+   the animal pollinators they rely on mainly feed on other more common plant
+   species. Consequently, the persistance of rare plant species depends on the
+   persistance of more common plant species in the community. Therefore,
+   management of rare plant species would benefit from a complete portrait of
+   the pollinator-plant network. For the same reasons, we could also argue that
+   the long-term persistance of pollinator species depends on the presence and
+   abundance of other pollinator they share plant host.
+   
+   [@gibson2006PolWebs]https://besjournals-onlinelibrary-wiley-com.proxy3.library.mcgill.ca/doi/full/10.1111/j.1365-2664.2006.01130.x
 
-1. Range shift of pollinators/plants system
 1. Virus spillover
-
+[@Johnson2020GloShi] https://royalsocietypublishing-org.proxy3.library.mcgill.ca/doi/full/10.1098/rspb.2019.2736
 
 ## What is the paper about?
 
