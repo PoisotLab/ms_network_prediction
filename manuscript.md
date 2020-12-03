@@ -42,6 +42,39 @@ bibliography: [references.bib]
 
 ## How do we predict how species that have never co-occurred will interact?
 
+The probability of the realization of an ecological interaction depend on
+co-occurrence in space and time, abundance and traits matching
+[@Poisot2014SpeWhy; @Pichler2019MacLea]. Given two species that co-occur, a
+neutral approach to probabilistic interactions would be based on abundances and
+"neutralize" the effect of traits matching [@Canard2012EmeStr]. In this case we
+can infer the probability of an interaction to occur by chance, just because two
+species are abundant enough to bump into each other, and should be a good
+parameter against which we could test other factors that limit the realization
+of an interaction.   
+
+However, some proxies can be used to make more accurate predictions of potential
+ecological interactions. For instance, functional traits are good such proxies
+because they are highly selected by ecological interactions and determine
+forbidden links (such as the mechanical impossibility of a bird to consume seeds
+larger than its beak). The fact that functional traits suffer some kind of
+selective pressure and because niches tend to be conserved throughout a
+phylogenetic tree, ecological interactions also tend to be conserved, and
+therefore we could also use phylogenies to infer pairs of co-occurring species
+that could potentially interact [@Gomez2010EcoInt]. In fact, the contribution of
+interactions to the phylogenetic match between species is consistent even
+through scales [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].  
+
+A final family of methods that gained interest in recent years are the
+network-based models. These models use the existing set of interactions to
+identify the unmeasured traits (i.e. latent traits) driving the network
+structure [@Becker2020PreWil]. Species positioned closely in the network should
+interact with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. As
+for functional traits, phylogenies can inform these models because these
+unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
+@Elmasri2020HieBay]. These network-based models are unfortunatly sensitive to
+sampling biases and limited to prediction for species for which we already have
+interaction data [@Becker2020PreWil].
+
 ## What does interaction strength mean?
 
 ## How are interaction strengths actually inferred? 
