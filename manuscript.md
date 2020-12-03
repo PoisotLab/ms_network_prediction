@@ -13,11 +13,20 @@
    the pollinator-plant network. For the same reasons, we could also argue that
    the long-term persistance of pollinator species depends on the presence and
    abundance of other pollinator they share plant host.
-   
+
    [@gibson2006PolWebs]https://besjournals-onlinelibrary-wiley-com.proxy3.library.mcgill.ca/doi/full/10.1111/j.1365-2664.2006.01130.x
 
-1. Virus spillover
-[@Johnson2020GloShi] https://royalsocietypublishing-org.proxy3.library.mcgill.ca/doi/full/10.1098/rspb.2019.2736
+1. Zoonotic disease spillover  
+   Many infectious diseases originate from animal. The prediction of potential
+   disease transmission across species (including humans) is therefore of major
+   concern for public health. Because many animals are changing their range in
+   response to warming and other anthropological changes, species that never
+   co-occured will encounter. This will create many opportunities for viral
+   spillover events. Only by simultaniously identifying potential hosts and
+   accuratly predicting species range shifts, we will be able to forecast the
+   emergences of new infectious diseases and help prevent public health hazards.
+   [@Johnson2020GloShi]
+   https://royalsocietypublishing-org.proxy3.library.mcgill.ca/doi/full/10.1098/rspb.2019.2736
 
 ## What is the paper about?
 
