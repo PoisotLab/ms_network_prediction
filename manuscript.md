@@ -73,7 +73,7 @@ While interactions improve SDM predictions for individual species, their
 importance for conservation goes beyond the scope of just SDMs. Interactions are
 fundamentally linked to conservation issues and are crucial to consider in
 conservation assessments, which is increasingly recognized by conservation
-organisms. According to IUCN, interactions represent an important gap and
+organisations. According to IUCN, interactions represent an important gap and
 challenge in the assessment of species vulnerability to climate change, a
 "seldom considered, but important driver of climate change impact on species",
 and their integration was identified as an important methodological advance to
