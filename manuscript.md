@@ -75,6 +75,41 @@ with relatively small amounts of data using existing process-based models.
 
 ## How do we fit a predictive model?
 
+In machine learning, a predictive (supervised) model is trained on a dataset
+containing an outcome variable which we want to predict (also called label,
+response, or dependent variable) and predictor variables (also called features,
+descriptors, or independent variables) which will be used for
+prediction[@Kuhn2013AppPre; @KuhnTidMod]. Before fitting the model, the dataset
+will generally be split into a training and validation subset. The model learns
+to predict the outcome from the training subset, then the fit and model
+performance are evaluated on the validation set [@Christin2020GoiFur]. Depending
+on the type of model, the validation step is part of the training and the model
+will keep learning until it reaches a certain threshold based on the loss
+function. Fitting and adjusting the model can be done by adjusting the model
+parameters depending on the type of model (layer compositions and network
+structures for neural networks, number of trees and splits for tree-based
+models).
+
+Another important step in predictive modeling is feature engineering, i.e.
+adjusting and reworking the predictors to enable models to better uncover
+predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
+include projecting the predictors into a principal component analysis space, and
+selecting only a dimensions for the modeling, as in our machine learning
+illustration. The modeling process can have a few more steps, some which worth
+mentioning include: exploratory data analysis, model tuning and selection, and
+model evaluation [@KuhnTidMod]. Model validation will be discussed in the next
+section.
+
+Many studies have used machine learning models specifically with ecological
+interactions. Relevant examples include species traits used to predict
+interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
+@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
+reconstruction of ecological networks using next-generation sequencing data
+[@Bohan2017NexGlo], and network inference from presence-absence data
+[@Sander2017EcoNet]. However, few studies have ever used predictive ML models on
+network properties, such as connectance as mentioned earlier, rather than
+interactions.
+
 ## How do we validate a predictive model?
 
 ## How do we propagate uncertainty through a predictive model?
