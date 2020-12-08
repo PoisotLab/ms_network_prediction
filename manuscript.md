@@ -40,6 +40,39 @@ bibliography: [references.bib]
 
 ## What is a species interaction?
 
+Interactions between species can be manifested in a multitude of ways e.g. different 
+types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted 
+between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread 
+between these multiple forms of interactions is that *at least* one of the species is 
+affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio]. Combine 
+this high 'diversity' of interaction types with the sheer number of potential 
+interactions that *could* occur in a community and it is understandable why attempting 
+to sample species interaction empirically is a considerable task. However, inferring 
+interactions through proxies such as traits, phylogenies, geographical data and other frameworks 
+could prove to be promising [@Morales-Castilla2015InfBio]. This requires viewing (and constraining?) 
+interaction networks in a variety of ways, such as using graphs or matrices.
+
+In a graph, each species is represented as a node and each interaction as an edge
+[@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
+representation of the interaction. When using a matrix format we can construct them in 
+such a way as to represent different interaction structures, namely bipartite 
+networks where we have two interacting species guilds and have one guild be represented 
+by rows and the other by columns e.g. hosts and parasites, k-partite networks which
+can serve as a way to integrate various bipartite networks e.g. parasitoid webs, 
+seed dispersal networks, and pollination networks [@Pocock2012RobRes],
+or we can use unipartite networks where each species *appears* twice - 
+both as a row and column species. For a presence/absence interaction network, the 
+matrix is filled with 1 and 0 representing an interaction and an
+absence of interaction respectively [@Dunne2006NetStr]. 
+
+The representation of species interactions or interaction networks in the
+form of graphs and matrices is quite effective for their description and analysis.
+It allows the calculation of many network properties (particularly pertaining to structure), 
+some of which can even be use to help the prediction of further interactions,
+by for example applying a constraint on the possible number of links based on
+the number of species present [@MacDonald2020RevLin].
+
+ 
 ## How do we predict how species that have never co-occurred will interact?
 
 The probability of the realization of an ecological interaction depend on
