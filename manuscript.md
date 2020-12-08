@@ -5,6 +5,11 @@
 ## What is the paper about?
 
 ## Who would benefit from it?
+The ability to reliably predict and forecast species interactions would improve our understanding of how species function within ecosystems and inform conservation efforts for protecting species, communities and ecosystems. Knowledge of species interactions is one of the most severe biodiversity shortfalls [@Hortal2015SevSho], because data collection is tedious, time-consuming and expensive. Predicting these interactions from existing datasets is the only way to have information for the bulk of species interacting in a particular ecosystem, and especially for interactions across the landscape. 
+
+First, these predictions would help unify the fields of community, network, and ecosystem ecology, and, in particular, move the field forward toward a comprehensive but cohesive niche concept [@Gravel2019BriElt], improve the quantification of functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe], re-evaluate meta-communities in light of trophic levels [@Guzman2018TowMul], and enable a new line of research into the biogeography of species interactions [@Massol2017IslBio;Braga2019SpaAna]. Second, having knowledge of species interactions could greatly improve our models for other ecological phenomena. The vast majority of predictions and forecasts are currently made using only environmental variables. We would be much better able to anticipate when a species will be able track its climate niche or tolerate a changing climate if we also knew the antagonistic or facilitative relationships with other species in the area. Even process-based ecosystem models [ref] could include much more detailed information on how elements of those ecosystems (species) interact. Third, reliable predictions of species interactions are critical for informing ecosystem management[@Harvey2017BriEco] and systematic conservation prioritization [@Pollock2020ProBio], and for anticipating extinctions and their consequences [@McDonald-Madden2016UsiFoo; McWilliams2019TheSta]. Reliable predictions for biodiversity change are increasingly sought after in international conservation programs (e.g. IPBES and GEO BON), and predictions that incorporate species interactions could substantially improve these assessments.
+
+
 
 ## Why do we need to predict interactions between species?
 
