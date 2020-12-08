@@ -246,7 +246,24 @@ interactions.
 
 ## How do we validate a predictive model?
 
+After we fit a model, we inevitably want to see how "good" it is. One of the context for validation is _model comparison_, where we aim to see which of a competing set of models provides the best explanation for a data set.
+A naive initial approach is to simply compute the average error between
+the model's prediction and the true data we have, and choose the model with the smallest error---however this approach inevitably results in _overfitting_.
+One approach to avoid overfitting is using information criteria (e.g. AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around the heuristic that good models maximize the ratio of information provided by the model to the number of parameters it has.
+
+However, when the intended use-case of a model is prediction, the relevant form of validation is _predictive accuracy_. _crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation methods divide the original dataset into two---one which is used to fit the model (called the _training_ set) and one used to validate its predictive accuracy on the data that is hasn't "seen" yet (called the _test_ set).
+This procedure is often repeated for different subdivisions of the dataset. One powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers each data points uniquely as a test set, enabling sensitivity analysis. However, these methods are typically limited by the ensuing computation time requirements.
+
+
 ## How do we propagate uncertainty through a predictive model?
+
+In order to predict networks across space, we need to combine multiple models---one which predicts what the species pool will be at a given location, and one to predict what interaction networks composed from this species pool are likely (see _conceptual figure_).
+Both of these models contain uncertainty.
+The Bayesian paradigm provides a convenient solution to this---if we have a chain of models where each model feeds into the next, we can sample from the posterior of the input models.
+A different approach is _ensemble modeling_ which combines the predictions made be several models, where each model is predicting the same thing.
+
+Error propagation is an important step in the modeling of ecological systems, as it provides estimates of the uncertainty around predictions. More generally, error propagation describes the effect of the uncertainty of input variables on the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp]. @Benke2018ErrPro identifies two broad approaches to model error propagation: analytically using differential equations or stochastically using Monte-Carlo simulation methods. The second approach is based upon samples of probability distributions and is more readily applicable to our problem of predicting ecological networks across space using our proposed methodological workflow. Indeed, each model's inputs can be sampled from the outputs of the preceding ones. Errors induced by the spatial or temporal extrapolation of data also need to be taken into account when estimating the uncertainty of a model's output [@Peters2004StrEco].
+
 
 ## How do we determine what interaction networks are feasible?
 
