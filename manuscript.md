@@ -82,6 +82,33 @@ The realized structure of a network is the synthesis of the interactions forming
 
 ## What is currently limiting our ability to predict network structure?
 
+Predicting the structure of ecological networks is dependent on species interactions data,
+but species interactions are challenging to sample
+comprehensively [@Bennett2019PotPit; @Jordano2016SamNet] and sampling methodology
+matters [@deAguiar2019RevBia]. This leads to a scarcity of data that can limit the range of computational tools usable by network ecologists. Most deep learning methods, for instance, are very data expensive. This paucity of data is compounded by
+a collection of biases that can be found in existing datasets. Species interaction
+datasets are typically dominated by food webs, pollination, and host-parasite networks
+[@Ings2009EcoNet; @Poisot2020EnvBia].
+This could prove to be a limiting factor when trying to understand or predict
+networks of *under represented* interaction types or trying to integrate
+different network types [@Fontaine2011EcoEvo], especially given the structural variation of
+ecological networks [@Michalska-Smith2019TelEco]. Spatial biases in data coverage are
+prevalent at the global scale (with South America, Africa and Asia being under
+represented) and different interaction types show biases towards different biomes (or
+environmental conditions) [@Poisot2020EnvBia].
+These 'spatial gaps' serve as a limitation to our ability to confidently make
+predictions when accounting for real-world environmental conditions, especially when
+encountering environments for which there are no analogous data. This stresses the need for an integrated, flexible, and data-efficient set of computational tools which will allow us to predict ecological networks accurately from existing and imperfect datasets.  
+
+We are also currently limited by the level of detail at which we can describe ecological networks, *i.e.* the level of organisation. For instance, our
+understanding of individual based networks [see for example @Araujo2008NetAna; @Tinker2012StrMec] is still in its infancy
+[@Guimaraes2020StrEco] and acts as a 'lower-limit' at which we
+would be able to predict networks. On the note of scale, the resolution of
+environmental (or landscape) data would also limit our ability to predict
+networks at finer scales, although current trends in e.g. remote sensing would
+suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
+
+
 ## What is currently enabling our ability to predict network structure?
 
 The acquisition of biodiversity and environmental data has tremendously 
