@@ -34,7 +34,7 @@
     {
       "affiliations": [
         "McGill University",
-        "Québec Centre for Biodiversity Science"
+        "Québec Centre for Biodiversity Sciences"
       ],
       "familyname": "Caron",
       "givennames": "Dominique",
@@ -74,6 +74,15 @@
       "familyname": "Mercier",
       "givennames": "Benjamin",
       "orcid": "0000-0002-4104-9463"
+    },
+    {
+      "affiliations": [
+        "McGill University",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Pollock",
+      "givennames": "Laura",
+      "orcid": "TODO"
     },
     {
       "affiliations": [
