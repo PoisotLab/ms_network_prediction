@@ -257,6 +257,14 @@ This procedure is often repeated for different subdivisions of the dataset. One 
 
 ## How do we propagate uncertainty through a predictive model?
 
+In order to predict networks across space, we need to combine multiple models---one which predicts what the species pool will be at a given location, and one to predict what interaction networks composed from this species pool are likely (see _conceptual figure_).
+Both of these models contain uncertainty.
+The Bayesian paradigm provides a convenient solution to this---if we have a chain of models where each model feeds into the next, we can sample from the posterior of the input models.
+A different approach is _ensemble modeling_ which combines the predictions made be several models, where each model is predicting the same thing.
+
+Error propagation is an important step in the modeling of ecological systems, as it provides estimates of the uncertainty around predictions. More generally, error propagation describes the effect of the uncertainty of input variables on the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp]. @Benke2018ErrPro identifies two broad approaches to model error propagation: analytically using differential equations or stochastically using Monte-Carlo simulation methods. The second approach is based upon samples of probability distributions and is more readily applicable to our problem of predicting ecological networks across space using our proposed methodological workflow. Indeed, each model's inputs can be sampled from the outputs of the preceding ones. Errors induced by the spatial or temporal extrapolation of data also need to be taken into account when estimating the uncertainty of a model's output [@Peters2004StrEco].
+
+
 ## How do we determine what interaction networks are feasible?
 
 For several decades, ecologists have aimed to understand how networks of
