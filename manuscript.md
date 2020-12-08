@@ -54,10 +54,13 @@ interaction networks in a variety of ways, such as using graphs or matrices.
 
 In a graph, each species is represented as a node and each interaction as an edge
 [@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
-representation of the interaction. When using a matrix format we can uses two 
-approaches, namely bipartite networks where we have two interacting species guilds 
-and have one guild be represented by rows and the other by columns e.g. hosts and 
-parasites or we can use unipartite networks where each species *appears* twice - 
+representation of the interaction. When using a matrix format we can construct them in 
+such a way as to represent different interaction structures, namely bipartite 
+networks where we have two interacting species guilds and have one guild be represented 
+by rows and the other by columns e.g. hosts and parasites, k-partite networks which
+can serve as a way to integrate various bipartite networks e.g. parasitoid webs, 
+seed dispersal networks, and pollination networks [@Pocock2012RobRes],
+or we can use unipartite networks where each species *appears* twice - 
 both as a row and column species. For a presence/absence interaction network, the 
 matrix is filled with 1 and 0 representing an interaction and an
 absence of interaction respectively [@Dunne2006NetStr]. 
