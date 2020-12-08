@@ -298,13 +298,160 @@ dampening these effects e.g building on the work of @Gravel2016StaCom.
 
 ## What is a species interaction?
 
+Interactions between species can be manifested in a multitude of ways e.g. different 
+types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted 
+between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread 
+between these multiple forms of interactions is that *at least* one of the species is 
+affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio]. Combine 
+this high 'diversity' of interaction types with the sheer number of potential 
+interactions that *could* occur in a community and it is understandable why attempting 
+to sample species interaction empirically is a considerable task. However, inferring 
+interactions through proxies such as traits, phylogenies, geographical data and other frameworks 
+could prove to be promising [@Morales-Castilla2015InfBio]. This requires viewing (and constraining?) 
+interaction networks in a variety of ways, such as using graphs or matrices.
+
+In a graph, each species is represented as a node and each interaction as an edge
+[@Delmas2018AnaEco, @Pascual2006EcoNet], thus the value/form an edge takes is a 
+representation of the interaction. When using a matrix format we can construct them in 
+such a way as to represent different interaction structures, namely bipartite 
+networks where we have two interacting species guilds and have one guild be represented 
+by rows and the other by columns e.g. hosts and parasites, k-partite networks which
+can serve as a way to integrate various bipartite networks e.g. parasitoid webs, 
+seed dispersal networks, and pollination networks [@Pocock2012RobRes],
+or we can use unipartite networks where each species *appears* twice - 
+both as a row and column species. For a presence/absence interaction network, the 
+matrix is filled with 1 and 0 representing an interaction and an
+absence of interaction respectively [@Dunne2006NetStr]. 
+
+The representation of species interactions or interaction networks in the
+form of graphs and matrices is quite effective for their description and analysis.
+It allows the calculation of many network properties (particularly pertaining to structure), 
+some of which can even be use to help the prediction of further interactions,
+by for example applying a constraint on the possible number of links based on
+the number of species present [@MacDonald2020RevLin].
+
+ 
 ## How do we predict how species that have never co-occurred will interact?
+
+The probability of the realization of an ecological interaction depend on
+co-occurrence in space and time, abundance and traits matching
+[@Poisot2014SpeWhy; @Pichler2019MacLea]. Given two species that co-occur, a
+neutral approach to probabilistic interactions would be based on abundances and
+"neutralize" the effect of traits matching [@Canard2012EmeStr]. In this case we
+can infer the probability of an interaction to occur by chance, just because two
+species are abundant enough to bump into each other, and should be a good
+parameter against which we could test other factors that limit the realization
+of an interaction.   
+
+However, some proxies can be used to make more accurate predictions of potential
+ecological interactions. For instance, functional traits are good such proxies
+because they are highly selected by ecological interactions and determine
+forbidden links (such as the mechanical impossibility of a bird to consume seeds
+larger than its beak). The fact that functional traits suffer some kind of
+selective pressure and because niches tend to be conserved throughout a
+phylogenetic tree, ecological interactions also tend to be conserved, and
+therefore we could also use phylogenies to infer pairs of co-occurring species
+that could potentially interact [@Gomez2010EcoInt]. In fact, the contribution of
+interactions to the phylogenetic match between species is consistent even
+through scales [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].  
+
+A final family of methods that gained interest in recent years are the
+network-based models. These models use the existing set of interactions to
+identify the unmeasured traits (i.e. latent traits) driving the network
+structure [@Becker2020PreWil]. Species positioned closely in the network should
+interact with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. As
+for functional traits, phylogenies can inform these models because these
+unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
+@Elmasri2020HieBay]. These network-based models are unfortunatly sensitive to
+sampling biases and limited to prediction for species for which we already have
+interaction data [@Becker2020PreWil].
 
 ## What does interaction strength mean?
 
-## How are interaction strengths actually inferred?
+Interaction strength, unlike the qualitative presence/absence interaction, 
+is the quantification of an interaction. It can be seen as its relative 
+importance [@Heleno2014EcoNet] or the direct effect of one species on 
+another over a period of time [@Wootten1997EstTes]. Interaction strength 
+can be expressed by a multitude of different metrics, generally depending 
+on the type of interaction, for example trophic interaction versus 
+plant-pollinator interactions, and the study objectives 
+[@Berlow2004IntStr, Wootten2005MeaInt] but the general measure is usually 
+expressed as a frequency or biomass [@Heleno2014EcoNet] over a period of 
+time. While interaction strength might take multiple forms, it can generally 
+be divided into two main categories as suggested by @Berlow2004IntStr: it 
+can either be seen as the strength of an individual species-to-species 
+link or as the effect that the changes in one species has on the dynamic 
+of other species or on the whole community. Despite the multiple 
+possibilities, one recurring observation throughout many studies is 
+that networks are often composed of many weak links and few strong 
+links [@Berlow2004IntStr]. 
 
-## Could we use hypergraphs and multi-layer networks to predict more interactions?
+The additional layer of information brought by interaction strength to 
+the underlying network topology is an important one. Indeed, knowing the 
+distribution of interaction strength within a network informs on 
+its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on 
+the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb] 
+and our potential to improve on the development of multispecies models [@Wootten2005MeaInt]. 
+Seeing interaction strength within a network as energy fluxes could also possibly 
+lead to its integration within a the Biodiversity-Ecosystem Functioning (BEF) 
+framekwork, which could in return further improve even our understanding of community 
+dynamics and ecosystem functioning [@Barnes2018EneFlua]. 
+
+It remains that the analysis of interaction strength from empirical estimation 
+is highly prone to biases since networks quantifying interaction strength are usually 
+lumped together, making it difficult to differentiate the strength in per-individual 
+interactions from strength of a whole species interaction [@Wells2013SpeInt]. 
+Empirical estimations of interaction strength are still crucial [@Novak2008EstNon], 
+but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootten2005MeaInt], 
+espically due to the large number of species composing communities, the 
+multiple paths species can affect one another, and the possibility that the 
+interaction strength functions might not have a linear response [@Wootten2005MeaInt]. 
+Furthermore, interaction strength is extremely variable and context dependant 
+and can be influenced by indirect effects, density dependence, spatial and 
+temporal variation, and community composition [@Wootten2005MeaInt]. Inferring 
+interaction strengths is a key step in linking species interactions to broader ecosystem processes 
+and has the possibility to be done with relatively easily accessible 
+data such as body size, abundance, density and metabolic rates [@Berlow2004IntStr].
+
+**I would argue for a certain homogenization of interaction strength between different types of network (interaction) to make comparison/analysis easier. Relevant? How? **
+
+## How are interaction strengths actually inferred? 
+
+## Can these predictions rely on hypergraphs and multi-layers networks?
+
+Although network ecology often assumes that interactions go strictly from one
+node to the other, the web of life is made up of a variety of interactions that
+can vary over time and space; these interactions include facilitation, niche
+construction, zoonoses, vector-borne diseases, among others
+[@Garcia-Callejas2018MulInt], which all share the fact that interactions between
+species are themselves interacting. One mathematical tool to describe these
+situations is hypergraphs: hypergraphs are the generalization of a graph,
+allowing a broad yet manageable approach to complex interactions
+[@Carletti2020DynSys], allowing in particular interactions to occur beyond a
+pair of nodes. @Golubski2011ModMod were among the first to show that interaction
+modifiers are themselves interacting, which makes the complexity of ecological
+networks explode. Investigating hypergraphical interactions can be more
+important than previously thought, as they can reveal the importance of species
+within a network based on *indirect* interactions [@Golubski2016EcoNet].
+
+An additional degree of complexity is introduced by multi-layer networks
+[@Hutchinson2019SeeFor]. Multi-layer networks offer links across "variants" of
+the networks, which can include, timepoints, or environments. As such, these can
+be particularly useful to account for the meta-community structure of ecological
+networks [@Gross2020ModMod], or to understand how spatial dispersal graphs can
+inform conservation actions [@Albert2017AppNet]. As @Pilosof2017MulNat suggest,
+ecological networks intrinsically contain multi-layers, as they are shaped by
+evolution, dispersal, environmental heterogeneity, among others. *Prima facie*,
+increasing the dimensionality of the object we need to predict (the multiple
+layers rather than a single network) may make the problem complicated. But
+multi-layer networks encode ecological constraints -- of dispersal, of
+evolution, and of niche suitability. One question that is worth investigating is
+whether the multi-layer structure of ecological networks may *improve* the
+predictibility of interactions. Indeed, this is the case for social networks
+[@Jalili2017LinPre; @Najari2019LinPre; @Yasami2018NovMul]. In short, although
+simple networks have captured a great deal of the complexity of interactions,
+exploring more intricate ways in which species interact might require that we
+make room for hypergraphs and multi-layer networks in our predictive framework.
 
 # Network predictions must have a spatial component
 
