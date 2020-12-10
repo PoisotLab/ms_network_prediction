@@ -3,30 +3,29 @@
 **BOX 1: Biological Examples**
 
 1. Pollinator-Plant conservation  
-   Most flowering plant rely on animal pollinators for reproduction. The
-   persistance of many rare plants is therefore dependent on the presence and
+   Most flowering plants rely on animal pollinators for reproduction. The
+   persistence of many rare plants is therefore dependent on the presence and
    abundance of these pollinator species. Because these focal plants are rare,
-   the animal pollinators they rely on mainly feed on other more common plant
-   species. Consequently, the persistance of rare plant species depends on the
-   persistance of more common plant species in the community. Therefore,
-   management of rare plant species would benefit from a complete portrait of
-   the pollinator-plant network. For the same reasons, we could also argue that
-   the long-term persistance of pollinator species depends on the presence and
-   abundance of other pollinator they share plant host.
-
-   [@gibson2006PolWebs]https://besjournals-onlinelibrary-wiley-com.proxy3.library.mcgill.ca/doi/full/10.1111/j.1365-2664.2006.01130.x
+   the animal pollinators they rely on also feed on other more common plant
+   species [@gibson2006PolWebs]. Consequently, the persistence of rare plants
+   indirectly depends on the persistence of more common plant species in the
+   community. Therefore, management of rare plant species would benefit from a
+   complete portrait of the pollinator-plant network. Identifying and protecting
+   the primary food sources of key pollinators would result in more effective
+   conservation plans. By the same reasoning, the long-term persistence of rare
+   pollinator species depends on the presence and abundance of other more common
+   pollinators they share plant hosts with.
 
 1. Zoonotic disease spillover  
    Many infectious diseases originate from animal. The prediction of potential
    disease transmission across species (including humans) is therefore of major
    concern for public health. Because many animals are changing their range in
-   response to warming and other anthropological changes, species that never
-   co-occured will encounter. This will create many opportunities for viral
-   spillover events. Only by simultaniously identifying potential hosts and
-   accuratly predicting species range shifts, we will be able to forecast the
-   emergences of new infectious diseases and help prevent public health hazards.
-   [@Johnson2020GloShi]
-   https://royalsocietypublishing-org.proxy3.library.mcgill.ca/doi/full/10.1098/rspb.2019.2736
+   response to anthropological changes, species that never co-occurred will
+   encounter. This will create many opportunities for viral spillover events
+   [@Johnson2020GloShi]. Only by simultaneously identifying potential hosts and
+   accurately predicting species range shifts, we will be able to forecast the
+   emergence of new infectious diseases, predict potential spillover events, and
+   help prevent public health hazards. 
 
 ## What is the paper about?
 
@@ -75,9 +74,6 @@
 **Everything is connected figure**
 
 ## How much do networks vary over space?
-They do (Species pool/richness vary in space; Intrasp variation; Environment can influence interactions)
-
-Actually, not so much (Ecological network share similar structure (connectance, link distribution); Species conserve role; etc) 
 
 ## How do we predict what the species pool at a particular location is?
 
