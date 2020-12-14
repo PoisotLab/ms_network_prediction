@@ -14,6 +14,78 @@
     },
     {
       "affiliations": [
+        "McGill University",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Catchen",
+      "givennames": "Michael David",
+      "orcid": "0000-0002-6506-6487"
+    },
+    {
+      "affiliations": [
+        "Université de Montréal",
+        "Université de Sherbrooke",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Banville",
+      "givennames": "Francis",
+      "orcid": "0000-0001-9051-0597"
+    },
+    {
+      "affiliations": [
+        "McGill University",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Caron",
+      "givennames": "Dominique",
+      "orcid": "0000-0002-2151-6693"
+    },
+    {
+      "affiliations": [
+        "Université de Montréal",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Dansereau",
+      "givennames": "Gabriel",
+      "orcid": "0000-0002-2212-3584"
+    },
+    {
+      "affiliations": [
+        "Université de Montréal",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Forero",
+      "givennames": "Norma",
+      "orcid": "0000-0001-9019-0108"
+    },
+    {
+      "affiliations": [
+        "Universidade Federal de Goiás"
+      ],
+      "familyname": "Higino",
+      "givennames": "Gracielle",
+      "orcid": "0000-0003-2791-8383"
+    },
+    {
+      "affiliations": [
+        "Université de Sherbrooke",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Mercier",
+      "givennames": "Benjamin",
+      "orcid": "0000-0002-4104-9463"
+    },
+    {
+      "affiliations": [
+        "McGill University",
+        "Québec Centre for Biodiversity Sciences"
+      ],
+      "familyname": "Pollock",
+      "givennames": "Laura",
+      "orcid": "TODO"
+    },
+    {
+      "affiliations": [
         "Université de Montréal",
         "Québec Centre for Biodiversity Sciences"
       ],
@@ -22,7 +94,6 @@
       "email": "timothee.poisot@umontreal.ca",
       "orcid": "0000-0002-0735-5184"
     }
-
   ],
   "description": "The abstract goes here.",
   "keywords": [
