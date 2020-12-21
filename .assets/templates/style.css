@@ -1,23 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans+Condensed:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 :root {
-    --structure: #1976D2;
-    --links: #00897B;
+    --citation: #1976D2;
+    --structure: #00897B;
     --light: #9E9E9E;
     --pale: #e0e0e0;
-    --citation: #e67e22;
+    --nav: #fdfdfd;
 
-    --width: 900px;
+    --width: 820px;
     --inner-space: 1.2em;
 }
+
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     margin: 0 0;
     padding: 0 0;
 }
+
+article > p {
+    line-height: 135%;
+}
+article > h1 {
+    padding-top: 3em;
+}
 a {
     text-decoration: none;
-    color: var(--links);
+    color: #000;
+    border-bottom: 1px solid var(--structure);
 }
 a:hover {
     font-weight: 600;
@@ -30,31 +38,37 @@ a:hover {
     max-width: var(--width);
     padding: var(--inner-space);
 }
+header > .container {
+    max-width: 100vw;
+}
 code, pre {
-    font-family: "Cousine", monospace;
+    font-family: "Fira Mono", monospace;
 }
 pre {
     white-space: pre-wrap;
 }
 h1, h2, h3 {
     color: var(--structure);
+    font-family: "Fira Sans Condensed", sans-serif;
 }
 header {
+    font-family: "Fira Sans Condensed", sans-serif;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: var(--structure);
+    background-color: var(--nav);
+    border: 1px solid var(--pale);
     z-index: 5;
-    color: white;
+    color: black;
 }
 .header--title {
-    font-weight: 900;
+    font-weight: 400;
     text-transform: uppercase;
 }
-.header--authors > span > a {
-    color: white;
-    font-size: 90%;
+.header--authors > span {
+    color: var(--light);
+    font-weight: 400;
 }
 main {
     padding-top: 8em !important;
@@ -62,6 +76,7 @@ main {
 }
 footer {
     background-color: var(--pale);
+    font-weight: 300;
 }
 .abstract {
     color: var(--light);
@@ -86,15 +101,25 @@ table {
     min-width: 100%;
     border-collapse: collapse;
 }
+table > caption {
+    padding: var(--inner-space);
+}
+figcaption, caption {
+    color: var(--light);
+    font-weight: 300;
+}
 thead {
-    background-color: var(--structure);
-    color: white;
+    color: var(--structure);
 }
 td, th {
     padding: 3px;
 }
 tr > th {
     text-align: center !important;
+}
+tr {
+    border-top: 1px solid var(--light);
+    border-bottom: 1px solid var(--light);
 }
 tbody > tr:nth-child(even) {background: var(--pale)};
 tbody {
