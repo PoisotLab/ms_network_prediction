@@ -35,6 +35,8 @@ would be able to predict networks. On the note of scale, the resolution of
 environmental (or landscape) data would also limit our ability to predict
 networks at finer scales, although current trends in e.g. remote sensing would suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
 
+![](figures/everything_connected_v2.png){#fig:conceptual}
+
 ## Why should we predict species interaction networks?
 
 Networks of species interactions underpin our understanding of key ecological processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially been used to describe the interactions *within* a community, interest in the last decade has shifted towards understanding their structure and variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and established network ecology as an important emerging component of biogeography and macroecology. Developing a unified methodology for prediction of the structure of ecological networks and the interactions that compose them would help unify the fields of community, network, and ecosystem ecology, improve the quantification of functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe], re-evaluate metacommunities in light of network structure [@Guzman2018TowMul], and enable a new line of research into the biogeography of species interactions [@Massol2017IslBio;Braga2019SpaAna] that incorporates both Eltonian and Grinnial niche [@Gravel2019BriElt].
@@ -264,6 +266,7 @@ make room for hypergraphs and multi-layer networks in our predictive framework.
 
 
 ### How do we determine what interaction networks are feasible?
+
 For several decades, ecologists have aimed to understand how networks of
 many interacting species persist through time. The diversity-stability
 "paradox", first explored by May [@May1974StaCom], shows that under a
