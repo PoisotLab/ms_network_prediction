@@ -7,35 +7,20 @@ bibliography: [references.bib]
 Ecosystems are composed of interactions---individual organisms interact with one-another either directly or indirectly through their shared environment. These interactions form complex networks that drive ecological and evolutionary dynamics and maintain ecosystem diversity and functioning [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni].
 Yet, knowledge of species interactions is one of the most severe contemporary shortfalls of knowledge in biodiversity science [@Hortal2015SevSho], because data collection is tedious, time-consuming, and expensive.
 As with many ecological systems, ecological networks have entered their "long now" [@Carpenter2002EcoFut], where contemporary actions will have long-term, low-predictability consequences,
-sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to
-develop a roadmap that would enable prediction (for the present) and forecasting
-(for the future) of the structure of ecological networks [@McCann2007ProBio; @Seibold2018NecMul],
+sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative to develop a roadmap that would enable prediction (for the present) and forecasting (for the future) of the structure of ecological networks [@McCann2007ProBio; @Seibold2018NecMul],
 of the processes they encode [@Thompson2012FooWeb], and that can account for their spatial, temporal, and climatic dimensions [@Burkle2011FutPla].
 In this paper, we adopt a question-driven approach to identify opportunities within this research agenda, and suggest a "roadmap" forward toward the prediction of species interactions across space and time.
 
 ## What is a species interaction network?
 
 - *Box 1: What is a species interaction network?*
-  - Definitions
-    - Species Interaction
-    - Species Interaction Strength
-    - Species Interaction Network
-  - _Example 1: Plant-Pollinator_
-  - _Example 2: Zoonotic Disease Spillover_
+- Definitions
+  - Species Interaction
+  - Species Interaction Strength
+  - Species Interaction Network
+- _Example 1: Plant-Pollinator_
+- _Example 2: Zoonotic Disease Spillover_
 
-
-## What is currently limiting our understanding of species interaction networks?
-
-At the moment, our understanding of the structure of ecological networks is limited by the availability of data. Although we have seen a growth in species occurrences data, this growth is much slower for ecological interactions because interactions are hard to capture [@Jordano2016SamNet]. Characterizing a network requires an exhaustive list of species interactions at each sampled location, and these data remain extremely scarce. In turn, the difficulty of sampling interactions can lead to biases in our understanding of network structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of approaches to deal with interactions in ecological research based on assumptions that do not always hold, such as the correlation between co-occurrence and meaningful interaction strength. Although sometimes this is a valid abstraction, it is known that co-occurrence is the only prerequisite for an interaction to occur [@Blanchet2020CooNot].
-
-We are also currently limited by the the level of biological organisation at which we can describe ecological networks. For instance, our
-understanding of individual based networks [see for example @Araujo2008NetAna; @Tinker2012StrMec] is still in its infancy
-[@Guimaraes2020StrEco] and acts as a 'lower-limit' at which we
-would be able to predict networks. On the note of scale, the resolution of
-environmental (or landscape) data would also limit our ability to predict
-networks at finer scales, although current trends in e.g. remote sensing would suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
-
-![](figures/everything_connected_v2.png){#fig:conceptual}
 
 ## Why should we predict species interaction networks?
 
@@ -49,52 +34,59 @@ Reliable predictions for biodiversity change are increasingly sought after in in
 Interactions are fundamentally linked to conservation issues and are crucial to consider in conservation assessments.
 According to IUCN, interactions represent an important gap and challenge in the assessment of species vulnerability to climate change, a "seldom considered, but important driver of climate change impact on species", and their integration was identified as an important methodological advance to come [@Foden2016IucSsc]. In addition, interactions were identified as a key element of the functional role of a species, which must be considered for the evaluation of species recovery for the development of an IUCN Green List of recovered species [@Akcakaya2018QuaSpe]. Similarly, IPBES recognized that models performing scenario analyses and projecting regional biodiversity dynamics will need to incorporate species interactions and community dynamics, which will benefit global and regional IPBES assessments [@IPBES2016MetAss]. Moreover, recent studies argue for a shift in focus from species to interaction networks for biodiversity conservation to better protect species, ecosystem processes,and ecosystem services [@Harvey2017BriEco]. Therefore, the framework we propose here will improve predictions by refining networks and interactions prediction in space, thus improving tools for conservation and biodiversity management.
 
+## What is currently limiting our understanding of species interaction networks?
+
+
+### Data
+At the moment, our understanding of the structure of ecological networks is limited by the availability of data. Although we have seen a growth in species occurrences data, this growth is much slower for ecological interactions because species interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]  and sampling methodology matters [@deAguiar2019RevBia].
+In turn, the difficulty of sampling interactions can lead to biases in our understanding of network structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of approaches to deal with interactions in ecological research based on assumptions that do not always hold, such as the correlation between co-occurrence and meaningful interaction strength, when it is known that co-occurrence is the only prerequisite for an interaction to occur [@Blanchet2020CooNot].
+Spatial biases in data coverage are
+prevalent at the global scale (with South America, Africa and Asia being underrepresented) and different interaction types show biases towards different biomes (or environmental conditions) [@Poisot2020EnvBia]. These 'spatial gaps' serve as a limitation to our ability to confidently make predictions when accounting for real-world environmental conditions, especially in environments for which there are no analogous data.
+
+### Methods
+This scarcity of data that can limit the range of computational tools usable by network ecologists. Most deep learning methods, for instance, are very data expensive.
+The paucity of data is compounded by a collection of biases that can be found in existing datasets. Species interaction datasets are typically dominated by food webs, pollination, and host-parasite networks [@Ings2009EcoNet; @Poisot2020EnvBia].This could prove to be a limiting factor when trying to understand or predict networks of *under represented* interaction types or trying to integrate different network types [@Fontaine2011EcoEvo], especially given the structural variation of ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an integrated, flexible, and data-efficient set of computational tools which will allow us to predict ecological networks accurately from existing and imperfect datasets.  
+
+### Scale
+We are also currently limited by the the level of biological organisation at which we can describe ecological networks. For instance, our understanding of individual based networks [see for example @Araujo2008NetAna; @Tinker2012StrMec] is still in its infancy [@Guimaraes2020StrEco] and acts as a resolution-limit at which we would be able to predict networks. On the note of scale, the resolution of environmental (or landscape) data would also limit our ability to predict networks at finer scales, although current trends in e.g. remote sensing would suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
+
+Ecosystems are a quintessential complex-adaptive-system []. In figure @fig:everything_is_connected, we see the myriad of ways in which processes at different spatial, temporal, and organizational scales influence and respond to one another.
+Understanding how properties of ecosystems emerge as the product of different processes at different scales remains difficult.  
+Each set of data we collect only reflects a single snapshot of the element
+![](figures/everything_connected_v2.png){#fig:everything_is_connected}
+
+
 ## What is the path forward to understand species interaction networks?
 
-The acquisition of biodiversity and environmental data has tremendously
-increased over the past decades thanks to the rise of citizen science
-[@Dickinson2010CitSci] and of novel technology [@Stephenson2020TecAdv],
-including wireless sensors [@Porter2005WirSen], DNA monitoring
-[@Creer2016EcoSF], and satellite remote sensing [@Skidmore2015AgrBio; @Lausch2016LinEar].
-Standard practices in data integration and quality control [@Kissling2018BuiEss] and in next-generation biomonitoring [NGB; @Makiola2020KeyQue] are being set, with favorable consequences on our ability to make reliable predictions of many ecosystem properties and components.
-
-
+### Open Data
+The acquisition of biodiversity and environmental data has tremendously increased over the past decades thanks to the rise of citizen science [@Dickinson2010CitSci] and of novel technology [@Stephenson2020TecAdv], including wireless sensors [@Porter2005WirSen], next-generation DNA sequencing [@Creer2016EcoSF], and remote sensing [@Skidmore2015AgrBio; @Lausch2016LinEar].
 Open access databases, such as [GBIF](https://www.gbif.org/) (for biodiversity data), [NCBI](https://www.ncbi.nlm.nih.gov/) (for taxonomic and genomics data), [TreeBASE](https://www.treebase.org/treebase-web/home.html) (for phylogenetics data),
 [CESTE](https://icestes.github.io/) [@Jeliazkov2020GloDat] (for metacommunity ecology and species traits data), and [WorldClim](https://www.worldclim.org/data/bioclim.html) (for bioclimatic data) contain millions of data points that can be integrated to monitor and model biodiversity at the global scale.
 For species interactions data, at the moment [Mangal](https://mangal.io/#/) is the most comprehensive open database of published ecological networks [@Poisot2016ManMak], and [GloBI](https://www.globalbioticinteractions.org/about) is an extensive database of realized and potential species interactions [@Poelen2014GloBio].
+Developing standard practices in data integration and quality control [@Kissling2018BuiEss] and in next-generation biomonitoring [NGB; @Makiola2020KeyQue] would improve our ability to make reliable predictions of ecosystem properties (e.g.) on increasing spatial and temporal scales. The advancement of prediction techniques coupled with a movement towards standardising data collection protocols (e.g. @Perez-Harguindeguy2013NewHan for plant functional traits) and metadata (e.g. [DarwinCore](https://www.tdwg.org)), which would facilitate interoperability and integration of datasets, as well as a growing interest at the government level [@Scholes2012BuiGlo] paints a positive picture for the prediction of networks in the coming years.
 
 
-Increasing computing power combined with recent advances in machine learning techniques and applications shows promise in ecology and environmental science (see @Christin2019AppDee for an overview), and open data enable us to use this data to best effect for prediction of ecological networks.
-Accurate predictions of ecological networks across space can thus be generated by integrating various high-quality, open access datasets, such as the ones archived in the above mentioned databases, if we use predictive methods appropriately. Moreover, ongoing developments in the field of artificial intelligence are aimed at using deep learning more efficiently in low-data regimes [e.g. @Antoniou2018DatAug] and with unbalanced datasets [@Chawla2010DatMin].
-Considering the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of data of species interactions, the prediction of ecological networks will undoubtedly benefit from these improvements.
-The advancement of prediction techniques coupled with a movement towards standardising data collection protocols (e.g. @Perez-Harguindeguy2013NewHan for plant functional traits) and metadata (e.g. [DarwinCore](https://www.tdwg.org)), which would facilitate interoperability and integration of datasets, as well as a growing interest at the government level [@Scholes2012BuiGlo] paints a positive picture for the prediction of networks in the coming years.
+### Open Tools and Methods
 
-Other elements that contribute to the realization of an interaction are abundance and traits matching in space and time, and the combination of these elements allow us to infer potential from realized interactions and empirical data about populations
-[@Poisot2016StrPro].
-If we wish to predict the interactions between species we have not observed together, using our knowledge of the structure of ecological networks to interact in a particular ecosystem is one of our most useful assets.
-Predicting the structure of ecological networks is dependent on species interactions data, but species interactions are challenging to sample
-comprehensively [@Bennett2019PotPit; @Jordano2016SamNet] and sampling methodology matters [@deAguiar2019RevBia].
-This leads to a scarcity of data that can limit the range of computational tools usable by network ecologists.
-Most deep learning methods, for instance, are very data expensive.
-This paucity of data is compounded by
-a collection of biases that can be found in existing datasets. Species interaction datasets are typically dominated by food webs, pollination, and host-parasite networks [@Ings2009EcoNet; @Poisot2020EnvBia].
-This could prove to be a limiting factor when trying to understand or predict networks of *under represented* interaction types or trying to integrate different network types [@Fontaine2011EcoEvo], especially given the structural variation of ecological networks [@Michalska-Smith2019TelEco].
-Spatial biases in data coverage are
-prevalent at the global scale (with South America, Africa and Asia being underrepresented) and different interaction types show biases towards different biomes (or environmental conditions) [@Poisot2020EnvBia].
-These 'spatial gaps' serve as a limitation to our ability to confidently make predictions when accounting for real-world environmental conditions, especially in environments for which there are no analogous data. This stresses the need for an integrated, flexible, and data-efficient set of computational tools which will allow us to predict ecological networks accurately from existing and imperfect datasets.  
+Machine learning encompasses a broad variety of techniques applied with or without human supervision. These techniques can often be more flexible and perform better than classical statistical methods, and can achieve a very high level of accuracy in many predictive and classification tasks in a relatively short amount of time [e.g. @Cutler2007RanFor; @Krizhevsky2017ImaCla].
+Increasing computing power combined with recent advances in machine learning techniques and applications shows promise in ecology and environmental science (see @Christin2019AppDee for an overview).
+Moreover, ongoing developments in the field of artificial intelligence are aimed at using deep learning more efficiently in low-data regimes [e.g. @Antoniou2018DatAug] and with unbalanced datasets [@Chawla2010DatMin].
 
-
-
-Many ecological and evolutionary processes underlie species interactions
-and the structure of their ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo].
-It can thus be difficult to choose relevant variables and model species
-interactions networks explicitly.
-Machine learning methods are particularly useful in predicting ecological networks as they can uncover hidden and complex relationships from vast amount of ecological data.
-Machine learning, including deep learning, encompasses a broad variety of techniques applied with or without human supervision. These techniques are typically more flexible and performant than standard statistical methods, and can achieve a very high level of accuracy in predictive and classification tasks in a relatively short amount of time [e.g. @Cutler2007RanFor; @Krizhevsky2017ImaCla].
 Machine learning is emerging as the new standard in computational ecology in general [@Olden2008MacLea; @Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo], as long as sufficient relevant data is available.
-A promising application of machine learning in natural sciences is Scientific-Machine Learning (SciML), a novel and very powerful predictive method that combines machine learning with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif].
-SciML may require smaller amounts of data than more traditional machine learning methods, in addition to being more interpretable than the black box of machine-learning.
-Although SciML has not yet been applied in ecology, we believe it could prove very useful in the near future to predict ecological networks with relatively small amounts of data using existing process-based models.
+Many ecological and evolutionary processes underlie species interactions and the structure of their ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo].
+It can thus be difficult to choose relevant variables and model species interactions networks explicitly.
+A promising application of machine learning in natural sciences is Scientific-Machine Learning (SciML), a framework that combines machine learning with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif].
+Although SciML has not yet been applied in ecology, it has the potential to combine mechanistic models with black box machine-learning to predict ecological networks with relatively small amounts of data using existing process-based models.
+Considering the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of data of species interactions, the prediction of ecological networks will undoubtedly benefit from these improvements.
+
+
+### Conceptual Synthesis
+
+
+If we wish to predict the interactions between species we have not observed together, using our knowledge of the structure of ecological networks to interact in a particular ecosystem is one of our most useful assets. Other elements that contribute to the realization of an interaction are abundance and traits matching in space and time, and the combination of these elements allow us to infer potential from realized interactions and empirical data about populations
+[@Poisot2016StrPro].
+
+
 
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
