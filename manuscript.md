@@ -514,26 +514,26 @@ between only a pair of species e.g indirect interactions [@Morales-Castilla2015I
 between these multiple forms of interactions is that *at least* one of the species is
 affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
 
-Inyeractions can be representad as graphs, where each species is represented as a node and each interaction as an edge
+Interactions can be representad as graphs, where each species is represented as a node 
+and each interaction as an edge
 [@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
-representation of the interaction. When using a matrix format we can construct them in
-such a way as to represent different interaction structures, namely bipartite
-networks where we have two interacting species guilds and have one guild be represented
-by rows and the other by columns e.g. hosts and parasites, k-partite networks which
-can serve as a way to integrate various bipartite networks e.g. parasitoid webs,
-seed dispersal networks, and pollination networks [@Pocock2012RobRes],
-or we can use unipartite networks where each species *appears* twice -
-both as a row and column species. For a presence/absence interaction network, the
-matrix is filled with 1 and 0 representing an interaction and an
-absence of interaction respectively [@Dunne2006NetStr].
+representation of the interaction. Using a matrix format we can construct 
+interaction networks in using 1s and 0s to 
+represent the presence or absence of interaction respectively [@Dunne2006NetStr].
+This allows for the calculation of many network properties (particularly pertaining to structure),
+with different ways being used so as to represent different interaction types 
+including:
 
-The representation of species interactions or interaction networks in the
-form of graphs and matrices is quite effective for their description and analysis.
-It allows the calculation of many network properties (particularly pertaining to structure),
-some of which can even be use to help the prediction of further interactions,
-by for example applying a constraint on the possible number of links based on
-the number of species present [@MacDonald2020RevLin].
-
+* *unipartite networks:* where each species *appears* twice -
+both as a row and column species, these are typically used to
+represent foodwebs
+* *bipartite networks:* where we have two interacting species 
+guilds and have one guild be represented
+by rows and the other by columns, these are typically used for
+paiewaise interactions *e.g.* hosts and parasites, 
+* *k-partite networks:* serve as a way to integrate various bipartite 
+networks e.g. parasitoid webs,
+seed dispersal networks, and pollination networks [@Pocock2012RobRes].
 
 
 #### What does interaction strength mean?
