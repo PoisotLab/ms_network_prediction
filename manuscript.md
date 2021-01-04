@@ -140,7 +140,7 @@ to predict networks at finer scales, although current trends in e.g. remote
 sensing would suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
 
 Ecosystems are a quintessential complex-adaptive-system []. In 
-figure +@fig:everything_is_connected, we see the myriad of ways in which 
+@fig:everything_is_connected, we see the myriad of ways in which 
 processes at different spatial, temporal, and organizational scales influence 
 and respond to one another. 
 Understanding how the product of these different processes drive the properties 
@@ -232,7 +232,7 @@ data about populations
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
  
 Below we focus on and discuss integrating what we envisage to be the key areas
- towards conceptualising and predicting ecological networks (+@fig:conceptual). 
+ towards conceptualising and predicting ecological networks (@fig:conceptual). 
  With particular focus on taking a machine learning approach to the modelling 
  process, the relationship between species interactions and network structure, 
  and how we would incorporate this across space.
