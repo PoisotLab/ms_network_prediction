@@ -121,8 +121,8 @@ The paucity of data is compounded by a collection of biases that can be found
 in existing datasets. Species interaction datasets are typically dominated by 
 food webs, pollination, and host-parasite networks [@Ings2009EcoNet; @Poisot2020EnvBia]. 
 This could prove to be a limiting factor when trying to understand or predict 
-networks of *under represented* interaction types or trying to integrate networks 
-of different types [@Fontaine2011EcoEvo], especially given the structural 
+networks of *under represented* interaction types or when trying to integrate networks 
+of different types [@Fontaine2011EcoEvo], especially given the inherit structural 
 variation of ecological networks [@Michalska-Smith2019TelEco]. This stresses 
 the need for an integrated, flexible, and data-efficient set of computational 
 tools which will allow us to predict ecological networks accurately from 
@@ -176,9 +176,9 @@ ability to make reliable predictions of ecosystem properties (e.g.) on increasin
 spatial and temporal scales. The advancement of prediction techniques coupled with a 
 movement towards standardising data collection protocols (e.g. @Perez-Harguindeguy2013NewHan 
 for plant functional traits) and metadata (e.g. [DarwinCore](https://www.tdwg.org)), 
-which would facilitate interoperability and integration of datasets, as well as a growing 
+which facilitates interoperability and integration of datasets, as well as a growing 
 interest at the government level [@Scholes2012BuiGlo] paints a positive picture for data 
-usability in the coming years.
+access and usability in the coming years.
 
 
 ### Open Tools and Methods
@@ -231,11 +231,11 @@ data about populations
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
  
-Below we focus on and discuss integrating what we envisage to be the key areas
- towards conceptualising and predicting ecological networks (@fig:conceptual). 
- With particular focus on taking a machine learning approach to the modelling 
- process, the relationship between species interactions and network structure, 
- and how we would incorporate this across space.
+Below we focus on and discuss integrating what we envisage to be the key areas 
+towards conceptualising and predicting ecological networks (@fig:conceptual). 
+With a particular focus on using machine learning approaches in the modelling process, 
+the relationship between species interactions and network structure, 
+and how we would incorporate this across space.
 
 ![](figures/conceptual.png){#fig:conceptual}
 
@@ -275,8 +275,8 @@ interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
 @Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
 reconstruction of ecological networks using next-generation sequencing data
 [@Bohan2017NexGlo], and network inference from presence-absence data
-[@Sander2017EcoNet]. However, few studies have ever used predictive ML models 
-on network properties or structure.
+[@Sander2017EcoNet]. However, few studies have ever used predictive machine 
+learning models on network properties or structure.
 
 ### How do we validate a predictive model?
 
