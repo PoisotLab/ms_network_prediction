@@ -4,26 +4,26 @@ bibliography: [references.bib]
 
 # Introduction
 
-Ecosystems are composed of interactions---individual organisms interact 
-with one-another either directly or indirectly through their shared 
-environment. These interactions form complex networks that drive ecological 
-and evolutionary dynamics and maintain ecosystem diversity and functioning 
+Ecosystems are composed of interactions---individual organisms interact
+with one-another either directly or indirectly through their shared
+environment. These interactions form complex networks that drive ecological
+and evolutionary dynamics and maintain ecosystem diversity and functioning
 [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni].
-Yet, knowledge of species interactions is one of the most severe contemporary 
-shortfalls of knowledge in biodiversity science [@Hortal2015SevSho], primarily 
-due to the tedious, time-consuming, and expensive nature of the data 
+Yet, knowledge of species interactions is one of the most severe contemporary
+shortfalls of knowledge in biodiversity science [@Hortal2015SevSho], primarily
+due to the tedious, time-consuming, and expensive nature of the data
 collection process.
-As with many ecological systems, ecological networks have entered their 
-"long now" [@Carpenter2002EcoFut], where contemporary actions will have 
+As with many ecological systems, ecological networks have entered their
+"long now" [@Carpenter2002EcoFut], where contemporary actions will have
 long-term, low-predictability consequences,
-sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative 
-to develop a roadmap that would enable the prediction (for the present) 
-and forecasting (for the future) of the structure of ecological networks 
+sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative
+to develop a roadmap that would enable the prediction (for the present)
+and forecasting (for the future) of the structure of ecological networks
 [@McCann2007ProBio; @Seibold2018NecMul],
-of the processes they encode [@Thompson2012FooWeb], and that can account 
+of the processes they encode [@Thompson2012FooWeb], and that can account
 for their spatial, temporal, and climatic dimensions [@Burkle2011FutPla].
-In this paper, we adopt a question-driven approach to identify opportunities 
-within this research agenda, and suggest a "roadmap" forward moving towards 
+In this paper, we adopt a question-driven approach to identify opportunities
+within this research agenda, and suggest a "roadmap" forward moving towards
 the prediction of species interactions across space and time.
 
 ## What is a species interaction network?
@@ -36,115 +36,114 @@ the prediction of species interactions across space and time.
 - _Example 1: Plant-Pollinator_
 - _Example 2: Zoonotic Disease Spillover_
 
-
 ## Why should we predict species interaction networks?
 
-Networks of species interactions underpin our understanding of key ecological 
-processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially 
-used to describe the interactions *within* a community, interest in the last 
-decade has shifted towards understanding their structure and variation over space 
-[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network ecology 
-as an important emerging component of biogeography and macroecology. 
-Developing a unified methodology for prediction of the structure of ecological 
-networks and the interactions that compose them would help unify the fields 
-of community, network, and ecosystem ecology, improve the quantification of 
-functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe], 
-re-evaluate metacommunities in light of network structure [@Guzman2018TowMul], 
+Networks of species interactions underpin our understanding of key ecological
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially
+used to describe the interactions *within* a community, interest in the last
+decade has shifted towards understanding their structure and variation over space
+[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network ecology
+as an important emerging component of biogeography and macroecology.
+Developing a unified methodology for prediction of the structure of ecological
+networks and the interactions that compose them would help unify the fields
+of community, network, and ecosystem ecology, improve the quantification of
+functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe],
+re-evaluate metacommunities in light of network structure [@Guzman2018TowMul],
 and enable a new line of research into the biogeography of species interactions
- [@Massol2017IslBio;Braga2019SpaAna] that incorporates both the Eltonian and 
+ [@Massol2017IslBio;Braga2019SpaAna] that incorporates both the Eltonian and
  Grinnial niche [@Gravel2019BriElt].
-Further, the ability to reliably predict and forecast species interactions 
-would improve our understanding of how species function within ecosystems and 
+Further, the ability to reliably predict and forecast species interactions
+would improve our understanding of how species function within ecosystems and
 inform conservation efforts for protecting species, communities and ecosystems.
 
 ## Who would benefit from better prediction of species interaction networks?
 
-Reliable predictions for biodiversity change are increasingly sought after 
-in international conservation programs (e.g. IPBES and GEO BON), and 
-predictions that incorporate species interactions could substantially improve 
-these assessments. International panels draw on these models to establish 
-scientific consensus [@Araujo2019StaDis]. For example, IUCN Red List 
-assessments includes an evaluation of a species from known, inferred, and 
-projected sites of occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta], 
-which can be improved through more effective forecasts of species 
+Reliable predictions for biodiversity change are increasingly sought after
+in international conservation programs (e.g. IPBES and GEO BON), and
+predictions that incorporate species interactions could substantially improve
+these assessments. International panels draw on these models to establish
+scientific consensus [@Araujo2019StaDis]. For example, IUCN Red List
+assessments includes an evaluation of a species from known, inferred, and
+projected sites of occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta],
+which can be improved through more effective forecasts of species
 distributions and interactions [@Syfert2014UsiSpe].
 
-Interactions are fundamentally linked to conservation issues and are 
+Interactions are fundamentally linked to conservation issues and are
 crucial to consider in conservation assessments.
-According to IUCN, interactions represent an important gap and challenge 
-in the assessment of species vulnerability to climate change, a 
-"seldom considered, but important driver of climate change impact on 
-species", and their integration was identified as an important methodological 
-advance to come [@Foden2016IucSsc]. In addition, interactions were identified 
-as a key element of the functional role of a species, which must be 
-considered for the evaluation of species recovery for the development 
-of an IUCN Green List of recovered species [@Akcakaya2018QuaSpe]. 
-Similarly, IPBES recognized that models performing scenario analyses 
-and projecting regional biodiversity dynamics will need to incorporate 
-species interactions and community dynamics, which will benefit global 
-and regional IPBES assessments [@IPBES2016MetAss]. Moreover, recent 
-studies argue for a shift in focus from species to interaction networks 
-for biodiversity conservation to better protect species, ecosystem 
-processes,and ecosystem services [@Harvey2017BriEco]. Therefore, the 
-framework we propose here will improve predictions by refining networks 
-and interactions prediction in space, thus improving tools for conservation 
+According to IUCN, interactions represent an important gap and challenge
+in the assessment of species vulnerability to climate change, a
+"seldom considered, but important driver of climate change impact on
+species", and their integration was identified as an important methodological
+advance to come [@Foden2016IucSsc]. In addition, interactions were identified
+as a key element of the functional role of a species, which must be
+considered for the evaluation of species recovery for the development
+of an IUCN Green List of recovered species [@Akcakaya2018QuaSpe].
+Similarly, IPBES recognized that models performing scenario analyses
+and projecting regional biodiversity dynamics will need to incorporate
+species interactions and community dynamics, which will benefit global
+and regional IPBES assessments [@IPBES2016MetAss]. Moreover, recent
+studies argue for a shift in focus from species to interaction networks
+for biodiversity conservation to better protect species, ecosystem
+processes,and ecosystem services [@Harvey2017BriEco]. Therefore, the
+framework we propose here will improve predictions by refining networks
+and interactions prediction in space, thus improving tools for conservation
 and biodiversity management.
 
 ## What is currently limiting our understanding of species interaction networks?
 
 ### Data
 
-At the moment, our understanding of the structure of ecological networks is limited 
-by the availability of data. Although we have seen a growth in species occurrences 
-data, this growth is much slower for ecological interactions because species 
+At the moment, our understanding of the structure of ecological networks is limited
+by the availability of data. Although we have seen a growth in species occurrences
+data, this growth is much slower for ecological interactions because species
 interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]  
 and sampling methodology matters [@deAguiar2019RevBia].
-In turn, the difficulty of sampling interactions can lead to biases in our 
-understanding of network structure [@deAguiar2019RevBia]. This knowledge gap has 
-motivated a variety of approaches to deal with interactions in ecological research 
-based on assumptions that do not always hold, such as the correlation between 
-co-occurrence and meaningful interaction strength, when it is known that co-occurrence 
+In turn, the difficulty of sampling interactions can lead to biases in our
+understanding of network structure [@deAguiar2019RevBia]. This knowledge gap has
+motivated a variety of approaches to deal with interactions in ecological research
+based on assumptions that do not always hold, such as the correlation between
+co-occurrence and meaningful interaction strength, when it is known that co-occurrence
 is the only prerequisite for an interaction to occur [@Blanchet2020CooNot].
 Spatial biases in data coverage are
-prevalent at the global scale (with South America, Africa and Asia being under-represented) 
-and different interaction types show biases towards different biomes (or environmental conditions) 
-[@Poisot2020EnvBia]. These 'spatial gaps' serve as a limitation to our ability to 
-confidently make predictions when accounting for real-world environmental conditions, 
+prevalent at the global scale (with South America, Africa and Asia being under-represented)
+and different interaction types show biases towards different biomes (or environmental conditions)
+[@Poisot2020EnvBia]. These 'spatial gaps' serve as a limitation to our ability to
+confidently make predictions when accounting for real-world environmental conditions,
 especially in environments for which there are no analogous data.
 
 ### Methods
 
-This scarcity of data limits the range of computational tools than can be used 
-by network ecologists. Most deep learning methods, for instance, are very data 
+This scarcity of data limits the range of computational tools than can be used
+by network ecologists. Most deep learning methods, for instance, are very data
 expensive.
-The paucity of data is compounded by a collection of biases that can be found 
-in existing datasets. Species interaction datasets are typically dominated by 
-food webs, pollination, and host-parasite networks [@Ings2009EcoNet; @Poisot2020EnvBia]. 
-This could prove to be a limiting factor when trying to understand or predict 
-networks of *under represented* interaction types or when trying to integrate networks 
-of different types [@Fontaine2011EcoEvo], especially given the inherit structural 
-variation of ecological networks [@Michalska-Smith2019TelEco]. This stresses 
-the need for an integrated, flexible, and data-efficient set of computational 
-tools which will allow us to predict ecological networks accurately from 
+The paucity of data is compounded by a collection of biases that can be found
+in existing datasets. Species interaction datasets are typically dominated by
+food webs, pollination, and host-parasite networks [@Ings2009EcoNet; @Poisot2020EnvBia].
+This could prove to be a limiting factor when trying to understand or predict
+networks of *under represented* interaction types or when trying to integrate networks
+of different types [@Fontaine2011EcoEvo], especially given the inherit structural
+variation of ecological networks [@Michalska-Smith2019TelEco]. This stresses
+the need for an integrated, flexible, and data-efficient set of computational
+tools which will allow us to predict ecological networks accurately from
 existing and imperfect datasets.  
 
 ### Scale
 
-We are also currently limited by the the level of biological organisation 
-at which we can describe ecological networks. For instance, our understanding 
-of individual based networks [see for example @Araujo2008NetAna; @Tinker2012StrMec] 
-is still in its infancy [@Guimaraes2020StrEco] and acts as a resolution-limit 
-at which we would be able to predict networks. On the note of scale, the 
-resolution of environmental (or landscape) data would also limit our ability 
-to predict networks at finer scales, although current trends in e.g. remote 
+We are also currently limited by the the level of biological organisation
+at which we can describe ecological networks. For instance, our understanding
+of individual based networks [see for example @Araujo2008NetAna; @Tinker2012StrMec]
+is still in its infancy [@Guimaraes2020StrEco] and acts as a resolution-limit
+at which we would be able to predict networks. On the note of scale, the
+resolution of environmental (or landscape) data would also limit our ability
+to predict networks at finer scales, although current trends in e.g. remote
 sensing would suggest that with time this would become less of a hindrance [@Makiola2020KeyQue].
 
-Ecosystems are a quintessential complex-adaptive-system []. In 
-@fig:everything_is_connected, we see the myriad of ways in which 
-processes at different spatial, temporal, and organizational scales influence 
-and respond to one another. 
-Understanding how the product of these different processes drive the properties 
-of ecosystems, especially at different scales, remains difficult and we should 
+Ecosystems are a quintessential complex-adaptive-system []. In
+@fig:everything_is_connected, we see the myriad of ways in which
+processes at different spatial, temporal, and organizational scales influence
+and respond to one another.
+Understanding how the product of these different processes drive the properties
+of ecosystems, especially at different scales, remains difficult and we should
 strive to work on methods that will integrate these different 'snapshots'.
 
 ![Everything is connected. Very academia. Much scholarship.](figures/everything_connected_v2.png){#fig:everything_is_connected}
@@ -153,87 +152,84 @@ strive to work on methods that will integrate these different 'snapshots'.
 
 ### Open Data
 
-The acquisition of biodiversity and environmental data has tremendously increased 
-over the past decades thanks to the rise of citizen science [@Dickinson2010CitSci] 
-and of novel technology [@Stephenson2020TecAdv], including wireless sensors [@Porter2005WirSen], 
-next-generation DNA sequencing [@Creer2016EcoSF], and remote sensing 
+The acquisition of biodiversity and environmental data has tremendously increased
+over the past decades thanks to the rise of citizen science [@Dickinson2010CitSci]
+and of novel technology [@Stephenson2020TecAdv], including wireless sensors [@Porter2005WirSen],
+next-generation DNA sequencing [@Creer2016EcoSF], and remote sensing
 [@Skidmore2015AgrBio; @Lausch2016LinEar].
-Open access databases, such as [GBIF](https://www.gbif.org/) (for biodiversity data), 
-[NCBI](https://www.ncbi.nlm.nih.gov/) (for taxonomic and genomics data), 
+Open access databases, such as [GBIF](https://www.gbif.org/) (for biodiversity data),
+[NCBI](https://www.ncbi.nlm.nih.gov/) (for taxonomic and genomics data),
 [TreeBASE](https://www.treebase.org/treebase-web/home.html) (for phylogenetics data),
-[CESTE](https://icestes.github.io/) [@Jeliazkov2020GloDat] (for metacommunity ecology 
-and species traits data), and [WorldClim](https://www.worldclim.org/data/bioclim.html) 
-(for bioclimatic data) contain millions of data points that can be integrated to monitor 
+[CESTE](https://icestes.github.io/) [@Jeliazkov2020GloDat] (for metacommunity ecology
+and species traits data), and [WorldClim](https://www.worldclim.org/data/bioclim.html)
+(for bioclimatic data) contain millions of data points that can be integrated to monitor
 and model biodiversity at the global scale.
-For species interactions data, at the moment [Mangal](https://mangal.io/#/) is the most 
-comprehensive open database of published ecological networks [@Poisot2016ManMak], and 
-[GloBI](https://www.globalbioticinteractions.org/about) is an extensive database of 
+For species interactions data, at the moment [Mangal](https://mangal.io/#/) is the most
+comprehensive open database of published ecological networks [@Poisot2016ManMak], and
+[GloBI](https://www.globalbioticinteractions.org/about) is an extensive database of
 realized and potential species interactions [@Poelen2014GloBio].
-Developing standard practices in data integration and quality control [@Kissling2018BuiEss] 
-and in next-generation biomonitoring [NGB; @Makiola2020KeyQue] would improve our 
-ability to make reliable predictions of ecosystem properties (e.g.) on increasing 
-spatial and temporal scales. The advancement of prediction techniques coupled with a 
-movement towards standardising data collection protocols (e.g. @Perez-Harguindeguy2013NewHan 
-for plant functional traits) and metadata (e.g. [DarwinCore](https://www.tdwg.org)), 
-which facilitates interoperability and integration of datasets, as well as a growing 
-interest at the government level [@Scholes2012BuiGlo] paints a positive picture for data 
+Developing standard practices in data integration and quality control [@Kissling2018BuiEss]
+and in next-generation biomonitoring [NGB; @Makiola2020KeyQue] would improve our
+ability to make reliable predictions of ecosystem properties (e.g.) on increasing
+spatial and temporal scales. The advancement of prediction techniques coupled with a
+movement towards standardising data collection protocols (e.g. @Perez-Harguindeguy2013NewHan
+for plant functional traits) and metadata (e.g. [DarwinCore](https://www.tdwg.org)),
+which facilitates interoperability and integration of datasets, as well as a growing
+interest at the government level [@Scholes2012BuiGlo] paints a positive picture for data
 access and usability in the coming years.
-
 
 ### Open Tools and Methods
 
-Machine learning encompasses a broad variety of techniques applied with 
-or without human supervision. These techniques can often be more flexible 
-and perform better than classical statistical methods, and can achieve a 
-very high level of accuracy in many predictive and classification tasks 
+Machine learning encompasses a broad variety of techniques applied with
+or without human supervision. These techniques can often be more flexible
+and perform better than classical statistical methods, and can achieve a
+very high level of accuracy in many predictive and classification tasks
 in a relatively short amount of time [e.g. @Cutler2007RanFor; @Krizhevsky2017ImaCla].
-Increasing computing power combined with recent advances in machine learning 
-techniques and applications shows promise in ecology and environmental science 
+Increasing computing power combined with recent advances in machine learning
+techniques and applications shows promise in ecology and environmental science
 (see @Christin2019AppDee for an overview).
-Moreover, ongoing developments in the field of artificial intelligence are aimed 
-at using deep learning more efficiently in low-data regimes [e.g. @Antoniou2018DatAug] 
+Moreover, ongoing developments in the field of artificial intelligence are aimed
+at using deep learning more efficiently in low-data regimes [e.g. @Antoniou2018DatAug]
 and with unbalanced datasets [@Chawla2010DatMin].
 
-Machine learning is emerging as the new standard in computational ecology 
-in general [@Olden2008MacLea; @Christin2019AppDee], and in network ecology 
-in-particular [@Bohan2017NexGlo], as long as sufficient relevant data are 
+Machine learning is emerging as the new standard in computational ecology
+in general [@Olden2008MacLea; @Christin2019AppDee], and in network ecology
+in-particular [@Bohan2017NexGlo], as long as sufficient relevant data are
 available.
-Many ecological and evolutionary processes underlie species interactions 
+Many ecological and evolutionary processes underlie species interactions
 and the structure of their ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo].
-It can thus be difficult to choose relevant variables and model species 
+It can thus be difficult to choose relevant variables and model species
 interactions networks explicitly.
-A promising application of machine learning in natural sciences is 
-Scientific-Machine Learning (SciML), a framework that combines machine 
+A promising application of machine learning in natural sciences is
+Scientific-Machine Learning (SciML), a framework that combines machine
 learning with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif].
-Although SciML has not yet been applied in ecology, it has the potential 
-to combine mechanistic models with black box machine-learning to predict 
-ecological networks with relatively small amounts of data using existing 
+Although SciML has not yet been applied in ecology, it has the potential
+to combine mechanistic models with black box machine-learning to predict
+ecological networks with relatively small amounts of data using existing
 process-based models.
-Considering the current biases in network ecology [@Poisot2020EnvBia] and 
-the scarcity of data of species interactions, the prediction of ecological 
+Considering the current biases in network ecology [@Poisot2020EnvBia] and
+the scarcity of data of species interactions, the prediction of ecological
 networks will undoubtedly benefit from these improvements.
-
 
 ### Conceptual Synthesis
 
-
-If we wish to predict the interactions between species we have not observed 
-together, using our knowledge of the structure of ecological networks to 
-interact in a particular ecosystem is one of our most useful assets. We are 
-able to infer species interactions using proxies such as traits, phylogenies, 
-geographical data and other frameworks [@Morales-Castilla2015InfBio]. Drawing 
-on elements that contribute to the realization of an interaction such as 
-abundance and traits matching in space and time, and the combination of these 
-elements allow us to infer potential from realized interactions and empirical 
+If we wish to predict the interactions between species we have not observed
+together, using our knowledge of the structure of ecological networks to
+interact in a particular ecosystem is one of our most useful assets. We are
+able to infer species interactions using proxies such as traits, phylogenies,
+geographical data and other frameworks [@Morales-Castilla2015InfBio]. Drawing
+on elements that contribute to the realization of an interaction such as
+abundance and traits matching in space and time, and the combination of these
+elements allow us to infer potential from realized interactions and empirical
 data about populations
 [@Poisot2016StrPro].
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
- 
-Below we focus on and discuss integrating what we envisage to be the key areas 
-towards conceptualising and predicting ecological networks (@fig:conceptual). 
-With a particular focus on using machine learning approaches in the modelling process, 
-the relationship between species interactions and network structure, 
+
+Below we focus on and discuss integrating what we envisage to be the key areas
+towards conceptualising and predicting ecological networks (@fig:conceptual).
+With a particular focus on using machine learning approaches in the modelling process,
+the relationship between species interactions and network structure,
 and how we would incorporate this across space.
 
 ![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
@@ -242,23 +238,23 @@ and how we would incorporate this across space.
 
 ### How do we fit a predictive model?
 
-In machine learning, a predictive (supervised) model is trained on a dataset 
-containing an outcome variable which we want to predict (also called label, 
-response, or dependent variable) and predictor variables (also called features, 
-descriptors, or independent variables) which will be used for 
+In machine learning, a predictive (supervised) model is trained on a dataset
+containing an outcome variable which we want to predict (also called label,
+response, or dependent variable) and predictor variables (also called features,
+descriptors, or independent variables) which will be used for
 prediction[@Kuhn2013AppPre; @KuhnTidMod].
-Before fitting the model, the dataset will generally be split into a training 
+Before fitting the model, the dataset will generally be split into a training
 and validation subset.
-The model learns to predict the outcome from the training subset, then the 
+The model learns to predict the outcome from the training subset, then the
 fit and model performance are evaluated on the validation set [@Christin2020GoiFur].
-Depending son the type of model, the validation step is part of the training 
-and the model will keep learning until it reaches a certain threshold based 
+Depending son the type of model, the validation step is part of the training
+and the model will keep learning until it reaches a certain threshold based
 on the loss function.
-Fitting and adjusting the model can be done by adjusting the model parameters 
-depending on the type of model (layer compositions and network structures for 
+Fitting and adjusting the model can be done by adjusting the model parameters
+depending on the type of model (layer compositions and network structures for
 neural networks, number of trees and splits for tree-based models).
 
-Another important step in predictive modelling is feature engineering, i.e. 
+Another important step in predictive modelling is feature engineering, i.e.
 adjusting and reworking the predictors to enable models to better uncover
 predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
 include projecting the predictors into a principal component analysis space, and
@@ -274,84 +270,82 @@ interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
 @Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
 reconstruction of ecological networks using next-generation sequencing data
 [@Bohan2017NexGlo], and network inference from presence-absence data
-[@Sander2017EcoNet]. However, few studies have ever used predictive machine 
+[@Sander2017EcoNet]. However, few studies have ever used predictive machine
 learning models on network properties or structure.
 
 ### How do we validate a predictive model?
 
-After model fitting, we inevitably want to see how "good" it is. One 
-of the context for validation is _model comparison_, where we aim to 
-see which of a competing set of models provides the best explanation 
+After model fitting, we inevitably want to see how "good" it is. One
+of the context for validation is _model comparison_, where we aim to
+see which of a competing set of models provides the best explanation
 for a data set.
 A naive initial approach is to simply compute the average error between
-the model's prediction and the true data we have, and choose the model 
+the model's prediction and the true data we have, and choose the model
 with the smallest error---however this approach inevitably results in _overfitting_.
-One approach to avoid overfitting is using information criteria (*e.g.* 
-AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around 
-the heuristic that good models maximize the ratio of information provided 
+One approach to avoid overfitting is using information criteria (*e.g.*
+AIC, BIC, MDL, the heavily maligned Bayes Factor), which are based around
+the heuristic that good models maximize the ratio of information provided
 by the model to the number of parameters it has.
 
 However, when the intended use-case of a model is prediction, the relevant
- form of validation is _predictive accuracy_. _Crossvalidation_ provides a 
- better alternative for validating a model's predictive capacity. Crossvalidation 
- methods divide the original dataset into two---one which is used to fit the model 
- (called the _training_ set) and one used to validate its predictive accuracy on 
+ form of validation is _predictive accuracy_. _Crossvalidation_ provides a
+ better alternative for validating a model's predictive capacity. Crossvalidation
+ methods divide the original dataset into two---one which is used to fit the model
+ (called the _training_ set) and one used to validate its predictive accuracy on
  the data that is hasn't "seen" yet (called the _test_ set).
-This procedure is often repeated for different subdivisions of the dataset. One 
-powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers each 
-data points uniquely as a test set, enabling sensitivity analysis. However, these 
+This procedure is often repeated for different subdivisions of the dataset. One
+powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers each
+data points uniquely as a test set, enabling sensitivity analysis. However, these
 methods are typically limited by the ensuing computation time requirements.
-
 
 ### How do we propagate uncertainty through a predictive model?
 
-In order to predict networks across space, we need to combine multiple 
-models---one which predicts what the species pool will be at a given 
-location, and one to predict what interaction networks composed from 
+In order to predict networks across space, we need to combine multiple
+models---one which predicts what the species pool will be at a given
+location, and one to predict what interaction networks composed from
 this species pool are likely (see _conceptual figure_).
 Both of these models contain uncertainty.
-The Bayesian paradigm provides a convenient solution to this---if 
-we have a chain of models where each model feeds into the next, we can 
+The Bayesian paradigm provides a convenient solution to this---if
+we have a chain of models where each model feeds into the next, we can
 sample from the posterior of the input models.
-A different approach is _ensemble modeling_ which combines the predictions 
+A different approach is _ensemble modeling_ which combines the predictions
 made be several models, where each model is predicting the same thing.
 
-Error propagation is an important step in the modeling of ecological 
-systems, as it provides estimates of the uncertainty around predictions. 
-More generally, error propagation describes the effect of the uncertainty 
-of input variables on the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp]. 
-@Benke2018ErrPro identifies two broad approaches to model error propagation: 
-analytically using differential equations or stochastically using Monte-Carlo 
-simulation methods. The second approach is based upon samples of probability 
-distributions and is more readily applicable to our problem of predicting 
-ecological networks across space using our proposed methodological workflow. 
-Indeed, each model's inputs can be sampled from the outputs of the preceding 
-ones. Errors induced by the spatial or temporal extrapolation of data also 
-need to be taken into account when 
+Error propagation is an important step in the modeling of ecological
+systems, as it provides estimates of the uncertainty around predictions.
+More generally, error propagation describes the effect of the uncertainty
+of input variables on the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp].
+@Benke2018ErrPro identifies two broad approaches to model error propagation:
+analytically using differential equations or stochastically using Monte-Carlo
+simulation methods. The second approach is based upon samples of probability
+distributions and is more readily applicable to our problem of predicting
+ecological networks across space using our proposed methodological workflow.
+Indeed, each model's inputs can be sampled from the outputs of the preceding
+ones. Errors induced by the spatial or temporal extrapolation of data also
+need to be taken into account when
 estimating the uncertainty of a model's output [@Peters2004StrEco].
 
 **Box 2: Machine Learning Illustration**
-
 
 ## Networks and Interactions
 
 ### Why predict networks and interactions at the same time?
 
-Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a 
+Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a
 set of interactions, but also a larger set of non-interactions.
 If we aim to predict the structure of networks from the "bottom-up"---
-by considering each pairwise combination of $S$ different species---we are 
-left with $S^2$ interaction values to estimate. Instead, we can use our 
-existing understanding of the mechanisms that structure ecological networks 
-to widdle down the set of feasible adjacency matrices, thereby reducing the 
-amount of information we must predict, and making the problem of predicting 
+by considering each pairwise combination of $S$ different species---we are
+left with $S^2$ interaction values to estimate. Instead, we can use our
+existing understanding of the mechanisms that structure ecological networks
+to widdle down the set of feasible adjacency matrices, thereby reducing the
+amount of information we must predict, and making the problem of predicting
 interactions less daunting.
 
-The processes that structure ecological networks do not only occur at the 
-scale of interactions---there are also processes at the network level which 
+The processes that structure ecological networks do not only occur at the
+scale of interactions---there are also processes at the network level which
 limit what interactions are possible.
-The realized structure of a network is the synthesis of the interactions 
-forming the basis for network structure, and the network structure refining 
+The realized structure of a network is the synthesis of the interactions
+forming the basis for network structure, and the network structure refining
 the possible interactions---"Part makes whole, and whole makes part" [@Levins1987DiaBio].
 
 ### What is the most important property of a network to predict?
@@ -378,7 +372,6 @@ and therefore can be measured from the number of links and the species richness
 only -- because it can be derived from coarse data and is informative on both
 the ecology and structure of the network, we argue that predictions of
 connectance are most likely to be immediately useful, and easy to formulate.
-
 
 ### How do we predict how species that have never co-occurred will interact?
 
@@ -415,16 +408,15 @@ unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
 sampling biases and limited to prediction for species for which we already have
 interaction data [@Becker2020PreWil].
 
-
 ### How are interaction strengths actually inferred?
 
 ### Can these predictions rely on hypergraphs and multi-layers networks?
 
 Although network ecology often assumes that interactions go strictly from one
-node to the other, the web of life is made up of a variety of interactions 
-with species can forming parts of different networks *e.g.* a plant species 
-may be included in potha plant-pollinator as well as herbivory network and 
-we could conceivably have a network of networks linked by shared 
+node to the other, the web of life is made up of a variety of interactions
+with species can forming parts of different networks *e.g.* a plant species
+may be included in potha plant-pollinator as well as herbivory network and
+we could conceivably have a network of networks linked by shared
 species. One mathematical tool to describe these
 situations is hypergraphs: hypergraphs are the generalization of a graph,
 allowing a broad yet manageable approach to complex interactions
@@ -454,7 +446,6 @@ simple networks have captured a great deal of the complexity of interactions,
 exploring more intricate ways in which species interact might require that we
 make room for hypergraphs and multi-layer networks in our predictive framework.
 
-
 ### How do we determine what interaction networks are feasible?
 
 For several decades, ecologists have aimed to understand how networks of
@@ -466,7 +457,7 @@ we observe networks of interactions that consist of far more species than
 May's model predicts [@Albouy2019MarFis].
 
 As a result, understanding what aspects of the neutral assumptions of
-May's model are incorrect has branched many investigations into the 
+May's model are incorrect has branched many investigations into the
 relationship between ecological network structure and persistence
 [@Allesina2012StaCri]. These assumptions can be split into dynamical
 assumptions and topological assumptions.
@@ -499,8 +490,6 @@ propagate along the various level of organisations within a network
 metacommunities and the affect of dispersal/linkages between them in
 dampening these effects e.g building on the work of @Gravel2016StaCom.
 
-
-
 ## Space
 
 ### How much do networks vary over space?
@@ -531,9 +520,9 @@ is quite constant in space.
 
 ### How do we predict what the species pool at a particular location is?
 
-As species form the basis of both network structure and interactions knowing which 
-species are present at a particular site will inforom on the potential interactions 
-that _could_ occur. A common approach in biogeography to predict whether a species 
+As species form the basis of both network structure and interactions knowing which
+species are present at a particular site will inforom on the potential interactions
+that _could_ occur. A common approach in biogeography to predict whether a species
 will be
 present or absent at specific sites is to use species distribution models (SDMs)
 based on known occurrences and environmental conditions at these locations, such
@@ -566,7 +555,7 @@ co-occurrences, but that it is also technically challenging and requires prior
 knowledge of the interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally species.
 
-### What is the spatial scale suitable for the prediction of species interactions?  
+### What is the spatial scale suitable for the prediction of species interactions?
 
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
@@ -638,66 +627,100 @@ that predict interactions at coarse resolution, and vice-versa.
 
 ### How do we combine spatial and network predictions?
 
-
 ## Time
-Giving a temporal component to network predictions requires forecasting
 
-**Box 3: Forecasting**
+In ecology, quantitative models have long been descriptive rather than predictive [@Evans2012PreEco].
+Yet, the need for predictive ecology to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
+The terms "prediction" and "forecasting" are often used interchangeably. Here we distinguish the terms based on their temporal scope: prediction is the estimation of values in the present, forecasting is the estimation of the what those values will be in the future.
+
+### Models
+
+Models are used for many purposes, however all models share some common properties. Any model can be thought of as a function $f$, which maps inputs $x$ and parameters $\theta$ to predicted output states $y$. However, the approaches taken to define $f$ vary.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+Statistical models are often used for inference and hypothesis testing.
+The quantitative representation of "effects" in statistical models---the influence of each input on the output---is almost always assumed to be linear. In the frequentist context, this often results in determining if an effects strength is non-zero  to determine its "significance".
+
+### What stuff do you need to predict
+
+First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
+Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
+Lastly, **priors** on parameters, $P(\theta)$.
+
+### What stuff do you need to forecast
+
+In addition to the three above items required to build a predictive model (data, model priors), to forecast an additional requirement is an forecast of the features (inputs) $x(t)$. For example, if we wish to forecast the distribution of a species of plant, and our model is that the plant follows some thermal tolerance function
+
+### Inference and the Inverse Problem
+
+Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
+To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
+
+### Prediction, The Forward Problem, and Generative Models
+
+The process from data to forecast.
+![box figure caption](figures/forecasting.png){#fig:forecastingBox}
+On some scales, empirical time-series encode enough information about
+the process for machine-learning approaches to make accurate forecasts.
+However, its clear this approach won't work as we rapidly shift the abiotic
+environment to conditions which have not been observed in the data.
 
 ### What data do we need to turn a predictive model into a forecasting model?
+
 Forecasts of the model's inputs
 
 ### How can we validate a forecasting model?
-Often the purpose of building a forecasting model to inform _present_ action 
-[@Dietze2018IteNea]. Yet, the nature of forecasting---trying to predict the future---is 
-that you can only know if a forecast is "right" once it is too late to change it. 
-If we want to maximize the chance that "reality" falls within a forecasting 
-model's predictions, there are two directions to approach this problem: the 
-first is to extend model validation techniques to a forecasting context, and 
-the second is to attempt to maximize the amount of uncertainty in a model 
+
+Often the purpose of building a forecasting model to inform _present_ action
+[@Dietze2018IteNea]. Yet, the nature of forecasting---trying to predict the future---is
+that you can only know if a forecast is "right" once it is too late to change it.
+If we want to maximize the chance that "reality" falls within a forecasting
+model's predictions, there are two directions to approach this problem: the
+first is to extend model validation techniques to a forecasting context, and
+the second is to attempt to maximize the amount of uncertainty in a model
 without compromising its resolution.
 
-Crossvalidation (see _How do we validate a predictive model?_) can be used 
-to test the efficacy of a forecasting model. Given a time-series of $N$ 
-observations, a model can iteratively be trained on the first $n$ time-points 
-of data, and the forecasting model's accuracy can be evaluated on the remaining 
-time-points it hasn't "seen". This enables us to understand both how much 
-temporal data is required for a model to be robust, and also enables us to 
+Crossvalidation (see _How do we validate a predictive model?_) can be used
+to test the efficacy of a forecasting model. Given a time-series of $N$
+observations, a model can iteratively be trained on the first $n$ time-points
+of data, and the forecasting model's accuracy can be evaluated on the remaining
+time-points it hasn't "seen". This enables us to understand both how much
+temporal data is required for a model to be robust, and also enables us to
 explore the _forecasting horizon_ of a process.
-Further, this approach can also be applied in the opposite temporal 
-direction--- if we have reliable data from the past, "hindcasting" can also 
+Further, this approach can also be applied in the opposite temporal
+direction--- if we have reliable data from the past, "hindcasting" can also
 be used to test a forecast's accuracy.
 
-However, these methods inevitably bump into a hard-limitation on what is 
+However, these methods inevitably bump into a hard-limitation on what is
 feasible for a forecasting model. The future is uncertain.
-Any empirical time-series we use to validate a model was collected in past 
+Any empirical time-series we use to validate a model was collected in past
 conditions that may not persist into the future.
-Any system we wish to forecast will undergo only one of many possible 
-scenarios (see _Forecasting Box_), yet we can only observe the realized 
+Any system we wish to forecast will undergo only one of many possible
+scenarios (see _Forecasting Box_), yet we can only observe the realized
 outcome of the system under the scenario that actually unfolds.
-It is therefore impossible to assess the quality of a forecasting model 
+It is therefore impossible to assess the quality of a forecasting model
 in scenarios that remain hypothetical.
-If the goal is to maximize the probability that reality will fall within 
-the forecast's estimates, forecasts should incorporate as much uncertainty 
+If the goal is to maximize the probability that reality will fall within
+the forecast's estimates, forecasts should incorporate as much uncertainty
 about the future scenario as possible.
 One way to do this is _ensemble modeling_ which combines forecasts from  
 multiple different models.
-However, as we increase the amount of uncertainty we incorporate into a 
+However, as we increase the amount of uncertainty we incorporate into a
 forecasting model, the resolution of the forecast's predictions shrinks,
-and therefore the modeler be mindful of the trade-off between resolution 
+and therefore the modeler be mindful of the trade-off between resolution
 and accuracy in any forecasting model (see _Forecasting Box_).
 
 A forecast inherently has a _resolution limit_ in space, time, and  organization.
-For example, one could never hope to predict the precise abundance of every 
+For example, one could never hope to predict the precise abundance of every
 species on Earth on every day hundreds of years into the future.
 There is often a trade-off between resolution and a forecasting horizon.
-However, a lower resolution forecast, like primary production will be at a 
+However, a lower resolution forecast, like primary production will be at a
 maximum in the summer, is likely to be true.
 
 Further, the inherent limitations on the "forecastability" of ecological time-series  [@Pennekamp2019IntPre] (see _Forecasting box_)
 
-
 ### What ecological knowledge would forecasting bring?
+
 Forecasting how climate change will alter biodiversity is crucial for maximising
 conservation outcomes. On the one hand, we know that biotic interactions
 influence the distribution of species at different scale [@Araujo2007TheImp,
@@ -720,49 +743,44 @@ that this roadmap towards forecasting ecological networks provide useful
 guidelines to ultimatly be able to predict more accuratly how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
 
-
 ## Why should we forecast species interaction networks?
 
-Predictions of species interactions are critical for informing ecosystem 
-management[@Harvey2017BriEco] and systematic conservation prioritization 
-[@Pollock2020ProBio], and for anticipating extinctions and their consequences 
+Predictions of species interactions are critical for informing ecosystem
+management[@Harvey2017BriEco] and systematic conservation prioritization
+[@Pollock2020ProBio], and for anticipating extinctions and their consequences
 [@McDonald-Madden2016UsiFoo; @McWilliams2019TheSta].
-Ecological interactions shape species distributions at both local and broad 
-spatial scales. Including interactions in SDM models typically improves 
-predictive performance [@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to 
-rely on approaches involving estimating pairwise dependencies based on 
-co-occurance (JSDM paper?), using surrogates for biotic-interaction gradients, 
+Ecological interactions shape species distributions at both local and broad
+spatial scales. Including interactions in SDM models typically improves
+predictive performance [@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to
+rely on approaches involving estimating pairwise dependencies based on
+co-occurance (JSDM paper?), using surrogates for biotic-interaction gradients,
 and hybridizing SDMs with dynamic models [@Wisz2013RolBio].
-Improving SDMs through interactions is crucial for conservation, as nearly 
-30% of models in SDM studies are used to assess population declines or landscape 
+Improving SDMs through interactions is crucial for conservation, as nearly
+30% of models in SDM studies are used to assess population declines or landscape
 ability to support populations [@Araujo2019StaDis].
 
-
-Ecosystem functioning promotes ecosystem services, which are related to basic 
-issues of health and the economy of humans, including pathogen transmission, 
+Ecosystem functioning promotes ecosystem services, which are related to basic
+issues of health and the economy of humans, including pathogen transmission,
 food security, or the availability of fresh water.
-But in a world with a high rate of biodiversity loss, land transformation, and 
-climate change, researchers are worried about how to protect human lives and 
-improve life quality in different countries, having into account the measure 
+But in a world with a high rate of biodiversity loss, land transformation, and
+climate change, researchers are worried about how to protect human lives and
+improve life quality in different countries, having into account the measure
 of the change in the world in the following years.  
 
-Because interactions carry a lot of ecological and evolutionary information 
-about biodiversity, predicting links can give us a more complete framework 
-tounderstand processes and forecast rearrangements of nature. Moreover, 
-using data to make reliable predictions about how ecosystems will change 
-over time will give us critical information that could be communicated to 
-decision-makers and the scientific community about what are future 
+Because interactions carry a lot of ecological and evolutionary information
+about biodiversity, predicting links can give us a more complete framework
+tounderstand processes and forecast rearrangements of nature. Moreover,
+using data to make reliable predictions about how ecosystems will change
+over time will give us critical information that could be communicated to
+decision-makers and the scientific community about what are future
 environmental risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
-
-
-
-
 
 # Boxes
 
 ## Box 1: Biological Examples
 
 ### Definitions
+
 #### What is a species interaction?
 
 Interactions between species can be manifested in a multitude of ways e.g. different
@@ -771,27 +789,26 @@ between only a pair of species e.g indirect interactions [@Morales-Castilla2015I
 between these multiple forms of interactions is that *at least* one of the species is
 affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
 
-Interactions can be representad as graphs, where each species is represented as a node 
+Interactions can be representad as graphs, where each species is represented as a node
 and each interaction as an edge
 [@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
-representation of the interaction. Using a matrix format we can construct 
-interaction networks in using 1s and 0s to 
+representation of the interaction. Using a matrix format we can construct
+interaction networks in using 1s and 0s to
 represent the presence or absence of interaction respectively [@Dunne2006NetStr].
 This allows for the calculation of many network properties (particularly pertaining to structure),
-with different ways being used so as to represent different interaction types 
+with different ways being used so as to represent different interaction types
 including:
 
 * *unipartite networks:* where each species *appears* twice -
-both as a row and column species, these are typically used to
-represent foodwebs
-* *bipartite networks:* where we have two interacting species 
-guilds and have one guild be represented
-by rows and the other by columns, these are typically used for
-paiewaise interactions *e.g.* hosts and parasites, 
-* *k-partite networks:* serve as a way to integrate various bipartite 
-networks e.g. parasitoid webs,
-seed dispersal networks, and pollination networks [@Pocock2012RobRes].
-
+  both as a row and column species, these are typically used to
+  represent foodwebs
+* *bipartite networks:* where we have two interacting species
+  guilds and have one guild be represented
+  by rows and the other by columns, these are typically used for
+  paiewaise interactions *e.g.* hosts and parasites,
+* *k-partite networks:* serve as a way to integrate various bipartite
+  networks e.g. parasitoid webs,
+  seed dispersal networks, and pollination networks [@Pocock2012RobRes].
 
 #### What does interaction strength mean?
 
@@ -842,7 +859,6 @@ data such as body size, abundance, density and metabolic rates [@Berlow2004IntSt
 
 **I would argue for a certain homogenization of interaction strength between 
 different types of network (interaction) to make comparison/analysis easier. Relevant? How? **
-
 
 ## Box 2: ML Case Study
 
