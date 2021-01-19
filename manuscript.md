@@ -60,20 +60,10 @@
 
 ## Box 3: From Models to Prediction to Forecasting
 
-In ecology, quantitative models have long been descriptive rather than predictive  [@Evans2012PreEco].
-Yet, the need for predictive ecology remains clear to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
-The terms "prediction" and "forecasting" are often used interchangably.
+In ecology, quantitative models have long been descriptive rather than predictive [@Evans2012PreEco].
+Yet, the need for predictive ecology to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
+The terms "prediction" and "forecasting" are often used interchangeably. Here we distinguish the terms based on their temporal scope: prediction is the estimation of values in the present, forecasting is the estimation of the what those values will be in the future.
 
-### What you need to predict
-
-First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
-Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
-Lastly, priors on parameters, $P(\theta)$.
-
-### What you need to forecast
-
-In addition to the three above items required to build a predictive model,
-Additionally a forecast of the features (inputs) $x(t)$ is needed.
 
 ### Models
 Models are used for many purposes, however all models share some common properties. Any model can be thought of as a function $f$, which maps inputs $x$ and parameters $\theta$ to predicted output states $y$. However, the approaches taken to define $f$ vary.
@@ -81,32 +71,40 @@ Models are used for many purposes, however all models share some common properti
 Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
 Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
 
-Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco].
-The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$.
-
-How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
-
-To make ecology predictive, we need to use our model to answer the forward problem.
-
-
-Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
-
 Statistical models are often used for inference and hypothesis testing.
-The quantitative representation of "effects" in statistical models---the influence of each input on the output---is broadly assumed to be linear.
-In the frequentist context, this often boils down to "significance".
+The quantitative representation of "effects" in statistical models---the influence of each input on the output---is broadly assumed to be linear. In the frequentist context, this often boils down to "significance".
 
+
+### What stuff do you need to predict
+
+First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
+Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
+Lastly, **priors** on parameters, $P(\theta)$.
+
+### What stuff do you need to forecast
+
+In addition to the three above items required to build a predictive model (data, model priors), to forecast an additional requirement is an forecast of the features (inputs) $x(t)$. For example, if we wish to forecast the distribution of a species of plant, and our model is that the plant follows some thermal tolerance function
+
+
+
+### Inference and the Inverse Problem
+Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
+
+To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
+
+
+### Prediction, The Forward Problem, and Generative Models
+
+
+The process from data to forecast.
+![box figure caption](figures/forecasting.png){#fig:forecastingBox}
 
 On some scales, empirical time-series encode enough information about
 the process for machine-learning approaches to make accurate forecasts.
 However, its clear this approach won't work as we rapidly shift the abiotic
 environment to conditions which have not been observed in the data.
 
-The process from data to forecast.
-![box figure caption](figures/forecasting.png){#fig:forecastingBox}
 
-
-
-## What data do we need to turn a predictive model into a forecasting model?
 
 ## How can we validate a forecast, and would hindcasting help?
 
