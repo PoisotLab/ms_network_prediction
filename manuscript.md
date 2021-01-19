@@ -147,8 +147,7 @@ Understanding how the product of these different processes drive the properties
 of ecosystems, especially at different scales, remains difficult and we should 
 strive to work on methods that will integrate these different 'snapshots'.
 
-![](figures/everything_connected_v2.png){#fig:everything_is_connected}
-
+![Everything is connected. Very academia. Much scholarship.](figures/everything_connected_v2.png){#fig:everything_is_connected}
 
 ## What is paving the path towards understanding species interaction networks?
 
@@ -237,7 +236,7 @@ With a particular focus on using machine learning approaches in the modelling pr
 the relationship between species interactions and network structure, 
 and how we would incorporate this across space.
 
-![](figures/conceptual.png){#fig:conceptual}
+![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
 
 ## Models
 
