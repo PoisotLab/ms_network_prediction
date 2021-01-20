@@ -9,7 +9,7 @@ with one-another either directly or indirectly through their shared
 environment. These interactions form complex networks that drive ecological
 and evolutionary dynamics and maintain ecosystem diversity and functioning
 [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni].
-Yet, knowledge of species interactions is one of the most severe contemporary
+Yet, understanding of species interactions networks are one of the most severe contemporary
 shortfalls of knowledge in biodiversity science [@Hortal2015SevSho], primarily
 due to the tedious, time-consuming, and expensive nature of the data
 collection process.
@@ -20,21 +20,89 @@ sometimes over centuries [@Burkle2013PlaInt]. It is therefore imperative
 to develop a roadmap that would enable the prediction (for the present)
 and forecasting (for the future) of the structure of ecological networks
 [@McCann2007ProBio; @Seibold2018NecMul],
-of the processes they encode [@Thompson2012FooWeb], and that can account
-for their spatial, temporal, and climatic dimensions [@Burkle2011FutPla].
+of the processes they encode [@Thompson2012FooWeb], and that can account for the known  spatial, temporal, and climatic structure they exhibit [@Burkle2011FutPla].
 In this paper, we adopt a question-driven approach to identify opportunities
 within this research agenda, and suggest a "roadmap" forward moving towards
 the prediction of species interactions across space and time.
 
-## What is a species interaction network?
+## What are species interaction networks?
+### What is a species interaction?
 
-- *Box 1: What is a species interaction network?*
-- Definitions
-  - Species Interaction
-  - Species Interaction Strength
-  - Species Interaction Network
-- _Example 1: Plant-Pollinator_
-- _Example 2: Zoonotic Disease Spillover_
+Interactions between species can be manifested in a multitude of ways e.g. different
+types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted
+between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread
+between these multiple forms of interactions is that *at least* one of the species is
+affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
+
+### What is a species interaction network?
+
+Interactions can be representad as graphs, where each species is represented as a node
+and each interaction as an edge
+[@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
+representation of the interaction. Using a matrix format we can construct
+interaction networks in using 1s and 0s to
+represent the presence or absence of interaction respectively [@Dunne2006NetStr].
+This allows for the calculation of many network properties (particularly pertaining to structure),
+with different ways being used so as to represent different interaction types
+including:
+
+* *unipartite networks:* where each species *appears* twice -
+  both as a row and column species, these are typically used to
+  represent foodwebs
+* *bipartite networks:* where we have two interacting species
+  guilds and have one guild be represented
+  by rows and the other by columns, these are typically used for
+  paiewaise interactions *e.g.* hosts and parasites,
+* *k-partite networks:* serve as a way to integrate various bipartite
+  networks e.g. parasitoid webs,
+  seed dispersal networks, and pollination networks [@Pocock2012RobRes].
+
+### What is interaction strength?
+
+Interaction strength, unlike the qualitative presence/absence interaction,
+is the quantification of an interaction. It can be seen as its relative
+importance [@Heleno2014EcoNet] or the direct effect of one species on
+another over a period of time [@Wootten1997EstTes]. Interaction strength
+can be expressed by a multitude of different metrics, generally depending
+on the type of interaction, for example trophic interaction versus
+plant-pollinator interactions, and the study objectives
+[@Berlow2004IntStr, Wootten2005MeaInt] but the general measure is usually
+expressed as a frequency or biomass [@Heleno2014EcoNet] over a period of
+time. While interaction strength might take multiple forms, it can generally
+be divided into two main categories as suggested by @Berlow2004IntStr: it
+can either be seen as the strength of an individual species-to-species
+link or as the effect that the changes in one species has on the dynamic
+of other species or on the whole community. Despite the multiple
+possibilities, one recurring observation throughout many studies is
+that networks are often composed of many weak links and few strong
+links [@Berlow2004IntStr].
+
+The additional layer of information brought by interaction strength to
+the underlying network topology is an important one. Indeed, knowing the
+distribution of interaction strength within a network informs on
+its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on
+the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb]
+and our potential to improve on the development of multispecies models [@Wootten2005MeaInt].
+Seeing interaction strength within a network as energy fluxes could also possibly
+lead to its integration within a the Biodiversity-Ecosystem Functioning (BEF)
+framekwork, which could in return further improve even our understanding of community
+dynamics and ecosystem functioning [@Barnes2018EneFlua].
+
+It remains that the analysis of interaction strength from empirical estimation
+is highly prone to biases since networks quantifying interaction strength are usually
+lumped together, making it difficult to differentiate the strength in per-individual
+interactions from strength of a whole species interaction [@Wells2013SpeInt].
+Empirical estimations of interaction strength are still crucial [@Novak2008EstNon],
+but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootten2005MeaInt],
+espically due to the large number of species composing communities, the
+multiple paths species can affect one another, and the possibility that the
+interaction strength functions might not have a linear response [@Wootten2005MeaInt].
+Furthermore, interaction strength is extremely variable and context dependant
+and can be influenced by indirect effects, density dependence, spatial and
+temporal variation, and community composition [@Wootten2005MeaInt]. Inferring
+interaction strengths is a key step in linking species interactions to broader ecosystem processes
+and has the possibility to be done with relatively easily accessible
+data such as body size, abundance, density and metabolic rates [@Berlow2004IntStr].
 
 ## Why should we predict species interaction networks?
 
@@ -56,7 +124,7 @@ Further, the ability to reliably predict and forecast species interactions
 would improve our understanding of how species function within ecosystems and
 inform conservation efforts for protecting species, communities and ecosystems.
 
-## Who would benefit from better prediction of species interaction networks?
+## Who would benefit from prediction of species interaction networks?
 
 Reliable predictions for biodiversity change are increasingly sought after
 in international conservation programs (e.g. IPBES and GEO BON), and
@@ -234,7 +302,51 @@ and how we would incorporate this across space.
 
 ![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
 
+This roadmap can be divided into three parts data, models, and predictions.
+
 ## Models
+
+### What is a model?
+
+Models are a necessity of science. If the goal of science is to make statements about the world that are true, then science presupposes the likelihood that a claim is true is proportional to the amount of evidence in favor of that claim.
+In order to understand how likely it is that a claim is true, we need a mechanism to
+differentiate the likelihood of different theories.
+
+The 
+
+
+
+, we must go through the process of inference.
+
+
+Models are used for many purposes, however all models share some common properties.
+
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+Any of these models can be thought of as a function $f$, which takes a set of inputs $x$ and parameters $\theta$ and maps them to predicted output states $y$ as a function, $y = f(x)$.
+
+Statistical models are often used for inference and hypothesis testing.
+The quantitative representation of "effects" in statistical models---the influence of each input on the output---is almost always assumed to be linear. In the frequentist context, this often results in determining if an effects strength is non-zero  to determine its "significance".
+
+
+### What do you need to make a predictive model?
+
+First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
+Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
+Lastly, **priors** on parameters, $P(\theta)$.
+
+### Inference and Forward Problems
+
+Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
+To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
+
+The process from data to forecast.
+![box figure caption](figures/forecasting.png){#fig:forecastingBox}
+On some scales, empirical time-series encode enough information about
+the process for machine-learning approaches to make accurate forecasts.
+However, its clear this approach won't work as we rapidly shift the abiotic
+environment to conditions which have not been observed in the data.
+
 
 ### How do we fit a predictive model?
 
@@ -629,45 +741,18 @@ that predict interactions at coarse resolution, and vice-versa.
 
 ## Time
 
+
+### Why forecast?
+
 In ecology, quantitative models have long been descriptive rather than predictive [@Evans2012PreEco].
-Yet, the need for predictive ecology to forecast the effects of Anthropogenic climate and land-use change on Earth's ecosystems [@Dietze2018IteNea].
+Yet, the need for ecological forecasts to anticipate the effects of Anthropogenic climate and land-use change on Earth's ecosystems remains clear [@Dietze2018IteNea].
 The terms "prediction" and "forecasting" are often used interchangeably. Here we distinguish the terms based on their temporal scope: prediction is the estimation of values in the present, forecasting is the estimation of the what those values will be in the future.
 
-### Models
-
-Models are used for many purposes, however all models share some common properties. Any model can be thought of as a function $f$, which maps inputs $x$ and parameters $\theta$ to predicted output states $y$. However, the approaches taken to define $f$ vary.
-Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
-Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
-Statistical models are often used for inference and hypothesis testing.
-The quantitative representation of "effects" in statistical models---the influence of each input on the output---is almost always assumed to be linear. In the frequentist context, this often results in determining if an effects strength is non-zero  to determine its "significance".
-
-### What stuff do you need to predict
-
-First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
-Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
-Lastly, **priors** on parameters, $P(\theta)$.
-
-### What stuff do you need to forecast
+### What do you need to turn a predictive model into a forecasting model?
 
 In addition to the three above items required to build a predictive model (data, model priors), to forecast an additional requirement is an forecast of the features (inputs) $x(t)$. For example, if we wish to forecast the distribution of a species of plant, and our model is that the plant follows some thermal tolerance function
 
-### Inference and the Inverse Problem
 
-Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
-To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
-
-### Prediction, The Forward Problem, and Generative Models
-
-The process from data to forecast.
-![box figure caption](figures/forecasting.png){#fig:forecastingBox}
-On some scales, empirical time-series encode enough information about
-the process for machine-learning approaches to make accurate forecasts.
-However, its clear this approach won't work as we rapidly shift the abiotic
-environment to conditions which have not been observed in the data.
-
-### What data do we need to turn a predictive model into a forecasting model?
-
-Forecasts of the model's inputs
 
 ### How can we validate a forecasting model?
 
@@ -776,89 +861,6 @@ decision-makers and the scientific community about what are future
 environmental risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
 
 # Boxes
-
-## Box 1: Biological Examples
-
-### Definitions
-
-#### What is a species interaction?
-
-Interactions between species can be manifested in a multitude of ways e.g. different
-types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted
-between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread
-between these multiple forms of interactions is that *at least* one of the species is
-affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
-
-Interactions can be representad as graphs, where each species is represented as a node
-and each interaction as an edge
-[@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
-representation of the interaction. Using a matrix format we can construct
-interaction networks in using 1s and 0s to
-represent the presence or absence of interaction respectively [@Dunne2006NetStr].
-This allows for the calculation of many network properties (particularly pertaining to structure),
-with different ways being used so as to represent different interaction types
-including:
-
-* *unipartite networks:* where each species *appears* twice -
-  both as a row and column species, these are typically used to
-  represent foodwebs
-* *bipartite networks:* where we have two interacting species
-  guilds and have one guild be represented
-  by rows and the other by columns, these are typically used for
-  paiewaise interactions *e.g.* hosts and parasites,
-* *k-partite networks:* serve as a way to integrate various bipartite
-  networks e.g. parasitoid webs,
-  seed dispersal networks, and pollination networks [@Pocock2012RobRes].
-
-#### What does interaction strength mean?
-
-Interaction strength, unlike the qualitative presence/absence interaction,
-is the quantification of an interaction. It can be seen as its relative
-importance [@Heleno2014EcoNet] or the direct effect of one species on
-another over a period of time [@Wootten1997EstTes]. Interaction strength
-can be expressed by a multitude of different metrics, generally depending
-on the type of interaction, for example trophic interaction versus
-plant-pollinator interactions, and the study objectives
-[@Berlow2004IntStr, Wootten2005MeaInt] but the general measure is usually
-expressed as a frequency or biomass [@Heleno2014EcoNet] over a period of
-time. While interaction strength might take multiple forms, it can generally
-be divided into two main categories as suggested by @Berlow2004IntStr: it
-can either be seen as the strength of an individual species-to-species
-link or as the effect that the changes in one species has on the dynamic
-of other species or on the whole community. Despite the multiple
-possibilities, one recurring observation throughout many studies is
-that networks are often composed of many weak links and few strong
-links [@Berlow2004IntStr].
-
-The additional layer of information brought by interaction strength to
-the underlying network topology is an important one. Indeed, knowing the
-distribution of interaction strength within a network informs on
-its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on
-the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb]
-and our potential to improve on the development of multispecies models [@Wootten2005MeaInt].
-Seeing interaction strength within a network as energy fluxes could also possibly
-lead to its integration within a the Biodiversity-Ecosystem Functioning (BEF)
-framekwork, which could in return further improve even our understanding of community
-dynamics and ecosystem functioning [@Barnes2018EneFlua].
-
-It remains that the analysis of interaction strength from empirical estimation
-is highly prone to biases since networks quantifying interaction strength are usually
-lumped together, making it difficult to differentiate the strength in per-individual
-interactions from strength of a whole species interaction [@Wells2013SpeInt].
-Empirical estimations of interaction strength are still crucial [@Novak2008EstNon],
-but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootten2005MeaInt],
-espically due to the large number of species composing communities, the
-multiple paths species can affect one another, and the possibility that the
-interaction strength functions might not have a linear response [@Wootten2005MeaInt].
-Furthermore, interaction strength is extremely variable and context dependant
-and can be influenced by indirect effects, density dependence, spatial and
-temporal variation, and community composition [@Wootten2005MeaInt]. Inferring
-interaction strengths is a key step in linking species interactions to broader ecosystem processes
-and has the possibility to be done with relatively easily accessible
-data such as body size, abundance, density and metabolic rates [@Berlow2004IntStr].
-
-**I would argue for a certain homogenization of interaction strength between 
-different types of network (interaction) to make comparison/analysis easier. Relevant? How? **
 
 ## Box 2: ML Case Study
 
