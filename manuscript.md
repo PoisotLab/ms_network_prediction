@@ -48,10 +48,10 @@ as an important emerging component of biogeography and macroecology.
 Developing a unified methodology for prediction of the structure of ecological 
 networks and the interactions that compose them would help unify the fields 
 of community, network, and ecosystem ecology, improve the quantification of 
-functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe], 
-re-evaluate metacommunities in light of network structure [@Guzman2018TowMul], 
+functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo], 
+re-evaluate metacommunities in light of network structure [@Guzman2019MulExt], 
 and enable a new line of research into the biogeography of species interactions
- [@Massol2017IslBio;Braga2019SpaAna] that incorporates both the Eltonian and 
+ [@Massol2017ChaFou;Braga2019SpaAna] that incorporates both the Eltonian and 
  Grinnial niche [@Gravel2019BriElt].
 Further, the ability to reliably predict and forecast species interactions 
 would improve our understanding of how species function within ecosystems and 
@@ -384,7 +384,7 @@ connectance are most likely to be immediately useful, and easy to formulate.
 
 The probability of the realization of an ecological interaction depend on
 co-occurrence in space and time, abundance and traits matching
-[@Poisot2014SpeWhy; @Pichler2019MacLea]. Given two species that co-occur, a
+[@Poisot2015SpeWhy; @Pichler2020MacLea]. Given two species that co-occur, a
 neutral approach to probabilistic interactions would be based on abundances and
 "neutralize" the effect of traits matching [@Canard2012EmeStr]. In this case we
 can infer the probability of an interaction to occur by chance, just because two
@@ -516,10 +516,10 @@ networks [@Poisot2014WheEco; @Dunne2002FooStr; @Riede2010ScaFoo].
 
 On a lower level, species turnover in space results in changes in the
 composition of ecological networks. But, this is not the only reason networks
-composition varies [@Poisot2015BeySpe]. Intraspecific variations can result in
+composition varies [@Poisot2015SpeWhy]. Intraspecific variations can result in
 interaction turnovers without changes in species composition
 [@Bolnick2011WhyInt]. Similarly, changes in species abundances can lead to
-variation in interactions strengths [@Canard2014EmpEvi; @Vazquez2007SpeAbu]. The
+variation in interactions strengths [@Canard2014EmpEva; @Vazquez2007SpeAbu]. The
 variation in the abiotic environment and indirect interactions
 [@Golubski2016EcoNet] are also likely to modify the occurrence and strength of
 individual interactions. Still, despite important species and interaction
@@ -578,7 +578,7 @@ interactions between higher taxonomic levels at a microscale level ignores
 individual plasticity, while individual-level interactions at a macroscale
 tangents to stochasticity. Another component the interplay between scale and
 interactions is *time*. Different timeframes enclosure different dynamics
-[@Trojelsgaard2016EcoNeta]. For example, an observation made in a timeframe too
+[@Trojelsgaard2016EcoNet]. For example, an observation made in a timeframe too
 short can capture an opportunistic interaction, which, by definition, does not
 frequently occur. If the time considered is too long, it will involve the
 evolutionary history of species, adaptation and co-evolution. The spatial scale
@@ -715,7 +715,7 @@ the whole ecosystem, community stability and persistance [@Thompson2012FooWeb,
 @Stouffer2010UndFoo]. Will climate change impact the distribution of network
 properties (e.g. connectance)? If so, which regions or species groups need
 special conservation efforts? These overarching questions are yet to be answered
-[but see @Albouy2013FroPro; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
+[but see @Albouy2013ProCli; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
 that this roadmap towards forecasting ecological networks provide useful
 guidelines to ultimatly be able to predict more accuratly how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
@@ -726,7 +726,7 @@ will affect the different dimensions of biodiversity and ecosystem functioning.
 Predictions of species interactions are critical for informing ecosystem 
 management[@Harvey2017BriEco] and systematic conservation prioritization 
 [@Pollock2020ProBio], and for anticipating extinctions and their consequences 
-[@McDonald-Madden2016UsiFoo; @McWilliams2019TheSta].
+[@McDonald-Madden2016UsiFoo; @McWilliams2019StaMul].
 Ecological interactions shape species distributions at both local and broad 
 spatial scales. Including interactions in SDM models typically improves 
 predictive performance [@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to 
@@ -798,11 +798,11 @@ seed dispersal networks, and pollination networks [@Pocock2012RobRes].
 Interaction strength, unlike the qualitative presence/absence interaction,
 is the quantification of an interaction. It can be seen as its relative
 importance [@Heleno2014EcoNet] or the direct effect of one species on
-another over a period of time [@Wootten1997EstTes]. Interaction strength
+another over a period of time [@Wootton2005MeaInt]. Interaction strength
 can be expressed by a multitude of different metrics, generally depending
 on the type of interaction, for example trophic interaction versus
 plant-pollinator interactions, and the study objectives
-[@Berlow2004IntStr, Wootten2005MeaInt] but the general measure is usually
+[@Berlow2004IntStr, @Wootton2005MeaInt] but the general measure is usually
 expressed as a frequency or biomass [@Heleno2014EcoNet] over a period of
 time. While interaction strength might take multiple forms, it can generally
 be divided into two main categories as suggested by @Berlow2004IntStr: it
@@ -818,24 +818,24 @@ the underlying network topology is an important one. Indeed, knowing the
 distribution of interaction strength within a network informs on
 its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on
 the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb]
-and our potential to improve on the development of multispecies models [@Wootten2005MeaInt].
+and our potential to improve on the development of multispecies models [@Wootton2005MeaInt].
 Seeing interaction strength within a network as energy fluxes could also possibly
 lead to its integration within a the Biodiversity-Ecosystem Functioning (BEF)
-framekwork, which could in return further improve even our understanding of community
-dynamics and ecosystem functioning [@Barnes2018EneFlua].
+framework, which could in return further improve even our understanding of community
+dynamics and ecosystem functioning [@Barnes2018EneFlu].
 
 It remains that the analysis of interaction strength from empirical estimation
 is highly prone to biases since networks quantifying interaction strength are usually
 lumped together, making it difficult to differentiate the strength in per-individual
 interactions from strength of a whole species interaction [@Wells2013SpeInt].
 Empirical estimations of interaction strength are still crucial [@Novak2008EstNon],
-but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootten2005MeaInt],
+but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt],
 espically due to the large number of species composing communities, the
 multiple paths species can affect one another, and the possibility that the
-interaction strength functions might not have a linear response [@Wootten2005MeaInt].
+interaction strength functions might not have a linear response [@WWootton2005MeaInt].
 Furthermore, interaction strength is extremely variable and context dependant
 and can be influenced by indirect effects, density dependence, spatial and
-temporal variation, and community composition [@Wootten2005MeaInt]. Inferring
+temporal variation, and community composition [@Wootton2005MeaInt]. Inferring
 interaction strengths is a key step in linking species interactions to broader ecosystem processes
 and has the possibility to be done with relatively easily accessible
 data such as body size, abundance, density and metabolic rates [@Berlow2004IntStr].
