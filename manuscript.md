@@ -832,7 +832,7 @@ Empirical estimations of interaction strength are still crucial [@Novak2008EstNo
 but are a hard task to do from natural communities [@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt],
 espically due to the large number of species composing communities, the
 multiple paths species can affect one another, and the possibility that the
-interaction strength functions might not have a linear response [@WWootton2005MeaInt].
+interaction strength functions might not have a linear response [@Wootton2005MeaInt].
 Furthermore, interaction strength is extremely variable and context dependant
 and can be influenced by indirect effects, density dependence, spatial and
 temporal variation, and community composition [@Wootton2005MeaInt]. Inferring
