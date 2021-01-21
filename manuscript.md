@@ -106,20 +106,19 @@ data such as body size, abundance, density and metabolic rates [@Berlow2004IntSt
 
 ## Why should we predict species interaction networks?
 
-Networks of species interactions underpin our understanding of key ecological
-processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially
-used to describe the interactions *within* a community, interest in the last
-decade has shifted towards understanding their structure and variation over space
-[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network ecology
-as an important emerging component of biogeography and macroecology.
-Developing a unified methodology for prediction of the structure of ecological
-networks and the interactions that compose them would help unify the fields
-of community, network, and ecosystem ecology, improve the quantification of
-functional relationships of species [@Dehling2018BriThe; @O’Connor2020UnvThe],
-re-evaluate metacommunities in light of network structure [@Guzman2018TowMul],
+Networks of species interactions underpin our understanding of key ecological 
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially 
+used to describe the interactions *within* a community, interest in the last 
+decade has shifted towards understanding their structure and variation over space 
+[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network ecology 
+as an important emerging component of biogeography and macroecology. 
+Developing a unified methodology for prediction of the structure of ecological 
+networks and the interactions that compose them would help unify the fields 
+of community, network, and ecosystem ecology, improve the quantification of 
+functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo], 
+re-evaluate metacommunities in light of network structure [@Guzman2019MulExt], 
 and enable a new line of research into the biogeography of species interactions
- [@Massol2017IslBio;Braga2019SpaAna] that incorporates both the Eltonian and
- Grinnial niche [@Gravel2019BriElt].
+ [@Massol2017ChaFou;Braga2019SpaAna] that incorporates both the Eltonian and Grinnial niche [@Gravel2019BriElt].
 Further, the ability to reliably predict and forecast species interactions
 would improve our understanding of how species function within ecosystems and
 inform conservation efforts for protecting species, communities and ecosystems.
@@ -489,7 +488,7 @@ connectance are most likely to be immediately useful, and easy to formulate.
 
 The probability of the realization of an ecological interaction depend on
 co-occurrence in space and time, abundance and traits matching
-[@Poisot2014SpeWhy; @Pichler2019MacLea]. Given two species that co-occur, a
+[@Poisot2015SpeWhy; @Pichler2020MacLea]. Given two species that co-occur, a
 neutral approach to probabilistic interactions would be based on abundances and
 "neutralize" the effect of traits matching [@Canard2012EmeStr]. In this case we
 can infer the probability of an interaction to occur by chance, just because two
@@ -617,10 +616,10 @@ networks [@Poisot2014WheEco; @Dunne2002FooStr; @Riede2010ScaFoo].
 
 On a lower level, species turnover in space results in changes in the
 composition of ecological networks. But, this is not the only reason networks
-composition varies [@Poisot2015BeySpe]. Intraspecific variations can result in
+composition varies [@Poisot2015SpeWhy]. Intraspecific variations can result in
 interaction turnovers without changes in species composition
 [@Bolnick2011WhyInt]. Similarly, changes in species abundances can lead to
-variation in interactions strengths [@Canard2014EmpEvi; @Vazquez2007SpeAbu]. The
+variation in interactions strengths [@Canard2014EmpEva; @Vazquez2007SpeAbu]. The
 variation in the abiotic environment and indirect interactions
 [@Golubski2016EcoNet] are also likely to modify the occurrence and strength of
 individual interactions. Still, despite important species and interaction
@@ -679,7 +678,7 @@ interactions between higher taxonomic levels at a microscale level ignores
 individual plasticity, while individual-level interactions at a macroscale
 tangents to stochasticity. Another component the interplay between scale and
 interactions is *time*. Different timeframes enclosure different dynamics
-[@Trojelsgaard2016EcoNeta]. For example, an observation made in a timeframe too
+[@Trojelsgaard2016EcoNet]. For example, an observation made in a timeframe too
 short can capture an opportunistic interaction, which, by definition, does not
 frequently occur. If the time considered is too long, it will involve the
 evolutionary history of species, adaptation and co-evolution. The spatial scale
@@ -823,22 +822,23 @@ the whole ecosystem, community stability and persistance [@Thompson2012FooWeb,
 @Stouffer2010UndFoo]. Will climate change impact the distribution of network
 properties (e.g. connectance)? If so, which regions or species groups need
 special conservation efforts? These overarching questions are yet to be answered
-[but see @Albouy2013FroPro; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
+[but see @Albouy2013ProCli; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
 that this roadmap towards forecasting ecological networks provide useful
 guidelines to ultimatly be able to predict more accuratly how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
 
 ## Why should we forecast species interaction networks?
 
-Predictions of species interactions are critical for informing ecosystem
-management[@Harvey2017BriEco] and systematic conservation prioritization
-[@Pollock2020ProBio], and for anticipating extinctions and their consequences
-[@McDonald-Madden2016UsiFoo; @McWilliams2019TheSta].
-Ecological interactions shape species distributions at both local and broad
-spatial scales. Including interactions in SDM models typically improves
-predictive performance [@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to
-rely on approaches involving estimating pairwise dependencies based on
-co-occurance (JSDM paper?), using surrogates for biotic-interaction gradients,
+
+Predictions of species interactions are critical for informing ecosystem 
+management[@Harvey2017BriEco] and systematic conservation prioritization 
+[@Pollock2020ProBio], and for anticipating extinctions and their consequences 
+[@McDonald-Madden2016UsiFoo; @McWilliams2019StaMul].
+Ecological interactions shape species distributions at both local and broad 
+spatial scales. Including interactions in SDM models typically improves 
+predictive performance [@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to 
+rely on approaches involving estimating pairwise dependencies based on 
+co-occurance (JSDM paper?), using surrogates for biotic-interaction gradients, 
 and hybridizing SDMs with dynamic models [@Wisz2013RolBio].
 Improving SDMs through interactions is crucial for conservation, as nearly
 30% of models in SDM studies are used to assess population declines or landscape
