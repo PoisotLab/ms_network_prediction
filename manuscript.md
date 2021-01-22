@@ -56,7 +56,7 @@ Species interaction networks can also be used as means to quantify and
 understand the relative importance [@Heleno2014EcoNet] or the direct effect of
 one species on another over a period of time [@Wootton2005MeaInt]. This can be
 achieved through quantifying the presence/absence of interactions into a measure
-of interaction strength [@Berlow2004IntStr, @Wootton2005MeaInt]. This provides
+of interaction strength [@Berlow2004IntStr; @Wootton2005MeaInt]. This provides
 insights on individual species-to-species links or how changes in one species
 affects the dynamics of other species or scales up to the whole community
 [@Berlow2004IntStr]
@@ -76,7 +76,7 @@ community, network, and ecosystem ecology, improve the quantification of
 functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo],
 re-evaluate metacommunities in light of network structure [@Guzman2019MulExt],
 and enable a new line of research into the biogeography of species interactions
-[@Massol2017ChaFou;Braga2019SpaAna] that incorporates both the Eltonian and
+[@Massol2017ChaFou; @Braga2019SpaAna] that incorporates both the Eltonian and
 Grinnial niche [@Gravel2019BriElt]. Further, the ability to reliably predict and
 forecast species interactions would improve our understanding of how species
 function within ecosystems and inform conservation efforts for protecting
@@ -117,10 +117,11 @@ conservation and biodiversity management.
 
 ## Data
 
-At the moment, our understanding of the structure of ecological networks is limited
-by the availability of data. Although we have seen a growth in species occurrences
-data, this growth is much slower for ecological interactions because species
-interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]  
+
+At the moment, our understanding of the structure of ecological networks is limited 
+by the availability of data. Although we have seen a growth in species occurrences 
+data, this growth is much slower for ecological interactions because species 
+interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet] 
 and sampling methodology matters [@deAguiar2019RevBia]. In turn, the difficulty
 of sampling interactions can lead to biases in our understanding of network
 structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of
