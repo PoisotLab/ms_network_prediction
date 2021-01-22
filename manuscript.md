@@ -237,6 +237,16 @@ models. Considering the current biases in network ecology [@Poisot2020EnvBia]
 and the scarcity of data of species interactions, the prediction of ecological
 networks will undoubtedly benefit from these improvements.
 
+Many studies have used machine learning models specifically with ecological
+interactions. Relevant examples include species traits used to predict
+interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
+@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
+reconstruction of ecological networks using next-generation sequencing data
+[@Bohan2017NexGlo], and network inference from presence-absence data
+[@Sander2017EcoNet]. However, few studies have ever used predictive machine
+learning models on network properties or structure.
+
+
 
 ## Conceptual Synthesis
 
@@ -263,79 +273,51 @@ and how we would incorporate this across space.
 
 ## Models
 
-### What is a model?
+![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
+
+### What is a predictive model?
 
 Models are used for many purposes, however all models share some common properties.
-Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet], predictive vs. descriptive .
 
-Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+Any model can be thought of as a function, $f$, that takes a set of inputs $x$ and parameters $\theta$ and to predicted output states $y$ based on the mapping $y=f(x,\theta)$.
 
-Process models
+A model is trained on a dataset containing an output variable (also called label, response, or dependent variable) which we want to predict and input variables (also called features, descriptors, or independent variables) $ which will be used for prediction [@Kuhn2013AppPre; @KuhnTidMod].
 
-Statistical models are often used for inference and hypothesis testing.
-The quantitative representation of "effects" in statistical models---the influence of each input on the output---is almost always assumed to be linear. In the frequentist context, this often results in determining if an effects strength is non-zero  to determine its "significance". Typically used as descriptive.
 
-Machine learning models.
+Many forms of scientific inquiry are based around inference.   
+In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
+The goal of inference, synonymous with the inverse problem [@Stouffer2019AllEco] or "fitting" a model, is often to determine how much a given input influences the output of a model (see model figure inference panel).
+The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome.
+Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@predictiveEcology], interest has grown in developing models that are not just descriptive, but also predictive.
 
-Any of these models can be thought of as a function $f$, which takes a set of inputs $x$ and parameters $\theta$ and maps them to predicted output states $y$ as a function, $y = f(x)$.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+Here, we posit the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+Any of these three can be used for either descriptive or predictive purposes
+Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
+Statistical models conceptualize the relationship between inputs not based on hypothesized mechanisms, but instead based on an assumption
+Machine learning models are "black boxes" which are algorithms designed to
+
+
 
 ### How do you build a predictive model?
 
-
-#### What do you need?
+What do you need?
 First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
 Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
-Lastly, **priors** on parameters, $P(\theta)$.
+Third, a loss function $L(\hat{x}, x)$.
+Lastly, **priors** on parameters, $P(\theta)$
 
-Two steps: fitting and prediction.
 
-Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
-To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
 
-The process from data to forecast.
-![box figure caption](figures/forecasting.png){#fig:forecastingBox}
-On some scales, empirical time-series encode enough information about
-the process for machine-learning approaches to make accurate forecasts.
-However, its clear this approach won't work as we rapidly shift the abiotic
-environment to conditions which have not been observed in the data.
 
-### How do we fit a predictive model?
-
-In machine learning, a predictive (supervised) model is trained on a dataset
-containing an outcome variable which we want to predict (also called label,
-response, or dependent variable) and predictor variables (also called features,
-descriptors, or independent variables) which will be used for
-prediction[@Kuhn2013AppPre; @KuhnTidMod].
-
-Before fitting the model, the dataset
-will generally be split into a training and validation subset. The model learns
-to predict the outcome from the training subset, then the fit and model
-performance are evaluated on the validation set [@Christin2020GoiFur]. Depending
-on the type of model, the validation step is part of the training and the model
-will keep learning until it reaches a certain threshold based on the loss
-function. Fitting and adjusting the model can be done by adjusting the model
-parameters depending on the type of model (layer compositions and network
-structures for neural networks, number of trees and splits for tree-based
-models).
-
-Another important step in predictive modelling is feature engineering, i.e.
-adjusting and reworking the predictors to enable models to better uncover
+Often, before fitting the model, the dataset
+will generally be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model
+performance are evaluated on the validation set [@Christin2020GoiFur] (see _How do you validate a predictive model?_).
+Another important step in predictive modelling is feature engineering: adjusting and reworking the predictors to enable models to better uncover
 predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
 include projecting the predictors into a principal component analysis space, and
-selecting only a dimensions for the modelling, as in our machine learning
-illustration. The modelling process can have a few more steps, some which worth
-mentioning include: exploratory data analysis, model tuning and selection, and
-model evaluation [@KuhnTidMod]. Model validation will be discussed in the next
-section.
+selecting only a dimensions for the modelling, as in our machine learning illustration.
 
-Many studies have used machine learning models specifically with ecological
-interactions. Relevant examples include species traits used to predict
-interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
-@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
-reconstruction of ecological networks using next-generation sequencing data
-[@Bohan2017NexGlo], and network inference from presence-absence data
-[@Sander2017EcoNet]. However, few studies have ever used predictive machine
-learning models on network properties or structure.
 
 ### How do we validate a predictive model?
 
@@ -350,9 +332,7 @@ heavily maligned Bayes Factor), which are based around the heuristic that good
 models maximize the ratio of information provided by the model to the number of
 parameters it has.
 
-However, when the intended use-case of a model is prediction, the relevant form
- of validation is _predictive accuracy_. _Crossvalidation_ provides a better
- alternative for validating a model's predictive capacity. Crossvalidation
+However, when the intended use-case of a model is prediction, the relevant form of validation is _predictive accuracy_. _Crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation
  methods divide the original dataset into two---one which is used to fit the
  model (called the _training_ set) and one used to validate its predictive
  accuracy on the data that is hasn't "seen" yet (called the _test_ set). This
@@ -362,8 +342,10 @@ However, when the intended use-case of a model is prediction, the relevant form
  However, these methods are typically limited by the ensuing computation time
  requirements.
 
-**Box 2: Machine Learning Illustration**
-
+ Further adjustments can be done by adjusting the model
+ structure (layer compositions and network
+ structures for neural networks, number of trees and splits for tree-based
+ models, etc.) and further tuning parameters.
 
 ## Networks and Interactions
 
@@ -617,7 +599,7 @@ and clades have their evolutionary history defined by historical series of
 events. Therefore, what should be the appropriate spatial scale for the
 prediction of species interactions?  
 
-As described above (PR #20), we can use different proxies to predict potential
+As described above, we can use different proxies to predict potential
 interactions. The choice of such proxies should be theoretically linked to the
 spatial scale we are using in our prediction [@Wiens1989SpaSca]. For example,
 @Bartomeus2016ComFra describe how functional traits influence the structure of
@@ -729,7 +711,10 @@ and how to mitigate them [@Kindsvater2018OveDat].
 ### What data do we need to turn a predictive model into a forecasting model?
 
 Forecasts of the model's inputs
-
+On some scales, empirical time-series encode enough information about
+the process for machine-learning approaches to make accurate forecasts.
+However, its clear this approach won't work as we rapidly shift the abiotic
+environment to conditions which have not been observed in the data.
 
 ### How can we validate a forecasting model?
 
