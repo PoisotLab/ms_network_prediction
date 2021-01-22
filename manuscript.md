@@ -265,17 +265,53 @@ and how we would incorporate this across space.
 
 ### What is a model?
 
+Models are used for many purposes, however all models share some common properties.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet], predictive vs. descriptive .
+
+Here, we define the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
+
+Process models
+
+Statistical models are often used for inference and hypothesis testing.
+The quantitative representation of "effects" in statistical models---the influence of each input on the output---is almost always assumed to be linear. In the frequentist context, this often results in determining if an effects strength is non-zero  to determine its "significance". Typically used as descriptive.
+
+Machine learning models.
+
+Any of these models can be thought of as a function $f$, which takes a set of inputs $x$ and parameters $\theta$ and maps them to predicted output states $y$ as a function, $y = f(x)$.
+
+### How do you build a predictive model?
+
+
+#### What do you need?
+First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
+Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
+Lastly, **priors** on parameters, $P(\theta)$.
+
+Two steps: fitting and prediction.
+
+Many forms of scientific inquiry (hypothesis testing, parameter inference)---are based around the inverse problem  [@Stouffer2019AllEco]. The goal of the inverse problem, effectively synonymous with "fitting" a model, is to estimate the parameters, $\theta$, that best explain a set of observations, $\{\hat{x}, \hat{y}\}$. How we qualify the distance between our models predictions $f(\hat{x}, \theta)$ and our observed outputs $\hat{y}$ falls under the topic of _model comparison and validation_ (section TBD).
+To make ecology predictive, we need to use our model to answer the forward problem. Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
+
+The process from data to forecast.
+![box figure caption](figures/forecasting.png){#fig:forecastingBox}
+On some scales, empirical time-series encode enough information about
+the process for machine-learning approaches to make accurate forecasts.
+However, its clear this approach won't work as we rapidly shift the abiotic
+environment to conditions which have not been observed in the data.
+
 ### How do we fit a predictive model?
 
 In machine learning, a predictive (supervised) model is trained on a dataset
 containing an outcome variable which we want to predict (also called label,
 response, or dependent variable) and predictor variables (also called features,
 descriptors, or independent variables) which will be used for
-prediction[@Kuhn2013AppPre; @KuhnTidMod]. Before fitting the model, the dataset
+prediction[@Kuhn2013AppPre; @KuhnTidMod].
+
+Before fitting the model, the dataset
 will generally be split into a training and validation subset. The model learns
 to predict the outcome from the training subset, then the fit and model
 performance are evaluated on the validation set [@Christin2020GoiFur]. Depending
-son the type of model, the validation step is part of the training and the model
+on the type of model, the validation step is part of the training and the model
 will keep learning until it reaches a certain threshold based on the loss
 function. Fitting and adjusting the model can be done by adjusting the model
 parameters depending on the type of model (layer compositions and network
@@ -325,33 +361,6 @@ However, when the intended use-case of a model is prediction, the relevant form
  each data points uniquely as a test set, enabling sensitivity analysis.
  However, these methods are typically limited by the ensuing computation time
  requirements.
-
-
-### How do we propagate uncertainty through a predictive model?
-
-In order to predict networks across space, we need to combine multiple
-models---one which predicts what the species pool will be at a given location,
-and one to predict what interaction networks composed from this species pool are
-likely (see _conceptual figure_). Both of these models contain uncertainty. The
-Bayesian paradigm provides a convenient solution to this---if we have a chain of
-models where each model feeds into the next, we can sample from the posterior of
-the input models. A different approach is _ensemble modeling_ which combines the
-predictions made be several models, where each model is predicting the same
-thing.
-
-Error propagation is an important step in the modeling of ecological systems, as
-it provides estimates of the uncertainty around predictions. More generally,
-error propagation describes the effect of the uncertainty of input variables on
-the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp].
-@Benke2018ErrPro identifies two broad approaches to model error propagation:
-analytically using differential equations or stochastically using Monte-Carlo
-simulation methods. The second approach is based upon samples of probability
-distributions and is more readily applicable to our problem of predicting
-ecological networks across space using our proposed methodological workflow.
-Indeed, each model's inputs can be sampled from the outputs of the preceding
-ones. Errors induced by the spatial or temporal extrapolation of data also need
-to be taken into account when estimating the uncertainty of a model's output
-[@Peters2004StrEco].
 
 **Box 2: Machine Learning Illustration**
 
@@ -658,16 +667,70 @@ that predict interactions at coarse resolution, and vice-versa.
 
 ### How do we combine spatial and network predictions?
 
+In order to predict networks across space, we need to combine multiple
+models---one which predicts what the species pool will be at a given location,
+and one to predict what interaction networks composed from this species pool are
+likely (see _conceptual figure_). Both of these models contain uncertainty. The
+Bayesian paradigm provides a convenient solution to this---if we have a chain of
+models where each model feeds into the next, we can sample from the posterior of
+the input models. A different approach is _ensemble modeling_ which combines the
+predictions made be several models, where each model is predicting the same
+thing.
+
+Error propagation is an important step in the modeling of ecological systems, as
+it provides estimates of the uncertainty around predictions. More generally,
+error propagation describes the effect of the uncertainty of input variables on
+the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp].
+@Benke2018ErrPro identifies two broad approaches to model error propagation:
+analytically using differential equations or stochastically using Monte-Carlo
+simulation methods. The second approach is based upon samples of probability
+distributions and is more readily applicable to our problem of predicting
+ecological networks across space using our proposed methodological workflow.
+Indeed, each model's inputs can be sampled from the outputs of the preceding
+ones. Errors induced by the spatial or temporal extrapolation of data also need
+to be taken into account when estimating the uncertainty of a model's output
+[@Peters2004StrEco].
 
 ## Time
 
-Giving a temporal component to network predictions requires forecasting
+## Why should we forecast species interaction networks?
 
-**Box 3: Forecasting**
+Predictions of species interactions are critical for informing ecosystem
+management[@Harvey2017BriEco] and systematic conservation prioritization
+[@Pollock2020ProBio], and for anticipating extinctions and their consequences
+[@McDonald-Madden2016UsiFoo; @McWilliams2019StaMul]. Ecological interactions
+shape species distributions at both local and broad spatial scales. Including
+interactions in SDM models typically improves predictive performance
+[@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to rely on approaches
+involving estimating pairwise dependencies based on co-occurance (JSDM paper?),
+using surrogates for biotic-interaction gradients, and hybridizing SDMs with
+dynamic models [@Wisz2013RolBio]. Improving SDMs through interactions is crucial
+for conservation, as nearly 30% of models in SDM studies are used to assess
+population declines or landscape ability to support populations
+[@Araujo2019StaDis].
+
+
+Ecosystem functioning promotes ecosystem services, which are related to basic
+issues of health and the economy of humans, including pathogen transmission,
+food security, or the availability of fresh water. But in a world with a high
+rate of biodiversity loss, land transformation, and climate change, researchers
+are worried about how to protect human lives and improve life quality in
+different countries, having into account the measure of the change in the world
+in the following years.  
+
+Because interactions carry a lot of ecological and evolutionary information
+about biodiversity, predicting links can give us a more complete framework
+to understand processes and forecast rearrangements of nature. Moreover, using
+data to make reliable predictions about how ecosystems will change over time
+will give us critical information that could be communicated to decision-makers
+and the scientific community about what are future environmental risks awaiting
+and how to mitigate them [@Kindsvater2018OveDat].
 
 ### What data do we need to turn a predictive model into a forecasting model?
 
 Forecasts of the model's inputs
+
+
 ### How can we validate a forecasting model?
 
 Often the purpose of building a forecasting model to inform _present_ action
@@ -716,7 +779,7 @@ lower resolution forecast, like primary production will be at a maximum in the
 summer, is likely to be true.
 
 Further, the inherent limitations on the "forecastability" of ecological
-time-series  [@Pennekamp2019IntPre] (see _Forecasting box_)
+time-series  [@Pennekamp2019IntPre].
 
 
 ### What ecological knowledge would forecasting bring?
@@ -744,38 +807,6 @@ guidelines to ultimatly be able to predict more accuratly how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
 
 
-## Why should we forecast species interaction networks?
-
-Predictions of species interactions are critical for informing ecosystem
-management[@Harvey2017BriEco] and systematic conservation prioritization
-[@Pollock2020ProBio], and for anticipating extinctions and their consequences
-[@McDonald-Madden2016UsiFoo; @McWilliams2019StaMul]. Ecological interactions
-shape species distributions at both local and broad spatial scales. Including
-interactions in SDM models typically improves predictive performance
-[@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to rely on approaches
-involving estimating pairwise dependencies based on co-occurance (JSDM paper?),
-using surrogates for biotic-interaction gradients, and hybridizing SDMs with
-dynamic models [@Wisz2013RolBio]. Improving SDMs through interactions is crucial
-for conservation, as nearly 30% of models in SDM studies are used to assess
-population declines or landscape ability to support populations
-[@Araujo2019StaDis].
-
-
-Ecosystem functioning promotes ecosystem services, which are related to basic
-issues of health and the economy of humans, including pathogen transmission,
-food security, or the availability of fresh water. But in a world with a high
-rate of biodiversity loss, land transformation, and climate change, researchers
-are worried about how to protect human lives and improve life quality in
-different countries, having into account the measure of the change in the world
-in the following years.  
-
-Because interactions carry a lot of ecological and evolutionary information
-about biodiversity, predicting links can give us a more complete framework
-tounderstand processes and forecast rearrangements of nature. Moreover, using
-data to make reliable predictions about how ecosystems will change over time
-will give us critical information that could be communicated to decision-makers
-and the scientific community about what are future environmental risks awaiting
-and how to mitigate them [@Kindsvater2018OveDat].
 
 ## Probelm Zone...
 ### What does interaction strength mean?
