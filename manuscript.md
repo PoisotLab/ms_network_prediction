@@ -76,7 +76,7 @@ community, network, and ecosystem ecology, improve the quantification of
 functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo],
 re-evaluate metacommunities in light of network structure [@Guzman2019MulExt],
 and enable a new line of research into the biogeography of species interactions
-[@Massol2017ChaFou; Braga2019SpaAna] that incorporates both the Eltonian and
+[@Massol2017ChaFou; @Braga2019SpaAna] that incorporates both the Eltonian and
 Grinnial niche [@Gravel2019BriElt]. Further, the ability to reliably predict and
 forecast species interactions would improve our understanding of how species
 function within ecosystems and inform conservation efforts for protecting
@@ -120,7 +120,7 @@ conservation and biodiversity management.
 At the moment, our understanding of the structure of ecological networks is limited 
 by the availability of data. Although we have seen a growth in species occurrences 
 data, this growth is much slower for ecological interactions because species 
-interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]  
+interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet] 
 and sampling methodology matters [@deAguiar2019RevBia]. In turn, the difficulty
 of sampling interactions can lead to biases in our understanding of network
 structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of
@@ -666,6 +666,7 @@ Giving a temporal component to network predictions requires forecasting
 ### What data do we need to turn a predictive model into a forecasting model?
 
 Forecasts of the model's inputs
+
 ### How can we validate a forecasting model?
 
 Often the purpose of building a forecasting model to inform _present_ action
