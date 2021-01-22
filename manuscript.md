@@ -263,6 +263,8 @@ and how we would incorporate this across space.
 
 ## Models
 
+### What is a model?
+
 ### How do we fit a predictive model?
 
 In machine learning, a predictive (supervised) model is trained on a dataset
