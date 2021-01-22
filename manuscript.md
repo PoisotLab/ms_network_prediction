@@ -28,13 +28,39 @@ the prediction of species interactions across space and time.
 
 ## What is a species interaction network?
 
-- *Box 1: What is a species interaction network?*
-- Definitions
-  - Species Interaction
-  - Species Interaction Strength
-  - Species Interaction Network
-- _Example 1: Plant-Pollinator_
-- _Example 2: Zoonotic Disease Spillover_
+Interactions between species can be manifested in a multitude of ways e.g. different
+types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted
+between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. 
+The common thread
+between these multiple forms of interactions is that *at least* one of the species is
+affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
+
+We can represent these networks of interactions as graphs, where each species 
+is represented as a node and each interaction as an edge
+[@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
+representation of the interaction. Using a matrix format we can construct 
+interaction networks in using 1s and 0s to 
+represent the presence or absence of interaction respectively [@Dunne2006NetStr].
+This allows for the calculation of many network properties (particularly pertaining to structure).
+We can also structure matrices so as to represent the different network and interaction types 
+including; *unipartite networks,* where each species *appears* twice -
+both as a row and column species, these are typically used to
+represent foodwebs; *bipartite networks,* where we have two interacting species 
+guilds and have one guild be represented
+by rows and the other by columns, these are typically used for
+pairwise interactions *e.g.* hosts and parasites; and *k-partite networks:,* 
+which serve as a way to integrate various bipartite 
+networks e.g. parasitoid webs,
+seed dispersal networks, and pollination networks [@Pocock2012RobRes].
+
+Species interaction networks can also be used as means to quantify and
+understand the relative importance [@Heleno2014EcoNet] or the direct 
+effect of one species on another over a period of time [@Wootton2005MeaInt].
+This can be achieved through quantifying the presence/absence of interactions
+into a measure of interaction strength [@Berlow2004IntStr, @Wootton2005MeaInt].
+This provides insights on individual species-to-species
+links or how changes in one species affects the dynamics
+of other species or scales up to the whole community [@Berlow2004IntStr]
 
 
 ## Why should we predict species interaction networks?
@@ -754,46 +780,8 @@ over time will give us critical information that could be communicated to
 decision-makers and the scientific community about what are future 
 environmental risks awaiting and how to mitigate them [@Kindsvater2018OveDat].
 
-
-
-
-
-# Boxes
-
-## Box 1: Biological Examples
-
-### Definitions
-#### What is a species interaction?
-
-Interactions between species can be manifested in a multitude of ways e.g. different
-types [@Jordano2016ChaEco], strengths, or symmetry and are not necessarily restricted
-between only a pair of species e.g indirect interactions [@Morales-Castilla2015InfBio]. The common thread
-between these multiple forms of interactions is that *at least* one of the species is
-affected by the interaction, this can be either positively or negatively [@Morales-Castilla2015InfBio].
-
-Interactions can be representad as graphs, where each species is represented as a node 
-and each interaction as an edge
-[@Delmas2018AnaEco, @Pascual2006EcoNet], and the value/form an edge takes is a
-representation of the interaction. Using a matrix format we can construct 
-interaction networks in using 1s and 0s to 
-represent the presence or absence of interaction respectively [@Dunne2006NetStr].
-This allows for the calculation of many network properties (particularly pertaining to structure),
-with different ways being used so as to represent different interaction types 
-including:
-
-* *unipartite networks:* where each species *appears* twice -
-both as a row and column species, these are typically used to
-represent foodwebs
-* *bipartite networks:* where we have two interacting species 
-guilds and have one guild be represented
-by rows and the other by columns, these are typically used for
-paiewaise interactions *e.g.* hosts and parasites, 
-* *k-partite networks:* serve as a way to integrate various bipartite 
-networks e.g. parasitoid webs,
-seed dispersal networks, and pollination networks [@Pocock2012RobRes].
-
-
-#### What does interaction strength mean?
+## Probelm Zone...
+### What does interaction strength mean?
 
 Interaction strength, unlike the qualitative presence/absence interaction,
 is the quantification of an interaction. It can be seen as its relative
@@ -839,13 +827,5 @@ temporal variation, and community composition [@Wootton2005MeaInt]. Inferring
 interaction strengths is a key step in linking species interactions to broader ecosystem processes
 and has the possibility to be done with relatively easily accessible
 data such as body size, abundance, density and metabolic rates [@Berlow2004IntStr].
-
-**I would argue for a certain homogenization of interaction strength between 
-different types of network (interaction) to make comparison/analysis easier. Relevant? How? **
-
-
-## Box 2: ML Case Study
-
-## Box 3: Forecasting
 
 # References
