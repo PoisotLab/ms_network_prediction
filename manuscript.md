@@ -4,25 +4,27 @@ bibliography: [references.bib]
 
 # Introduction
 
-Ecosystems are composed of interactions---individual organisms interact with
-one-another either directly or indirectly through their shared environment.
-These interactions form complex networks that drive ecological and evolutionary
-dynamics and maintain ecosystem diversity and functioning [@Delmas2018AnaEco;
-@Landi2018ComSta; @Albrecht2018PlaAni]. Yet, knowledge of species interactions
-is one of the most severe contemporary shortfalls of knowledge in biodiversity
-science [@Hortal2015SevSho], primarily due to the tedious, time-consuming, and
-expensive nature of the data collection process. As with many ecological
-systems, ecological networks have entered their "long now"
-[@Carpenter2002EcoFut], where contemporary actions will have long-term,
-low-predictability consequences, sometimes over centuries [@Burkle2013PlaInt].
-It is therefore imperative to develop a roadmap that would enable the prediction
-(for the present) and forecasting (for the future) of the structure of
-ecological networks [@McCann2007ProBio; @Seibold2018NecMul], of the processes
-they encode [@Thompson2012FooWeb], and that can account for their spatial,
-temporal, and climatic dimensions [@Burkle2011FutPla]. In this paper, we adopt a
-question-driven approach to identify opportunities within this research agenda,
-and suggest a "roadmap" forward moving towards the prediction of species
-interactions across space and time.
+Ecosystems *are* interactions -- organisms interact with one-another and with
+their environment, either directly or indirectly. Between organisms, these
+interactions form networks of varying complexity, drive ecological and
+evolutionary dynamics, and maintain ecosystem diversity and functioning
+[@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Yet, even basic
+knowledge of species interactions (like being able to list them, or guess which
+ones may exist) is one of the most severe shortfalls in biodiversity science
+[@Hortal2015SevSho]. This is due in no small part to the tedious,
+time-consuming, and expensive data collection process. But as many ecological
+systems, networks have entered their "long now" [@Carpenter2002EcoFut], where
+contemporary actions will have long-term, low-predictability consequences,
+sometimes spanning centuries [@Burkle2013PlaInt]. Therefore, our field needs a
+roadmap that enables the prediction (for the present) and forecasting (for the
+future) of the structure of ecological networks [@McCann2007ProBio;
+@Seibold2018NecMul]. Ideally, the predictions derived from these new models
+would address the processes encoded by network structure [@Thompson2012FooWeb],
+and account for their spatial, temporal, and climatic dimensions
+[@Burkle2011FutPla]. Here we adopt a question-driven approach to identify
+current obstacles and opportunities, and suggest a roadmap based on incremental
+steps: from the prediction of networks, to the prediction of interactions, to
+spatially explicit dynamical forecasts.
 
 ## What is a species interaction network?
 
