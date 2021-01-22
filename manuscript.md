@@ -274,33 +274,27 @@ and how we would incorporate this across space.
 
 ## Models
 
-![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
 
 ### What is a predictive model?
 
-Models are used for many purposes, however all models share some common properties.
+Models are used for many purposes, and the term "model" embodies a wide variety of meanings in scientific discourse.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+What unifies all models is that any model can be thought of as a function, $f$, that takes a set of features $x$ and parameters $\theta$, and maps them to predicted output states $y$ based on those inputs, $y=f(x,\theta)$.
 
-Any model can be thought of as a function, $f$, that takes a set of inputs $x$ and parameters $\theta$ and to predicted output states $y$ based on the mapping $y=f(x,\theta)$.
+Models can be used for either descriptive or predictive purposes. Many forms of scientific inquiry are based around the inverse problem  synonymous with "fitting" a model.
+In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
+In some cases, these parameter values are themselves of interest (e.g the strength of selection),
+but in others cases, the goal is to compare different models $f_1, f_2, \dots$ to determine which provides the most
+parsimonious explanation for a dataset. The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome. Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@predictiveEcology], interest has grown in developing models that are used not just for description of data, but also for prediction.
+
+Prediction requires inference, followed by _the forward problem_, where we aim to predict new values of the output $y$ given an input $x$ and our estimate value of $\theta$ [@Stouffer2019AllEco].
 
 A model is trained on a dataset containing an output variable (also called label, response, or dependent variable) which we want to predict and input variables (also called features, descriptors, or independent variables) $ which will be used for prediction [@Kuhn2013AppPre; @KuhnTidMod].
 
-
-Many forms of scientific inquiry are based around inference.   
-In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
-The goal of inference, synonymous with the inverse problem [@Stouffer2019AllEco] or "fitting" a model, is often to determine how much a given input influences the output of a model (see model figure inference panel).
-The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome.
-Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@predictiveEcology], interest has grown in developing models that are not just descriptive, but also predictive.
-
-Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
-Here, we posit the following three categories of quantitative models: 1) process models, 2) statistical models, 3) machine-learning models.
-Any of these three can be used for either descriptive or predictive purposes
-Process-based models attempt to model the state of a system by quantifying how measurable states of the system effect one-another, often in the form of differential/difference equations . In ecology, process-based models were long "toys" [@Okubo]---useful for exploring the outcomes of oversimplified versions of dynamics.
-Statistical models conceptualize the relationship between inputs not based on hypothesized mechanisms, but instead based on an assumption
-Machine learning models are "black boxes" which are algorithms designed to
+![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
 
 
-
-### How do you build a predictive model?
+### What do you need to build a predictive model?
 
 What do you need?
 First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
@@ -308,11 +302,8 @@ Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of 
 Third, a loss function $L(\hat{x}, x)$.
 Lastly, **priors** on parameters, $P(\theta)$
 
-
-
-
 Often, before fitting the model, the dataset
-will generally be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model
+will be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model
 performance are evaluated on the validation set [@Christin2020GoiFur] (see _How do you validate a predictive model?_).
 Another important step in predictive modelling is feature engineering: adjusting and reworking the predictors to enable models to better uncover
 predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
