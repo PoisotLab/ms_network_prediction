@@ -5,7 +5,7 @@ bibliography: [references.bib]
 # Introduction
 
 Ecosystems are composed of interactions---individual organisms interact
-with one-another either directly or indirectly through their shared
+with one-another, either directly or indirectly through their shared
 environment. These interactions form complex networks that drive ecological
 and evolutionary dynamics and maintain ecosystem diversity and functioning
 [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni].
@@ -308,15 +308,29 @@ This roadmap can be divided into three parts data, models, and predictions.
 
 ### What is a model?
 
-Models are a necessity of science. If the goal of science is to make statements about the world that are true, then science presupposes the likelihood that a claim is true is proportional to the amount of evidence in favor of that claim.
-In order to understand how likely it is that a claim is true, we need a mechanism to
-differentiate the likelihood of different theories.
+Models are ubiquitous in science.
+The world "model" is used to describe a wide diversity of things---sometimes a model is purely conceptual explanation of the world,
+sometimes a model is a computer program, and sometimes it is purely quantitative constructs used to find patterns in data.
 
-The 
+For a model to be valid it must be predictive.
+It must make predictions that can be compared to future observations.
+If a model's predictions match reality, we take this as evidence in favor of the model.
+
+Descriptive statistics vs predictive (cite predictive ecology)
+
+
+If the goal of science is understand natural phenomena,
+then establishing models that provide mechanistic explanations of phenomena and
+therefore that can be used to make predictions
+
+it presupposes the likelihood that a claim is true is proportional to the amount of evidence in favor of that claim.
+In order to understand how likely it is that a claim is true, we need a mechanism to differentiate the likelihood of different theories.
 
 
 
-, we must go through the process of inference.
+
+
+We must go through the process of inference.
 
 
 Models are used for many purposes, however all models share some common properties.
