@@ -95,9 +95,10 @@
       "orcid": "0000-0002-0735-5184"
     }
   ],
-  "description": "The abstract goes here.",
+  "description": "Ecological networks can capture meaningful information on the structure of ecological communities. Yet the scarcity of existing data, and the difficulty associated with collecting new ones, means that to describe the structure, variation, and change of ecological networks over time and space, we need to rely on modelling tools with predictive capacity. In this review, we offer a roadmap aimed at guiding the development and integration of these tools, with the specific purpose of boosting our predictive ability. Notably, by working from first principles on the mechanisms involved in structuring ecological networks, we make recommendations about the scale at which we can predict networks: species level, community level, and spatial and temporal scale. In so doing, we show that multiple sources of data and quantitative approaches, including statistical, dynamical, and inferential models, can be integrated to deliver forecasts of ecological networks. Importantly, we argue that ecological forecasting applied to networks will provide benefits to other fields of ecology: it will notably improve the integration between network ecology and meta-community theory and highlight the interoperability between different data sources.",
   "keywords": [
-    "population dynamics",
-    "differential equations",
+    "ecological networks",
+    "ecological forecasting",
+    "biogeography",
     "community ecology"
   ]}
