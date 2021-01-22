@@ -84,14 +84,14 @@ species, communities and ecosystems.
 
 ## Who would benefit from better prediction of species interaction networks?
 
-Reliable predictions for biodiversity change are increasingly sought after 
-in international conservation programs (e.g. IPBES and GEO BON), and 
-predictions that incorporate species interactions could substantially improve 
-these assessments. International panels draw on these models to establish 
-scientific consensus [@Araujo2019StaDis]. For example, IUCN Red List 
-assessments includes an evaluation of a species from known, inferred, and 
-projected sites of occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta], 
-which can be improved through more effective forecasts of species 
+Reliable predictions for biodiversity change are increasingly sought after
+in international conservation programs (e.g. IPBES and GEO BON), and
+predictions that incorporate species interactions could substantially improve
+these assessments. International panels draw on these models to establish
+scientific consensus [@Araujo2019StaDis]. For example, IUCN Red List
+assessments includes an evaluation of a species from known, inferred, and
+projected sites of occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta],
+which can be improved through more effective forecasts of species
 distributions and interactions [@Syfert2014UsiSpe].
 
 Interactions are fundamentally linked to conservation issues and are crucial to
@@ -117,9 +117,9 @@ conservation and biodiversity management.
 
 ## Data
 
-At the moment, our understanding of the structure of ecological networks is limited 
-by the availability of data. Although we have seen a growth in species occurrences 
-data, this growth is much slower for ecological interactions because species 
+At the moment, our understanding of the structure of ecological networks is limited
+by the availability of data. Although we have seen a growth in species occurrences
+data, this growth is much slower for ecological interactions because species
 interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]  
 and sampling methodology matters [@deAguiar2019RevBia]. In turn, the difficulty
 of sampling interactions can lead to biases in our understanding of network
@@ -252,16 +252,18 @@ allow us to infer potential from realized interactions and empirical data about
 populations [@Poisot2016StrPro].
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
- 
-Below we focus on and discuss integrating what we envisage to be the key areas 
-towards conceptualising and predicting ecological networks (@fig:conceptual). 
-With a particular focus on using machine learning approaches in the modelling process, 
-the relationship between species interactions and network structure, 
+
+Below we focus on and discuss integrating what we envisage to be the key areas
+towards conceptualising and predicting ecological networks (@fig:conceptual).
+With a particular focus on using machine learning approaches in the modelling process,
+the relationship between species interactions and network structure,
 and how we would incorporate this across space.
 
 ![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
 
 ## Models
+
+### What is a model?
 
 ### How do we fit a predictive model?
 
@@ -687,23 +689,23 @@ explore the _forecasting horizon_ of a process. Further, this approach can also
 be applied in the opposite temporal direction--- if we have reliable data from
 the past, "hindcasting" can also be used to test a forecast's accuracy.
 
-However, these methods inevitably bump into a hard-limitation on what is 
+However, these methods inevitably bump into a hard-limitation on what is
 feasible for a forecasting model. The future is uncertain.
-Any empirical time-series we use to validate a model was collected in past 
+Any empirical time-series we use to validate a model was collected in past
 conditions that may not persist into the future.
-Any system we wish to forecast will undergo only one of many possible 
-scenarios (see _Forecasting Box_), yet we can only observe the realized 
+Any system we wish to forecast will undergo only one of many possible
+scenarios (see _Forecasting Box_), yet we can only observe the realized
 outcome of the system under the scenario that actually unfolds.
-It is therefore impossible to assess the quality of a forecasting model 
+It is therefore impossible to assess the quality of a forecasting model
 in scenarios that remain hypothetical.
-If the goal is to maximize the probability that reality will fall within 
-the forecast's estimates, forecasts should incorporate as much uncertainty 
+If the goal is to maximize the probability that reality will fall within
+the forecast's estimates, forecasts should incorporate as much uncertainty
 about the future scenario as possible.
 One way to do this is _ensemble modeling_ which combines forecasts from  
 multiple different models.
-However, as we increase the amount of uncertainty we incorporate into a 
+However, as we increase the amount of uncertainty we incorporate into a
 forecasting model, the resolution of the forecast's predictions shrinks,
-and therefore the modeler be mindful of the trade-off between resolution 
+and therefore the modeler be mindful of the trade-off between resolution
 and accuracy in any forecasting model (see _Forecasting Box_).
 
 A forecast inherently has a _resolution limit_ in space, time, and
