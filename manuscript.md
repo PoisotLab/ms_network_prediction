@@ -118,10 +118,10 @@ conservation and biodiversity management.
 ## Data
 
 
-At the moment, our understanding of the structure of ecological networks is limited 
-by the availability of data. Although we have seen a growth in species occurrences 
-data, this growth is much slower for ecological interactions because species 
-interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet] 
+At the moment, our understanding of the structure of ecological networks is limited
+by the availability of data. Although we have seen a growth in species occurrences
+data, this growth is much slower for ecological interactions because species
+interactions are challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]
 and sampling methodology matters [@deAguiar2019RevBia]. In turn, the difficulty
 of sampling interactions can lead to biases in our understanding of network
 structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of
@@ -278,10 +278,14 @@ and how we would incorporate this across space.
 ### What is a predictive model?
 
 Models are used for many purposes, and the term "model" embodies a wide variety of meanings in scientific discourse.
-Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
-What unifies all models is that any model can be thought of as a function, $f$, that takes a set of features $x$ and parameters $\theta$, and maps them to predicted output states $y$ based on those inputs, $y=f(x,\theta)$.
 
-Models can be used for either descriptive or predictive purposes. Many forms of scientific inquiry are based around the inverse problem  synonymous with "fitting" a model.
+All models   can be thought of as a function, $f$, that takes a set of features $x$ and parameters $\theta$, and maps them to predicted output states $y$ based on those inputs, $y=f(x,\theta)$.
+
+Models can be used for either descriptive or predictive purposes.
+Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
+
+
+Many forms of scientific inquiry are based around the inverse problem, synonymous with "fitting" a model [@Stouffer2019AllEco].
 In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
 In some cases, these parameter values are themselves of interest (e.g the strength of selection),
 but in others cases, the goal is to compare different models $f_1, f_2, \dots$ to determine which provides the most
@@ -297,7 +301,7 @@ A model is trained on a dataset containing an output variable (also called label
 ### What do you need to build a predictive model?
 
 What do you need?
-First, **data**, split into features, $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
+First, **data**, split into features $\hat{x}$ and labels $\hat{y}$ (Box Figure Label).
 Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$.
 Third, a loss function $L(\hat{x}, x)$.
 Lastly, **priors** on parameters, $P(\theta)$
