@@ -673,44 +673,58 @@ to be taken into account when estimating the uncertainty of a model's output
 
 ## Why should we forecast species interaction networks?
 
-Predictions of species interactions are critical for informing ecosystem
-management[@Harvey2017BriEco] and systematic conservation prioritization
+Forecasting species interactions are critical for informing ecosystem
+management [@Harvey2017BriEco] and systematic conservation prioritization
 [@Pollock2020ProBio], and for anticipating extinctions and their consequences
 [@McDonald-Madden2016UsiFoo; @McWilliams2019StaMul]. Ecological interactions
 shape species distributions at both local and broad spatial scales. Including
 interactions in SDM models typically improves predictive performance
-[@Araujo2007ImpBio; @Wisz2013RolBio]---which tend to rely on approaches
-involving estimating pairwise dependencies based on co-occurance (JSDM paper?),
+[@Araujo2007ImpBio; @Wisz2013RolBio; @Pigot2013SpeInt]---which tend to rely on approaches
+involving estimating pairwise dependencies based on cooccurance,
 using surrogates for biotic-interaction gradients, and hybridizing SDMs with
-dynamic models [@Wisz2013RolBio]. Improving SDMs through interactions is crucial
-for conservation, as nearly 30% of models in SDM studies are used to assess
-population declines or landscape ability to support populations
-[@Araujo2019StaDis].
+dynamic models [@Wisz2013RolBio]. Most existing models to predict the future
+distribution of species ignore interactions [@Urban2016ImpFor]. Changes in species ranges and phenology
+will inevitably create spatiotemporal mismatches and affect encounter rates between species
+[@Gilman2010FraCom], which will further shift the distribution of species across space.
+New interactions will also appear between species that are not
+currently co-occuring [@Gilman2010FraCom]. Only by forecasting how species will
+interact can we hope to have an accurate portrait of how biodiversity will be
+distributed under the future climate.
 
-
-Ecosystem functioning promotes ecosystem services, which are related to basic
-issues of health and the economy of humans, including pathogen transmission,
-food security, or the availability of fresh water. But in a world with a high
-rate of biodiversity loss, land transformation, and climate change, researchers
-are worried about how to protect human lives and improve life quality in
-different countries, having into account the measure of the change in the world
-in the following years.  
-
-Because interactions carry a lot of ecological and evolutionary information
-about biodiversity, predicting links can give us a more complete framework
-to understand processes and forecast rearrangements of nature. Moreover, using
-data to make reliable predictions about how ecosystems will change over time
+Forecasting how climate change will alter biodiversity is also crucial for maximizing
+conservation outcomes. Improving SDMs through interactions is crucial for conservation, as nearly 30% of models in SDM studies are used to assess population declines or landscape ability to support populations
+[@Araujo2019StaDis]. Reliable predictions about how ecological networks will change over time
 will give us critical information that could be communicated to decision-makers
 and the scientific community about what are future environmental risks awaiting
 and how to mitigate them [@Kindsvater2018OveDat].
 
-### What data do we need to turn a predictive model into a forecasting model?
+Not only this, but how biodiversity is structured influence the functioning of
+the whole ecosystem, community stability and persistence [@Thompson2012FooWeb,
+@Stouffer2010UndFoo]. Will climate change impact the distribution of network
+properties (e.g. connectance)? If so, which regions or species groups need
+special conservation efforts? These overarching questions are yet to be answered
+[but see @Albouy2013ProCli; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
+that this roadmap towards forecasting ecological networks provide useful
+guidelines to ultimately be able to predict more accurately how climate change
+will affect the different dimensions of biodiversity and ecosystem functioning.
 
-Forecasts of the model's inputs
-On some scales, empirical time-series encode enough information about
-the process for machine-learning approaches to make accurate forecasts.
-However, its clear this approach won't work as we rapidly shift the abiotic
-environment to conditions which have not been observed in the data.
+
+
+### How do we turn a predictive model into a forecasting model?
+
+On some scales, empirical time-series encode enough information about ecological processes
+for machine-learning approaches to make accurate forecasts.
+However, there is an intrinsic limit to the predictability of ecological time-series [@Pennekamp2019IntPre].
+
+A forecast inherently has a _resolution limit_ in space, time, and
+organization. For example, one could never hope to predict the precise abundance
+of every species on Earth on every day hundreds of years into the future. There
+is often a trade-off between the resolution and horizon of forecast, e.g., a
+lower resolution forecast, like primary production will be at a maximum in the
+summer, is likely to be true much further into the future than a higher resolution forecast, like where a specific species will be located across space.
+
+If we want to forecast the structure of ecological networks beyond the forecasting horizon of time-series based methods, we need forecasts of our predictive model's inputs---
+a forecast of the distribution of both environmental conditions and the potential species pool across space (see models figure).
 
 ### How can we validate a forecasting model?
 
@@ -750,42 +764,8 @@ multiple different models.
 However, as we increase the amount of uncertainty we incorporate into a
 forecasting model, the resolution of the forecast's predictions shrinks,
 and therefore the modeler be mindful of the trade-off between resolution
-and accuracy in any forecasting model (see _Forecasting Box_).
+and accuracy in any forecasting model.
 
-A forecast inherently has a _resolution limit_ in space, time, and
-organization. For example, one could never hope to predict the precise abundance
-of every species on Earth on every day hundreds of years into the future. There
-is often a trade-off between resolution and a forecasting horizon. However, a
-lower resolution forecast, like primary production will be at a maximum in the
-summer, is likely to be true.
-
-Further, the inherent limitations on the "forecastability" of ecological
-time-series  [@Pennekamp2019IntPre].
-
-
-### What ecological knowledge would forecasting bring?
-
-Forecasting how climate change will alter biodiversity is crucial for maximising
-conservation outcomes. On the one hand, we know that biotic interactions
-influence the distribution of species at different scale [@Araujo2007TheImp,
-@Pigot2013SpeInt]. On the other hand, most existing models to predict the future
-distribution of species ignore interactions [@Urban2016ImpFor]. Species range
-shifts and phenological adaptations will inevitably create spatiotemporal
-mistmatches and affect encounter rates between interacting species
-[@Gilman2010FraCom]. New links will also be created between species that are not
-currently co-occuring [@Gilman2010FraCom]. Only by forecasting how species will
-interact can we hope to have an accurate portrait of how biodiversity will be
-distributed under the future climate.
-
-Not only this, but how biodiversity is structured influence the functioning of
-the whole ecosystem, community stability and persistance [@Thompson2012FooWeb,
-@Stouffer2010UndFoo]. Will climate change impact the distribution of network
-properties (e.g. connectance)? If so, which regions or species groups need
-special conservation efforts? These overarching questions are yet to be answered
-[but see @Albouy2013ProCli; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
-that this roadmap towards forecasting ecological networks provide useful
-guidelines to ultimatly be able to predict more accuratly how climate change
-will affect the different dimensions of biodiversity and ecosystem functioning.
 
 
 
