@@ -59,8 +59,51 @@ achieved through quantifying the presence/absence of interactions into a measure
 of interaction strength [@Berlow2004IntStr; @Wootton2005MeaInt]. This provides
 insights on individual species-to-species links or how changes in one species
 affects the dynamics of other species or scales up to the whole community
-[@Berlow2004IntStr]
+[@Berlow2004IntStr].
 
+Interaction strength, unlike the qualitative presence/absence interaction, is
+the quantification of an interaction. It can be seen as its relative importance
+[@Heleno2014EcoNet] or the direct effect of one species on another over a period
+of time [@Wootton2005MeaInt]. Interaction strength can be expressed by a
+multitude of different metrics, generally depending on the type of interaction,
+for example trophic interaction versus plant-pollinator interactions, and the
+study objectives [@Berlow2004IntStr, @Wootton2005MeaInt] but the general measure
+is usually expressed as a frequency or biomass [@Heleno2014EcoNet] over a period
+of time. While interaction strength might take multiple forms, it can generally
+be divided into two main categories as suggested by @Berlow2004IntStr: it can
+either be seen as the strength of an individual species-to-species link or as
+the effect that the changes in one species has on the dynamic of other species
+or on the whole community. Despite the multiple possibilities, one recurring
+observation throughout many studies is that networks are often composed of many
+weak links and few strong links [@Berlow2004IntStr].
+
+The additional layer of information brought by interaction strength to the
+underlying network topology is an important one. Indeed, knowing the
+distribution of interaction strength within a network informs on its stability
+[@Neutel2002StaReaa, @Ruiter1995EnePat], influences on the ecosystemic functions
+[@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the
+development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
+strength within a network as energy fluxes could also possibly lead to its
+integration within a the Biodiversity-Ecosystem Functioning (BEF) framework,
+which could in return further improve even our understanding of community
+dynamics and ecosystem functioning [@Barnes2018EneFlu].
+
+It remains that the analysis of interaction strength from empirical estimation
+is highly prone to biases since networks quantifying interaction strength are
+usually lumped together, making it difficult to differentiate the strength in
+per-individual interactions from strength of a whole species interaction
+[@Wells2013SpeInt]. Empirical estimations of interaction strength are still
+crucial [@Novak2008EstNon], but are a hard task to do from natural communities
+[@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt], espically due to the
+large number of species composing communities, the multiple paths species can
+affect one another, and the possibility that the interaction strength functions
+might not have a linear response [@Wootton2005MeaInt]. Furthermore, interaction
+strength is extremely variable and context dependant and can be influenced by
+indirect effects, density dependence, spatial and temporal variation, and
+community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
+key step in linking species interactions to broader ecosystem processes and has
+the possibility to be done with relatively easily accessible data such as body
+size, abundance, density and metabolic rates [@Berlow2004IntStr].
 
 ## Why should we predict species interaction networks?
 
@@ -756,55 +799,5 @@ However, as we increase the amount of uncertainty we incorporate into a
 forecasting model, the resolution of the forecast's predictions shrinks,
 and therefore the modeler be mindful of the trade-off between resolution
 and accuracy in any forecasting model.
-
-
-
-
-## Probelm Zone...
-### What does interaction strength mean?
-
-Interaction strength, unlike the qualitative presence/absence interaction, is
-the quantification of an interaction. It can be seen as its relative importance
-[@Heleno2014EcoNet] or the direct effect of one species on another over a period
-of time [@Wootton2005MeaInt]. Interaction strength can be expressed by a
-multitude of different metrics, generally depending on the type of interaction,
-for example trophic interaction versus plant-pollinator interactions, and the
-study objectives [@Berlow2004IntStr, @Wootton2005MeaInt] but the general measure
-is usually expressed as a frequency or biomass [@Heleno2014EcoNet] over a period
-of time. While interaction strength might take multiple forms, it can generally
-be divided into two main categories as suggested by @Berlow2004IntStr: it can
-either be seen as the strength of an individual species-to-species link or as
-the effect that the changes in one species has on the dynamic of other species
-or on the whole community. Despite the multiple possibilities, one recurring
-observation throughout many studies is that networks are often composed of many
-weak links and few strong links [@Berlow2004IntStr].
-
-The additional layer of information brought by interaction strength to the
-underlying network topology is an important one. Indeed, knowing the
-distribution of interaction strength within a network informs on its stability
-[@Neutel2002StaReaa, @Ruiter1995EnePat], influences on the ecosystemic functions
-[@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the
-development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
-strength within a network as energy fluxes could also possibly lead to its
-integration within a the Biodiversity-Ecosystem Functioning (BEF) framework,
-which could in return further improve even our understanding of community
-dynamics and ecosystem functioning [@Barnes2018EneFlu].
-
-It remains that the analysis of interaction strength from empirical estimation
-is highly prone to biases since networks quantifying interaction strength are
-usually lumped together, making it difficult to differentiate the strength in
-per-individual interactions from strength of a whole species interaction
-[@Wells2013SpeInt]. Empirical estimations of interaction strength are still
-crucial [@Novak2008EstNon], but are a hard task to do from natural communities
-[@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt], espically due to the
-large number of species composing communities, the multiple paths species can
-affect one another, and the possibility that the interaction strength functions
-might not have a linear response [@Wootton2005MeaInt]. Furthermore, interaction
-strength is extremely variable and context dependant and can be influenced by
-indirect effects, density dependence, spatial and temporal variation, and
-community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
-key step in linking species interactions to broader ecosystem processes and has
-the possibility to be done with relatively easily accessible data such as body
-size, abundance, density and metabolic rates [@Berlow2004IntStr].
 
 # References
