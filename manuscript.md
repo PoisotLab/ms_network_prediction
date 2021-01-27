@@ -56,18 +56,29 @@ affects the dynamics of other species or scales up to the whole community
 [@Heleno2014EcoNet] or the direct effect of one species on another over a period
 of time [@Wootton2005MeaInt]. Interaction strength can be expressed by a
 many different metrics, depending on the type of interaction and the
-study objectives [@Berlow2004IntStr, @Wootton2005MeaInt] but the general measure
+study objectives [@Berlow2004IntStr; @Wootton2005MeaInt] but the general measure
+
 is usually expressed as a frequency or biomass [@Heleno2014EcoNet] over a period
 of time. While interaction strength might take multiple forms, it can generally
 be divided into two main categories (as suggested by @Berlow2004IntStr): it can
 either be seen as the strength of an individual species-to-species link or as
 the effect that the changes in one species has on the dynamics of the other species. One recurring observation throughout many studies is that networks are often composed of many weak links and few strong links [@Berlow2004IntStr].
-Knowing the distribution of interaction strength within a network informs on its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
+Knowing the distribution of interaction strength within a network informs on its stability [@Neutel2002StaReaa; @Ruiter1995EnePat], influences on the ecosystemic functions [@Duffy2002BioEco; @Montoya2003FooWeb] and our potential to improve on the development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
+the effect that the changes in one species has on the dynamic of other species
+or on the whole community. Despite the multiple possibilities, one recurring
+observation throughout many studies is that networks are often composed of many
+weak links and few strong links [@Berlow2004IntStr].
+
+The additional layer of information brought by interaction strength to the
+underlying network topology is an important one. Indeed, knowing the
+distribution of interaction strength within a network informs on its stability
+[@Neutel2002StaReaa; @Ruiter1995EnePat], influences on ecosystem functions
+[@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the
+development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
 strength within a network as energy fluxes could also possibly lead to its
-integration within a the Biodiversity-Ecosystem Functioning (BEF) framework,
+integration within the Biodiversity-Ecosystem Functioning (BEF) framework,
 which could in return further improve even our understanding of community
 dynamics and ecosystem functioning [@Barnes2018EneFlu].
-
 
 ## Why should we predict species interaction networks?
 
@@ -182,6 +193,7 @@ of environmental (or landscape) data would also limit our ability to predict
 networks at finer scales, although current trends in e.g. remote sensing would
 suggest that with time this would become less of a hindrance
 [@Makiola2020KeyQue]. Ecosystems are a quintessential complex-adaptive-system [@Levin1998EcoBio]. In
+
 @fig:everything_is_connected, we see the myriad of ways in which processes at
 different spatial, temporal, and organizational scales influence and respond to
 one another. Understanding how the product of these different processes drive
@@ -189,7 +201,7 @@ the properties of ecosystems, especially at different scales, remains difficult
 and we should strive to work on methods that will integrate these different
 'snapshots'.
 
-![Everything is connected. Very academia. Much scholarship.](figures/everything_connected_v2.png){#fig:everything_is_connected}
+![Ecological processes rarely occur in isolation and are influenced by (as well as influence) other aspects or properties of a system. This highlights the need to integrate these various processes across various spatial, temporal, and organisational scales if we are to improve our understanding of ecosystems as a whole.](figures/everything_connected_v2.png){#fig:everything_is_connected}
 
 # What is paving the path towards understanding species interaction networks?
 
@@ -278,25 +290,44 @@ populations [@Poisot2016StrPro].
 Below we focus on and discuss integrating what we envisage to be the conceptual and methodological pathway towards better conceptualization and prediction of ecological networks (@fig:conceptual).
 Below we provide a primer on predictive network ecology, with particular focus on using machine learning approaches in the modeling process, in order to provide a path forward toward building models to predict ecological networks and interactions and to better understanding the relationship between species interactions and network structure.
 
-![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
+![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual.png){#fig:conceptual}
 
 ## Models
 
 
 ### What is a predictive model?
 
-Models are used for many purposes, and the term "model" embodies a wide variety of meanings in scientific discourse.
-All models can be thought of as a function, $f$, that takes a set of inputs $x$ (also called features, descriptors, or independent variables)  and some parameters $\theta$, and maps them to predicted output states $y$ (also called label, response, or dependent variable) based on the input to the model: $y=f(x,\theta)$.
+Models are used for many purposes, and the term "model" embodies a wide variety 
+of meanings in scientific discourse.
+All models can be thought of as a function, $f$, that takes a set of inputs $x$ 
+(also called features, descriptors, or independent variables) and some parameters 
+$\theta$, and maps them to predicted output states $y$ (also called label, response, 
+or dependent variable) based on the input to the model: $y=f(x,\theta)$.
 However, any given model $f$ can be used for either descriptive or predictive purposes.
 
-Many forms of scientific inquiry are based around inference (also called the inverse problem, fitting a model, or training a model) [@Stouffer2019AllEco].
-In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
-In some cases, these parameter values are themselves of interest (e.g the strength of selection, intrinsic growth rate, dispersal distance),
-but in others cases, the goal is to compare different models $f_1, f_2, \dots$ to determine which provides the most
-parsimonious explanation for a dataset. The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome. Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@Evans2012PreEco], interest has grown in developing models that are used not just for description of data, but also for prediction. Predictive models use _the forward problem_, where the aim is to predict new values of the output $y$ given an input $x$ and our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward problem relies on an estimate of $\theta$, then, the problem of inference is nested within the forward problem (@fig:models).
+Many forms of scientific inquiry are based around inference (also called the inverse 
+problem, fitting a model, or training a model) [@Stouffer2019AllEco].
+In this context, the goal of using a model is to estimate the parameters, $\theta$, 
+that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
+In some cases, these parameter values are themselves of interest (e.g the strength 
+of selection, intrinsic growth rate, dispersal distance),
+but in others cases, the goal is to compare different models $f_1, f_2, \dots$ to 
+determine which provides the most
+parsimonious explanation for a dataset. The quantitative representation of "effects" 
+in these models---the influence of each input on the output---is often assumed to be 
+linear, and in the frequentist context, the goal is often to determine if the 
+coeffecient corresponding with an input is non-zero to determine its "significance" 
+in influencing the outcome. Models designed for inference have utility, however, 
+in order for ecology to develop as a predictive science [@Evans2012PreEco], 
+interest has grown in developing models that are used not just for description 
+of data, but also for prediction. Predictive models use _the forward problem_, 
+where the aim is to predict new values of the output $y$ given an input $x$ and 
+our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward problem 
+relies on an estimate of $\theta$, then, the problem of inference is nested within 
+the forward problem (@fig:models).
 
 
-![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
+![The nested nature of developing predictive and forecasting models, showcases the _forward problem_ and how this relies on a hierarchical structure of the modelling process.](figures/forecasting_v3.png){#fig:models}
 
 
 ### What do you need to build a predictive model?
@@ -307,11 +338,16 @@ Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of 
 Third, a loss function $L(\hat{x}, x)$.
 Lastly, **priors** on parameters, $P(\theta)$
 
-Often, before fitting the model, the dataset will be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model performance are evaluated on the validation set [@Christin2020GoiFur] (see _How do you validate a predictive model?_).
-Another important step in predictive modelling is feature engineering: adjusting and reworking the predictors to enable models to better uncover
+Often, before fitting the model, the dataset will be split into a training and validation 
+subsets. The model learns to predict the outcome from the training subset, then the fit 
+and model performance are evaluated on the validation set [@Christin2020GoiFur] (see 
+_How do you validate a predictive model?_).
+Another important step in predictive modelling is feature engineering: adjusting and 
+reworking the predictors to enable models to better uncover
 predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
-include projecting the predictors into a principal component analysis space, and
-selecting only a dimensions for the modelling, as in our machine learning illustration.
+include projecting the predictors into principal component analysis space, and
+selecting only a set of dimensions for the modelling, as in our machine learning 
+illustration.
 
 
 ### How do we validate a predictive model?
@@ -327,20 +363,22 @@ heavily maligned Bayes Factor), which are based around the heuristic that good
 models maximize the ratio of information provided by the model to the number of
 parameters it has.
 
-However, when the intended use-case of a model is prediction, the relevant form of validation is _predictive accuracy_. _Crossvalidation_ provides a better alternative for validating a model's predictive capacity. Crossvalidation
- methods divide the original dataset into two---one which is used to fit the
- model (called the _training_ set) and one used to validate its predictive
- accuracy on the data that is hasn't "seen" yet (called the _test_ set). This
- procedure is often repeated for different subdivisions of the dataset. One
- powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers
- each data points uniquely as a test set, enabling sensitivity analysis.
- However, these methods are typically limited by the ensuing computation time
- requirements.
+However, when the intended use-case of a model is prediction, the relevant 
+form of validation is _predictive accuracy_. _Crossvalidation_ provides a 
+better alternative for validating a model's predictive capacity. Crossvalidation 
+methods divide the original dataset into two---one which is used to fit the 
+model (called the _training_ set) and one used to validate its predictive 
+accuracy on the data that is hasn't "seen" yet (called the _test_ set). This 
+procedure is often repeated for different subdivisions of the dataset. One 
+powerful approach is Leave-one-out-crossvalidation (LOOCV), which considers 
+each data points uniquely as a test set, enabling sensitivity analysis. 
+However, these methods are typically limited by the ensuing computation time 
+requirements.
 
- Further adjustments can be done by adjusting the model
- structure (layer compositions and network
- structures for neural networks, number of trees and splits for tree-based
- models, etc.) and further tuning parameters.
+Further adjustments can be done by adjusting the model 
+structure (layer compositions and network 
+structures for neural networks, number of trees and splits for tree-based 
+models, etc.) and further tuning parameters.
 
 ## Networks and Interactions
 
@@ -682,7 +720,8 @@ interactions in SDM models typically improves predictive performance
 involving estimating pairwise dependencies based on cooccurance,
 using surrogates for biotic-interaction gradients, and hybridizing SDMs with
 dynamic models [@Wisz2013RolBio]. Most existing models to predict the future
-distribution of species ignore interactions [@Urban2016ImpFor]. Changes in species ranges and phenology
+distribution of species ignore interactions [@Urban2016ImpFor]. Changes in species 
+ranges and phenology
 will inevitably create spatiotemporal mismatches and affect encounter rates between species
 [@Gilman2010FraCom], which will further shift the distribution of species across space.
 New interactions will also appear between species that are not
@@ -722,8 +761,10 @@ is often a trade-off between the resolution and horizon of forecast, e.g., a
 lower resolution forecast, like primary production will be at a maximum in the
 summer, is likely to be true much further into the future than a higher resolution forecast, like where a specific species will be located across space.
 
-If we want to forecast the structure of ecological networks beyond the forecasting horizon of time-series based methods, we need forecasts of our predictive model's inputs---
-a forecast of the distribution of both environmental conditions and the potential species pool across space (see models figure).
+If we want to forecast the structure of ecological networks beyond the forecasting 
+horizon of time-series based methods, we need forecasts of our predictive model's inputs---
+a forecast of the distribution of both environmental conditions and the potential 
+species pool across space (see models figure).
 
 ### How can we validate a forecasting model?
 
