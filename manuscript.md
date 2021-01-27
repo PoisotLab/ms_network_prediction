@@ -33,17 +33,13 @@ different types [@Jordano2016ChaEco], strengths, or symmetry and are not
 necessarily restricted between only a pair of species e.g indirect interactions
 [@Morales-Castilla2015InfBio]. The common thread between these multiple forms of
 interactions is that *at least* one of the species is affected by the
-interaction, this can be either positively or negatively
-[@Morales-Castilla2015InfBio].
-
-We can represent these networks of interactions as graphs, where each species is
-represented as a node and each interaction as an edge [@Delmas2018AnaEco,
-@Pascual2006EcoNet], and the value/form an edge takes is a representation of the
-interaction. Using a matrix format we can construct interaction networks in
-using 1s and 0s to represent the presence or absence of interaction respectively
-[@Dunne2006NetStr]. This allows for the calculation of many network properties
-(particularly pertaining to structure). We can also structure matrices so as to
-represent the different network and interaction types including; *unipartite
+interaction, either positively or negatively
+[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as graphs, where each species is
+represented as a node, and each interaction as an edge [@Delmas2018AnaEco,
+@Pascual2006EcoNet]. The value of each edge each represents the
+interaction. We can represent interaction networks using a matrix,
+using 1s and 0s to represent the presence or absence of interaction at each entry $(i,j)$ in the matrix
+[@Dunne2006NetStr]. This construct allows for convenient computation of network properties, particularly properties relating to network structure. Network and interaction types including: *unipartite
 networks,* where each species *appears* twice - both as a row and column
 species, these are typically used to represent foodwebs; *bipartite networks,*
 where we have two interacting species guilds and have one guild be represented
@@ -53,57 +49,25 @@ as a way to integrate various bipartite networks e.g. parasitoid webs, seed
 dispersal networks, and pollination networks [@Pocock2012RobRes].
 
 Species interaction networks can also be used as means to quantify and
-understand the relative importance [@Heleno2014EcoNet] or the direct effect of
-one species on another over a period of time [@Wootton2005MeaInt]. This can be
-achieved through quantifying the presence/absence of interactions into a measure
-of interaction strength [@Berlow2004IntStr; @Wootton2005MeaInt]. This provides
-insights on individual species-to-species links or how changes in one species
+understand _interaction strength_: the relative importance [@Heleno2014EcoNet] or the direct effect of
+one species on another over a period of time [@Berlow2004IntStr; @Wootton2005MeaInt]. This provides insights on individual species-to-species links or how changes in one species
 affects the dynamics of other species or scales up to the whole community
-[@Berlow2004IntStr].
-
-Interaction strength, unlike the qualitative presence/absence interaction, is
-the quantification of an interaction. It can be seen as its relative importance
+[@Berlow2004IntStr]. Interaction strength, unlike the qualitative presence or absence an  interaction, is a continuous measurement which can reflect either relative importance
 [@Heleno2014EcoNet] or the direct effect of one species on another over a period
 of time [@Wootton2005MeaInt]. Interaction strength can be expressed by a
-multitude of different metrics, generally depending on the type of interaction,
-for example trophic interaction versus plant-pollinator interactions, and the
+many different metrics, depending on the type of interaction and the
 study objectives [@Berlow2004IntStr, @Wootton2005MeaInt] but the general measure
 is usually expressed as a frequency or biomass [@Heleno2014EcoNet] over a period
 of time. While interaction strength might take multiple forms, it can generally
-be divided into two main categories as suggested by @Berlow2004IntStr: it can
+be divided into two main categories (as suggested by @Berlow2004IntStr): it can
 either be seen as the strength of an individual species-to-species link or as
-the effect that the changes in one species has on the dynamic of other species
-or on the whole community. Despite the multiple possibilities, one recurring
-observation throughout many studies is that networks are often composed of many
-weak links and few strong links [@Berlow2004IntStr].
-
-The additional layer of information brought by interaction strength to the
-underlying network topology is an important one. Indeed, knowing the
-distribution of interaction strength within a network informs on its stability
-[@Neutel2002StaReaa, @Ruiter1995EnePat], influences on the ecosystemic functions
-[@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the
-development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
+the effect that the changes in one species has on the dynamics of the other species. One recurring observation throughout many studies is that networks are often composed of many weak links and few strong links [@Berlow2004IntStr].
+Knowing the distribution of interaction strength within a network informs on its stability [@Neutel2002StaReaa, @Ruiter1995EnePat], influences on the ecosystemic functions [@Duffy2002BioEco, @Montoya2003FooWeb] and our potential to improve on the development of multispecies models [@Wootton2005MeaInt]. Seeing interaction
 strength within a network as energy fluxes could also possibly lead to its
 integration within a the Biodiversity-Ecosystem Functioning (BEF) framework,
 which could in return further improve even our understanding of community
 dynamics and ecosystem functioning [@Barnes2018EneFlu].
 
-It remains that the analysis of interaction strength from empirical estimation
-is highly prone to biases since networks quantifying interaction strength are
-usually lumped together, making it difficult to differentiate the strength in
-per-individual interactions from strength of a whole species interaction
-[@Wells2013SpeInt]. Empirical estimations of interaction strength are still
-crucial [@Novak2008EstNon], but are a hard task to do from natural communities
-[@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt], espically due to the
-large number of species composing communities, the multiple paths species can
-affect one another, and the possibility that the interaction strength functions
-might not have a linear response [@Wootton2005MeaInt]. Furthermore, interaction
-strength is extremely variable and context dependant and can be influenced by
-indirect effects, density dependence, spatial and temporal variation, and
-community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
-key step in linking species interactions to broader ecosystem processes and has
-the possibility to be done with relatively easily accessible data such as body
-size, abundance, density and metabolic rates [@Berlow2004IntStr].
 
 ## Why should we predict species interaction networks?
 
@@ -135,9 +99,7 @@ scientific consensus [@Araujo2019StaDis]. For example, IUCN Red List
 assessments includes an evaluation of a species from known, inferred, and
 projected sites of occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta],
 which can be improved through more effective forecasts of species
-distributions and interactions [@Syfert2014UsiSpe].
-
-Interactions are fundamentally linked to conservation issues and are crucial to
+distributions and interactions [@Syfert2014UsiSpe]. Interactions are fundamentally linked to conservation issues and are crucial to
 consider in conservation assessments. According to IUCN, interactions represent
 an important gap and challenge in the assessment of species vulnerability to
 climate change, a "seldom considered, but important driver of climate change
@@ -179,6 +141,20 @@ These 'spatial gaps' serve as a limitation to our ability to confidently make
 predictions when accounting for real-world environmental conditions, especially
 in environments for which there are no analogous data.
 
+Further, the analysis of interaction strength from empirical estimation
+is highly prone to biases since existing data quantifying interaction strength are usually lumped together, making it difficult to differentiate the strength in
+per-individual interactions from strength of a whole species interaction
+[@Wells2013SpeInt]. Empirical estimations of interaction strength are still
+crucial [@Novak2008EstNon], but are a hard task to in natural communities
+[@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt], especially as
+the number of species composing communities increases, composed with the possibility of higher-order interactions or non-linear responses [@Wootton2005MeaInt]. Furthermore, interaction
+strength is extremely variable and context dependent and can be influenced by density dependence and spatiotemporal variation in abundances and
+community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
+key step in linking species interactions to broader ecosystem processes and has
+the possibility to be done with relatively easily accessible data such as body
+size, abundance, density and metabolic rates [@Berlow2004IntStr].
+
+
 ## Methods
 
 This scarcity of data limits the range of computational tools than can be used
@@ -205,9 +181,7 @@ which we would be able to predict networks. On the note of scale, the resolution
 of environmental (or landscape) data would also limit our ability to predict
 networks at finer scales, although current trends in e.g. remote sensing would
 suggest that with time this would become less of a hindrance
-[@Makiola2020KeyQue].
-
-Ecosystems are a quintessential complex-adaptive-system []. In
+[@Makiola2020KeyQue]. Ecosystems are a quintessential complex-adaptive-system [@Levin1998EcoBio]. In
 @fig:everything_is_connected, we see the myriad of ways in which processes at
 different spatial, temporal, and organizational scales influence and respond to
 one another. Understanding how the product of these different processes drive
@@ -279,21 +253,15 @@ mechanistic models with black box machine-learning to predict ecological
 networks with relatively small amounts of data using existing process-based
 models. Considering the current biases in network ecology [@Poisot2020EnvBia]
 and the scarcity of data of species interactions, the prediction of ecological
-networks will undoubtedly benefit from these improvements.
-
-Many studies have used machine learning models specifically with ecological
+networks will undoubtedly benefit from these improvements. Many studies have used machine learning models specifically with ecological
 interactions. Relevant examples include species traits used to predict
 interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
 @Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
 reconstruction of ecological networks using next-generation sequencing data
 [@Bohan2017NexGlo], and network inference from presence-absence data
-[@Sander2017EcoNet]. However, few studies have ever used predictive machine
-learning models on network properties or structure.
-
-
+[@Sander2017EcoNet].
 
 ## Conceptual Synthesis
-
 
 If we wish to predict the interactions between species we have not observed
 together, using our knowledge of the structure of ecological networks to
@@ -307,11 +275,8 @@ populations [@Poisot2016StrPro].
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
 
-Below we focus on and discuss integrating what we envisage to be the key areas
-towards conceptualising and predicting ecological networks (@fig:conceptual).
-With a particular focus on using machine learning approaches in the modelling process,
-the relationship between species interactions and network structure,
-and how we would incorporate this across space.
+Below we focus on and discuss integrating what we envisage to be the conceptual and methodological pathway towards better conceptualization and prediction of ecological networks (@fig:conceptual).
+Below we provide a primer on predictive network ecology, with particular focus on using machine learning approaches in the modeling process, in order to provide a path forward toward building models to predict ecological networks and interactions and to better understanding the relationship between species interactions and network structure.
 
 ![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
 
@@ -705,7 +670,7 @@ to be taken into account when estimating the uncertainty of a model's output
 
 ## Time
 
-### Why should we forecast species interaction networks?
+## Why should we forecast species interaction networks?
 
 Forecasting species interactions are critical for informing ecosystem
 management [@Harvey2017BriEco] and systematic conservation prioritization
