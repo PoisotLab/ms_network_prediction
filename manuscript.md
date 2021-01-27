@@ -705,7 +705,7 @@ to be taken into account when estimating the uncertainty of a model's output
 
 ## Time
 
-## Why should we forecast species interaction networks?
+### Why should we forecast species interaction networks?
 
 Forecasting species interactions are critical for informing ecosystem
 management [@Harvey2017BriEco] and systematic conservation prioritization
