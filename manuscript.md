@@ -207,7 +207,7 @@ networks at finer scales, although current trends in e.g. remote sensing would
 suggest that with time this would become less of a hindrance
 [@Makiola2020KeyQue].
 
-Ecosystems are a quintessential complex-adaptive-system []. In
+Ecosystems are a quintessential complex-adaptive-system. In
 @fig:everything_is_connected, we see the myriad of ways in which processes at
 different spatial, temporal, and organizational scales influence and respond to
 one another. Understanding how the product of these different processes drive
@@ -215,7 +215,7 @@ the properties of ecosystems, especially at different scales, remains difficult
 and we should strive to work on methods that will integrate these different
 'snapshots'.
 
-![Everything is connected. Very academia. Much scholarship.](figures/everything_connected_v2.png){#fig:everything_is_connected}
+![Ecological processes rarely occur in isolation and are influenced by (as well as influence) other aspects or properties of a system. This highlights the need to integrate these various processes across various spatial, temporal, and organisational scales if we are to improve our understanding of ecosystems as a whole.](figures/everything_connected_v2.png){#fig:everything_is_connected}
 
 # What is paving the path towards understanding species interaction networks?
 
@@ -313,7 +313,7 @@ With a particular focus on using machine learning approaches in the modelling pr
 the relationship between species interactions and network structure,
 and how we would incorporate this across space.
 
-![LEGEND GOES HERE](figures/conceptual.png){#fig:conceptual}
+![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual.png){#fig:conceptual}
 
 ## Models
 
@@ -350,7 +350,7 @@ relies on an estimate of $\theta$, then, the problem of inference is nested with
 the forward problem (@fig:models).
 
 
-![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
+![The nested nature of developing predictive and forecasting models, showcases the _forward problem_ and how this relies on a hierarchical structure of the modelling process.](figures/forecasting_v3.png){#fig:models}
 
 
 ### What do you need to build a predictive model?
