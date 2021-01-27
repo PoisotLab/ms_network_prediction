@@ -278,22 +278,15 @@ and how we would incorporate this across space.
 ### What is a predictive model?
 
 Models are used for many purposes, and the term "model" embodies a wide variety of meanings in scientific discourse.
+All models can be thought of as a function, $f$, that takes a set of inputs $x$ (also called features, descriptors, or independent variables)  and some parameters $\theta$, and maps them to predicted output states $y$ (also called label, response, or dependent variable) based on the input to the model: $y=f(x,\theta)$.
+However, any given model $f$ can be used for either descriptive or predictive purposes.
 
-All models   can be thought of as a function, $f$, that takes a set of features $x$ and parameters $\theta$, and maps them to predicted output states $y$ based on those inputs, $y=f(x,\theta)$.
-
-Models can be used for either descriptive or predictive purposes.
-Various attempts to categorize models have been made --- phenomenalogical vs. mechanistic [@], data vs. algorithmic [@Breiman2000TwoSch], statistical vs. process [@McElreath2020StaRet].
-
-
-Many forms of scientific inquiry are based around the inverse problem, synonymous with "fitting" a model [@Stouffer2019AllEco].
+Many forms of scientific inquiry are based around inference (also called the inverse problem, fitting a model, or training a model) [@Stouffer2019AllEco].
 In this context, the goal of using a model is to estimate the parameters, $\theta$, that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$.
-In some cases, these parameter values are themselves of interest (e.g the strength of selection),
+In some cases, these parameter values are themselves of interest (e.g the strength of selection, intrinsic growth rate, dispersal distance),
 but in others cases, the goal is to compare different models $f_1, f_2, \dots$ to determine which provides the most
-parsimonious explanation for a dataset. The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome. Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@predictiveEcology], interest has grown in developing models that are used not just for description of data, but also for prediction.
+parsimonious explanation for a dataset. The quantitative representation of "effects" in these models---the influence of each input on the output---is often assumed to be linear, and in the frequentist context, the goal is often to determine if the coeffecient corresponding with an input is non-zero to determine its "significance" in influencing the outcome. Models designed for inference have utility, however, in order for ecology to develop as a predictive science [@predictiveEcology], interest has grown in developing models that are used not just for description of data, but also for prediction. Predictive models use _the forward problem_, where the aim is to predict new values of the output $y$ given an input $x$ and our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward problem relies on an estimate of $\theta$, then, the problem of inference is nested within the forward problem (@fig:models).
 
-Prediction requires inference, followed by _the forward problem_, where we aim to predict new values of the output $y$ given an input $x$ and our estimate value of $\theta$ [@Stouffer2019AllEco].
-
-A model is trained on a dataset containing an output variable (also called label, response, or dependent variable) which we want to predict and input variables (also called features, descriptors, or independent variables) $ which will be used for prediction [@Kuhn2013AppPre; @KuhnTidMod].
 
 ![LEGEND GOES HERE](figures/forecasting_v3.png){#fig:models}
 
@@ -306,9 +299,7 @@ Second, a **model** $f$, which maps features $x$ to labels $y$ as a function of 
 Third, a loss function $L(\hat{x}, x)$.
 Lastly, **priors** on parameters, $P(\theta)$
 
-Often, before fitting the model, the dataset
-will be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model
-performance are evaluated on the validation set [@Christin2020GoiFur] (see _How do you validate a predictive model?_).
+Often, before fitting the model, the dataset will be split into a training and validation subsets. The model learns to predict the outcome from the training subset, then the fit and model performance are evaluated on the validation set [@Christin2020GoiFur] (see _How do you validate a predictive model?_).
 Another important step in predictive modelling is feature engineering: adjusting and reworking the predictors to enable models to better uncover
 predictor-response relationships [@Kuhn2019FeaEng]. For instance, this can
 include projecting the predictors into a principal component analysis space, and
@@ -540,7 +531,7 @@ is quite constant in space.
 ### How do we predict what the species pool at a particular location is?
 
 As species form the basis of both network structure and interactions knowing
-which species are present at a particular site will inforom on the potential
+which species are present at a particular site will inform on the potential
 interactions that _could_ occur. A common approach in biogeography to predict
 whether a species will be present or absent at specific sites is to use species
 distribution models (SDMs) based on known occurrences and environmental
