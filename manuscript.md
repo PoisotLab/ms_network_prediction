@@ -28,14 +28,14 @@ spatially explicit dynamical forecasts.
 
 ## What is a species interaction network?
 
-Interactions between species can be manifested in a multitude of ways (e.g.
-different types [@Jordano2016ChaEco], variable strengths, symmetric vs. asymmetric, direct vs. indirect)
-[@Morales-Castilla2015InfBio]. The common thread between these forms of
+Interactions between species can be conceptualized in a multitude of ways (e.g.
+different types, variable strengths, symmetric vs. asymmetric, direct vs. indirect)
+[Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread between these forms of
 interactions is that *at least* one of the species is affected by the
 presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as networks or graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
-@Pascual2006EcoNet]. The value of each edge each represents information about that interaction. We can this network using a matrix,
-using 1s and 0s to represent the presence or absence of interaction at each entry $(i,j)$ in the matrix
+[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
+@Pascual2006EcoNet]. The value of each edge each represents information about that interaction. We can represent this network using a matrix,
+using 1s and 0s to represent the presence or absence of an interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
 [@Dunne2006NetStr]. This construct allows for convenient computation of network properties, particularly properties relating to network structure. Network and interaction types include: *unipartite
 networks,* where each species can be linked any other species,
 species (these are typically used to represent food webs), *bipartite networks*
@@ -131,7 +131,7 @@ is highly prone to biases since existing data quantifying interaction strength a
 per-individual interactions from strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to in natural communities
-[@Wootten1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt], especially as
+[@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt], especially as
 the number of species composing communities increases, composed with the possibility of higher-order interactions or non-linear responses [@Wootton2005MeaInt]. Furthermore, interaction
 strength is extremely variable and context dependent and can be influenced by density dependence and spatiotemporal variation in abundances and
 community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
