@@ -358,9 +358,7 @@ combination of $S$ different species---we are left with $S^2$ interaction values
 to estimate. Instead, we can use our existing understanding of the mechanisms
 that structure ecological networks to widdle down the set of feasible adjacency
 matrices, thereby reducing the amount of information we must predict, and making
-the problem of predicting interactions less daunting.
-
-The processes that structure ecological networks do not only occur at the scale
+the problem of predicting interactions less daunting. The processes that structure ecological networks do not only occur at the scale
 of interactions---there are also processes at the network level which limit what
 interactions are possible. The realized structure of a network is the synthesis
 of the interactions forming the basis for network structure, and the network
@@ -424,7 +422,7 @@ structure [@Becker2020PreWil]. Species positioned closely in the network should
 interact with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. As
 for functional traits, phylogenies can inform these models because these
 unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
-@Elmasri2020HieBay]. These network-based models are unfortunatly sensitive to
+@Elmasri2020HieBay]. These network-based models are unfortunately sensitive to
 sampling biases and limited to prediction for species for which we already have
 interaction data [@Becker2020PreWil].
 
@@ -439,9 +437,7 @@ species can forming parts of different networks *e.g.* a plant species may be
 included in both a plant-pollinator as well as herbivory network and we could
 conceivably have a network of networks linked by shared species. Investigating indirect interactions---either higher-order interactions between species, or interaction strengths that themselves interact --- has gained interest in recent years
 [@Golubski2016EcoNet; @Golubski2011ModMod].
-One
-mathematical tool to describe these situations is hypergraphs: hypergraphs are
-the generalization of a graph, allowing a broad yet manageable approach to
+One mathematical tool to describe these situations is hypergraphs: hypergraphs are the generalization of a graph, allowing a broad yet manageable approach to
 complex interactions [@Carletti2020DynSys], allowing for particular interactions
 to occur beyond a pair of nodes.  
 An additional degree of complexity is introduced by multi-layer networks
@@ -723,10 +719,6 @@ If the goal is to maximize the probability that reality will fall within
 the forecast's estimates, forecasts should incorporate as much uncertainty
 about the future scenario as possible.
 One way to do this is _ensemble modeling_ which combines forecasts from  
-multiple different models.
-However, as we increase the amount of uncertainty we incorporate into a
-forecasting model, the resolution of the forecast's predictions shrinks,
-and therefore the modeler be mindful of the trade-off between resolution
-and accuracy in any forecasting model.
+multiple different models. However, as we increase the amount of uncertainty we incorporate into a forecasting model, the resolution of the forecast's predictions shrinks, and therefore the modeler be mindful of the trade-off between resolution and accuracy in any forecasting model.
 
 # References
