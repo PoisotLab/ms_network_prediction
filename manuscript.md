@@ -131,7 +131,7 @@ is highly prone to biases since existing data quantifying interaction strength a
 per-individual interactions from strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to in natural communities
-[@Wootten1997EstTesa; @Sala2002ComDis; @Wootton2005MeaInt], especially as
+[@Wootten1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt], especially as
 the number of species composing communities increases, composed with the possibility of higher-order interactions or non-linear responses [@Wootton2005MeaInt]. Furthermore, interaction
 strength is extremely variable and context dependent and can be influenced by density dependence and spatiotemporal variation in abundances and
 community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
