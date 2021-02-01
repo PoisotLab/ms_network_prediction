@@ -28,14 +28,14 @@ spatially explicit dynamical forecasts.
 
 ## What is a species interaction network?
 
-Interactions between species can be manifested in a multitude of ways (e.g.
-different types [@Jordano2016ChaEco], variable strengths, symmetric vs. asymmetric, direct vs. indirect)
-[@Morales-Castilla2015InfBio]. The common thread between these forms of
+Interactions between species can be conceptualized in a multitude of ways (e.g.
+different types, variable strengths, symmetric vs. asymmetric, direct vs. indirect)
+[Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread between these forms of
 interactions is that *at least* one of the species is affected by the
 presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as networks or graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
-@Pascual2006EcoNet]. The value of each edge each represents information about that interaction. We can this network using a matrix,
-using 1s and 0s to represent the presence or absence of interaction at each entry $(i,j)$ in the matrix
+[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
+@Pascual2006EcoNet]. The value of each edge each represents information about that interaction. We can represent this network using a matrix,
+using 1s and 0s to represent the presence or absence of an interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
 [@Dunne2006NetStr]. This construct allows for convenient computation of network properties, particularly properties relating to network structure. Network and interaction types include: *unipartite
 networks,* where each species can be linked any other species,
 species (these are typically used to represent food webs), *bipartite networks*
@@ -131,7 +131,7 @@ is highly prone to biases since existing data quantifying interaction strength a
 per-individual interactions from strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to in natural communities
-[@Wootten1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt], especially as
+[@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt], especially as
 the number of species composing communities increases, composed with the possibility of higher-order interactions or non-linear responses [@Wootton2005MeaInt]. Furthermore, interaction
 strength is extremely variable and context dependent and can be influenced by density dependence and spatiotemporal variation in abundances and
 community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
@@ -428,6 +428,10 @@ interaction data [@Becker2020PreWil].
 
 
 ### How are interaction strengths actually inferred?
+
+Interaction strength can be inferred empirically or theoretically [@Berlow2004IntStr]. While the development of theoretical predictive models to infer interaction strength is important, the empirical sampling of quantitative networks is although not to be neglected as they are important to model parameterization and validation [@Novak2008EstNon]. Before we attempt to make inferences from data, we must adapt a conceptual framework to model interaction strength. One such framework is functional foraging [@Portalier2019MecPre], where the primary basis for inferring interaction is based an organism's traits, the environment, and foraging behavior such as searching, capture and handling times. A different conceptual alternative, applicable in food-webs, is metabolic based models, where body mass, metabolic demands, and energy loss are used to infer energetic  energy fluxes between organisms [@Yodzis1992BodSiz;@Berlow2009SimPre].
+
+Energy can be seen as the common currency that links every level of biology from individual organisms to the whole ecosystem [@Brown2004MetThe,@Barnes2018EneFlua]. Thus, predicting interaction strength as energy fluxes could potentially open the way to the conciliation of the different spheres of ecology. Preceded by the prediction of network topology itself, a bottom-up or top-down approach could either be used to quantitatively predict interaction strength using the relatively easily accessible traits mention previously (or mention here? "such as body size, abundance, density and metabolic rates"). A bottom-up approach like the one used in [@Berlow2009SimPre] could be implemented, where the basal species biomasses are first infered and from there the higher trophic-level species biomasses and energetic demands would be computed. Otherwise, a top-down approach like the one used in [@Barnes2018EneFlua] could be implemented, where energy fluxes are calculated starting from the top consumer to the bottom ones, based on species body-masses, metabolic rates and assimilation effeciencies. One flexible and useful characteristic of the food-web energetics model used by [@Barnes2018] is that it can either incorporate individual-based data or more lumped data to the species level or trophic group depending on what is available for a specific network.
 
 ### What about indirect and higher-order interactions?
 
