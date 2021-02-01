@@ -33,14 +33,14 @@ different types [@Jordano2016ChaEco], variable strengths, symmetric vs. asymmetr
 [@Morales-Castilla2015InfBio]. The common thread between these forms of
 interactions is that *at least* one of the species is affected by the
 presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as networks or graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco,
+[@Morales-Castilla2015InfBio]. We can represent these networks of interactions as networks or graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
 @Pascual2006EcoNet]. The value of each edge each represents information about that interaction. We can this network using a matrix,
 using 1s and 0s to represent the presence or absence of interaction at each entry $(i,j)$ in the matrix
 [@Dunne2006NetStr]. This construct allows for convenient computation of network properties, particularly properties relating to network structure. Network and interaction types include: *unipartite
-networks,* where each species *appears* twice - both as a row and column
-species (these are typically used to represent foodwebs), *bipartite networks*
+networks,* where each species can be linked any other species,
+species (these are typically used to represent food webs), *bipartite networks*
 where there are two pools of species, and all interactions occur between species in each pool, are typically used for pairwise
-interactions (e.g. hosts and parasites, ), and *k-partite networks:,* which serve as a way to expand to more than two discrete sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and pollination networks [@Pocock2012RobRes]).
+interactions (e.g. hosts and parasites, ), and *k-partite networks:,* which serve as a way to expand to more than two discrete sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and pollination networks) [@Pocock2012RobRes].
 
 Species interaction networks can also be used as means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative presence or absence an interaction, is a continuous measurement which attempts to quantify the effect of one species on another.
@@ -131,7 +131,7 @@ is highly prone to biases since existing data quantifying interaction strength a
 per-individual interactions from strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to in natural communities
-[@Wootten1997EstTesa, @Sala2002ComDis, @Wootton2005MeaInt], especially as
+[@Wootten1997EstTesa; @Sala2002ComDis; @Wootton2005MeaInt], especially as
 the number of species composing communities increases, composed with the possibility of higher-order interactions or non-linear responses [@Wootton2005MeaInt]. Furthermore, interaction
 strength is extremely variable and context dependent and can be influenced by density dependence and spatiotemporal variation in abundances and
 community composition [@Wootton2005MeaInt]. Inferring interaction strengths is a
@@ -148,7 +148,7 @@ expensive. The paucity of data is compounded by a collection of biases that can
 be found in existing datasets. Species interaction datasets are typically
 dominated by food webs, pollination, and host-parasite networks
 [@Ings2009EcoNet; @Poisot2020EnvBia]. This could prove to be a limiting factor
-when trying to understand or predict networks of *under represented* interaction
+when trying to understand or predict networks of *underrepresented* interaction
 types or when trying to integrate networks of different types
 [@Fontaine2011EcoEvo], especially given the inherit structural variation of
 ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
@@ -496,10 +496,8 @@ in the understood relationship between allometry and metabolism
 An additional consideration is the multidimensional nature of "stability" and
 "feasibility" e.g resilience to environmental change vs extinctions
 [@Dominguez-Garcia2019UnvDim] and how these different disturbances will
-propagate along the various level of organisations within a network
-[@Kefi2019AdvOur], as well as their effect over space such as considering
-metacommunities and the affect of dispersal/linkages between them in dampening
-these effects e.g building on the work of @Gravel2016StaCom.
+propagate along the various level of biological organization
+[@Kefi2019AdvOur], as well as their effect over space such as dispersal [@Gravel2016StaCom].
 
 
 
@@ -572,14 +570,9 @@ framework of predicting networks first, interactions next, and finally species.
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
 fluctuation of genomes and phenotypes across populations of a given species.
-Additionally, there is a trade-off when we combine different taxonomic and spatial scales: assessing interactions between higher taxonomic levels at a microscale level ignores individual plasticity.
+Additionally, there is a trade-off when we combine different taxonomic and spatial scales: assessing interactions between higher taxonomic levels at a microscale level ignores individual plasticity. As described above, we can use different trait-based proxies to predict potential interactions. The choice of such proxies should be theoretically linked to the spatial scale we are using in our prediction [@Wiens1989SpaSca].
 
-As described above, we can use different trait-based proxies to predict potential interactions. The choice of such proxies should be theoretically linked to the spatial scale we are using in our prediction [@Wiens1989SpaSca].
-Traits influence the structure of ecological networks in three different ways: they are selected by the environmental conditions, they alter the probability of interactions and finally they determine the interaction functioning [@Bartomeus2016ComFra].
-
-At some scales we can use morphological traits of co-occurring species to assess the probability of interaction between them [@Bartomeus2016ComFra]. This translates to a spatial extent that does not necessarily capture the entire distribution of a given set of species, with a resolution that is sufficient to capture the phenotypical variability of the species.
-
-At larger scales, we can infer interactions through the phylogenetic similarity between species, assuming their functional traits are themselves are phylogenetically conserved [@Gomez2010EcoInt]. On scales where the niche is a is phylogenetically conserved, we can think of the probability that one species will interact with another as the "amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt].
+At some scales we can use morphological traits of co-occurring species to assess the probability of interaction between them [@Bartomeus2016ComFra]. This translates to a spatial extent that does not necessarily capture the entire distribution of a given set of species, with a resolution that is sufficient to capture the phenotypical variability of the species. At larger scales, we can infer interactions through the phylogenetic similarity between species, assuming their functional traits are themselves are phylogenetically conserved [@Gomez2010EcoInt]. On scales where the niche is a is phylogenetically conserved, we can think of the probability that one species will interact with another as the "amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt].
 
 At the smallest scales, we may be interested in predicting behavioural traits like foraging behavior [@Bartomeus2016ComFra].. At this point, the spatial resolution in this case should is fine enough that a model may be precise in a given system, but much less generalizable. At this scale it is also important to consider abundance, it modulates the probability of encounter along with behaviour [@Wells2013SpeInt].
 
@@ -651,39 +644,18 @@ that this roadmap towards forecasting ecological networks provide useful
 guidelines to ultimately be able to predict more accurately how climate change
 will affect the different dimensions of biodiversity and ecosystem functioning.
 
-### What is the temporal scale suitable for the prediction of species interactions?  
-
-Another component the interplay between scale and
-interactions is *time*.
-Different mechanisms structure ecological networks across different timescales
-[@Trojelsgaard2016EcoNet].
-Individuals are highly affected by the present, local environmental variables, while species
-and clades have their evolutionary history defined by historical series of
-events.
-Therefore, what should be the appropriate temporal scale for the
-prediction of species interactions?  
-On some scales, we can infer interactions through the phylogenetic similarity between species, under the assumption that at this scale functional traits are phylogenetically conserved [@Gomez2010EcoInt]. On phylogenetic scales where the niche is conserved, we also may
-want to evaluate potential interactions for bipartite networks and identify
-species that can replace one another inside each set
-[@Desjardins-Proulx2017EcoInt].  
-
 ### How do we turn a predictive model into a forecasting model?
 
 On some scales, empirical time-series encode enough information about ecological processes
 for machine-learning approaches to make accurate forecasts.
-However, there is an intrinsic limit to the predictability of ecological time-series [@Pennekamp2019IntPre].
-
-A forecast inherently has a _resolution limit_ in space, time, and
-organization. For example, one could never hope to predict the precise abundance
-of every species on Earth on every day hundreds of years into the future. There
+However, there is an intrinsic limit to the predictability of ecological time-series [@Pennekamp2019IntPre]. A forecast inherently has a _resolution limit_ in space, time, and organization.
+For example, one could never hope to predict the precise abundance of every species on Earth on every day hundreds of years into the future. There
 is often a trade-off between the resolution and horizon of forecast, e.g., a
 lower resolution forecast, like primary production will be at a maximum in the
 summer, is likely to be true much further into the future than a higher resolution forecast, like where a specific species will be located across space.
 
-If we want to forecast the structure of ecological networks beyond the forecasting
-horizon of time-series based methods, we need forecasts of our predictive model's inputs---
-a forecast of the distribution of both environmental conditions and the potential
-species pool across space (@fig:models).
+If we want to forecast the structure of ecological networks beyond the forecasting horizon of time-series based methods, we need forecasts of our predictive model's inputs---
+a forecast of the distribution of both environmental conditions and the potential species pool across space (@fig:models).
 
 ### How can we validate a forecasting model?
 
