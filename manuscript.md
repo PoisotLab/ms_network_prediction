@@ -30,7 +30,7 @@ spatially explicit dynamical forecasts.
 
 Interactions between species can be conceptualized in a multitude of ways (e.g.
 different types, variable strengths, symmetric vs. asymmetric, direct vs. indirect)
-[Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread between these forms of
+[@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread between these forms of
 interactions is that *at least* one of the species is affected by the
 presence of another, either positively or negatively
 [@Morales-Castilla2015InfBio]. We can represent these networks of interactions as graphs, where each species is represented as a node, and each interaction as an edge [@Delmas2018AnaEco;
@@ -173,7 +173,7 @@ the properties of ecosystems, especially at different scales, remains difficult
 and we should strive to work on methods that will integrate these different
 'snapshots'.
 
-![Ecological processes rarely occur in isolation and are influenced by (as well as influence) other aspects or properties of a system. This highlights the need to integrate these various processes across various spatial, temporal, and organisational scales if we are to improve our understanding of ecosystems as a whole.](figures/everything_connected_v2.png){#fig:everything_is_connected}
+![Ecological processes rarely occur in isolation and are influenced by (as well as influence) other aspects or properties of a system. This highlights the need to integrate these various processes across various spatial, temporal, and organisational scales if we are to improve our understanding of ecosystems as a whole.](figures/everything_connected_v3.png){#fig:everything_is_connected}
 
 # What is paving the path towards understanding species interaction networks?
 
@@ -262,7 +262,7 @@ populations [@Poisot2016StrPro].
 Below we focus on and discuss integrating what we envisage to be the conceptual and methodological pathway towards better conceptualization and prediction of ecological networks (@fig:conceptual).
 Below we provide a primer on predictive network ecology, with particular focus on using machine learning approaches in the modelling process, in order to provide a path forward toward building models to predict ecological networks and interactions and to better understanding the relationship between species interactions and network structure.
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual.png){#fig:conceptual}
+![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 ## Models
 
