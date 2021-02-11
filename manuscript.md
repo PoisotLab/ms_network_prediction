@@ -19,10 +19,11 @@ sometimes spanning centuries [@Burkle2013PlaInt]. Therefore, our field needs a
 roadmap that enables the prediction (for the present) and forecasting (for the
 future) of the structure of ecological networks [@McCann2007ProBio;
 @Seibold2018NecMul]. Ideally, the predictions derived from these new models
-would incorporate the ecological processes encoded by network structure [@Thompson2012FooWeb],
-and account for their spatial, temporal, and climatic dimensions
-[@Burkle2011FutPla]. Here we adopt a question-driven approach to identify
-current obstacles and opportunities, and suggest a roadmap forward in the research agenda.
+would incorporate the ecological processes encoded by network structure
+[@Thompson2012FooWeb], and account for their spatial, temporal, and climatic
+dimensions [@Burkle2011FutPla]. Here we adopt a question-driven approach to
+identify current obstacles and opportunities, and suggest a roadmap forward in
+the research agenda.
 
 ## What is a species interaction network?
 
@@ -76,6 +77,17 @@ functioning [@Barnes2018EneFlu].
 
 ## Can we predict species interaction networks? An illustration.
 
+The core premise of this manuscript is that ecological networks, especially when
+they have a spatial or temporal component, can be predicted. In this section, we
+provide a rapid overview of the process through an example, in which we (i)
+aggregate a series of spatially replicated networks into a metaweb, (ii) extract
+latent features based on the co-occurrence of species, (iii) use these features
+to train a deep neural binary classifier to predict interactions, and (iv) apply
+this classifier to the original features to predict possibly missing
+interactions. The entire analysis is presented in @fig:example, and the code to
+reproduce it is available at **TODO OSF LINK**.
+
+![LEGEND TODO](figures/review-netwpred-example.png){#fig:example}
 
 ## Why should we predict species interaction networks?
 
@@ -139,7 +151,6 @@ relationship between species interactions and network structure.
 ## What is currently limiting our understanding of species interaction networks?
 
 ### Data
-
 
 At the moment, our understanding of the structure of ecological networks is
 limited by the availability of data. Although we have seen a growth in species
