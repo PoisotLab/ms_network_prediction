@@ -1,113 +1,76 @@
 ---
-bibliography: [references.bib]
+  bibliography: [references.bib]
 ---
-
 # Introduction
 
 Ecosystems *are* interactions -- organisms interact with one-another and with
 their environment, either directly or indirectly. Between organisms, these
 interactions form networks of varying complexity, drive ecological and
 evolutionary dynamics, and maintain ecosystem diversity and functioning
-[@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Yet, even basic
-knowledge of species interactions (like being able to list them, or guess which
-ones may exist) is one of the most severe shortfalls in biodiversity science
-[@Hortal2015SevSho]. This is due in no small part to the tedious,
-time-consuming, and expensive data collection process. But as many ecological
-systems, networks have entered their "long now" [@Carpenter2002EcoFut], where
-contemporary actions will have long-term, low-predictability consequences,
-sometimes spanning centuries [@Burkle2013PlaInt]. Therefore, our field needs a
-roadmap that enables the prediction (for the present) and forecasting (for the
-future) of the structure of ecological networks [@McCann2007ProBio;
-@Seibold2018NecMul]. Ideally, the predictions derived from these new models
-would incorporate the ecological processes encoded by network structure
-[@Thompson2012FooWeb], and account for their spatial, temporal, and climatic
-dimensions [@Burkle2011FutPla]. Here we adopt a question-driven approach to
-identify current obstacles and opportunities, and suggest a roadmap forward in
-the research agenda.
+[@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Networks of species
+interactions underpin our understanding of key ecological processes
+[@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge of species
+interactions (like being able to list them, or guess which ones may exist) is
+one of the most severe shortfalls in biodiversity science [@Hortal2015SevSho].
+This is due in large part to the tedious, time-consuming, and expensive data
+collection process. As with many ecological systems, networks of species
+interactions have entered their "long now" [@Carpenter2002EcoFut], where
+contemporary actions have long-term, low-predictability consequences
+[@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
+models that enable prediction (for the present) and forecasting (for the future)
+of species interactions and the networks they form [@McCann2007ProBio;
+@Seibold2018NecMul]. Here we provide a simple illustration to show how machine
+learning approaches can enable unreasonably effective prediction of interactions
+in a host-parasite system, which serves as a proof-of-concept for this
+conceptual framework. We then propose a roadmap forward for improving
+predictions using this approach, and provide a primer on the relevant tools and
+methods that could be incorporated into models of this type in the future in
+order to account for the spatial, temporal, and climatic dimensions of network
+prediction [@Burkle2011FutPla]
 
-## Why should we predict species interaction networks?
+Better prediction of ecological networks would help unify the fields of
+community, network, and spatial ecology, improve the quantification of the
+functional relationships between species [@Dehling2018BriElt;
+@OConnor2020UnvFoo], re-evaluate metacommunities in light of network structure
+[@Guzman2019MulExt], and enable a new line of research into the biogeography of
+species interactions [@Massol2017ChaFou; @Braga2019SpaAna] which incorporates a
+synthesis of both Eltonian and Grinnellian niche [@Gravel2019BriElt]. Further,
+the ability to reliably predict and forecast species interactions would inform
+conservation efforts for protecting species, communities, and ecosystems.
+International panels draw on models to establish scientific consensus
+[@Araujo2019StaDis]---IUCN Red List assessments includes an evaluation of a
+species from known, inferred, and projected sites of occurrence
+[@IUCNRedListTechnicalWorkingGroup2019MapSta], which can be improved through
+more effective forecasts of species distributions and interactions
+[@Syfert2014UsiSpe]. Integration of species interactions into the assessment of
+vulnerability to climate change is a needed methodological advance
+[@Foden2016IucSsc]. IPBES recognized that models for forecasting regional
+biodiversity dynamics will need to incorporate species interactions
+[@IPBES2016MetAss]. Moreover, recent studies argue for a shift in focus from
+species to interaction networks for biodiversity conservation to better protect
+species, ecosystem processes, and ecosystem services [@Harvey2017BriEco].
+Interactions are a key element of the functional role of a species, which should
+be considered for the evaluation of species recovery for the development of an
+IUCN Green List of recovered species or similar [@Akcakaya2018QuaSpe].
 
-Interactions between species can be conceptualized in a multitude of ways (e.g.
-different types, variable strengths, symmetric vs. asymmetric, direct vs.
-indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread
-between these forms of interactions is that *at least* one of the species is
-affected by the presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. We can represent these networks of interactions
-as graphs, where each species is represented as a node, and each interaction as
-an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge each
-represents information about that interaction. We can represent this network
-using a matrix, using 1s and 0s to represent the presence or absence of an
-interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
-[@Dunne2006NetStr]. This construct allows for convenient computation of network
-properties, particularly properties relating to network structure. Networks can
-be used to represent a variety of interaction types, including: *unipartite
-networks,* where each species can be linked any other species, species (these
-are typically used to represent food webs), *bipartite networks* where there are
-two pools of species, and all interactions occur between species in each pool,
-are typically used for pairwise interactions (e.g. hosts and parasites), and
-*k-partite networks:,* which serve as a way to expand to more than two discrete
-sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
-pollination networks) [@Pocock2012RobRes].
+# Proof-of-Concept
 
-Species interaction networks can also be used as means to quantify and
-understand _interaction strength_. Interaction strength, unlike the qualitative
-presence or absence an interaction, is a continuous measurement which attempts
-to quantify the effect of one species on another. While an interaction strength
-can take multiple forms, they can generally be divided into two main categories
-(as suggested by @Berlow2004IntStr): it can either be seen as the strength of an
-individual species-to-species link or as the effect that the changes in one
-species has on the dynamics of the other species. Interaction strength is
-measured either as the relative importance of one species on another or the
-direct effect of one species on another over a period of time, often in the
-units of biomass [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt].
-This differentiates between interactions at the individual level and
-interactions that are population level, and emphasizes the importance of
-understanding the scaling of interactions from individuals to populations to
-communities [@Berlow2004IntStr]. One recurring observation throughout studies of
-interaction strengths is that networks are often composed of many weak links and
-few strong links [@Berlow2004IntStr]. Knowing the distribution of interaction
-strength within a network informs on its stability [@Neutel2002StaRea;
-@Ruiter1995EnePat], influences on the ecosystem functioning [@Duffy2002BioEco;
-@Montoya2003FooWeb] and our potential to improve on the development of
-multispecies models [@Wootton2005MeaInt]. Seeing interaction strength within a
-network as energy fluxes could also possibly lead to its integration within the
-Biodiversity-Ecosystem Functioning (BEF) framework, which could in return
-further improve even our understanding of community dynamics and ecosystem
-functioning [@Barnes2018EneFlu].
-
-Networks of species interactions underpin our understanding of key ecological
-processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially
-used to describe the interactions *within* a community, interest in the last
-decade has shifted towards understanding their structure and variation over
-space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network
-ecology as an important emerging component of biogeography and macroecology.
-Developing a unified methodology for prediction of the structure of ecological
-networks and the interactions that compose them would help unify the fields of
-community, network, and ecosystem ecology, improve the quantification of
-functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo],
-re-evaluate metacommunities in light of network structure [@Guzman2019MulExt],
-and enable a new line of research into the biogeography of species interactions
-[@Massol2017ChaFou; @Braga2019SpaAna] that incorporates both the Eltonian and
-Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably predict
-and forecast species interactions would improve our understanding of how species
-function within ecosystems and inform conservation efforts for protecting
-species, communities, and ecosystems.
-
-## Can we predict species interaction networks? An illustration.
+![What does it actually mean to predict a species interaction
+network?](./figures/network_prediction_problem.png)
 
 The core premise of this manuscript is that ecological networks, especially when
 they have a spatial or temporal component, can be predicted. In this section, we
-provide a rapid overview of the process through an example, in which we (i)
-aggregate a series of spatially replicated networks into a metaweb, (ii) extract
-latent features based on the co-occurrence of species, (iii) use these features
-to train a deep neural binary classifier to predict interactions, and (iv) apply
-this classifier to the original features to predict possibly missing
-interactions. The entire analysis is presented in @fig:example, and the code to
-reproduce it is available at **TODO OSF LINK**; the entire example was carried
-out in *Julia 1.5.3* [@Bezanson2017JulFre], and notably uses the *Flux* machine
-learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
-as an *example only*, and should in practice be fined-tuned according to the
-state of the art [*e.g.* @Goodfellow2016DeeLea].
+provide a proof-of-concept, in which we (i) aggregate a series of spatially
+replicated networks into a metaweb, (ii) extract latent features based on the
+co-occurrence of species, (iii) use these features to train a deep neural binary
+classifier to predict interactions, and (iv) apply this classifier to the
+original features to predict possibly missing interactions. The entire analysis
+is presented in @fig:example, and the code to reproduce it is available at
+**TODO OSF LINK**; the entire example was carried out in *Julia 1.5.3*
+[@Bezanson2017JulFre], and notably uses the *Flux* machine learning framework
+[@Innes2018FluEle]. Note that this analysis is meant to serve as an *example
+only*, and should in practice be fined-tuned according to the state of the art
+[*e.g.* @Goodfellow2016DeeLea].
 
 We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
 where not all species pairs co-occur across sites. This implies that there are
@@ -163,44 +126,11 @@ the prediction of species interaction networks, and specifically strive to
 incorporate novel tools, more diverse sources, and adopt an explicitly spatial
 and temporal perspective on the question.
 
-## Who would benefit from better prediction of species interaction networks?
-
-Reliable predictions for biodiversity change are increasingly sought after in
-international conservation programs (e.g. IPBES and GEO BON), and predictions
-that incorporate species interactions could substantially improve these
-assessments. International panels draw on these models to establish scientific
-consensus [@Araujo2019StaDis]. For example, IUCN Red List assessments includes
-an evaluation of a species from known, inferred, and projected sites of
-occurrence [@IUCNRedListTechnicalWorkingGroup2019MapSta], which can be improved
-through more effective forecasts of species distributions and interactions
-[@Syfert2014UsiSpe]. Interactions are fundamentally linked to conservation
-issues and are crucial to consider in conservation assessments. According to
-IUCN, interactions represent an important gap and challenge in the assessment of
-species vulnerability to climate change, a "seldom considered, but important
-driver of climate change impact on species", and their integration was
-identified as an important methodological advance to come [@Foden2016IucSsc]. In
-addition, interactions were identified as a key element of the functional role
-of a species, which must be considered for the evaluation of species recovery
-for the development of an IUCN Green List of recovered species
-[@Akcakaya2018QuaSpe]. Similarly, IPBES recognized that models performing
-scenario analyses and projecting regional biodiversity dynamics will need to
-incorporate species interactions and community dynamics, which will benefit
-global and regional IPBES assessments [@IPBES2016MetAss]. Moreover, recent
-studies argue for a shift in focus from species to interaction networks for
-biodiversity conservation to better protect species, ecosystem processes, and
-ecosystem services [@Harvey2017BriEco]. Therefore, the framework we propose here
-will improve understanding of existing and future species interactions, thus
-improving tools for conservation and biodiversity management.
-
-# A Roadmap Toward Prediction of Ecological Networks across Space and Time
+# A Roadmap Toward Better Prediction of Ecological Networks across Space and Time
 
 Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better conceptualization and prediction of
-ecological networks (@fig:conceptual). Below we provide a primer on predictive
-network ecology, with particular focus on using machine learning approaches in
-the modelling process, in order to provide a path forward toward building models
-to predict ecological networks and interactions and to better understanding the
-relationship between species interactions and network structure.
+ecological networks (@fig:conceptual).
 
 ## Challenges: the many constraints on prediction
 
@@ -362,9 +292,21 @@ automated discovery of food webs [@Bohan2011AutDis], reconstruction of
 ecological networks using next-generation sequencing data [@Bohan2017NexGlo],
 and network inference from presence-absence data [@Sander2017EcoNet].
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual_v2.png){#fig:conceptual}
+![A conceptual roadmap highlighting key areas for the prediction of ecological
+networks. Starting with the input of data from multiple sources, followed by a
+modelling framework for ecological networks and the landscape, which are then
+ultimately combined to allow for the prediction of spatially explicit
+networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 # A Primer on Predictive Network Ecology
+
+Below we provide a primer on predictive network ecology, with particular focus
+on using machine learning approaches in the modelling process, in order to
+provide a path forward toward building models to predict ecological networks and
+interactions and to better understanding the relationship between species
+interactions and network structure. Here adopt a question-driven approach to
+serve as a guide through the path toward building models to predict and forecast
+the structure of ecological networks across space.
 
 ## Models
 
@@ -399,7 +341,9 @@ output $y$ given an input $x$ and our estimate value of $\theta$
 $\theta$, then, the problem of inference is nested within the forward problem
 (@fig:models).
 
-![The nested nature of developing predictive and forecasting models, showcases the _forward problem_ and how this relies on a hierarchical structure of the modelling process.](figures/forecasting_v3.png){#fig:models}
+![The nested nature of developing predictive and forecasting models, showcases
+the _forward problem_ and how this relies on a hierarchical structure of the
+modelling process.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
@@ -416,7 +360,6 @@ reworking the predictors to enable models to better uncover predictor-response
 relationships [@Kuhn2019FeaEng]. For instance, this can include projecting the
 predictors into principal component analysis space, and selecting only a set of
 dimensions for the modelling, as in our machine learning illustration.
-
 
 ### How do we validate a predictive model?
 
@@ -490,7 +433,6 @@ only -- because it can be derived from coarse data and is informative on both
 the ecology and structure of the network, we argue that predictions of
 connectance are most likely to be immediately useful, and easy to formulate.
 
-
 ### How do we predict how species that have never co-occurred will interact?
 
 The probability of the realization of an ecological interaction depend on
@@ -521,8 +463,59 @@ unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
 sampling biases and limited to prediction for species for which we already have
 interaction data [@Becker2020PreWil].
 
+### What is an interaction, really?
 
-### How are interaction strengths inferred?
+Interactions between species can be conceptualized in a multitude of ways (e.g.
+different types, variable strengths, symmetric vs. asymmetric, direct vs.
+indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread
+between these forms of interactions is that *at least* one of the species is
+affected by the presence of another, either positively or negatively
+[@Morales-Castilla2015InfBio]. We can represent these networks of interactions
+as graphs, where each species is represented as a node, and each interaction as
+an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge each
+represents information about that interaction. We can represent this network
+using a matrix, using 1s and 0s to represent the presence or absence of an
+interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
+[@Dunne2006NetStr]. This construct allows for convenient computation of network
+properties, particularly properties relating to network structure. Networks can
+be used to represent a variety of interaction types, including: *unipartite
+networks,* where each species can be linked any other species, species (these
+are typically used to represent food webs), *bipartite networks* where there are
+two pools of species, and all interactions occur between species in each pool,
+are typically used for pairwise interactions (e.g. hosts and parasites), and
+*k-partite networks:,* which serve as a way to expand to more than two discrete
+sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
+pollination networks) [@Pocock2012RobRes].
+
+### What about interaction _strength_?
+
+Species interaction networks can also be used as means to quantify and
+understand _interaction strength_. Interaction strength, unlike the qualitative
+presence or absence an interaction, is a continuous measurement which attempts
+to quantify the effect of one species on another. While an interaction strength
+can take multiple forms, they can generally be divided into two main categories
+(as suggested by @Berlow2004IntStr): it can either be seen as the strength of an
+individual species-to-species link or as the effect that the changes in one
+species has on the dynamics of the other species. Interaction strength is
+measured either as the relative importance of one species on another or the
+direct effect of one species on another over a period of time, often in the
+units of biomass [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt].
+This differentiates between interactions at the individual level and
+interactions that are population level, and emphasizes the importance of
+understanding the scaling of interactions from individuals to populations to
+communities [@Berlow2004IntStr]. One recurring observation throughout studies of
+interaction strengths is that networks are often composed of many weak links and
+few strong links [@Berlow2004IntStr]. Knowing the distribution of interaction
+strength within a network informs on its stability [@Neutel2002StaRea;
+@Ruiter1995EnePat], influences on the ecosystem functioning [@Duffy2002BioEco;
+@Montoya2003FooWeb] and our potential to improve on the development of
+multispecies models [@Wootton2005MeaInt]. Seeing interaction strength within a
+network as energy fluxes could also possibly lead to its integration within the
+Biodiversity-Ecosystem Functioning (BEF) framework, which could in return
+further improve even our understanding of community dynamics and ecosystem
+functioning [@Barnes2018EneFlu].
+
+### How are interaction strengths actually inferred?
 
 Interaction strength can be inferred empirically or theoretically
 [@Berlow2004IntStr]. While the development of theoretical predictive models to
@@ -577,19 +570,17 @@ evolution, dispersal, environmental heterogeneity, among others.
 
 However, the potential of links between larger subsets causes a combinatoric
 explosion which increases the number of predictions we would need to make with
-our already scarce data.
-*Prima facie*, increasing the dimensionality of the object we need to predict
-(the multiple layers rather than a single network) may make the problem
-complicated. But multi-layer networks encode ecological constraints -- of
-dispersal, of evolution, and of niche suitability. One question that is worth
-investigating is whether the multi-layer structure of ecological networks may
-*improve* the predictibility of interactions. Indeed, this is the case for
-social networks [@Jalili2017LinPre; @Najari2019LinPre; @Yasami2018NovMul].
-Although at the moment it seems bests to address our understanding of simple
-networks, exploring the more intricate ways in which species interact might
-require that we make room for hypergraphs and multi-layer networks in our
-predictive framework.
-
+our already scarce data. *Prima facie*, increasing the dimensionality of the
+object we need to predict (the multiple layers rather than a single network) may
+make the problem complicated. But multi-layer networks encode ecological
+constraints -- of dispersal, of evolution, and of niche suitability. One
+question that is worth investigating is whether the multi-layer structure of
+ecological networks may *improve* the predictibility of interactions. Indeed,
+this is the case for social networks [@Jalili2017LinPre; @Najari2019LinPre;
+@Yasami2018NovMul]. Although at the moment it seems bests to address our
+understanding of simple networks, exploring the more intricate ways in which
+species interact might require that we make room for hypergraphs and multi-layer
+networks in our predictive framework.
 
 ### How do we determine what interaction networks are feasible?
 
@@ -630,6 +621,12 @@ will propagate along the various level of biological organization
 [@Gravel2016StaCom].
 
 ## Space
+
+Although networks were initially used to describe the interactions *within* a
+community, interest in the last decade has shifted towards understanding their
+structure and variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul],
+and has established network ecology as an important emerging component of
+biogeography and macroecology.
 
 ### How much do networks vary over space?
 
@@ -693,7 +690,8 @@ co-occurrences, but that it is also technically challenging and requires prior
 knowledge of the interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally species.
 
-### What is the spatial scale suitable for the prediction of species interactions?
+### What is the spatial scale suitable for the prediction of species
+#interactions?
 
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
@@ -887,10 +885,10 @@ reliable datasets on networks in space or time will make this information more
 actionable.
 
 **Acknowledgements:** TS, NF, TP are funded by a donation from the Courtois
-Foundation; FB, NF, and TP are funded by IVADO; FB, GD, NF, and GH are funded by
-the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by the Canadian
-Institute of Ecology & Evolution; this research was enabled in part by support
-provided by Calcul Québec (www.calculquebec.ca) and Compute Canada
-(www.computecanada.ca).
+*Foundation; FB, NF, and TP are funded by IVADO; FB, GD, NF, and GH are funded
+*by the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by the
+*Canadian Institute of Ecology & Evolution; this research was enabled in part by
+*support provided by Calcul Québec (www.calculquebec.ca) and Compute Canada
+*(www.computecanada.ca).
 
 # References
