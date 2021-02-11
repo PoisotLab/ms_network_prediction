@@ -25,7 +25,7 @@ dimensions [@Burkle2011FutPla]. Here we adopt a question-driven approach to
 identify current obstacles and opportunities, and suggest a roadmap forward in
 the research agenda.
 
-## What is a species interaction network?
+## Why should we predict species interaction networks?
 
 Interactions between species can be conceptualized in a multitude of ways (e.g.
 different types, variable strengths, symmetric vs. asymmetric, direct vs.
@@ -75,22 +75,6 @@ Biodiversity-Ecosystem Functioning (BEF) framework, which could in return
 further improve even our understanding of community dynamics and ecosystem
 functioning [@Barnes2018EneFlu].
 
-## Can we predict species interaction networks? An illustration.
-
-The core premise of this manuscript is that ecological networks, especially when
-they have a spatial or temporal component, can be predicted. In this section, we
-provide a rapid overview of the process through an example, in which we (i)
-aggregate a series of spatially replicated networks into a metaweb, (ii) extract
-latent features based on the co-occurrence of species, (iii) use these features
-to train a deep neural binary classifier to predict interactions, and (iv) apply
-this classifier to the original features to predict possibly missing
-interactions. The entire analysis is presented in @fig:example, and the code to
-reproduce it is available at **TODO OSF LINK**.
-
-![LEGEND TODO](figures/review-netwpred-example.png){#fig:example}
-
-## Why should we predict species interaction networks?
-
 Networks of species interactions underpin our understanding of key ecological
 processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Although they were initially
 used to describe the interactions *within* a community, interest in the last
@@ -108,6 +92,69 @@ Grinnial niche [@Gravel2019BriElt]. Further, the ability to reliably predict and
 forecast species interactions would improve our understanding of how species
 function within ecosystems and inform conservation efforts for protecting
 species, communities and ecosystems.
+## Can we predict species interaction networks? An illustration.
+
+The core premise of this manuscript is that ecological networks, especially when
+they have a spatial or temporal component, can be predicted. In this section, we
+provide a rapid overview of the process through an example, in which we (i)
+aggregate a series of spatially replicated networks into a metaweb, (ii) extract
+latent features based on the co-occurrence of species, (iii) use these features
+to train a deep neural binary classifier to predict interactions, and (iv) apply
+this classifier to the original features to predict possibly missing
+interactions. The entire analysis is presented in @fig:example, and the code to
+reproduce it is available at **TODO OSF LINK**; the entire example was carried
+out in *Julia 1.5.3* [@Bezanson2017JulFre], and notably uses the *Flux* machine
+learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
+as an *example only*, and should in practice be fined-tuned according to the
+state of the art [*e.g.* @Goodfellow2016DeeLea].
+
+We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
+where not all species pairs co-occur across sites. This implies that there are
+"negative associations" that might be biologically feasible but not observed
+because the two species have not been observed in co-occurrence. As this dataset
+has no features like species traits on which to base a predictive model, we have
+aggregated all interactions into a binary metaweb [@Dunne2006NetStr], internally
+represented as a sparse matrix. We have then transformed the (undirected)
+metaweb through a probabilistic PCA [@Tipping1999ProPri], so as to create a
+number of latent features for the species in a context where the dataset is both
+unbalanced and likely to have many missing values. This frames the problem as
+predicting a binary outcome, the interaction $M_{xy}$ represented as `true` or
+`false` (and one-hot encoded), based on a features vector $v_{xy} = [v_x, v_y]$
+where $v_x$ is the values of the selected features for the parasite and %v_y$ is
+the features of the host. In the following example, we used the first 15
+components of the latent sub-space created by the probabilistic PCA. This
+features vector is then fed into the input layer of a neural network, which uses
+three hidden layers with appropriate dropout rates (1/2), and finally a
+two-neurons output layer whose result is softmaxed to pick the most likely
+outcome. The resulting value is one-cold encoded to represent $M_{xy}$, *i.e.*
+the interaction bit describing an interaction when equal to 1, and no
+interaction when equal to 0.
+
+![LEGEND TODO](figures/review-netwpred-example.png){#fig:example}
+
+During the training of this neural network, we exploited ecological constraints
+in two ways. First, the selection of features was done so that absent
+interactions in a species pair with no co-occurrence were removed from the data.
+This ensures that the network is trained only on the subset of the data for
+which we have minimal ecological information. Second, the batches of 16 items
+used for training were constrained to have at least 10 positive interactions.
+The reasoning for this choice was made based on three observations: the network
+is sparse (*i.e.* the prevalence of interactions is low); negative interactions
+have a chance of being false negatives due to lack of reporting in the field;
+there are no true negative interactions reported, *i.e.* interactions for which
+we know that they almost never happen. Therefore, slightly inflating the dataset
+with positive interactions was a way to counterbalance these biases.
+
+After the training ($2.5\times 10^4$ epochs), as presented in @fig:example, our
+model reached a final accuracy of $\approx 0.8$, with no marked deviation
+between the training and testing sets (respectively 80% and 20% of the data),
+suggesting no to minimal overfitting. Applying this model to the entire features
+dataset (including non co-occurring species pairs) identified 1831 new possible
+interactions -- 382 of which were in species pairs with no document
+co-occurrence. Our core argument in this manuscript is that we should embrace
+the prediction of species interaction networks, and specifically strive to
+incorporate novel tools, more diverse sources, and adopt an explicitly spatial
+and temporal perspective on the question.
 
 ## Who would benefit from better prediction of species interaction networks?
 
@@ -202,7 +249,7 @@ ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
 integrated, flexible, and data-efficient set of computational tools which will
 allow us to predict ecological networks accurately from existing and imperfect
 datasets, but also enable us to perform model validation and comparison with
-more flexibility than existing tools.  
+more flexibility than existing tools.
 
 ### Scale
 
@@ -450,7 +497,7 @@ ecological interactions also tend to be conserved, and therefore we could also
 use phylogenies to infer pairs of co-occurring species that could potentially
 interact [@Gomez2010EcoInt]. In fact, the contribution of interactions to the
 phylogenetic match between species is consistent even through scales
-[@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].  
+[@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].
 
 A separate family of methods that gained interest in recent years are the
 network-based models. These models use the existing set of interactions to
@@ -506,7 +553,7 @@ years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool to
 describe these situations is hypergraphs: hypergraphs are the generalization of
 a graph, allowing a broad yet manageable approach to complex interactions
 [@Carletti2020DynSys], allowing for particular interactions to occur beyond a
-pair of nodes.  
+pair of nodes.
 
 An additional degree of complexity is introduced by multi-layer networks
 [@Hutchinson2019SeeFor]. Multi-layer networks offer links across "variants" of
@@ -519,7 +566,7 @@ evolution, dispersal, environmental heterogeneity, among others.
 
 However, the potential of links between larger subsets causes a combinatoric
 explosion which increases the number of predictions we would need to make with
-our already scarce data.  
+our already scarce data.
 *Prima facie*, increasing the dimensionality of the object we need to predict
 (the multiple layers rather than a single network) may make the problem
 complicated. But multi-layer networks encode ecological constraints -- of
@@ -635,7 +682,7 @@ co-occurrences, but that it is also technically challenging and requires prior
 knowledge of the interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally species.
 
-### What is the spatial scale suitable for the prediction of species interactions?  
+### What is the spatial scale suitable for the prediction of species interactions?
 
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
