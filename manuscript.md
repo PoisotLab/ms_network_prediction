@@ -101,7 +101,7 @@ conservation and biodiversity management.
 
 Here we present an example of what we mean by predicting ecological networks.
 
-![Case Study Conceptual Panel](./figures/example_concept_panel.png)
+![Case Study Conceptual Panel](./figures/example_concept_both_panels.png)
 
 # A Roadmap Toward Prediction of Ecological Networks across Space and Time
 
