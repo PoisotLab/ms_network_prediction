@@ -55,24 +55,26 @@ IUCN Green List of recovered species or similar [@Akcakaya2018QuaSpe].
 
 # Proof-of-Concept
 
-![What does it actually mean to predict a species interaction
-network?](./figures/network_prediction_problem.png)
+The core premise of this manuscript is that ecological networks can be
+predicted. In this section, we provide a proof-of-concept, in which we (i)
+aggregate a series of networks collected across space into a metaweb, (ii)
+extract latent features based on the co-occurrence of species, (iii) use these
+features to train a neural network to predict interactions, and (iv) apply this
+classifier to the original features to predict possibly missing interactions
+across the entire species pool. The entire analysis is presented in
+@fig:example, and the code to reproduce it is available at **TODO OSF LINK**;
+the entire example was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], and
+notably uses the *Flux* machine learning framework [@Innes2018FluEle]. Note that
+this analysis is meant to serve as an *example only*, and should in practice be
+fined-tuned according to the state of the art [*e.g.* @Goodfellow2016DeeLea].
 
-The core premise of this manuscript is that ecological networks, especially when
-they have a spatial or temporal component, can be predicted. In this section, we
-provide a proof-of-concept, in which we (i) aggregate a series of spatially
-replicated networks into a metaweb, (ii) extract latent features based on the
-co-occurrence of species, (iii) use these features to train a deep neural binary
-classifier to predict interactions, and (iv) apply this classifier to the
-original features to predict possibly missing interactions. The entire analysis
-is presented in @fig:example, and the code to reproduce it is available at
-**TODO OSF LINK**; the entire example was carried out in *Julia 1.5.3*
-[@Bezanson2017JulFre], and notably uses the *Flux* machine learning framework
-[@Innes2018FluEle]. Note that this analysis is meant to serve as an *example
-only*, and should in practice be fined-tuned according to the state of the art
-[*e.g.* @Goodfellow2016DeeLea].
+![What does it actually mean to predict a species interaction network? An
+overgeneralized version of the problem of taking incomplete sampled networks and
+producing a metaweb with prediction about how species that have not been
+observed co-occuring will interact.](./figures/network_prediction_problem.png)
 
-We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
+
+ We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
 where not all species pairs co-occur across sites. This implies that there are
 "negative associations" that might be biologically feasible but not observed
 because the two species have not been observed in co-occurrence. As this dataset
@@ -83,16 +85,15 @@ metaweb through a probabilistic PCA [@Tipping1999ProPri], so as to create a
 number of latent features for the species in a context where the dataset is both
 unbalanced and likely to have many missing values. This frames the problem as
 predicting a binary outcome, the interaction $M_{xy}$ represented as `true` or
-`false` (and one-hot encoded), based on a features vector $v_{xy} = [v_x, v_y]$
-where $v_x$ is the values of the selected features for the parasite and $v_y$ is
-the features of the host. In the following example, we used the first 15
-components of the latent sub-space created by the probabilistic PCA. This
-features vector is then fed into the input layer of a neural network, which uses
-three hidden layers with appropriate dropout rates (1/2), and finally a
-two-neurons output layer whose result is softmaxed to pick the most likely
-outcome. The resulting value is one-cold encoded to represent $M_{xy}$, *i.e.*
-the interaction bit describing an interaction when equal to 1, and no
-interaction when equal to 0.
+`false`  based on a features vector $v_{xy} = [v_x, v_y]$ where $v_x$ is the
+values of the selected features for the parasite and $v_y$ is the features of
+the host. In the following example, we used the first 15 components of the
+latent sub-space created by the probabilistic PCA. This features vector is then
+fed into the input layer of a neural network, which uses three hidden layers
+with appropriate dropout rates ($\frac{1}{2}$), and finally a two-neurons output
+layer whose result is softmaxed to pick the most likely outcome,  *i.e.* the
+interaction bit describing an interaction when equal to 1, and no interaction
+when equal to 0.
 
 ![Overview of the imputation process. An empirical network [from
 @Hadfield2014TalTwo] is converted intro latent features using probabilistic PCA,
@@ -113,23 +114,25 @@ is sparse (*i.e.* the prevalence of interactions is low); negative interactions
 have a chance of being false negatives due to lack of reporting in the field;
 there are no true negative interactions reported, *i.e.* interactions for which
 we know that they almost never happen. Therefore, slightly inflating the dataset
-with positive interactions was a way to counterbalance these biases.
+with positive interactions enables us to counterbalance these biases.
 
-After the training ($2.5\times 10^4$ epochs), as presented in @fig:example, our
-model reached a final accuracy of $\approx 0.8$, with no marked deviation
-between the training and testing sets (respectively 80% and 20% of the data),
-suggesting no to minimal overfitting. Applying this model to the entire features
-dataset (including non co-occurring species pairs) identified 1831 new possible
-interactions -- 382 of which were in species pairs with no document
-co-occurrence. Our core argument in this manuscript is that we should embrace
-the prediction of species interaction networks, and specifically strive to
-incorporate novel tools, more diverse sources, and adopt an explicitly spatial
-and temporal perspective on the question.
+After the training ($2.5\times 10^4$ epochs in @fig:example), our model reached
+an accuracy of $\approx 0.8$, with no marked deviation between the training and
+testing sets (respectively 80% and 20% of the data), suggesting no to minimal
+overfitting. Applying this model to the entire dataset (including species pairs
+never observed co-occuring in the dataset) identified 1831 new possible
+interactions -- 382 of which were in species pairs where the pair of species was
+never considered prior. This suggests that meaningful information about
+ecological interaction is structured within network data, and our core argument
+here is that we should embrace the prediction of species interaction networks as
+a worthy topic of concept , and specifically strive to adopt an explicitly
+spatial and temporal perspective on this question. Now, the question becomes:
+home do we make our prediction of ecological networks _better_?
 
 # A Roadmap Toward Better Prediction of Ecological Networks across Space and Time
 
 Below we focus on and discuss integrating what we envisage to be the conceptual
-and methodological pathway towards better conceptualization and prediction of
+and methodological pathway towards better prediction of
 ecological networks (@fig:conceptual).
 
 ## Challenges: the many constraints on prediction
@@ -664,9 +667,7 @@ distribution models (SDMs) based on known occurrences and environmental
 conditions at these locations, such as climate and land cover (abiotic filter)
 [@Guisan2005PreSpe, @Elith2006NovMet]. Including interactions or co-occurrences
 in SDMs, therefore the biotic filter, generally improves predictive performance
-[@Wisz2013RolBio] (discussed in more details in the next section).
-
-Several approaches have been proposed for multi-species predictions, as is
+[@Wisz2013RolBio] (discussed in more details in the next section). Several approaches have been proposed for multi-species predictions, as is
 required for the species pool. Community assemblage at a particular site can be
 predicted either by combining independent single-species SDMs (stacked-SDMs,
 SSDMs) or by directly modelling the entire species assemblage and multiple
@@ -690,8 +691,7 @@ co-occurrences, but that it is also technically challenging and requires prior
 knowledge of the interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally species.
 
-### What is the spatial scale suitable for the prediction of species
-#interactions?
+### What is the spatial scale suitable for the prediction of species interactions?
 
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
@@ -702,7 +702,6 @@ microscale level ignores individual plasticity. As described above, we can use
 different trait-based proxies to predict potential interactions. The choice of
 such proxies should be theoretically linked to the spatial scale we are using in
 our prediction [@Wiens1989SpaSca].
-
 At some scales we can use morphological traits of co-occurring species to assess
 the probability of interaction between them [@Bartomeus2016ComFra]. This
 translates to a spatial extent that does not necessarily capture the entire
@@ -713,7 +712,6 @@ their functional traits are themselves are phylogenetically conserved
 [@Gomez2010EcoInt]. On scales where the niche is phylogenetically conserved, we
 can think of the probability that one species will interact with another as the
 "amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt].
-
 At the smallest scales, we may be interested in predicting behavioural traits
 like foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial
 resolution in this case should is fine enough that a model may be precise in a
@@ -731,9 +729,7 @@ Bayesian paradigm provides a convenient solution to this---if we have a chain of
 models where each model feeds into the next, we can sample from the posterior of
 the input models. A different approach is _ensemble modeling_ which combines the
 predictions made be several models, where each model is predicting the same
-thing.
-
-Error propagation is an important step in the modeling of ecological systems, as
+thing. Error propagation is an important step in the modeling of ecological systems, as
 it provides estimates of the uncertainty around predictions. More generally,
 error propagation describes the effect of the uncertainty of input variables on
 the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp].
