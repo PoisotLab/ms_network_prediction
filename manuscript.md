@@ -195,9 +195,9 @@ the modelling process, in order to provide a path forward toward building models
 to predict ecological networks and interactions and to better understanding the
 relationship between species interactions and network structure.
 
-## What is currently limiting our understanding of species interaction networks?
+## Challenges: the many constraints on prediction
 
-### Data
+### Ecological network data are scarce and hard to obtain
 
 At the moment, our understanding of the structure of ecological networks is
 limited by the availability of data. Although we have seen a growth in species
@@ -221,7 +221,7 @@ conditions, especially in environments for which there are no analogous data.
 Further, the analysis of interaction strength from empirical estimation is
 highly prone to bias as existing data quantifying interaction strength are
 usually lumped together, making it difficult to differentiate the strength in
-per-individual interactions from strength of a whole species interaction
+per-individual interactions from the strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to quantify in natural
 communities [@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt],
@@ -234,7 +234,7 @@ dependence and spatiotemporal variation in abundances and community composition
 communities is a key step in linking species interactions to ecosystem processes
 and functioning.
 
-### Methods
+### Powerful predictive tools work better on large data volumes
 
 This scarcity of data limits the range of computational tools than can be used
 by network ecologists. Most deep learning methods, for instance, are very data
@@ -249,9 +249,16 @@ ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
 integrated, flexible, and data-efficient set of computational tools which will
 allow us to predict ecological networks accurately from existing and imperfect
 datasets, but also enable us to perform model validation and comparison with
-more flexibility than existing tools.
+more flexibility than existing tools. We argue that @fig:example is an example
+of the promise of these tools *even* when facing datasets of smaller size. When
+carefully controlling for over-fitting (which is discussed in the next section),
+machine learning systems are at least adequate at generalizing. The ability to
+extract and engineer features, notably latent ones, also contributes to
+bolstering our predictive ability. In short, the current lack of massive
+datasets must not be an obstacle to prediction; it is an ideal testing ground to
+understand how little data is sufficient to obtain actionable predictions.
 
-### Scale
+### Scaling-up predictions requires scaled-up data
 
 We are also currently limited by the the level of biological organisation at
 which we can describe ecological networks. For instance, our understanding of
