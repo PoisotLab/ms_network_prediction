@@ -1,7 +1,6 @@
 ---
-bibliography: [references.bib]
+  bibliography: [references.bib]
 ---
-
 # Introduction
 
 Ecosystems *are* interactions -- organisms interact with one-another and with
@@ -17,20 +16,17 @@ This is due in large part to the tedious, time-consuming, and expensive data
 collection process. As with many ecological systems, networks of species
 interactions have entered their "long now" [@Carpenter2002EcoFut], where
 contemporary actions have long-term, low-predictability consequences
-[@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward models that enable
-prediction (for the present) and forecasting (for the future) of species
-interactions and the networks they form [@McCann2007ProBio;
-@Seibold2018NecMul]. Here we adopt a question-driven approach to identify current obstacles and
-opportunities in this research agenda, and provide a simple illustration to show
-how machine learning approaches can enable unreasonably effective prediction of
-interactions in a host-parasite system, which serves as a proof-of-concept for
-this conceptual framework. We then propose a roadmap forward for improving
+[@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
+models that enable prediction (for the present) and forecasting (for the future)
+of species interactions and the networks they form [@McCann2007ProBio;
+@Seibold2018NecMul]. Here we provide a simple illustration to show how machine
+learning approaches can enable unreasonably effective prediction of interactions
+in a host-parasite system, which serves as a proof-of-concept for this
+conceptual framework. We then propose a roadmap forward for improving
 predictions using this approach, and provide a primer on the relevant tools and
 methods that could be incorporated into models of this type in the future in
-order to account for the spatial, temporal, and climatic dimensions of network prediction
-[@Burkle2011FutPla]
-
-## Why should we predict species interaction networks?
+order to account for the spatial, temporal, and climatic dimensions of network
+prediction [@Burkle2011FutPla]
 
 Better prediction of ecological networks would help unify the fields of
 community, network, and spatial ecology, improve the quantification of the
@@ -57,25 +53,24 @@ Interactions are a key element of the functional role of a species, which should
 be considered for the evaluation of species recovery for the development of an
 IUCN Green List of recovered species or similar [@Akcakaya2018QuaSpe].
 
+# Proof-of-Concept
 
-
-## Can we predict species interaction networks? An illustration.
-
-![What does it actually mean to predict a species interaction network?](./figures/network_prediction_problem.png)
+![What does it actually mean to predict a species interaction
+network?](./figures/network_prediction_problem.png)
 
 The core premise of this manuscript is that ecological networks, especially when
 they have a spatial or temporal component, can be predicted. In this section, we
-provide a rapid overview of the process through an example, in which we (i)
-aggregate a series of spatially replicated networks into a metaweb, (ii) extract
-latent features based on the co-occurrence of species, (iii) use these features
-to train a deep neural binary classifier to predict interactions, and (iv) apply
-this classifier to the original features to predict possibly missing
-interactions. The entire analysis is presented in @fig:example, and the code to
-reproduce it is available at **TODO OSF LINK**; the entire example was carried
-out in *Julia 1.5.3* [@Bezanson2017JulFre], and notably uses the *Flux* machine
-learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
-as an *example only*, and should in practice be fined-tuned according to the
-state of the art [*e.g.* @Goodfellow2016DeeLea].
+provide a proof-of-concept, in which we (i) aggregate a series of spatially
+replicated networks into a metaweb, (ii) extract latent features based on the
+co-occurrence of species, (iii) use these features to train a deep neural binary
+classifier to predict interactions, and (iv) apply this classifier to the
+original features to predict possibly missing interactions. The entire analysis
+is presented in @fig:example, and the code to reproduce it is available at
+**TODO OSF LINK**; the entire example was carried out in *Julia 1.5.3*
+[@Bezanson2017JulFre], and notably uses the *Flux* machine learning framework
+[@Innes2018FluEle]. Note that this analysis is meant to serve as an *example
+only*, and should in practice be fined-tuned according to the state of the art
+[*e.g.* @Goodfellow2016DeeLea].
 
 We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
 where not all species pairs co-occur across sites. This implies that there are
@@ -131,16 +126,11 @@ the prediction of species interaction networks, and specifically strive to
 incorporate novel tools, more diverse sources, and adopt an explicitly spatial
 and temporal perspective on the question.
 
-
 # A Roadmap Toward Better Prediction of Ecological Networks across Space and Time
 
 Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better conceptualization and prediction of
-ecological networks (@fig:conceptual). Below we provide a primer on predictive
-network ecology, with particular focus on using machine learning approaches in
-the modelling process, in order to provide a path forward toward building models
-to predict ecological networks and interactions and to better understanding the
-relationship between species interactions and network structure.
+ecological networks (@fig:conceptual).
 
 ## Challenges: the many constraints on prediction
 
@@ -302,9 +292,21 @@ automated discovery of food webs [@Bohan2011AutDis], reconstruction of
 ecological networks using next-generation sequencing data [@Bohan2017NexGlo],
 and network inference from presence-absence data [@Sander2017EcoNet].
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual_v2.png){#fig:conceptual}
+![A conceptual roadmap highlighting key areas for the prediction of ecological
+networks. Starting with the input of data from multiple sources, followed by a
+modelling framework for ecological networks and the landscape, which are then
+ultimately combined to allow for the prediction of spatially explicit
+networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 # A Primer on Predictive Network Ecology
+
+Below we provide a primer on predictive network ecology, with particular focus
+on using machine learning approaches in the modelling process, in order to
+provide a path forward toward building models to predict ecological networks and
+interactions and to better understanding the relationship between species
+interactions and network structure. Here adopt a question-driven approach to
+serve as a guide through the path toward building models to predict and forecast
+the structure of ecological networks across space.
 
 ## Models
 
@@ -339,7 +341,9 @@ output $y$ given an input $x$ and our estimate value of $\theta$
 $\theta$, then, the problem of inference is nested within the forward problem
 (@fig:models).
 
-![The nested nature of developing predictive and forecasting models, showcases the _forward problem_ and how this relies on a hierarchical structure of the modelling process.](figures/forecasting_v3.png){#fig:models}
+![The nested nature of developing predictive and forecasting models, showcases
+the _forward problem_ and how this relies on a hierarchical structure of the
+modelling process.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
@@ -356,7 +360,6 @@ reworking the predictors to enable models to better uncover predictor-response
 relationships [@Kuhn2019FeaEng]. For instance, this can include projecting the
 predictors into principal component analysis space, and selecting only a set of
 dimensions for the modelling, as in our machine learning illustration.
-
 
 ### How do we validate a predictive model?
 
@@ -429,7 +432,6 @@ and therefore can be measured from the number of links and the species richness
 only -- because it can be derived from coarse data and is informative on both
 the ecology and structure of the network, we argue that predictions of
 connectance are most likely to be immediately useful, and easy to formulate.
-
 
 ### How do we predict how species that have never co-occurred will interact?
 
@@ -568,19 +570,17 @@ evolution, dispersal, environmental heterogeneity, among others.
 
 However, the potential of links between larger subsets causes a combinatoric
 explosion which increases the number of predictions we would need to make with
-our already scarce data.
-*Prima facie*, increasing the dimensionality of the object we need to predict
-(the multiple layers rather than a single network) may make the problem
-complicated. But multi-layer networks encode ecological constraints -- of
-dispersal, of evolution, and of niche suitability. One question that is worth
-investigating is whether the multi-layer structure of ecological networks may
-*improve* the predictibility of interactions. Indeed, this is the case for
-social networks [@Jalili2017LinPre; @Najari2019LinPre; @Yasami2018NovMul].
-Although at the moment it seems bests to address our understanding of simple
-networks, exploring the more intricate ways in which species interact might
-require that we make room for hypergraphs and multi-layer networks in our
-predictive framework.
-
+our already scarce data. *Prima facie*, increasing the dimensionality of the
+object we need to predict (the multiple layers rather than a single network) may
+make the problem complicated. But multi-layer networks encode ecological
+constraints -- of dispersal, of evolution, and of niche suitability. One
+question that is worth investigating is whether the multi-layer structure of
+ecological networks may *improve* the predictibility of interactions. Indeed,
+this is the case for social networks [@Jalili2017LinPre; @Najari2019LinPre;
+@Yasami2018NovMul]. Although at the moment it seems bests to address our
+understanding of simple networks, exploring the more intricate ways in which
+species interact might require that we make room for hypergraphs and multi-layer
+networks in our predictive framework.
 
 ### How do we determine what interaction networks are feasible?
 
@@ -622,12 +622,11 @@ will propagate along the various level of biological organization
 
 ## Space
 
-Although networks were initially used to
-describe the interactions *within* a community, interest in the last decade has
-shifted towards understanding their structure and variation over space
-[@Trojelsgaard2016EcoNet; @Baiser2019EcoRul], and has established network
-ecology as an important emerging component of biogeography and macroecology.
-
+Although networks were initially used to describe the interactions *within* a
+community, interest in the last decade has shifted towards understanding their
+structure and variation over space [@Trojelsgaard2016EcoNet; @Baiser2019EcoRul],
+and has established network ecology as an important emerging component of
+biogeography and macroecology.
 
 ### How much do networks vary over space?
 
@@ -691,7 +690,8 @@ co-occurrences, but that it is also technically challenging and requires prior
 knowledge of the interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally species.
 
-### What is the spatial scale suitable for the prediction of species interactions?
+### What is the spatial scale suitable for the prediction of species
+#interactions?
 
 If we trace the mechanisms that result in a given interaction to the smallest
 scale, we can end up looking at genes interacting with each other resulting in
@@ -885,10 +885,10 @@ reliable datasets on networks in space or time will make this information more
 actionable.
 
 **Acknowledgements:** TS, NF, TP are funded by a donation from the Courtois
-Foundation; FB, NF, and TP are funded by IVADO; FB, GD, NF, and GH are funded by
-the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by the Canadian
-Institute of Ecology & Evolution; this research was enabled in part by support
-provided by Calcul Québec (www.calculquebec.ca) and Compute Canada
-(www.computecanada.ca).
+*Foundation; FB, NF, and TP are funded by IVADO; FB, GD, NF, and GH are funded
+*by the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by the
+*Canadian Institute of Ecology & Evolution; this research was enabled in part by
+*support provided by Calcul Québec (www.calculquebec.ca) and Compute Canada
+*(www.computecanada.ca).
 
 # References
