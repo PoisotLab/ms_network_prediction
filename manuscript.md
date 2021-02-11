@@ -66,7 +66,7 @@ understanding the scaling of interactions from individuals to populations to
 communities [@Berlow2004IntStr]. One recurring observation throughout studies of
 interaction strengths is that networks are often composed of many weak links and
 few strong links [@Berlow2004IntStr]. Knowing the distribution of interaction
-strength within a network informs on its stability [@Neutel2002StaReaa;
+strength within a network informs on its stability [@Neutel2002StaRea;
 @Ruiter1995EnePat], influences on the ecosystem functioning [@Duffy2002BioEco;
 @Montoya2003FooWeb] and our potential to improve on the development of
 multispecies models [@Wootton2005MeaInt]. Seeing interaction strength within a
@@ -88,8 +88,8 @@ functional relationships of species [@Dehling2018BriElt; @OConnor2020UnvFoo],
 re-evaluate metacommunities in light of network structure [@Guzman2019MulExt],
 and enable a new line of research into the biogeography of species interactions
 [@Massol2017ChaFou; @Braga2019SpaAna] that incorporates both the Eltonian and
-Grinnial niche [@Gravel2019BriElt]. Further, the ability to reliably predict and
-forecast species interactions would improve our understanding of how species
+Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably predict
+and forecast species interactions would improve our understanding of how species
 function within ecosystems and inform conservation efforts for protecting
 species, communities, and ecosystems.
 
@@ -290,6 +290,7 @@ allow us to infer potential from realized interactions and empirical data about
 populations [@Poisot2016StrPro]. In turn, this effort is supported by a thriving
 ecosystem of data sources and computational tools. In this section, we give a
 brief overview of these resources.
+
 ### Open Data
 
 The acquisition of biodiversity and environmental data has tremendously
