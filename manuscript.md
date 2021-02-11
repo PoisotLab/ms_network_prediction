@@ -97,9 +97,22 @@ species, ecosystem processes, and ecosystem services [@Harvey2017BriEco].
 Therefore, the framework we propose here will improve understanding of existing and future species interactions, thus improving tools for
 conservation and biodiversity management.
 
-# What is currently limiting our understanding of species interaction networks?
+# Case Study: Predicting Interactions in Host-Parasite Networks
 
-## Data
+Here we present an example of what we mean by predicting ecological networks.
+
+![Case Study Conceptual Panel](./figures/example_concept_panel.png)
+
+# A Roadmap Toward Prediction of Ecological Networks across Space and Time
+
+Below we focus on and discuss integrating what we envisage to be the conceptual and methodological pathway towards better conceptualization and prediction of ecological networks (@fig:conceptual).
+Below we provide a primer on predictive network ecology, with particular focus on using machine learning approaches in the modelling process, in order to provide a path forward toward building models to predict ecological networks and interactions and to better understanding the relationship between species interactions and network structure.
+
+
+
+## What is currently limiting our understanding of species interaction networks?
+
+### Data
 
 
 At the moment, our understanding of the structure of ecological networks is limited
@@ -130,7 +143,7 @@ strength is extremely variable and context dependent and can be influenced by de
 community composition [@Wootton2005MeaInt]. A better understanding of interaction strengths in communities is a
 key step in linking species interactions to ecosystem processes and functioning.
 
-## Methods
+### Methods
 
 This scarcity of data limits the range of computational tools than can be used
 by network ecologists. Most deep learning methods, for instance, are very data
@@ -146,7 +159,7 @@ integrated, flexible, and data-efficient set of computational tools which will
 allow us to predict ecological networks accurately from existing and imperfect
 datasets, but also enable us to perform model validation and comparison with more flexibility than existing tools.  
 
-## Scale
+### Scale
 
 We are also currently limited by the the level of biological organisation at
 which we can describe ecological networks. For instance, our understanding of
@@ -163,9 +176,7 @@ the properties of ecosystem across different scales remains a central challenge 
 and we should strive to work on methods that will integrate these different
 'snapshots'.
 
-![Ecological processes rarely occur in isolation and are influenced by (as well as influence) other aspects or properties of a system. This highlights the need to integrate these various processes across various spatial, temporal, and organisational scales if we are to improve our understanding of ecosystems as a whole.](figures/everything_connected_v3.png){#fig:everything_is_connected}
-
-# What is paving the path towards understanding species interaction networks?
+## What the path foward towards understanding species interaction networks?
 
 ## Open Data
 
@@ -245,15 +256,11 @@ and traits matching in space and time, and the combination of these elements
 allow us to infer potential from realized interactions and empirical data about
 populations [@Poisot2016StrPro].
 
-# A Roadmap Toward Prediction of Ecological Networks across Space and Time
-
-Below we focus on and discuss integrating what we envisage to be the conceptual and methodological pathway towards better conceptualization and prediction of ecological networks (@fig:conceptual).
-Below we provide a primer on predictive network ecology, with particular focus on using machine learning approaches in the modelling process, in order to provide a path forward toward building models to predict ecological networks and interactions and to better understanding the relationship between species interactions and network structure.
-
 ![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual_v2.png){#fig:conceptual}
 
-## Models
+# A Primer on Predictive Network Ecology
 
+## Models
 
 ### What is a predictive model?
 
@@ -410,7 +417,7 @@ sampling biases and limited to prediction for species for which we already have
 interaction data [@Becker2020PreWil].
 
 
-### How are interaction strengths actually inferred?
+### How are interaction strengths inferred?
 
 Interaction strength can be inferred empirically or theoretically [@Berlow2004IntStr]. While the development of theoretical predictive models to infer interaction strength is important, the empirical sampling of quantitative networks is not to be neglected as they are important to model parameterization and validation [@Novak2008EstNon]. Before we attempt to make inferences from data, we must adapt a conceptual framework to model interaction strength. One such framework is functional foraging [@Portalier2019MecPre], where the primary basis for inferring interaction is based on an organism's traits, the environment, and foraging behavior such as searching, capture and handling times. A different conceptual alternative, applicable in food-webs, is metabolic based models, where body mass, metabolic demands, and energy loss are used to infer energetic energy fluxes between organisms [@Yodzis1992BodSiz;@Berlow2009SimPre].
 

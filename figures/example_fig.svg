@@ -9,8 +9,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="548.81232mm"
-   height="313.96283mm"
-   viewBox="0 0 548.81232 313.96283"
+   height="312.1998mm"
+   viewBox="0 0 548.81233 312.19979"
    version="1.1"
    id="svg20968"
    inkscape:version="1.0.1 (1.0.1+r74)"
@@ -164,9 +164,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49716564"
-     inkscape:cx="784.57118"
-     inkscape:cy="561.62704"
+     inkscape:zoom="0.50416066"
+     inkscape:cx="808.29577"
+     inkscape:cy="694.712"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -183,15 +183,15 @@
      fit-margin-right="0"
      fit-margin-bottom="0">
     <sodipodi:guide
-       position="17.384357,203.31217"
+       position="17.384356,201.83915"
        orientation="1,0"
        id="guide1205" />
     <sodipodi:guide
-       position="221.51608,233.95008"
+       position="221.51608,232.47706"
        orientation="0,-1"
        id="guide2566" />
     <sodipodi:guide
-       position="352.47589,290.17677"
+       position="352.47589,288.70375"
        orientation="0,-1"
        id="guide2568" />
   </sodipodi:namedview>
@@ -211,19 +211,19 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(8.3658543,309.33957)">
+     transform="translate(8.3658543,309.04956)">
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.42344;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect22963"
        width="541.01373"
        height="311.59528"
-       x="-4.4403596"
-       y="-309.33957" />
+       x="-4.0693531"
+       y="-308.54977" />
     <rect
-       style="fill:#f8f8f8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.706351;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       style="fill:#f8f8f8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.703586;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect13468"
        width="133.19057"
-       height="311.66919"
+       height="309.23431"
        x="407.25592"
        y="-307.04593" />
     <path
