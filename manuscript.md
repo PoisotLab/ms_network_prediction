@@ -846,7 +846,7 @@ between resolution and accuracy in any forecasting model.
 
 # Conclusion: why should we predict species interaction networks?
 
-Because we can.
+Because we almost can, and because we definitely should.
 
 More accurately, we should invest in network prediction because the right
 conditions to do so reliably and rapidly, including forecasting, are beginning
