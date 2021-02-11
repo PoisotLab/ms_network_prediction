@@ -121,7 +121,7 @@ number of latent features for the species in a context where the dataset is both
 unbalanced and likely to have many missing values. This frames the problem as
 predicting a binary outcome, the interaction $M_{xy}$ represented as `true` or
 `false` (and one-hot encoded), based on a features vector $v_{xy} = [v_x, v_y]$
-where $v_x$ is the values of the selected features for the parasite and %v_y$ is
+where $v_x$ is the values of the selected features for the parasite and $v_y$ is
 the features of the host. In the following example, we used the first 15
 components of the latent sub-space created by the probabilistic PCA. This
 features vector is then fed into the input layer of a neural network, which uses
@@ -131,7 +131,13 @@ outcome. The resulting value is one-cold encoded to represent $M_{xy}$, *i.e.*
 the interaction bit describing an interaction when equal to 1, and no
 interaction when equal to 0.
 
-![LEGEND TODO](figures/review-netwpred-example.png){#fig:example}
+![Overview of the imputation process. An empirical network [from
+@Hadfield2014TalTwo] is converted intro latent features using probabilistic PCA,
+then used to train a deep neural network to predict species interactions. The
+initial and imputed networks are represented as their tSNE embedding, and the
+colors of nodes are the cluster to which they are assigned based on a $k$-means
+clustering of the tSNE
+output.](figures/review-netwpred-example.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
 in two ways. First, the selection of features was done so that absent
