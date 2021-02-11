@@ -269,9 +269,20 @@ different processes drive the properties of ecosystem across different scales
 remains a central challenge of ecological research, and we should strive to work
 on methods that will integrate these different 'snapshots'.
 
-## What the path foward towards understanding species interaction networks?
+## Opportunities: the emerging ecosystem of open tools and data
 
-## Open Data
+If we wish to predict the interactions between species we have not observed
+together, using our knowledge of the structure of ecological networks to
+interact in a particular ecosystem is one of our most useful assets. We are able
+to infer species interactions using proxies such as traits, phylogenies,
+geographical data and other frameworks [@Morales-Castilla2015InfBio]. Drawing on
+elements that contribute to the realization of an interaction such as abundance
+and traits matching in space and time, and the combination of these elements
+allow us to infer potential from realized interactions and empirical data about
+populations [@Poisot2016StrPro]. In turn, this effort is supported by a thriving
+ecosystem of data sources and computational tools. In this section, we give a
+brief overview of these resources.
+### Open Data
 
 The acquisition of biodiversity and environmental data has tremendously
 increased over the past decades thanks to the rise of citizen science
@@ -302,7 +313,7 @@ integration of datasets---as well as a growing interest at the government level
 the coming years.
 
 
-## Open Tools and Methods
+### Open Tools and Methods
 
 Machine learning encompasses a broad variety of techniques applied with or
 without human supervision. These techniques can often be more flexible and
@@ -336,18 +347,6 @@ trait-matching rules [@Desjardins-Proulx2017EcoInt; @Pichler2020MacLea],
 automated discovery of food webs [@Bohan2011AutDis], reconstruction of
 ecological networks using next-generation sequencing data [@Bohan2017NexGlo],
 and network inference from presence-absence data [@Sander2017EcoNet].
-
-## Conceptual Synthesis
-
-If we wish to predict the interactions between species we have not observed
-together, using our knowledge of the structure of ecological networks to
-interact in a particular ecosystem is one of our most useful assets. We are able
-to infer species interactions using proxies such as traits, phylogenies,
-geographical data and other frameworks [@Morales-Castilla2015InfBio]. Drawing on
-elements that contribute to the realization of an interaction such as abundance
-and traits matching in space and time, and the combination of these elements
-allow us to infer potential from realized interactions and empirical data about
-populations [@Poisot2016StrPro].
 
 ![A conceptual roadmap highlighting key areas for the prediction of ecological networks. Starting with the input of data from multiple sources, followed by a modelling framework for ecological networks and the landscape, which are then ultimately combined to allow for the prediction of spatially explicit networks.](figures/conceptual_v2.png){#fig:conceptual}
 
@@ -386,9 +385,7 @@ output $y$ given an input $x$ and our estimate value of $\theta$
 $\theta$, then, the problem of inference is nested within the forward problem
 (@fig:models).
 
-
 ![The nested nature of developing predictive and forecasting models, showcases the _forward problem_ and how this relies on a hierarchical structure of the modelling process.](figures/forecasting_v3.png){#fig:models}
-
 
 ### What do you need to build a predictive model?
 
