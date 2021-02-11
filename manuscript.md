@@ -327,7 +327,6 @@ integration of datasets---as well as a growing interest at the government level
 [@Scholes2012BuiGlo] paints a positive picture for data access and usability in
 the coming years.
 
-
 ### Open Tools and Methods
 
 Machine learning encompasses a broad variety of techniques applied with or
