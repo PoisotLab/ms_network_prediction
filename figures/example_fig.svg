@@ -164,9 +164,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.50416066"
-     inkscape:cx="808.29577"
-     inkscape:cy="694.712"
+     inkscape:zoom="2.5976571"
+     inkscape:cx="1254.9279"
+     inkscape:cy="688.0527"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -420,7 +420,7 @@
        style="display:inline;fill:none;fill-opacity:1;stroke:#060606;stroke-width:1.28109;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="ellipse22893"
        cx="330.4888"
-       cy="-122.94197"
+       cy="-112.35864"
        rx="7.2940149"
        ry="7.0849333" />
     <text
@@ -564,14 +564,6 @@
        style="fill:none;stroke:#000000;stroke-width:0.391278px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 296.08124,-112.46392 -12.4278,-49.82762"
        id="path23059" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.391278px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 310.35242,-111.58165 13.42966,-10.62393"
-       id="path23061" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.391278px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 309.88425,-136.81122 13.89783,14.60564"
-       id="path23063" />
     <text
        xml:space="preserve"
        style="font-size:3.99294px;line-height:0.75;font-family:sans-serif;text-align:end;letter-spacing:0px;text-anchor:end;fill:#193d4c;fill-opacity:1;stroke-width:0.316336"
