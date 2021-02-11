@@ -844,4 +844,53 @@ incorporate into a forecasting model, the resolution of the forecast's
 predictions shrinks, and therefore the modeler be mindful of the trade-off
 between resolution and accuracy in any forecasting model.
 
+# Conclusion: why should we predict species interaction networks?
+
+Because we almost can, and because we definitely should.
+
+More accurately, we should invest in network prediction because the right
+conditions to do so reliably and rapidly, including forecasting, are beginning
+to emerge. Given the possible benefits to a variety of ecological disciplines
+that would result from an increased ability to predict ecological networks and
+their structure, we feel strongly that the research agenda we outline here
+should be picked up by the community. Although novel technologies are bringing
+massive amounts of data to some parts of ecology (primarily environmental DNA
+and remote sensing, but now more commonly image analysis and bioacoustics), it
+is even more important to be intentional about *reconciling* data. This involves
+not only the scholarly work of understand the processes that the data encode,
+and whether they speak to scales that are compatible, but also the groundwork of
+developing pipelines to bridge the ever-expanding gap between "high-throughput"
+and "low-throughput" sampling methods. An overall increase in the volume of data
+will not result in an increase of our predictive capacity as long as this data
+increase is limited to specific aspects of the problem. In the areas we
+highlight in @fig:conceptual, many data steps are still limiting: documenting
+empirical interactions is natural history work that doesn't lend itself to
+systematic automation; expert knowldge is by design a social process that may be
+slightly accelerated by text mining and natural language processing (but is not
+yet, or not routinely or at scale). These limitations are affecting our ability
+to reconstruct networks.
+
+But the tools to which we feed these data, incomplete as they may be, are
+gradually getting better; that is, they can do predictions faster, they handle
+uncertainty and propagate it well, and they can accomodate data volumes than are
+lower than we may expect. It is clear that attempting to predict the structure
+of ecological networks at any scale is a methodological and ecological
+challenge; yet it will result in qualitative changes in our understanding of
+complex adaptive systems, as well as changes to our ability to leverage
+information about network structure for conservation decision. It is perhaps
+even more important to forecast the structure of ecological networks because it
+is commonly neglected as a facet of biodiversity that can (and should) be
+managed. In fact, none of the Aichi targets mention biostructure or its
+protection, despite this being recognized as an important task
+[@McCann2007ProBio], either implicitely or explicitely. Being able to generate
+reliable datasets on networks in space or time will make this information more
+actionable.
+
+**Acknowledgements:** TS, NF, TP are funded by a donation from the Courtois
+Foundation; FB, NF, and TP are funded by IVADO; FB, GD, NF, and GH are funded by
+the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by the Canadian
+Institute of Ecology & Evolution; this research was enabled in part by support
+provided by Calcul Québec (www.calculquebec.ca) and Compute Canada
+(www.computecanada.ca).
+
 # References
