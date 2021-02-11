@@ -91,7 +91,8 @@ and enable a new line of research into the biogeography of species interactions
 Grinnial niche [@Gravel2019BriElt]. Further, the ability to reliably predict and
 forecast species interactions would improve our understanding of how species
 function within ecosystems and inform conservation efforts for protecting
-species, communities and ecosystems.
+species, communities, and ecosystems.
+
 ## Can we predict species interaction networks? An illustration.
 
 The core premise of this manuscript is that ecological networks, especially when
