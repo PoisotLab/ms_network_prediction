@@ -21,7 +21,7 @@ contemporary actions have long-term, low-predictability consequences
 Therefore, our field needs a conceptual path forward toward models that enable
 prediction (for the present) and forecasting (for the future) of species
 interactions and the networks they form [@McCann2007ProBio; @Seibold2018NecMul].
-Here we provide an data-driven illustration to show how machine learning
+Here we provide a data-driven illustration to show how machine learning
 approaches can enable unreasonably effective prediction of interactions whereby
 we construct a metaweb of host-parasite interactions across space, which serves
 as a proof-of-concept for this conceptual framework. We then propose a roadmap
@@ -139,7 +139,7 @@ per-individual interactions from the strength of a whole species interaction
 crucial [@Novak2008EstNon], but are a hard task to quantify in natural
 communities [@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt],
 especially as the number of species composing communities increases,
-compounds the possibility of higher-order interactions or non-linear responses in
+compounded by the possibility of higher-order interactions or non-linear responses in
 interactions [@Wootton2005MeaInt]. Furthermore, interaction strength is
 extremely variable and context dependent and can be influenced by density
 dependence and spatiotemporal variation in abundances and community composition
@@ -469,7 +469,7 @@ mass, metabolic demands, and energy loss are used to infer energetic energy
 fluxes between organisms [@Yodzis1992BodSiz;@Berlow2009SimPre]. Energy can be
 seen as the common currency that links every level of biology from individual
 organisms to the whole ecosystem [@Brown2004MetThe;@Barnes2018EneFlua].
-Conceptualizing interaction strength a flux of energy could open the way to the
+Conceptualizing interaction strength as the flux of energy could open the way to the
 conciliation of the different field of ecology. One bottom-up approach is to
 first estimate basal species biomasses and from there the higher trophic-level
 species biomasses and energetic demands are computed [@Berlow2009SimPre].
@@ -576,7 +576,7 @@ across space.
 
 ### How do we predict what the species pool at a particular location is?
 
-As species pool form the basis network structure, predicting which species are
+As species pools form the basis network structure, predicting which species are
 present at a particular location is essential to predict networks across space.
 The development of species distribution models (SDMs) is increasingly ubiquitous
 in macroecology--- these models predict a species' distribution across space
