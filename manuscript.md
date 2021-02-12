@@ -25,7 +25,7 @@ Here we provide an data-driven illustration to show how machine learning
 approaches can enable unreasonably effective prediction of interactions whereby
 we construct a metaweb of host-parasite interactions across space, which serves
 as a proof-of-concept for this conceptual framework. We then propose a roadmap
-forward for *how* to improve predictions using this approach, and provide a
+forward for how to improve predictions using this approach, and provide a
 primer on the relevant tools and methods that could be incorporated into models
 of this type in the future in order to account for the spatial, temporal, and
 climatic dimensions of network prediction [@Burkle2011FutPla].
@@ -37,7 +37,7 @@ climatic dimensions of network prediction [@Burkle2011FutPla].
 The core premise of this manuscript is that ecological networks can be
 predicted. In this section, we provide a proof-of-concept, in which we (i)
 aggregate a series of networks collected across space into a metaweb, (ii)
-extract latent features based on the co-occurrence of species, (iii) use these
+extract features based on species co-occurrence, (iii) use these
 features to train a neural network to predict interactions, and (iv) apply this
 classifier to the original features to predict possibly missing interactions
 across the entire species pool. The entire analysis is presented in
@@ -102,24 +102,6 @@ spatial and temporal perspective on this question. Now, the question becomes:
 home do we make our prediction of ecological networks _better_?
 
 # A Roadmap Toward Better Prediction of Ecological Networks across Space and Time
-
-A better understanding of species interactions, and the networks they form, is
-deeply needed. It would help unify the fields of community, network, and spatial
-ecology; improve the quantification of the functional relationships between
-species [@Dehling2018BriElt; @OConnor2020UnvFoo]; re-evaluate metacommunities in
-light of network structure [@Guzman2019MulExt]; and enable a new line of
-research into the biogeography of species interactions [@Massol2017ChaFou;
-@Braga2019SpaAna] which incorporates a synthesis of both Eltonian and
-Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably predict
-and forecast species interactions would inform conservation efforts for
-protecting species, communities, and ecosystems. Integration of species
-interactions into the assessment of vulnerability to climate change is a needed
-methodological advance [@Foden2016IucSsc]. International panels draw on models
-to establish scientific consensus [@Araujo2019StaDis], and they can be improved
-through more effective prediction of species distributions and interactions
-[@Syfert2014UsiSpe]. Further, recent studies argue for a shift in focus from
-species to interaction networks for biodiversity conservation to better
-ecosystem processes [@Harvey2017BriEco].
 
 Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better prediction of
@@ -765,7 +747,24 @@ trade-off between resolution and accuracy where developing any forecast.
 
 # Conclusion: why should we predict species interaction networks?
 
-Because we almost can, and because we definitely should.
+Because we almost can, and because we definitely should. A better understanding
+of species interactions, and the networks they form, would help unify the fields
+of community, network, and spatial ecology; improve the quantification of the
+functional relationships between species [@Dehling2018BriElt;
+@OConnor2020UnvFoo]; re-evaluate metacommunities in light of network structure
+[@Guzman2019MulExt]; and enable a new line of research into the biogeography of
+species interactions [@Massol2017ChaFou; @Braga2019SpaAna] which incorporates a
+synthesis of both Eltonian and Grinnellian niche [@Gravel2019BriElt]. Further,
+the ability to reliably predict and forecast species interactions would inform
+conservation efforts for protecting species, communities, and ecosystems.
+Integration of species interactions into the assessment of vulnerability to
+climate change is a needed methodological advance [@Foden2016IucSsc].
+International panels draw on models to establish scientific consensus
+[@Araujo2019StaDis], and they can be improved through more effective prediction
+of species distributions and interactions [@Syfert2014UsiSpe]. Further, recent
+studies argue for a shift in focus from species to interaction networks for
+biodiversity conservation to better ecosystem processes [@Harvey2017BriEco].
+
 
 We should invest in network prediction because the right
 conditions to do so reliably and rapidly, including forecasting, are beginning
