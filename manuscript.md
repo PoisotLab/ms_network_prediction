@@ -321,16 +321,15 @@ $f$, that takes a set of inputs $x$ (also called features, descriptors, or
 independent variables) and some parameters $\theta$, and maps them to predicted
 output states $y$ (also called label, response, or dependent variable) based on
 the input to the model: $y=f(x,\theta)$. However, any given model $f$ can be
-used for either descriptive or predictive purposes.
-
-Many forms of scientific inquiry are based around inference (also called the
-inverse problem, fitting a model, or training a model) [@Stouffer2019AllEco]. In
-this context, the goal of using a model is to estimate the parameters, $\theta$,
-that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$. In
-some cases, these parameter values are themselves of interest (e.g the strength
-of selection, intrinsic growth rate, dispersal distance), but in others cases,
-the goal is to compare different models $f_1, f_2, \dots$ to determine which
-provides the most parsimonious explanation for a dataset. The quantitative
+used for either descriptive or predictive purposes. Many forms of scientific
+inquiry are based around using models _descriptively_ (also called inference,
+the inverse problem, fitting a model, or training a model)
+[@Stouffer2019AllEco]. In this context, the goal of using a model is to estimate
+the parameters, $\theta$, that best explain a set of empirical observations,
+$\{\hat{x}, \hat{y}\}$. In some cases, these parameter values are themselves of
+interest (e.g the strength of selection, intrinsic growth rate, dispersal
+distance), but in others cases, the goal is to compare a set of competing models $f_1,
+f_2, \dots$ to determine which provides the most parsimonious explanation for a dataset. The quantitative
 representation of "effects" in these models---the influence of each input on the
 output---is often assumed to be linear, and in the frequentist context, the goal
 is often to determine if the coeffecient corresponding with an input is non-zero
@@ -354,15 +353,12 @@ In order to build a predictive machine-learning model, one needs the following:
 first, **data**, split into features $\hat{x}$ and labels $\hat{y}$ (Box Figure
 Label). Second, a **model** $f$, which maps features $x$ to labels $y$ as a
 function of parameters $\theta$, i.e. $y = f(x, \theta)$. Third, a loss function
-$L(\hat{x}, x)$. Lastly, **priors** on parameters, $P(\theta)$. Often, before
-fitting the model, the dataset will be split into a training and validation
-subsets. The model is trained on the training subset, then the fit and model
-performance are evaluated on the validation set [@Christin2020GoiFur]. Another
-important step in predictive modelling is feature engineering: adjusting and
-reworking the predictors to enable models to better uncover predictor-response
-relationships [@Kuhn2019FeaEng]. For instance, this can include projecting the
-predictors into principal component analysis space, and selecting only a set of
-dimensions for the modelling, as in our machine learning illustration.
+$L(\hat{y}, x)$, which describes how far a models prediction $y$ is from an
+empirical estimate $\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$.
+Another important before fitting a model is feature engineering: adjusting
+and reworking the predictors to better uncover
+predictor-response relationships [@Kuhn2019FeaEng]. This can include projecting
+the predictors into a lower dimensional space, as in our proof-of-concept.
 
 ### How do we validate a predictive model?
 
@@ -372,25 +368,16 @@ competing set of models provides the best explanation for a data set. A naive
 initial approach is to simply compute the average error between the model's
 prediction and the true data we have, and choose the model with the smallest
 error---however this approach inevitably results in _overfitting_. One approach
-to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL, the
-heavily maligned Bayes Factor), which are based around the heuristic that good
-models maximize the ratio of information provided by the model to the number of
-parameters it has.
-
-However, when the intended use-case of a model is prediction, the relevant form
-of validation is _predictive accuracy_. _Crossvalidation_ provides a better
-alternative for validating a model's predictive capacity. Crossvalidation
-methods divide the original dataset into two---one which is used to fit the
-model (called the _training_ set) and one used to validate its predictive
-accuracy on the data that is hasn't "seen" yet (called the _test_ set)
-[@Bishop2006PatRec]. This procedure is often repeated for different subdivisions
-of the dataset. One powerful approach is Leave-one-out-crossvalidation (LOOCV),
-which considers each data points uniquely as a test set, enabling analysis of a
-given models sensitivity to a single data point [@Arlot2010SurCro]. However,
-these methods are typically limited by the ensuing computation time
-requirements. Further adjustments can be done by adjusting the model structure
-(layer compositions and network structures for neural networks, number of trees
-and splits for tree-based models, etc.) and further tuning parameters.
+to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL) based
+around the heuristic that good models maximize the ratio of information provided
+by the model to the number of parameters it has. However, when the intended
+use-case of a model is prediction, the relevant form of validation is
+_predictive accuracy_, _crossvalidation_ provides a better alternative for
+validating a model's predictive capacity. Crossvalidation methods divide the
+original dataset into two---one which is used to fit the model (called the _training_ set) and one
+ used to validate its predictive accuracy on the data that is hasn't "seen" yet
+ (called the _test_ set) [@Bishop2006PatRec]. This procedure is often repeated
+ for different subdivisions of the dataset [@Arlot2010SurCro].
 
 ## Networks and Interactions
 
@@ -401,7 +388,7 @@ of interactions, but also a larger set of non-interactions. If we aim to predict
 the structure of networks from the "bottom-up"--- by considering each pairwise
 combination of $S$ different species---we are left with $S^2$ interaction values
 to estimate. Instead, we can use our existing understanding of the mechanisms
-that structure ecological networks to widdle down the set of feasible adjacency
+that structure ecological networks to whittle down the set of feasible adjacency
 matrices, thereby reducing the amount of information we must predict, and making
 the problem of predicting interactions less daunting. The processes that
 structure ecological networks do not only occur at the scale of
@@ -411,22 +398,20 @@ of the interactions forming the basis for network structure, and the network
 structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
 
-### What is the most important property of a network to predict?
+### What network properties should we should use to inform our predictions of interactions?
 
-Networks enclose a wealth of data that are explanatory for many types of
-interactions and are informative for the understanding of a wide range of
-ecological phenomena [@Delmas2018AnaEco]. This might make the task of network
-structure prediction look daunting, as the number of properties to predict can
-be immense. Yet there are two arguments to justify focusing on a single
-property, namely connectance, the proportion of the interaction matrix filled
-with interactions. First, connectance is ecologically informative. It ties into
-resilience to invasion [@Baiser2010ConDet; @Smith-Ramesh2016GloSyn], can
-increase robustness to extinction in food webs [@Dunne2002NetStr], and decrease
-it in mutualistic networks [@Vieira2015SimSto], and relate to stability
-[@Landi2018ComSta]. Second, most (if not all) network properties co-vary with
-connectance [*e.g.* @Poisot2014WheEco]. @Dunne2002FooStr emphasize that most
-network properties respond to network size (species richness) and connectance.
-Diversity estimates can provide good baselines [@Jenkins2013GloPat] for species
+There are many dimensions of network structure [@Delmas2018AnaEco]. This might
+make the task of network structure prediction look daunting, as the number of
+properties one could predict is immense. Yet there are two arguments to justify
+focusing on a single property, namely connectance, the proportion of the
+interaction matrix filled with interactions. First, connectance is ecologically
+informative. It ties into resilience to invasion [@Baiser2010ConDet;
+@Smith-Ramesh2016GloSyn], can increase robustness to extinction in food webs
+[@Dunne2002NetStr], and decrease it in mutualistic networks [@Vieira2015SimSto],
+and relate to stability [@Landi2018ComSta]. Second, most (if not all) network
+properties co-vary with connectance [*e.g.* @Poisot2014WheEco]. @Dunne2002FooStr
+emphasize that most network properties respond to network size (species
+richness) and connectance. Diversity estimates can provide good baselines [@Jenkins2013GloPat] for species
 richness over space; furthermore, recent advances in predicting the connectance
 from species richness alone [@MacDonald2020RevLin] allow to derive distributions
 of network properties for a given species richness. Connectance is defined as
@@ -438,22 +423,22 @@ connectance are most likely to be immediately useful, and easy to formulate.
 
 ### How do we predict how species that have never co-occurred will interact?
 
-The probability of the realization of an ecological interaction depend on
-co-occurrence in space and time, abundance and traits matching
-[@Poisot2015SpeWhy; @Pichler2020MacLea]. Given two species that co-occur, a
-neutral approach to probabilistic interactions would be based on abundances and
-trait matching would have no effect [@Canard2012EmeStr]. However, some proxies
-can be used to make more accurate predictions of potential ecological
-interactions. For instance, functional traits are good such proxies because they
-are highly selected by ecological interactions and determine forbidden links
-(such as the mechanical impossibility of a bird to consume seeds larger than its
-beak). The fact that functional traits suffer some kind of selective pressure
-and because niches tend to be conserved throughout a phylogenetic tree,
-ecological interactions also tend to be conserved, and therefore we could also
-use phylogenies to infer pairs of co-occurring species that could potentially
-interact [@Gomez2010EcoInt]. In fact, the contribution of interactions to the
-phylogenetic match between species is consistent even through scales
-[@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].
+The probability of an interaction occurring depends on the likelihood of
+co-occurrence in space and time [@Poisot2015SpeWhy; @Pichler2020MacLea]. Given
+two species that co-occur, a neutral approach to probabilistic interactions
+would be based on abundances and trait matching would have no effect
+[@Canard2012EmeStr]. However, some proxies can be used to make more accurate
+predictions of potential ecological interactions. For instance, functional
+traits are good such proxies because they are highly selected by ecological
+interactions and determine forbidden links (such as the mechanical impossibility
+of a bird to consume seeds larger than its beak). The fact that functional
+traits suffer some kind of selective pressure and because niches tend to be
+conserved throughout a phylogenetic tree, ecological interactions also tend to
+be conserved, and therefore we could also use phylogenies to infer pairs of
+co-occurring species that could potentially interact [@Gomez2010EcoInt]. In
+fact, the contribution of interactions to the phylogenetic match between species
+is consistent even through scales [@Poisot2018IntRet] and in neutral models
+[@Coelho2017NeuBio].
 
 A separate family of methods that gained interest in recent years are the
 network-based models. These models use the existing set of interactions to
