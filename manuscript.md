@@ -16,61 +16,21 @@ This is due in large part to the tedious, time-consuming, and expensive data
 collection process. As with many ecological systems, networks of species
 interactions have entered their "long now" [@Carpenter2002EcoFut], where
 contemporary actions have long-term, low-predictability consequences
-[@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
-models that enable prediction (for the present) and forecasting (for the future)
-of species interactions and the networks they form [@McCann2007ProBio;
-@Seibold2018NecMul]. Here we provide a simple illustration to show how machine
-learning approaches can enable unreasonably effective prediction of interactions
-in a host-parasite system, which serves as a proof-of-concept for this
-conceptual framework. We then propose a roadmap forward for improving
-predictions using this approach, and provide a primer on the relevant tools and
-methods that could be incorporated into models of this type in the future in
-order to account for the spatial, temporal, and climatic dimensions of network
-prediction [@Burkle2011FutPla]
+[@Burkle2013PlaInt].
 
-We can represent these networks of interactions
-as graphs, where each species is represented as a node, and each interaction as
-an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge
-represents information about that interaction. We can represent this network
-using a matrix, using 1s and 0s to represent the presence or absence of an
-interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
-[@Dunne2006NetStr]. This construct allows for convenient computation of network
-properties, particularly properties relating to network structure.
+Therefore, our field needs a conceptual path forward toward models that enable
+prediction (for the present) and forecasting (for the future) of species
+interactions and the networks they form [@McCann2007ProBio; @Seibold2018NecMul].
+Here we provide an data-driven illustration to show how machine learning
+approaches can enable unreasonably effective prediction of interactions whereby
+we construct a metaweb of host-parasite interactions across space, which serves
+as a proof-of-concept for this conceptual framework. We then propose a roadmap
+forward for *how* to improve predictions using this approach, and provide a
+primer on the relevant tools and methods that could be incorporated into models
+of this type in the future in order to account for the spatial, temporal, and
+climatic dimensions of network prediction [@Burkle2011FutPla].
 
-Better prediction of ecological networks would help unify the fields of
-community, network, and spatial ecology; improve the quantification of the
-functional relationships between species [@Dehling2018BriElt;
-@OConnor2020UnvFoo]; re-evaluate metacommunities in light of network structure
-[@Guzman2019MulExt]; and enable a new line of research into the biogeography of
-species interactions [@Massol2017ChaFou; @Braga2019SpaAna] which incorporates a
-synthesis of both Eltonian and Grinnellian niche [@Gravel2019BriElt]. Further,
-the ability to reliably predict and forecast species interactions would inform
-conservation efforts for protecting species, communities, and ecosystems.
-International panels draw on models to establish scientific consensus
-[@Araujo2019StaDis]---IUCN Red List assessments includes an evaluation of a
-species from known, inferred, and projected sites of occurrence
-[@IUCNRedListTechnicalWorkingGroup2019MapSta], which can be improved through
-more effective forecasts of species distributions and interactions
-[@Syfert2014UsiSpe]. Integration of species interactions into the assessment of
-vulnerability to climate change is a needed methodological advance
-[@Foden2016IucSsc]. IPBES recognized that models for forecasting regional
-biodiversity dynamics will need to incorporate species interactions
-[@IPBES2016MetAss]. Moreover, recent studies argue for a shift in focus from
-species to interaction networks for biodiversity conservation to better protect
-species, ecosystem processes, and ecosystem services [@Harvey2017BriEco].
-Interactions are a key element of the functional role of a species, which should
-be considered for the evaluation of species recovery for the development of an
-IUCN Green List of recovered species or similar [@Akcakaya2018QuaSpe].
 
-The scope od this paper is not to provide a complete overview of the the state of
-predictive network ecology but rather to present a workflow (**roadmap?**) of
-*how* to move through the predictive modelling process. We place an
-emphasis on how we can use (and capitalise on) modern machine learning
-techniques as well as the various components and aspects
-of network structure and interactions that we should focus our attention on,
-especially within a spatial context. This workflow is
-illustrated by a data-driven example whereby we construct a metaweb of host-parasite
-interactions across space.
 
 # Proof-of-Concept
 
@@ -86,7 +46,6 @@ the entire example was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], and
 notably uses the *Flux* machine learning framework [@Innes2018FluEle]. Note that
 this analysis is meant to serve as an *example only*, and should in practice be
 fined-tuned according to the state of the art [*e.g.* @Goodfellow2016DeeLea].
-
 
 We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
 where not all species pairs co-occur across sites. This implies that there are
@@ -144,6 +103,24 @@ spatial and temporal perspective on this question. Now, the question becomes:
 home do we make our prediction of ecological networks _better_?
 
 # A Roadmap Toward Better Prediction of Ecological Networks across Space and Time
+
+A better understanding of species interactions, and the networks they form, is
+deeply needed. It would help unify the fields of community, network, and spatial
+ecology; improve the quantification of the functional relationships between
+species [@Dehling2018BriElt; @OConnor2020UnvFoo]; re-evaluate metacommunities in
+light of network structure [@Guzman2019MulExt]; and enable a new line of
+research into the biogeography of species interactions [@Massol2017ChaFou;
+@Braga2019SpaAna] which incorporates a synthesis of both Eltonian and
+Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably predict
+and forecast species interactions would inform conservation efforts for
+protecting species, communities, and ecosystems. Integration of species
+interactions into the assessment of vulnerability to climate change is a needed
+methodological advance [@Foden2016IucSsc]. International panels draw on models
+to establish scientific consensus [@Araujo2019StaDis], and they can be improved
+through more effective prediction of species distributions and interactions
+[@Syfert2014UsiSpe]. Further, recent studies argue for a shift in focus from
+species to interaction networks for biodiversity conservation to better
+ecosystem processes [@Harvey2017BriEco].
 
 Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better prediction of
@@ -318,13 +295,12 @@ and network inference from presence-absence data [@Sander2017EcoNet].
 
 # A Primer on Predictive Network Ecology
 
-Below we provide a primer on predictive network ecology, with particular focus
+Below we provide a primer on our approach to predictive network ecology, with particular focus
 on using machine learning approaches in the modelling process, in order to
-provide a path forward toward building models to predict ecological networks and
-interactions and to better understanding the relationship between species
-interactions and network structure. Here adopt a question-driven approach to
-serve as a guide through the path toward building models to predict and forecast
-the structure of ecological networks across space.
+provide a path forward toward building models to predict ecological networks.
+Here adopt a question-driven approach to serve as a guide through the path
+toward building models to predict and forecast the structure of ecological
+networks across space.
 
 ## Models
 
