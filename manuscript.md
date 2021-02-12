@@ -68,13 +68,8 @@ notably uses the *Flux* machine learning framework [@Innes2018FluEle]. Note that
 this analysis is meant to serve as an *example only*, and should in practice be
 fined-tuned according to the state of the art [*e.g.* @Goodfellow2016DeeLea].
 
-![What does it actually mean to predict a species interaction network? An
-overgeneralized version of the problem of taking incomplete sampled networks and
-producing a metaweb with prediction about how species that have not been
-observed co-occuring will interact.](./figures/network_prediction_problem.png)
 
-
- We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
+We used data from @Hadfield2014TalTwo, describing 51 host-parasite networks,
 where not all species pairs co-occur across sites. This implies that there are
 "negative associations" that might be biologically feasible but not observed
 because the two species have not been observed in co-occurrence. As this dataset
@@ -135,6 +130,12 @@ Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better prediction of
 ecological networks (@fig:conceptual).
 
+![A conceptual roadmap highlighting key areas for the prediction of ecological
+networks. Starting with the input of data from multiple sources, followed by a
+modelling framework for ecological networks and the landscape, which are then
+ultimately combined to allow for the prediction of spatially explicit
+networks.](figures/conceptual_v2.png){#fig:conceptual}
+
 ## Challenges: the many constraints on prediction
 
 ### Ecological network data are scarce and hard to obtain
@@ -149,7 +150,7 @@ sampling interactions can lead to biases in our understanding of network
 structure [@deAguiar2019RevBia]. This knowledge gap has motivated a variety of
 approaches to deal with interactions in ecological research based on assumptions
 that do not always hold, such as the assumption that co-occurrence is equivalent
-to meaningful interaction strength, when it is known that co-occurrence is the
+to meaningful interaction strength, when it is known that co-occurrence is not the
 only prerequisite for an interaction to occur [@Blanchet2020CooNot]. Spatial
 biases in data coverage are prevalent at the global scale (with South America,
 Africa and Asia being under-represented) and different interaction types show
@@ -165,8 +166,8 @@ per-individual interactions from the strength of a whole species interaction
 [@Wells2013SpeInt]. Empirical estimations of interaction strength are still
 crucial [@Novak2008EstNon], but are a hard task to quantify in natural
 communities [@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt],
-especially as the number of species composing communities increases, composed
-with the possibility of higher-order interactions or non-linear responses in
+especially as the number of species composing communities increases, 
+compounds the possibility of higher-order interactions or non-linear responses in
 interactions [@Wootton2005MeaInt]. Furthermore, interaction strength is
 extremely variable and context dependent and can be influenced by density
 dependence and spatiotemporal variation in abundances and community composition
@@ -184,7 +185,7 @@ dominated by food webs, pollination, and host-parasite networks
 [@Ings2009EcoNet; @Poisot2020EnvBia]. This could prove to be a limiting factor
 when trying to understand or predict networks of *underrepresented* interaction
 types or when trying to integrate networks of different types
-[@Fontaine2011EcoEvo], especially given the inherit structural variation of
+[@Fontaine2011EcoEvo], especially given the inherent structural variation of
 ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
 integrated, flexible, and data-efficient set of computational tools which will
 allow us to predict ecological networks accurately from existing and imperfect
@@ -209,9 +210,9 @@ environmental (or landscape) data would also limit our ability to predict
 networks at finer scales, although current trends in e.g. remote sensing would
 suggest that with time this would become less of a hindrance
 [@Makiola2020KeyQue]. Ecosystems are a quintessential complex-adaptive-system
-[@Levin1998EcoBio]. In @fig:everything_is_connected, we see the myriad of ways
+[@Levin1998EcoBio] with a myriad of ways
 in which processes at different spatial, temporal, and organizational scales
-influence and respond to one another. Understanding how the product of these
+can influence and respond to one another. Understanding how the product of these
 different processes drive the properties of ecosystem across different scales
 remains a central challenge of ecological research, and we should strive to work
 on methods that will integrate these different 'snapshots'.
@@ -295,11 +296,6 @@ automated discovery of food webs [@Bohan2011AutDis], reconstruction of
 ecological networks using next-generation sequencing data [@Bohan2017NexGlo],
 and network inference from presence-absence data [@Sander2017EcoNet].
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological
-networks. Starting with the input of data from multiple sources, followed by a
-modelling framework for ecological networks and the landscape, which are then
-ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 # A Primer on Predictive Network Ecology
 
@@ -401,7 +397,7 @@ of interactions, but also a larger set of non-interactions. If we aim to predict
 the structure of networks from the "bottom-up"--- by considering each pairwise
 combination of $S$ different species---we are left with $S^2$ interaction values
 to estimate. Instead, we can use our existing understanding of the mechanisms
-that structure ecological networks to widdle down the set of feasible adjacency
+that structure ecological networks to whittle down the set of feasible adjacency
 matrices, thereby reducing the amount of information we must predict, and making
 the problem of predicting interactions less daunting. The processes that
 structure ecological networks do not only occur at the scale of
@@ -411,7 +407,7 @@ of the interactions forming the basis for network structure, and the network
 structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
 
-### What is the most important property of a network to predict?
+### What is the first property of a network to predict?
 
 Networks enclose a wealth of data that are explanatory for many types of
 interactions and are informative for the understanding of a wide range of
@@ -438,14 +434,14 @@ connectance are most likely to be immediately useful, and easy to formulate.
 
 ### How do we predict how species that have never co-occurred will interact?
 
-The probability of the realization of an ecological interaction depend on
-co-occurrence in space and time, abundance and traits matching
+The probability of the realization of an ecological interaction depends on
+co-occurrence in space and time, abundance, and traits matching
 [@Poisot2015SpeWhy; @Pichler2020MacLea]. Given two species that co-occur, a
 neutral approach to probabilistic interactions would be based on abundances and
 trait matching would have no effect [@Canard2012EmeStr]. However, some proxies
 can be used to make more accurate predictions of potential ecological
-interactions. For instance, functional traits are good such proxies because they
-are highly selected by ecological interactions and determine forbidden links
+interactions. Functional traits, for instance, are a good candidate as they
+are highly selected for by ecological interactions and determine forbidden links
 (such as the mechanical impossibility of a bird to consume seeds larger than its
 beak). The fact that functional traits suffer some kind of selective pressure
 and because niches tend to be conserved throughout a phylogenetic tree,
@@ -455,7 +451,7 @@ interact [@Gomez2010EcoInt]. In fact, the contribution of interactions to the
 phylogenetic match between species is consistent even through scales
 [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].
 
-A separate family of methods that gained interest in recent years are the
+A separate family of methods that has gained interest in recent years are the
 network-based models. These models use the existing set of interactions to
 identify the unmeasured traits (i.e. latent traits) driving the network
 structure [@Becker2020PreWil]. Species positioned closely in the network should
@@ -475,7 +471,7 @@ between these forms of interactions is that *at least* one of the species is
 affected by the presence of another, either positively or negatively
 [@Morales-Castilla2015InfBio]. We can represent these networks of interactions
 as graphs, where each species is represented as a node, and each interaction as
-an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge each
+an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge
 represents information about that interaction. We can represent this network
 using a matrix, using 1s and 0s to represent the presence or absence of an
 interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
@@ -504,7 +500,7 @@ measured either as the relative importance of one species on another or the
 direct effect of one species on another over a period of time, often in the
 units of biomass [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt].
 This differentiates between interactions at the individual level and
-interactions that are population level, and emphasizes the importance of
+interactions that are at the population level, and emphasizes the importance of
 understanding the scaling of interactions from individuals to populations to
 communities [@Berlow2004IntStr]. One recurring observation throughout studies of
 interaction strengths is that networks are often composed of many weak links and
