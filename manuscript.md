@@ -544,7 +544,7 @@ relationship between allometry and metabolism [@Delmas2017SimBio]. An additional
 consideration is the multidimensional nature of "stability" and "feasibility"
 (e.g resilience to environmental change vs extinctions)
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
-levels of biological organization [@Kefi2019AdvOurl; @Gravel2016StaCom].
+levels of biological organization [@Kefi2019AdvOur; @Gravel2016StaCom].
 
 ## Space
 
