@@ -107,11 +107,6 @@ Below we focus on and discuss integrating what we envisage to be the conceptual
 and methodological pathway towards better prediction of
 ecological networks (@fig:conceptual).
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological
-networks. Starting with the input of data from multiple sources, followed by a
-modelling framework for ecological networks and the landscape, which are then
-ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 ## Challenges: the many constraints on prediction
 
@@ -269,6 +264,11 @@ food webs [@Bohan2011AutDis], reconstruction of ecological networks using
 next-generation sequencing data [@Bohan2017NexGlo], and network inference from
 presence-absence data [@Sander2017EcoNet].
 
+![A conceptual roadmap highlighting key areas for the prediction of ecological
+networks. Starting with the input of data from multiple sources, followed by a
+modelling framework for ecological networks and the landscape, which are then
+ultimately combined to allow for the prediction of spatially explicit
+networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 # A Primer on Predictive Network Ecology
 
@@ -278,6 +278,9 @@ provide a path forward toward building models to predict ecological networks.
 Here adopt a question-driven approach to serve as a guide through the path
 toward building models to predict and forecast the structure of ecological
 networks across space.
+
+
+
 
 ## Models
 
