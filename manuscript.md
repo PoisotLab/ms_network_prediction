@@ -620,65 +620,37 @@ across space.
 
 ### How do we predict what the species pool at a particular location is?
 
-As species form the basis of both network structure and interactions knowing
-which species are present at a particular site will inform on the potential
-interactions that _could_ occur. A common approach in biogeography to predict
-whether a species will be present or absent at specific sites is to use species
-distribution models (SDMs) based on known occurrences and environmental
-conditions at these locations, such as climate and land cover (abiotic filter)
-[@Guisan2005PreSpe, @Elith2006NovMet]. Including interactions or co-occurrences
-in SDMs, therefore the biotic filter, generally improves predictive performance
-[@Wisz2013RolBio] (discussed in more details in the next section). Several approaches have been proposed for multi-species predictions, as is
-required for the species pool. Community assemblage at a particular site can be
-predicted either by combining independent single-species SDMs (stacked-SDMs,
-SSDMs) or by directly modelling the entire species assemblage and multiple
-species at the same time (joint SDMs, JSDMs) [@Norberg2019ComEva]. Building on
-the JSDM framework, hierarchical modeling of species communities was also
-suggested [@Ovaskainen2017HowMak], and has the advantage of capturing processes
-that structure communities. An interesting approach, put forward by
-@Guisan2011SesNew with spatially explicit species assemblage modeling (SESAM),
-is to constrain the SDM predictions using macro-ecological models. Properties
-such as species richness can be used to constrain assemblage predictions from
-stacked species distribution models [@DAmen2015UsiSpe]. Similarly, the next step
-we envision here, in light of the framework we proposed earlier, is to constrain
-distribution predictions using network properties. This would also build on
-previous calls to adopt a probabilistic view: there have been calls for a
-probabilistic species pool [@Karger2016DelPro], and more importantly including
-interactions through Bayesian networks and propagating conditional dependencies
-has generated better range predictions [@Staniczenko2017LinMac].
-@Blanchet2020CooNot argue that this is more mathematically explicit about the
-relation between species, thus avoiding some confusion between interactions and
-co-occurrences, but that it is also technically challenging and requires prior
-knowledge of the interactions. This could potentially be solved through our
-framework of predicting networks first, interactions next, and finally species.
+As species pool form the basis network structure, predicting which species are
+present at a particular location is essential to predict networks across space.
+The development of species distribution models (SDMs) is increasingly ubiquitous
+in macroecology--- these models predict a species' distribution across space
+based on known occurrences and environmental conditions at these locations, such
+as climate and land cover (abiotic filter) [@Guisan2005PreSpe,
+@Elith2006NovMet]. Including interactions or co-occurrences in SDMs generally
+improves predictive performance [@Wisz2013RolBio].
 
-### What is the spatial scale suitable for the prediction of species interactions?
-
-If we trace the mechanisms that result in a given interaction to the smallest
-scale, we can end up looking at genes interacting with each other resulting in
-fluctuation of genomes and phenotypes across populations of a given species.
-Additionally, there is a trade-off when we combine different taxonomic and
-spatial scales: assessing interactions between higher taxonomic levels at a
-microscale level ignores individual plasticity. As described above, we can use
-different trait-based proxies to predict potential interactions. The choice of
-such proxies should be theoretically linked to the spatial scale we are using in
-our prediction [@Wiens1989SpaSca].
-At some scales we can use morphological traits of co-occurring species to assess
-the probability of interaction between them [@Bartomeus2016ComFra]. This
-translates to a spatial extent that does not necessarily capture the entire
-distribution of a given set of species, with a resolution that is sufficient to
-capture the phenotypical variability of the species. At larger scales, we can
-infer interactions through the phylogenetic similarity between species, assuming
-their functional traits are themselves are phylogenetically conserved
-[@Gomez2010EcoInt]. On scales where the niche is phylogenetically conserved, we
-can think of the probability that one species will interact with another as the
-"amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt].
-At the smallest scales, we may be interested in predicting behavioural traits
-like foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial
-resolution in this case should is fine enough that a model may be precise in a
-given system, but much less generalizable. At this scale it is also important to
-consider abundance, it modulates the probability of encounter along with
-behaviour [@Wells2013SpeInt].
+Several approaches exist to combine multiple SDMs: community assemblage at a
+particular site can be predicted either by combining independent single-species
+SDMs (stacked-SDMs, SSDMs) or by directly modelling the entire species
+assemblage and multiple species at the same time (joint SDMs, JSDMs)
+[@Norberg2019ComEva]. Building on the JSDM framework, hierarchical modeling of
+species communities was also suggested [@Ovaskainen2017HowMak], and has the
+advantage of capturing processes that structure communities. An interesting
+approach, put forward by @Guisan2011SesNew with spatially explicit species
+assemblage modeling (SESAM), is to constrain the SDM predictions using
+macro-ecological models. Properties such as species richness can be used to
+constrain assemblage predictions from stacked species distribution models
+[@DAmen2015UsiSpe]. The next step is to constrain distribution predictions using
+network properties. This would also build on previous calls to adopt a
+probabilistic view: there have been calls for a probabilistic species pool
+[@Karger2016DelPro], and more importantly including interactions through
+Bayesian networks and propagating conditional dependencies has generated better
+range predictions [@Staniczenko2017LinMac]. @Blanchet2020CooNot argue that this
+is more mathematically explicit about the relation between species, thus
+avoiding some confusion between interactions and co-occurrences, but that it is
+also technically challenging and requires prior knowledge of the interactions.
+This could potentially be solved through our framework of predicting networks
+first, interactions next, and finally the realized species pool.
 
 ### How do we combine spatial and network predictions?
 
@@ -690,19 +662,37 @@ Bayesian paradigm provides a convenient solution to this---if we have a chain of
 models where each model feeds into the next, we can sample from the posterior of
 the input models. A different approach is _ensemble modeling_ which combines the
 predictions made be several models, where each model is predicting the same
-thing. Error propagation is an important step in the modeling of ecological systems, as
-it provides estimates of the uncertainty around predictions. More generally,
-error propagation describes the effect of the uncertainty of input variables on
+thing [@Parker2013EnsMod]. Error propagation, an important step in building any
+ecological model, describes the effect of the uncertainty of input variables on
 the uncertainty of output variables [@Draper1995AssPro; @Parysow2000EffApp].
 @Benke2018ErrPro identifies two broad approaches to model error propagation:
 analytically using differential equations or stochastically using Monte-Carlo
-simulation methods. The second approach is based upon samples of probability
-distributions and is more readily applicable to our problem of predicting
-ecological networks across space using our proposed methodological workflow.
-Indeed, each model's inputs can be sampled from the outputs of the preceding
-ones. Errors induced by the spatial or temporal extrapolation of data also need
-to be taken into account when estimating the uncertainty of a model's output
-[@Peters2004StrEco].
+simulation methods. Errors induced by the spatial or temporal extrapolation of
+data also need to be taken into account when estimating the uncertainty of a
+model's output [@Peters2004StrEco].
+
+### What is the spatial scale suitable for the prediction of species interactions?
+
+As described above, we can use different trait-based proxies to predict
+potential interactions. The choice of such proxies should be theoretically
+linked to the spatial scale we are using in our prediction [@Wiens1989SpaSca].
+At some scales we can use morphological traits of co-occurring species to assess
+the probability of interaction between them [@Bartomeus2016ComFra]. This
+translates to a spatial extent that does not necessarily capture the entire
+distribution of a given set of species, with a resolution that is sufficient to
+capture the phenotypical variability of the species. At larger scales, we can
+infer interactions through the phylogenetic similarity between species, assuming
+their functional traits are themselves are phylogenetically conserved
+[@Gomez2010EcoInt]. On scales where the niche is phylogenetically conserved, we
+can think of the probability that one species will interact with another as the
+"amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt]. At
+the smallest scales, we may be interested in predicting behavioural traits like
+foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial resolution
+in this case should is fine enough that a model may be precise in a given
+system, but much less generalizable. At this scale it is also important to
+consider abundance, it modulates the probability of encounter along with
+behaviour [@Wells2013SpeInt].
+
 
 ## Time
 
@@ -768,20 +758,20 @@ environmental conditions and the potential species pool across space
 Often the purpose of building a forecasting model to inform _present_ action
 [@Dietze2018IteNea]. Yet, the nature of forecasting---trying to predict the
 future---is that you can only know if a forecast is "right" once it is too late
-to change it. If we want to maximize the chance that "reality" falls within a
+to change it. If we want to maximize the chance that reality falls within a
 forecasting model's predictions, there are two directions to approach this
 problem: the first is to extend model validation techniques to a forecasting
-context, and the second is to attempt to maximize the amount of uncertainty in a
-model without compromising its resolution. Crossvalidation (see _How do we
-validate a predictive model?_) can be used to test the efficacy of a forecasting
-model. Given a time-series of $N$ observations, a model can iteratively be
-trained on the first $n$ time-points of data, and the forecasting model's
-accuracy can be evaluated on the remaining time-points it hasn't "seen"
+context, and the second is to attempt to maximize the amount of uncertainty in
+the forecast without compromising its resolution. Crossvalidation (see _How do
+we validate a predictive model?_) can be used to test the efficacy of a
+forecasting model. Given a time-series of $N$ observations, a model can
+iteratively be trained on the first $n$ time-points of data, and the forecasting
+model's accuracy can be evaluated on the remaining time-points it hasn't "seen"
 [@Bishop2006PatRec]. This enables us to understand both how much temporal data
 is required for a model to be robust, and also enables us to explore the
 _forecasting horizon_ of a process. Further, this approach can also be applied
 in the opposite temporal direction--- if we have reliable data from the past,
-"hindcasting" can also be used to test a forecast's accuracy.
+"hindcasting" can also be used to test a forecast's robustness.
 
 However, these methods inevitably bump into a hard-limitation on what is
 feasible for a forecasting model. The future is uncertain. Any empirical
@@ -792,18 +782,17 @@ the system under the scenario that actually unfolds. It is therefore impossible
 to assess the quality of a forecasting model in scenarios that remain
 hypothetical. If the goal is to maximize the probability that reality will fall
 within the forecast's estimates, forecasts should incorporate as much
-uncertainty about the future scenario as possible. One way to do this is
-_ensemble modeling_ which combines forecasts from multiple different models
-[@Parker2013EnsMod]. However, as we increase the amount of uncertainty we
-incorporate into a forecasting model, the resolution of the forecast's
-predictions shrinks, and therefore the modeler be mindful of the trade-off
-between resolution and accuracy in any forecasting model.
+uncertainty about the future scenario as possible---one way to do this is
+ensemble modeling [@Parker2013EnsMod]. However, as we increase the amount of
+uncertainty we incorporate into a forecasting model, the resolution of the
+forecast's predictions could shrink [@Lei2017EvaTra], and therefore the modeler be mindful of the
+trade-off between resolution and accuracy where developing any forecast.
 
 # Conclusion: why should we predict species interaction networks?
 
 Because we almost can, and because we definitely should.
 
-More accurately, we should invest in network prediction because the right
+We should invest in network prediction because the right
 conditions to do so reliably and rapidly, including forecasting, are beginning
 to emerge. Given the possible benefits to a variety of ecological disciplines
 that would result from an increased ability to predict ecological networks and
@@ -820,7 +809,7 @@ will not result in an increase of our predictive capacity as long as this data
 increase is limited to specific aspects of the problem. In the areas we
 highlight in @fig:conceptual, many data steps are still limiting: documenting
 empirical interactions is natural history work that doesn't lend itself to
-systematic automation; expert knowldge is by design a social process that may be
+systematic automation; expert knowledge is by design a social process that may be
 slightly accelerated by text mining and natural language processing (but is not
 yet, or not routinely or at scale). These limitations are affecting our ability
 to reconstruct networks.
