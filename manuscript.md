@@ -132,7 +132,7 @@ only prerequisite for an interaction to occur [@Blanchet2020CooNot]. Spatial
 biases in data coverage are prevalent at the global scale (with South America,
 Africa and Asia being under-represented) and different interaction types show
 biases towards different biomes (or environmental conditions)
-[@Poisot2020EnvBia]. These 'spatial gaps' serve as a limitation to our ability
+[@Poisot2020EnvBia]. These "spatial gaps" serve as a limitation to our ability
 to confidently make predictions when accounting for real-world environmental
 conditions, especially in environments for which there are no analogous data.
 
@@ -168,11 +168,10 @@ integrated, flexible, and data-efficient set of computational tools which will
 allow us to predict ecological networks accurately from existing and imperfect
 datasets, but also enable us to perform model validation and comparison with
 more flexibility than existing tools. We argue that @fig:example is an example
-of the promise of these tools *even* when facing datasets of smaller size. When
-carefully controlling for over-fitting (which is discussed in the next section),
-machine learning systems are at least adequate at generalizing. The ability to
-extract and engineer features, notably latent ones, also contributes to
-bolstering our predictive ability. In short, the current lack of massive
+of the promise of these tools *even* when facing datasets of small size. When
+carefully controlling for overfitting machine learning systems are at least
+adequate at generalizing. The ability to extract and engineer features also
+serves to bolster our predictive power. In short, the current lack of massive
 datasets must not be an obstacle to prediction; it is an ideal testing ground to
 understand how little data is sufficient to obtain actionable predictions.
 
@@ -181,18 +180,18 @@ understand how little data is sufficient to obtain actionable predictions.
 We are also currently limited by the the level of biological organisation at
 which we can describe ecological networks. For instance, our understanding of
 individual based networks [*e.g.* @Araujo2008NetAna; @Tinker2012StrMec] is still
-in its infancy [@Guimaraes2020StrEco] and acts as a resolution-limit at which we
-would be able to predict networks. On the note of scale, the resolution of
-environmental (or landscape) data would also limit our ability to predict
-networks at finer scales, although current trends in e.g. remote sensing would
-suggest that with time this would become less of a hindrance
-[@Makiola2020KeyQue]. Ecosystems are a quintessential complex-adaptive-system
-[@Levin1998EcoBio] with a myriad of ways
-in which processes at different spatial, temporal, and organizational scales
-can influence and respond to one another. Understanding how the product of these
+in its infancy [@Guimaraes2020StrEco] and acts as a resolution-limit. On the
+note of scale, the resolution of environmental (or landscape) data would also
+limit our ability to predict networks at finer scales, although current trends
+in e.g. remote sensing would suggest that with time this would become less of a
+hindrance [@Makiola2020KeyQue]. Ecosystems are a quintessential
+complex-adaptive-system [@Levin1998EcoBio] with a myriad of ways in which
+processes at different spatial, temporal, and organizational scales can
+influence and respond to one another. Understanding how the product of these
 different processes drive the properties of ecosystem across different scales
 remains a central challenge of ecological research, and we should strive to work
-on methods that will integrate these different 'snapshots'.
+on methods that will integrate different empirical "snapshots" of this larger
+system.
 
 ## Opportunities: the emerging ecosystem of open tools and data
 
@@ -259,19 +258,16 @@ species interactions and the structure of their ecological networks [e.g.
 relevant variables and model species interactions networks explicitly. A
 promising application of machine learning in natural sciences is
 Scientific-Machine Learning (SciML), a framework that combines machine learning
-with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif]. Although
-SciML has not yet been applied in ecology, it has the potential to combine
-mechanistic models with black box machine-learning to predict ecological
-networks with relatively small amounts of data using existing process-based
-models. Considering the current biases in network ecology [@Poisot2020EnvBia]
-and the scarcity of data of species interactions, the prediction of ecological
-networks will undoubtedly benefit from these improvements. Many studies have
-used machine learning models specifically with ecological interactions. Relevant
-examples include species traits used to predict interactions and infer
-trait-matching rules [@Desjardins-Proulx2017EcoInt; @Pichler2020MacLea],
-automated discovery of food webs [@Bohan2011AutDis], reconstruction of
-ecological networks using next-generation sequencing data [@Bohan2017NexGlo],
-and network inference from presence-absence data [@Sander2017EcoNet].
+with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif]. Considering
+the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of
+data of species interactions, the prediction of ecological networks will
+undoubtedly benefit from these improvements. Many studies have used machine
+learning models specifically with ecological interactions. Relevant examples
+include species traits used to predict interactions and infer trait-matching
+rules [@Desjardins-Proulx2017EcoInt; @Pichler2020MacLea], automated discovery of
+food webs [@Bohan2011AutDis], reconstruction of ecological networks using
+next-generation sequencing data [@Bohan2017NexGlo], and network inference from
+presence-absence data [@Sander2017EcoNet].
 
 
 # A Primer on Predictive Network Ecology
@@ -642,13 +638,12 @@ infer interactions through the phylogenetic similarity between species, assuming
 their functional traits are themselves are phylogenetically conserved
 [@Gomez2010EcoInt]. On scales where the niche is phylogenetically conserved, we
 can think of the probability that one species will interact with another as the
-"amount" of niche superposition between them [@Desjardins-Proulx2017EcoInt]. At
-the smallest scales, we may be interested in predicting behavioural traits like
+distance between them in niche-space [@Desjardins-Proulx2017EcoInt]. At
+the smallest scales, we may be interested in predicting behavioral traits like
 foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial resolution
 in this case should is fine enough that a model may be precise in a given
 system, but much less generalizable. At this scale it is also important to
-consider abundance, it modulates the probability of encounter along with
-behaviour [@Wells2013SpeInt].
+consider abundance's effect on probability of an encounter [@Wells2013SpeInt].
 
 
 ## Time
