@@ -28,6 +28,15 @@ methods that could be incorporated into models of this type in the future in
 order to account for the spatial, temporal, and climatic dimensions of network
 prediction [@Burkle2011FutPla]
 
+We can represent these networks of interactions
+as graphs, where each species is represented as a node, and each interaction as
+an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge
+represents information about that interaction. We can represent this network
+using a matrix, using 1s and 0s to represent the presence or absence of an
+interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
+[@Dunne2006NetStr]. This construct allows for convenient computation of network
+properties, particularly properties relating to network structure.
+
 Better prediction of ecological networks would help unify the fields of
 community, network, and spatial ecology; improve the quantification of the
 functional relationships between species [@Dehling2018BriElt;
@@ -408,70 +417,56 @@ makes part" [@Levins1987DiaBio].
 
 There are many dimensions of network structure [@Delmas2018AnaEco]. This might
 make the task of network structure prediction look daunting, as the number of
-properties one could predict is immense. Yet there are two arguments to justify
-focusing on a single property, namely connectance, the proportion of the
-interaction matrix filled with interactions. First, connectance is ecologically
-informative. It ties into resilience to invasion [@Baiser2010ConDet;
-@Smith-Ramesh2016GloSyn], can increase robustness to extinction in food webs
-[@Dunne2002NetStr], and decrease it in mutualistic networks [@Vieira2015SimSto],
-and relate to stability [@Landi2018ComSta]. Second, most (if not all) network
-properties co-vary with connectance [*e.g.* @Poisot2014WheEco]. @Dunne2002FooStr
-emphasize that most network properties respond to network size (species
-richness) and connectance. Diversity estimates can provide good baselines [@Jenkins2013GloPat] for species
-richness over space; furthermore, recent advances in predicting the connectance
-from species richness alone [@MacDonald2020RevLin] allow to derive distributions
-of network properties for a given species richness. Connectance is defined as
-$L/S^2$ in unipartite networks, and $L/(S_1\times S_2)$ in bipartite networks,
-and therefore can be measured from the number of links and the species richness
-only -- because it can be derived from coarse data and is informative on both
-the ecology and structure of the network, we argue that predictions of
-connectance are most likely to be immediately useful, and easy to formulate.
+properties one could predict is immense. Yet there are two reasons to begin with
+a single property, connectance (the ratio of actual edges to possible edges in
+the network). First, connectance is ecologically informative---it relates to
+resilience to invasion [@Baiser2010ConDet; @Smith-Ramesh2016GloSyn], can
+increase robustness to extinction in food webs [@Dunne2002NetStr], while
+decreasing it in mutualistic networks [@Vieira2015SimSto], and connectance
+relates to network stability [@Landi2018ComSta]. Second, most (if not all)
+network properties co-vary with connectance [@Poisot2014WheEco;
+@Dunne2002FooStr]. We have models to estimate species richness over space
+[@Jenkins2013GloPat], and because we can predict connectance from species
+richness, [@MacDonald2020RevLin], we can then derive distributions of network
+properties from estimates of richness alone. Therefore we suggest that
+predicting the value of network connectance across space (and eventually time)
+is most likely to be the most practical to formulate at the moment.
 
 ### How do we predict how species that have never co-occurred will interact?
 
 The probability of an interaction occurring depends on the likelihood of
 co-occurrence in space and time [@Poisot2015SpeWhy; @Pichler2020MacLea]. Given
 two species that co-occur, a neutral approach to probabilistic interactions
-would be based on abundances and trait matching would have no effect
-[@Canard2012EmeStr]. However, some proxies can be used to make more accurate
-predictions of potential ecological interactions. For instance, functional
-traits are good such proxies because they are highly selected by ecological
-interactions and determine forbidden links (such as the mechanical impossibility
-of a bird to consume seeds larger than its beak). The fact that functional
-traits suffer some kind of selective pressure and because niches tend to be
-conserved throughout a phylogenetic tree, ecological interactions also tend to
-be conserved, and therefore we could also use phylogenies to infer pairs of
-co-occurring species that could potentially interact [@Gomez2010EcoInt]. In
-fact, the contribution of interactions to the phylogenetic match between species
-is consistent even through scales [@Poisot2018IntRet] and in neutral models
-[@Coelho2017NeuBio].
+would assume that the effect of abundances and trait matching would have no
+effect [@Canard2012EmeStr]. However, some proxies can be used to make more
+accurate predictions of potential ecological interactions. For instance,
+functional traits are selected for in ecological interactions and determine
+forbidden links (such as the mechanical impossibility of a bird to consume seeds
+larger than its beak). Selection on functional traits could cause interactions
+to be conserved at some phylogenetic scales, and therefore evolutionary models
+could also be used to determine the potential for interactions
+[@Gomez2010EcoInt]. The contribution of interactions to the phylogenetic match
+between species is consistent even through scales [@Poisot2018IntRet] and in
+neutral models [@Coelho2017NeuBio].
 
-A separate family of methods that has gained interest in recent years are the
-network-based models. These models use the existing set of interactions to
-identify the unmeasured traits (i.e. latent traits) driving the network
-structure [@Becker2020PreWil]. Species positioned closely in the network should
-interact with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. As
-for functional traits, phylogenies can inform these models because these
-unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
-@Elmasri2020HieBay]. These network-based models are unfortunately sensitive to
-sampling biases and limited to prediction for species for which we already have
-interaction data [@Becker2020PreWil].
+A separate family of methods are the embedding based models, as was used in the
+proof-of-concept. These models use the existing network to identify latent
+features in the network structure [@Becker2020PreWil]. Species positioned
+closely in the latent space should interact with similar set of species
+[@Rossberg2006FooWeb; @Rohr2010ModFoo], and phylogenies can inform these models
+because these unmeasured traits have evolved over time. [@Rossberg2006FooWeb;
+@Elmasri2020HieBay]. However, these network-based models are unfortunately
+sensitive to sampling biases and limited to prediction for species for which we
+already have interaction data [@Becker2020PreWil].
 
 ### What is an interaction, really?
 
-Interactions between species can be conceptualized in a multitude of ways (e.g.
-different types, variable strengths, symmetric vs. asymmetric, direct vs.
-indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common thread
-between these forms of interactions is that *at least* one of the species is
-affected by the presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. We can represent these networks of interactions
-as graphs, where each species is represented as a node, and each interaction as
-an edge [@Delmas2018AnaEco; @Pascual2006EcoNet]. The value of each edge
-represents information about that interaction. We can represent this network
-using a matrix, using 1s and 0s to represent the presence or absence of an
-interaction between species $i$ and species $j$ at each matrix entry $(i,j)$.
-[@Dunne2006NetStr]. This construct allows for convenient computation of network
-properties, particularly properties relating to network structure. Networks can
+Interactions between species can be conceptualized in a multitude of ways
+(mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric, direct
+vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. The common
+thread between these forms of interactions is that *at least* one of the species
+is affected by the presence of another, either positively or negatively
+[@Morales-Castilla2015InfBio]. Networks can
 be used to represent a variety of interaction types, including: *unipartite
 networks,* where each species can be linked any other species, species (these
 are typically used to represent food webs), *bipartite networks* where there are
@@ -494,10 +489,7 @@ species has on the dynamics of the other species. Interaction strength is
 measured either as the relative importance of one species on another or the
 direct effect of one species on another over a period of time, often in the
 units of biomass [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt].
-This differentiates between interactions at the individual level and
-interactions that are at the population level, and emphasizes the importance of
-understanding the scaling of interactions from individuals to populations to
-communities [@Berlow2004IntStr]. One recurring observation throughout studies of
+One recurring observation throughout studies of
 interaction strengths is that networks are often composed of many weak links and
 few strong links [@Berlow2004IntStr]. Knowing the distribution of interaction
 strength within a network informs on its stability [@Neutel2002StaRea;
@@ -509,77 +501,64 @@ Biodiversity-Ecosystem Functioning (BEF) framework, which could in return
 further improve even our understanding of community dynamics and ecosystem
 functioning [@Barnes2018EneFlu].
 
-### How are interaction strengths actually inferred?
+### How are interaction strengths actually estimated?
 
-Interaction strength can be inferred empirically or theoretically
-[@Berlow2004IntStr]. While the development of theoretical predictive models to
-infer interaction strength is important, the empirical sampling of quantitative
-networks is not to be neglected as they are important to model parameterization
-and validation [@Novak2008EstNon]. Before we attempt to make inferences from
-data, we must adapt a conceptual framework to model interaction strength. One
-such framework is functional foraging [@Portalier2019MecPre], where the primary
-basis for inferring interaction is based on an organism's traits, the
-environment, and foraging behavior such as searching, capture and handling
-times. A different conceptual alternative, applicable in food-webs, is metabolic
-based models, where body mass, metabolic demands, and energy loss are used to
-infer energetic energy fluxes between organisms
-[@Yodzis1992BodSiz;@Berlow2009SimPre].
-
-Energy can be seen as the common currency that links every level of biology from
-individual organisms to the whole ecosystem
-[@Brown2004MetThe;@Barnes2018EneFlua]. Thus, predicting interaction strength as
-energy fluxes could potentially open the way to the conciliation of the
-different spheres of ecology. One bottom-up approach is to first estimate basal
-species biomasses and from there the higher trophic-level species biomasses and
-energetic demands are computed [@Berlow2009SimPre]. Alternatively, a top-down
-approach, where energy fluxes are calculated starting from the top consumer
-downward toward producers [@Barnes2018EneFlu]. Food-web energetics models can be
-incorporated at various resolutions for a specific network, ranging from
-individual-based data to more lumped data at the species level or trophic group,
-depending on data availability [@Barnes2018EneFlu].
+Before we attempt to make inferences from data, we must adapt a conceptual
+framework to model interaction strength. One such framework is functional
+foraging [@Portalier2019MecPre], where the primary basis for inferring
+interaction is based on an organism's traits, the environment, and foraging
+behavior such as searching, capture and handling times.  A different conceptual
+alternative, applicable in food-webs, is metabolic based models, where body
+mass, metabolic demands, and energy loss are used to infer energetic energy
+fluxes between organisms [@Yodzis1992BodSiz;@Berlow2009SimPre]. Energy can be
+seen as the common currency that links every level of biology from individual
+organisms to the whole ecosystem [@Brown2004MetThe;@Barnes2018EneFlua].
+Conceptualizing interaction strength a flux of energy could open the way to the
+conciliation of the different field of ecology. One bottom-up approach is to
+first estimate basal species biomasses and from there the higher trophic-level
+species biomasses and energetic demands are computed [@Berlow2009SimPre].
+Alternatively, a top-down approach, where energy fluxes are calculated starting
+from the top consumer downward toward producers [@Barnes2018EneFlu]. Food-web
+energetics models can be incorporated at various resolutions for a specific
+network, ranging from individual-based data to more lumped data at the species
+level or trophic group, depending on data availability [@Barnes2018EneFlu].
 
 ### What about indirect and higher-order interactions?
 
 Although network ecology often assumes that interactions go strictly from one
-node to the other, the web of life is made up of a variety of interactions where
-species can form parts of different networks *e.g.* a plant species may be
-included in both a plant-pollinator as well as herbivory network and we could
-conceivably have a network of networks linked by shared species. Investigating
-indirect interactions---either higher-order interactions between species, or
+node to the other, the web of life is made up of a variety of interactions.
+Indirect interactions---either higher-order interactions between species, or
 interaction strengths that themselves interact --- has gained interest in recent
 years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool to
 describe these situations is hypergraphs: hypergraphs are the generalization of
 a graph, allowing a broad yet manageable approach to complex interactions
 [@Carletti2020DynSys], allowing for particular interactions to occur beyond a
-pair of nodes.
-
-An additional degree of complexity is introduced by multi-layer networks
-[@Hutchinson2019SeeFor]. Multi-layer networks offer links across "variants" of
-the networks, which can include, timepoints, or environments. As such, these can
-be particularly useful to account for the meta-community structure of ecological
-networks [@Gross2020ModMod], or to understand how spatial dispersal graphs can
-inform conservation actions [@Albert2017AppNet]. As @Pilosof2017MulNat suggest,
-ecological networks intrinsically contain multi-layers, as they are shaped by
-evolution, dispersal, environmental heterogeneity, among others.
-
-However, the potential of links between larger subsets causes a combinatoric
-explosion which increases the number of predictions we would need to make with
-our already scarce data. *Prima facie*, increasing the dimensionality of the
-object we need to predict (the multiple layers rather than a single network) may
-make the problem complicated. But multi-layer networks encode ecological
-constraints -- of dispersal, of evolution, and of niche suitability. One
-question that is worth investigating is whether the multi-layer structure of
-ecological networks may *improve* the predictibility of interactions. Indeed,
-this is the case for social networks [@Jalili2017LinPre; @Najari2019LinPre;
-@Yasami2018NovMul]. Although at the moment it seems bests to address our
-understanding of simple networks, exploring the more intricate ways in which
-species interact might require that we make room for hypergraphs and multi-layer
-networks in our predictive framework.
+pair of nodes. An additional degree of complexity is introduced by multi-layer
+networks [@Hutchinson2019SeeFor]. Multi-layer networks offer links across
+"variants" of the networks, which can include, timepoints, or environments. As
+such, these can be particularly useful to account for the meta-community
+structure of ecological networks [@Gross2020ModMod], or to understand how
+spatial dispersal graphs can inform conservation actions [@Albert2017AppNet]. As
+@Pilosof2017MulNat suggest, ecological networks intrinsically contain
+multi-layers, as they are shaped by evolution, dispersal, environmental
+heterogeneity, among others. However, the potential of links between larger
+subsets causes a combinatoric explosion which increases the number of
+predictions we would need to make with our already scarce data. *Prima facie*,
+increasing the dimensionality of the object we need to predict (the multiple
+layers rather than a single network) may make the problem complicated. But
+multi-layer networks encode ecological constraints -- of dispersal, of
+evolution, and of niche suitability. One question that is worth investigating is
+whether the multi-layer structure of ecological networks may *improve* the
+predictibility of interactions. Indeed, this is the case for social networks
+[@Jalili2017LinPre; @Najari2019LinPre; @Yasami2018NovMul]. Although at the
+moment it seems bests to address our understanding of simple networks, exploring
+the more intricate ways in which species interact might require that we make
+room for hypergraphs and multi-layer networks in our predictive framework.
 
 ### How do we determine what interaction networks are feasible?
 
 For several decades, ecologists have aimed to understand how networks of many
-interacting species persist through time. The diversity-stability "paradox",
+interacting species persist through time. The diversity-stability paradox,
 first explored by May [@May1974StaCom], shows that under a neutral set of
 assumptions, ecological networks should become decreasingly stable as the number
 of species increases. However, in the natural world we observe networks of
@@ -590,29 +569,25 @@ the relationship between ecological network structure and persistence
 [@Allesina2012StaCri]. These assumptions can be split into dynamical assumptions
 and topological assumptions.
 
-On the topological side, we know that ecological networks are not structured
-randomly. Some properties, like connectance, are highly predictable
+Topologically, we know that ecological networks are not structured randomly.
+Some properties, like the aforementioned connectance, are highly predictable
 [@MacDonald2020RevLin]. Various generative models of food-webs have been shown
 to fit empirical networks more effectively than random models. These typically
-rely on _network embeddings_---where each node (species) in the network is
-assigned a value in a latent space, and the resulting network topology is
-generated stochastically based on properties of the position of nodes in that
-latent space. Generative network models have long used allometry as a
+rely on network embeddings, where each node (species) in the network is assigned
+a value in a latent space, and the resulting network topology is generated
+stochastically based on properties of the position of nodes in that latent
+space. Generative network models have long used allometry as a
 single-dimensional latent space---naturally we want to extend this to traits in
-general [@Allesina2008GenMod].
-
-The second approach to understand stability is through _dynamics_. Early models
-of community dynamics (Lotka-Volterra, MacArthurs Consumer-Resource Model) rely
-on the assumption of linear interaction effects. However, models of bioenergetic
-community dynamics have shown promise in basing our understanding of dynamics in
-food-webs, where the functional response of one species on another is grounded
-in the understood relationship between allometry and metabolism
-[@Delmas2017SimBio]. An additional consideration is the multidimensional nature
-of "stability" and "feasibility" e.g resilience to environmental change vs
-extinctions [@Dominguez-Garcia2019UnvDim] and how these different disturbances
-will propagate along the various level of biological organization
-[@Kefi2019AdvOur], as well as their effect over space such as dispersal
-[@Gravel2016StaCom].
+general [@Allesina2008GenMod]. The second approach to understand stability is
+through _dynamics_. Early models of community dynamics rely on the assumption of
+linear interaction effects. However, models of bioenergetic community dynamics
+have shown promise in basing our understanding of dynamics in food-webs, where
+the functional response of one species on another is grounded in the understood
+relationship between allometry and metabolism [@Delmas2017SimBio]. An additional
+consideration is the multidimensional nature of "stability" and "feasibility"
+(e.g resilience to environmental change vs extinctions)
+[@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
+levels of biological organization [@Kefi2019AdvOurl; @Gravel2016StaCom].
 
 ## Space
 
@@ -627,26 +602,21 @@ biogeography and macroecology.
 Networks can vary either in their structural properties (e.g. changes in
 connectance or degree distribution) or in their composition (e.g. changes in
 nodes and links identity). Interestingly, variation in the structural properties
-of ecological networks tend to respond mostly to changes in the size of the
-network. First, the number of links in ecological networks scales with the
-number of species [@MacDonald2020RevLin; @Brose2004UniSpa]. Second, connectance
-and size are driving the rest of the structural properties of ecological
-networks [@Poisot2014WheEco; @Dunne2002FooStr; @Riede2010ScaFoo].
-
-On a lower level, species turnover in space results in changes in the
-composition of ecological networks. But, this is not the only reason networks
-composition varies [@Poisot2015SpeWhy]. Intraspecific variations can result in
-interaction turnovers without changes in species composition
+of ecological networks primarily responds to changes in the size of the network.
+The number of links in ecological networks scales with the number of species
+[@MacDonald2020RevLin; @Brose2004UniSpa], and connectance and size drive the
+rest of the structural properties of ecological networks [@Poisot2014WheEco;
+@Dunne2002FooStr; @Riede2010ScaFoo]. Species turnover in space results in
+changes in the composition of ecological networks. But, this is not the only
+reason networks composition varies [@Poisot2015SpeWhy]. Intraspecific variations
+can result in interaction turnovers without changes in species composition
 [@Bolnick2011WhyInt]. Similarly, changes in species abundances can lead to
 variation in interactions strengths [@Canard2014EmpEva; @Vazquez2007SpeAbu]. The
 variation in the abiotic environment and indirect interactions
 [@Golubski2016EcoNet] are also likely to modify the occurrence and strength of
-individual interactions. Still, despite important species and interaction
-turnovers, ecological networks tend to share a common backbone [@Mora2018IdeCom]
-and functional composition [@Dehling2020SimCom]. In all, ecological networks do
-vary considerably when looking at the identities of individual species and
-interactions, but overall, the functional composition and structure of networks
-is quite constant in space.
+individual interactions. Despite this, empirical networks tend to share a common
+backbone [@Mora2018IdeCom] and functional composition [@Dehling2020SimCom]
+across space.
 
 ### How do we predict what the species pool at a particular location is?
 
