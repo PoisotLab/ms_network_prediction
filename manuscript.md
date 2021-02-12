@@ -29,10 +29,10 @@ order to account for the spatial, temporal, and climatic dimensions of network
 prediction [@Burkle2011FutPla]
 
 Better prediction of ecological networks would help unify the fields of
-community, network, and spatial ecology, improve the quantification of the
+community, network, and spatial ecology; improve the quantification of the
 functional relationships between species [@Dehling2018BriElt;
-@OConnor2020UnvFoo], re-evaluate metacommunities in light of network structure
-[@Guzman2019MulExt], and enable a new line of research into the biogeography of
+@OConnor2020UnvFoo]; re-evaluate metacommunities in light of network structure
+[@Guzman2019MulExt]; and enable a new line of research into the biogeography of
 species interactions [@Massol2017ChaFou; @Braga2019SpaAna] which incorporates a
 synthesis of both Eltonian and Grinnellian niche [@Gravel2019BriElt]. Further,
 the ability to reliably predict and forecast species interactions would inform
@@ -52,6 +52,16 @@ species, ecosystem processes, and ecosystem services [@Harvey2017BriEco].
 Interactions are a key element of the functional role of a species, which should
 be considered for the evaluation of species recovery for the development of an
 IUCN Green List of recovered species or similar [@Akcakaya2018QuaSpe].
+
+The scope od this paper is not to provide a complete overview of the the state of 
+predictive network ecology but rather to present a workflow (**roadmap?**) of 
+*how* to move through the predictive modelling process. We place an 
+emphasis on how we can use (and capitalise on) modern machine learning 
+techniques as well as the various components and aspects
+of network structure and interactions that we should focus our attention on, 
+especially within a spatial context. This workflow is 
+illustrated by a data-driven example whereby we construct a metaweb of host-parasite
+interactions across space.
 
 # Proof-of-Concept
 
