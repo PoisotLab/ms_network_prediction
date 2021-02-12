@@ -32,7 +32,7 @@ climatic dimensions of network prediction [@Burkle2011FutPla].
 
 
 
-# Proof-of-Concept
+# Proof-of-Concept: can we predict ecological networks?
 
 The core premise of this manuscript is that ecological networks can be
 predicted. In this section, we provide a proof-of-concept, in which we (i)
