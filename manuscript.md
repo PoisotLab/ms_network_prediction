@@ -52,29 +52,28 @@ where not all species pairs co-occur across sites. This implies that there are
 "negative associations" that might be biologically feasible but not observed
 because the two species have not been observed in co-occurrence. As this dataset
 has no features like species traits on which to base a predictive model, we have
-aggregated all interactions into a binary metaweb [@Dunne2006NetStr], internally
-represented as a sparse matrix. We have then transformed the (undirected)
-metaweb through a probabilistic PCA [@Tipping1999ProPri], so as to create a
-number of latent features for the species in a context where the dataset is both
-unbalanced and likely to have many missing values. This frames the problem as
-predicting a binary outcome, the interaction $M_{xy}$ represented as `true` or
-`false`  based on a features vector $v_{xy} = [v_x, v_y]$ where $v_x$ is the
-values of the selected features for the parasite and $v_y$ is the features of
-the host. In the following example, we used the first 15 components of the
-latent sub-space created by the probabilistic PCA. This features vector is then
-fed into the input layer of a neural network, which uses three hidden layers
-with appropriate dropout rates ($\frac{1}{2}$), and finally a two-neurons output
-layer whose result is softmaxed to pick the most likely outcome,  *i.e.* the
-interaction bit describing an interaction when equal to 1, and no interaction
-when equal to 0.
+aggregated all interactions into a binary metaweb [@Dunne2006NetStr]. We then
+transformed the (undirected) metaweb through a probabilistic PCA
+[@Tipping1999ProPri], so as to create a number of latent features for the
+species in a context where the dataset is both unbalanced and likely to have
+many missing values. This frames the problem as predicting a binary outcome, the
+interaction $M_{xy}$ represented as `true` or `false`  based on a features
+vector $v_{xy} = [v_x, v_y]$ where $v_x$ is the values of the selected features
+for the parasite and $v_y$ is the features of the host. In the following
+example, we used the first 15 components of the latent sub-space created by the
+probabilistic PCA. This features vector is then fed into the input layer of a
+neural network, which uses three hidden layers with appropriate dropout rates
+($0.5$), and finally a two-neurons output layer whose result is softmaxed to
+pick the most likely outcome,  *i.e.* the interaction bit describing an
+interaction when equal to 1, and no interaction when equal to 0.
 
-![Overview of the imputation process. An empirical network [from
+![ (A) A conceptual overview of the process of network prediction. Beginning with data of observed interaction between species, we aim to predict the metaweb of interaction across the entire species pool, even those that have not been observed together. (B) Proof-of-Concept: An empirical network [from
 @Hadfield2014TalTwo] is converted intro latent features using probabilistic PCA,
 then used to train a deep neural network to predict species interactions. The
 initial and imputed networks are represented as their tSNE embedding, and the
 colors of nodes are the cluster to which they are assigned based on a $k$-means
 clustering of the tSNE
-output.](figures/review-netwpred-example.png){#fig:example}
+output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
 in two ways. First, the selection of features was done so that absent
