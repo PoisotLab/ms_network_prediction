@@ -21,7 +21,7 @@ contemporary actions have long-term, low-predictability consequences
 Therefore, our field needs a conceptual path forward toward models that enable
 prediction (for the present) and forecasting (for the future) of species
 interactions and the networks they form [@McCann2007ProBio; @Seibold2018NecMul].
-Here we provide an data-driven illustration to show how machine learning
+Here we provide a data-driven illustration to show how machine learning
 approaches can enable unreasonably effective prediction of interactions whereby
 we construct a metaweb of host-parasite interactions across space, which serves
 as a proof-of-concept for this conceptual framework. We then propose a roadmap
@@ -139,7 +139,7 @@ per-individual interactions from the strength of a whole species interaction
 crucial [@Novak2008EstNon], but are a hard task to quantify in natural
 communities [@Wootton1997EstTes; @Sala2002ComDis; @Wootton2005MeaInt],
 especially as the number of species composing communities increases,
-compounds the possibility of higher-order interactions or non-linear responses in
+compounded by the possibility of higher-order interactions or non-linear responses in
 interactions [@Wootton2005MeaInt]. Furthermore, interaction strength is
 extremely variable and context dependent and can be influenced by density
 dependence and spatiotemporal variation in abundances and community composition
@@ -474,6 +474,7 @@ toward producers [@Barnes2018EneFlu]. Food-web energetics models can be
 incorporated at various resolutions for a specific network, ranging from
 individual-based data to more lumped data at the species level or trophic group,
 depending on data availability [@Barnes2018EneFlu].
+
 
 ### What about indirect and higher-order interactions?
 
