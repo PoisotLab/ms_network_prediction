@@ -272,14 +272,11 @@ networks.](figures/conceptual_v2.png){#fig:conceptual}
 
 # A Primer on Predictive Network Ecology
 
-Below we provide a primer on our approach to predictive network ecology, with particular focus
-on using machine learning approaches in the modelling process, in order to
-provide a path forward toward building models to predict ecological networks.
-Here adopt a question-driven approach to serve as a guide through the path
-toward building models to predict and forecast the structure of ecological
-networks across space.
-
-
+Below we provide a primer on the current state of predictive network ecology,
+with particular focus on using machine learning approaches in the modelling
+process. Here adopt a question-driven approach to serve as a guide through the
+path toward building models to predict and forecast the structure of ecological
+networks across space, and to identify the next steps in the research regime.
 
 
 ## Models
@@ -394,7 +391,7 @@ co-occurrence in space and time [@Poisot2015SpeWhy; @Pichler2020MacLea]. Given
 two species co-occur, a neutral approach to probabilistic interactions would
 assume that the effect of abundances and trait matching would have no effect
 [@Canard2012EmeStr]. However, functional-trait based proxies could enable better
-predictions of ecological interactions. For instance, selection on functional
+predictions of ecological interactions. Selection on functional
 traits could cause interactions to be conserved at some evolutionary scales, and
 therefore predictions of interaction could be informed by phylogenetic analyses.
 [@Elmasri2020HieBay; @Gomez2010EcoInt]. Phylogenetic matching in bipartite networks is consistent
@@ -439,20 +436,20 @@ to quantify the effect of one species on another. Interaction strength can
 generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): either the strength of an interaction between individuals of
 each species, or the effect that changes in one species population has on the
-dynamics of the other species. Further, it can be measured either the direct
-effect of one species on another over a period of time, (often in the units of
+dynamics of the other species. Further, it can be measured either as the direct
+effect of one species on another over a period of time (often in the units of
 biomass) or the relative importance of one species on another
 [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
 observation throughout studies of interaction strengths is that networks are
-often composed of many weak links and few strong links [@Berlow2004IntStr].
-Knowing the distribution of interaction strength within a network informs on its
-stability [@Neutel2002StaRea; @Ruiter1995EnePat], influences on the ecosystem
-functioning [@Duffy2002BioEco; @Montoya2003FooWeb] and our potential to improve
-on the development of multispecies models [@Wootton2005MeaInt]. Seeing
-interaction strength within a network as energy fluxes could also possibly lead
-to its integration within the Biodiversity-Ecosystem Functioning (BEF)
-framework, which could in return further improve even our understanding of
-community dynamics and ecosystem functioning [@Barnes2018EneFlu].
+often composed of many weak links and few strong links [@Berlow2004IntStr]. The
+distribution of interaction strength within a network informs on its stability
+[@Neutel2002StaRea; @Ruiter1995EnePat], influences on the ecosystem functioning
+[@Duffy2002BioEco; @Montoya2003FooWeb] and our potential to improve multispecies
+models [@Wootton2005MeaInt]. Seeing interaction strength within a network as
+energy fluxes could also possibly lead to its integration within the
+Biodiversity-Ecosystem Functioning (BEF) framework, which could in return
+further improve even our understanding of community dynamics and ecosystem
+functioning [@Barnes2018EneFlu].
 
 ### How are interaction strengths actually estimated?
 
@@ -460,20 +457,20 @@ Before we attempt to make inferences from data, we must adapt a conceptual
 framework to model interaction strength. One such framework is functional
 foraging [@Portalier2019MecPre], where the primary basis for inferring
 interaction is based on an organism's traits, the environment, and foraging
-behavior such as searching, capture and handling times.  A different conceptual
+behavior like searching, capture and handling times. A different conceptual
 alternative, applicable in food-webs, is metabolic based models, where body
 mass, metabolic demands, and energy loss are used to infer energetic energy
 fluxes between organisms [@Yodzis1992BodSiz;@Berlow2009SimPre]. Energy can be
 seen as the common currency that links every level of biology from individual
 organisms to the whole ecosystem [@Brown2004MetThe;@Barnes2018EneFlua]. A
-(metabolically) bottom-up approach first estimates basal species biomasses
-and compute the higher trophic-level species biomasses and energetic demands
-from there [@Berlow2009SimPre]. Alternatively, a metabolically top-down
-approach computes energy fluxes starting from the top consumer downward
-toward producers [@Barnes2018EneFlu]. Food-web energetics models can be
-incorporated at various resolutions for a specific network, ranging from
-individual-based data to more lumped data at the species level or trophic group,
-depending on data availability [@Barnes2018EneFlu].
+(metabolically) bottom-up approach first estimates basal species biomasses and
+compute the higher trophic-level species biomasses and energetic demands from
+there [@Berlow2009SimPre]. Alternatively, a metabolically top-down approach
+computes energy fluxes starting from the top consumer downward toward producers
+[@Barnes2018EneFlu]. Food-web energetics models can be incorporated at various
+resolutions for a specific network, ranging from individual-based data to more
+lumped data at the species level or trophic group, depending on data
+availability [@Barnes2018EneFlu].
 
 
 ### What about indirect and higher-order interactions?
@@ -559,7 +556,7 @@ can result in interaction turnovers without changes in species composition
 [@Bolnick2011WhyInt]. Similarly, changes in species abundances can lead to
 variation in interaction strengths [@Canard2014EmpEva; @Vazquez2007SpeAbu].
 Variation in the abiotic environment and indirect interactions
-[@Golubski2016EcoNet] are also likely to modify the occurrence and strength of
+[@Golubski2016EcoNet] could modify the occurrence and strength of
 individual interactions. Despite this, empirical networks tend to share a common
 backbone [@Mora2018IdeCom] and functional composition [@Dehling2020SimCom]
 across space.
@@ -570,24 +567,23 @@ As the species pool forms the basis for network structure, predicting which
 species are present at a particular location is essential to predict networks
 across space. Species distribution models (SDMs) are increasingly ubiquitous in
 macroecology--- these models predict the range of a species based on known
-occurrences and environmental conditions, such as climate and
-land cover [@Guisan2005PreSpe; @Elith2006NovMet]. Including
-interactions or co-occurrences in SDMs generally improves predictive performance
-[@Wisz2013RolBio].
+occurrences and environmental conditions, such as climate and land cover
+[@Guisan2005PreSpe; @Elith2006NovMet]. Including interactions or co-occurrences
+in SDMs generally improves predictive performance [@Wisz2013RolBio].Several
+approaches exist to combine multiple SDMs: community assemblage at a particular
+site can be predicted either by combining independent single-species SDMs
+(stacked-SDMs, SSDMs) or by directly modelling the entire species assemblage and
+multiple species at the same time (joint SDMs, JSDMs) [@Norberg2019ComEva].
+Building on the JSDM framework, hierarchical modeling of species communities
+[@Ovaskainen2017HowMak] has the advantage of capturing processes that structure
+communities. Spatially Explicit Species Assemblage Modeling (SESAM) constrains
+SDM predictions using macro-ecological models [@Guisan2011SesNew] --- for
+example, variation in species richness across space can constrain assemblage
+predictions [@DAmen2015UsiSpe].
 
-Several approaches exist to combine multiple SDMs: community assemblage at a
-particular site can be predicted either by combining independent single-species
-SDMs (stacked-SDMs, SSDMs) or by directly modelling the entire species
-assemblage and multiple species at the same time (joint SDMs, JSDMs)
-[@Norberg2019ComEva]. Building on the JSDM framework, hierarchical modeling of
-species communities [@Ovaskainen2017HowMak] has the advantage of capturing
-processes that structure communities. Spatially Explicit Species Assemblage
-Modeling (SESAM) constrains SDM predictions using macro-ecological models
-[@Guisan2011SesNew] --- for example, variation in species richness across space
-can be used to constrain assemblage predictions [@DAmen2015UsiSpe]. The next
-step is to constrain distribution predictions using network properties. This
-would also build on previous calls to adopt a probabilistic view: there have
-been calls for a probabilistic species pool [@Karger2016DelPro], and more
+The next step is to constrain distribution predictions using network properties.
+This would also build on previous calls to adopt a probabilistic view: there
+have been calls for a probabilistic species pool [@Karger2016DelPro], and more
 importantly including interactions through Bayesian networks and propagating
 conditional dependencies has generated better range predictions
 [@Staniczenko2017LinMac]. @Blanchet2020CooNot argue that the probabilistic view
@@ -675,9 +671,9 @@ ecosystem, community stability and persistence [@Thompson2012FooWeb,
 properties (e.g. connectance)? If so, which regions or species groups need
 special conservation efforts? These overarching questions are yet to be answered
 [but see @Albouy2013ProCli; @Kortsch2015CliCha; @Hattab2016ForFin]. We believe
-that this roadmap towards forecasting ecological networks provide useful
-guidelines to ultimately be able to predict more accurately how climate change
-will affect the different dimensions of biodiversity and ecosystem functioning.
+that the path toward forecasting ecological networks provides useful guidelines
+to ultimately better predict how climate change will affect the different
+dimensions of biodiversity and ecosystem functioning.
 
 ### How do we turn a predictive model into a forecasting model?
 
@@ -777,7 +773,7 @@ to reconstruct networks.
 But the tools to which we feed these data, incomplete as they may be, are
 gradually getting better; that is, they can do predictions faster, they handle
 uncertainty and propagate it well, and they can accomodate data volumes than are
-lower than we may expect [@Pichler2020MacLea]. It is clear that attempting to predict the structure
+lower than we may expect [@Pichler2020MacLea]. It is clear attempting to predict the structure
 of ecological networks at any scale is a methodological and ecological
 challenge; yet it will result in qualitative changes in our understanding of
 complex adaptive systems, as well as changes to our ability to leverage
