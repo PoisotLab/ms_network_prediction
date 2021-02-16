@@ -792,6 +792,6 @@ Alexander Graham Bell Canada Graduate Scholarship and the FRQNT master's
 scholarship; FB, GD, NF, and GH are funded by the NSERC BIOS² CREATE program; 
 DC, TS, LP, and TP are funded by the Canadian Institute of Ecology & Evolution; 
 this research was enabled in part by support provided by Calcul Québec
-(www.calculquebec.ca) and Compute Canada *(www.computecanada.ca).
+(www.calculquebec.ca) and Compute Canada (www.computecanada.ca).
 
 # References
