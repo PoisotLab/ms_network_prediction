@@ -41,7 +41,7 @@ extract features based on species co-occurrence, (iii) use these
 features to train a neural network to predict interactions, and (iv) apply this
 classifier to the original features to predict possibly missing interactions
 across the entire species pool. The entire analysis is presented in
-@fig:example, and the code to reproduce it is available at **TODO OSF LINK**;
+@fig:example, and the code to reproduce it is available at `https://osf.io/6jp4b/`;
 the entire example was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], and
 notably uses the *Flux* machine learning framework [@Innes2018FluEle]. Note that
 this analysis is meant to serve as an *example only*, and should in practice be
