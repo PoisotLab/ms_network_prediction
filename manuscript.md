@@ -787,11 +787,11 @@ reliable datasets on networks in space or time will make this information more
 actionable.
 
 **Acknowledgements:** TS, NF, TP are funded by a donation from the Courtois
-*Foundation; FB, NF, and TP are funded by IVADO; BM is funded by the NSERC
+Foundation; FB, NF, and TP are funded by IVADO; BM is funded by the NSERC
 Alexander Graham Bell Canada Graduate Scholarship and the FRQNT master's
-scholarship; FB, GD, NF, and GH are funded *by the NSERC BIOS² CREATE program; 
-DC, TS, LP, and TP are funded by the *Canadian Institute of Ecology & Evolution; 
-this research was enabled in part by *support provided by Calcul Québec
- (www.calculquebec.ca) and Compute Canada *(www.computecanada.ca).
+scholarship; FB, GD, NF, and GH are funded by the NSERC BIOS² CREATE program; 
+DC, TS, LP, and TP are funded by the Canadian Institute of Ecology & Evolution; 
+this research was enabled in part by support provided by Calcul Québec
+(www.calculquebec.ca) and Compute Canada *(www.computecanada.ca).
 
 # References
