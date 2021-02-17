@@ -612,7 +612,7 @@ using Monte-Carlo simulation methods. Errors induced by the spatial or temporal
 extrapolation of data also need to be taken into account when estimating the
 uncertainty of a model's output [@Peters2004StrEco].
 
-### What is the spatial scale suitable for the prediction of species interactions?
+### What scales are suitable for the prediction of species interactions?
 
 As described above, we can use different trait-based proxies to predict
 potential interactions. The choice of such proxies should be theoretically
@@ -626,7 +626,7 @@ infer interactions through the phylogenetic similarity between species, assuming
 their functional traits are themselves are conserved
 [@Gomez2010EcoInt]. On evolutionary scales where the niche is conserved, we
 can think of the probability that one species will interact with another as the
-distance between them in niche-space [@Desjardins-Proulx2017EcoInt]. At
+distance between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be modeled using by simulating neutral expectations of trait variation on phylogenies [@Davies2021EcoRed]. At
 the smallest scales, we may be interested in predicting behavioral traits like
 foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial resolution
 in this case should is fine enough that a model may be precise in a given
