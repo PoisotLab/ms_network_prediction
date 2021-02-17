@@ -366,19 +366,17 @@ correct in the majority of cases because the majority of potential interactions
 in a network typically do not exist. Therefore this "empty-matrix" model would
 always have an _accuracy_ of $1-C$, where $C$ is the observed connectance, which
 would almost always be greater than 50%! This emphasizes the importance of
-considering null models when validating a model's performance.
-
-One way to avoid is phenomena is to only consider the true-positive rate, which
-is the proportion of actually observed interaction that the model predicts
-correctly. A different metric is the true-skill statistic (TSS;
-@AssAccAllouche2006), which is related to ability to avoid both false-negative
-and false-positives. he performance of this proof-of-concept model in each of
-the metrics (accuracy, true positive, TSS) is shown in @fig:validation, and
-reflects that the proof-of-concept model works well with limited data, and would
-likely work better if we integrate more data sources.
+considering null models when validating a model's performance. One way to avoid
+is phenomena is to only consider the true-positive rate, which is the proportion
+of actually observed interaction that the model predicts correctly. A different
+metric is the true-skill statistic (TSS; @AssAccAllouche2006), which is related
+to ability to avoid both false-negative and false-positives. The performance of
+this proof-of-concept model in each of the metrics (accuracy, true positive,
+TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
+works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from for a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo], suggesting we could improve neural network models if we integrate more data sources.
 
 
-![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$)](./figures/validation.png){#fig:validation}
+![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
 
 ## Networks and Interactions
 
