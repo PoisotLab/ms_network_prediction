@@ -506,9 +506,9 @@ beak). The fact that functional traits suffer some kind of selective pressure
 and because niches tend to be conserved throughout a phylogenetic tree,
 ecological interactions also tend to be conserved, and therefore we could also
 use phylogenies to infer pairs of co-occurring species that could potentially
-interact [@Gomez2010EcoInt]. In fact, the contribution of interactions to the
-phylogenetic match between species is consistent even through scales
-[@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].
+interact [@Davies2021EcoRed; @Gomez2010EcoInt]. In fact, the contribution of
+interactions to the phylogenetic match between species is consistent even
+through scales [@Poisot2018IntRet] and in neutral models [@Coelho2017NeuBio].
 
 A separate family of methods that gained interest in recent years are the
 network-based models. These models use the existing set of interactions to
