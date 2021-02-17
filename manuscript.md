@@ -346,6 +346,8 @@ original dataset into two---one which is used to fit the model (called the _trai
  (called the _test_ set) [@Bishop2006PatRec]. This procedure is often repeated
  for different subdivisions of the dataset [@Arlot2010SurCro].
 
+![TODO: validation figure caption](./figures/validation.png)
+
 ## Networks and Interactions
 
 ### Why predict networks and interactions at the same time?
