@@ -532,6 +532,24 @@ consideration is the multidimensional nature of "stability" and "feasibility"
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organization [@Kefi2019AdvOur; @Gravel2016StaCom].
 
+### What taxonomic scales are suitable for the prediction of species interactions?
+
+As described above, we can use different trait-based proxies to predict
+potential interactions. The choice of such proxies should be theoretically
+linked to the taxonomic and spatial scale we are using in our prediction
+[@Wiens1989SpaSca]. At some scales we can use morphological traits of
+co-occurring species to assess the probability of interaction between them
+[@Bartomeus2016ComFra]. On broader taxonomic scales we can infer interaction
+probability through the phylogenetic distance, assuming their functional traits
+are themselves are conserved [@Gomez2010EcoInt]. In this case, we can think of
+the probability that one species will interact with another as the distance
+between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be
+modeled by simulating neutral expectations of trait variation on phylogenetic
+tree [@Davies2021EcoRed]. At the narrowest scales, we may be interested in
+predicting behavioral traits like foraging behavior [@Bartomeus2016ComFra], and
+at this scale we may need to consider abundance's effect on probability of an
+encounter [@Wells2013SpeInt].
+
 ## Space
 
 Although networks were initially used to describe the interactions *within* a
@@ -611,27 +629,6 @@ error propagation: analytically using differential equations or stochastically
 using Monte-Carlo simulation methods. Errors induced by the spatial or temporal
 extrapolation of data also need to be taken into account when estimating the
 uncertainty of a model's output [@Peters2004StrEco].
-
-### What scales are suitable for the prediction of species interactions?
-
-As described above, we can use different trait-based proxies to predict
-potential interactions. The choice of such proxies should be theoretically
-linked to the spatial scale we are using in our prediction [@Wiens1989SpaSca].
-At some scales we can use morphological traits of co-occurring species to assess
-the probability of interaction between them [@Bartomeus2016ComFra]. This
-translates to a spatial extent that does not necessarily capture the entire
-distribution of a given set of species, with a resolution that is sufficient to
-capture the phenotypical variability of the species. At some scales, we can
-infer interactions through the phylogenetic similarity between species, assuming
-their functional traits are themselves are conserved
-[@Gomez2010EcoInt]. On evolutionary scales where the niche is conserved, we
-can think of the probability that one species will interact with another as the
-distance between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be modeled using by simulating neutral expectations of trait variation on phylogenies [@Davies2021EcoRed]. At
-the smallest scales, we may be interested in predicting behavioral traits like
-foraging behavior [@Bartomeus2016ComFra]. At this point, the spatial resolution
-in this case should is fine enough that a model may be precise in a given
-system, but much less generalizable. At this scale it is also important to
-consider abundance's effect on probability of an encounter [@Wells2013SpeInt].
 
 
 ## Time
