@@ -369,7 +369,7 @@ would almost always be greater than 50%! This emphasizes the importance of
 considering null models when validating a model's performance. One way to avoid
 is phenomena is to only consider the true-positive rate, which is the proportion
 of actually observed interaction that the model predicts correctly. A different
-metric is the true-skill statistic (TSS; @AssAccAllouche2006), which is related
+metric is the true-skill statistic (TSS; @Allouche2006AssAcc), which is related
 to ability to avoid both false-negative and false-positives. The performance of
 this proof-of-concept model in each of the metrics (accuracy, true positive,
 TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
