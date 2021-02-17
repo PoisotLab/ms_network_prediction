@@ -317,16 +317,22 @@ modelling process.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
-In order to build a predictive machine-learning model, one needs the following:
+In order to build a predictive model under the Bayesian paradigm, one needs the following:
 first, **data**, split into features $\hat{x}$ and labels $\hat{y}$ (Box Figure
 Label). Second, a **model** $f$, which maps features $x$ to labels $y$ as a
 function of parameters $\theta$, i.e. $y = f(x, \theta)$. Third, a loss function
 $L(\hat{y}, y)$, which describes how far a model's prediction $y$ is from an
 empirical estimate $\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$.
-Another important step before fitting a model is feature engineering: adjusting
-and reworking the predictors to better uncover
-predictor-response relationships [@Kuhn2019FeaEng]. This can include projecting
-the predictors into a lower dimensional space, as in our proof-of-concept.
+Often an important step before fitting a model is feature engineering: adjusting
+and reworking the predictors to better uncover predictor-response relationships
+[@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
+dimensional space, as in our proof-of-concept. Then, when a model is fitted
+(synonymous with parameter inference or the inverse problem, see @fig:models), a
+fitting algorithm attempts to estimate the values of $\theta$ that minimizes the
+mean value of loss function $L(\hat{y},y)$ for all labels $y$ in the provided
+data $Y$. These typically rely on drawing candidate parameter values from priors and
+applying some form of Bayesian sampling to generate a posterior estimate of parameters, $P(\theta | \hat{x},
+ \hat{y})$.
 
 ### How do we validate a predictive model?
 
@@ -339,14 +345,38 @@ error---however this approach inevitably results in _overfitting_. One approach
 to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL) based
 around the heuristic that good models maximize the ratio of information provided
 by the model to the number of parameters it has. However, when the intended
-use-case of a model is prediction the relevant form of validation is
-_predictive accuracy_, which should be tested with _crossvalidation_. Crossvalidation methods divide the
-original dataset into two---one which is used to fit the model (called the _training_ set) and one
- used to validate its predictive accuracy on the data that is hasn't "seen" yet
- (called the _test_ set) [@Bishop2006PatRec]. This procedure is often repeated
- for different subdivisions of the dataset [@Arlot2010SurCro].
+use-case of a model is prediction the relevant form of validation is _predictive
+accuracy_, which should be tested with _crossvalidation_. Crossvalidation
+methods divide the original dataset into two---one which is used to fit the
+model (called the _training_ set) and one used to validate its predictive
+accuracy on the data that is hasn't "seen" yet (called the _test_ set)
+[@Bishop2006PatRec]. This procedure is often repeated for different subdivisions
+of the dataset [@Arlot2010SurCro].
 
-![TODO: validation figure caption](./figures/validation.png)
+In the proof-of-concept, we used a neural-network to perform binary
+classification by predicting the presence/absence of an interaction between any
+two species. Many different metrics exist to validate the performance of a
+binary classifier. One approach is _accuracy_, the proportion of values it got
+correct.  However, consider what we know about interaction networks: they are
+often vary sparse, with connectance between $0.1$ and $0.3$. There are two ways
+for the model to be right: the model predicts an interaction and there is one,
+or the model predicts no interaction and there isn't one. If we built a model
+that always guesses there will be no interaction between two species, it will be
+correct in the majority of cases because the majority of potential interactions
+in a network typically do not exist. Therefore this "empty-matrix" model would
+always have an _accuracy_ of $1-C$, where $C$ is the observed connectance, which
+would almost always be greater than 50%! This emphasizes the importance of
+considering null models when validating a model's performance. One way to avoid
+is phenomena is to only consider the true-positive rate, which is the proportion
+of actually observed interaction that the model predicts correctly. A different
+metric is the true-skill statistic (TSS; @AssAccAllouche2006), which is related
+to ability to avoid both false-negative and false-positives. The performance of
+this proof-of-concept model in each of the metrics (accuracy, true positive,
+TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
+works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from for a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo], suggesting we could improve neural network models if we integrate more data sources.
+
+
+![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
 
 ## Networks and Interactions
 
