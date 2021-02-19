@@ -245,7 +245,7 @@ modelling framework for ecological networks and the landscape, which are then
 ultimately combined to allow for the prediction of spatially explicit
 networks.](figures/conceptual_v2.png){#fig:conceptual}
 
-### Data (1)
+## Data (1)
 
 The acquisition of biodiversity and environmental data has tremendously
 increased over the past decades thanks to the rise of citizen science
