@@ -245,7 +245,7 @@ modelling framework for ecological networks and the landscape, which are then
 ultimately combined to allow for the prediction of spatially explicit
 networks.](figures/conceptual_v2.png){#fig:conceptual}
 
-## Data (1)
+## Data
 
 The acquisition of biodiversity and environmental data has tremendously
 increased over the past decades thanks to the rise of citizen science
@@ -275,7 +275,7 @@ integration of datasets---as well as a growing interest at the government level
 [@Scholes2012BuiGlo] paints a positive picture for data access and usability in
 the coming years.
 
-## Models (2)
+## Models
 
 ### What is a predictive model?
 
@@ -375,7 +375,7 @@ works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar
 
 ![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
 
-## Networks and Interactions (3)
+## Networks and Interactions
 
 ### Why predict networks and interactions at the same time?
 
@@ -395,7 +395,7 @@ structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
 
 
-### What network properties should we should use to inform our predictions of interactions? (3a)
+### What network properties should we should use to inform our predictions of interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet there
 are two reasons to begin with a single property, connectance (the ratio of
@@ -414,7 +414,7 @@ eventually time) is most likely to be the most practical to formulate at the
 moment.
 
 
-### How do we predict how species that we have never observed together will interact? (3b)
+### How do we predict how species that we have never observed together will interact?
 
 A neutral approach would assume probability of an interaction occurring depends
 on the likelihood of co-occurrence in space and time [@Poisot2015SpeWhy;
@@ -438,7 +438,7 @@ in the latent space should interact with similar set of species
 sampling biases as they are limited to species for which there is already
 interaction data [@Becker2020PreWil].
 
-### How do we determine what interaction networks are feasible? (3c)
+### How do we determine what interaction networks are feasible?
 
 For several decades, ecologists have aimed to understand how networks of many
 interacting species persist through time. The diversity-stability paradox, first
@@ -583,7 +583,7 @@ individual interactions. Despite this, empirical networks tend to share a common
 backbone [@Mora2018IdeCom] and functional composition [@Dehling2020SimCom]
 across space.
 
-### How do we predict what the species pool at a particular location is? (4)
+### How do we predict what the species pool at a particular location is?
 
 As the species pool forms the basis for network structure, predicting which
 species are present at a particular location is essential to predict networks
@@ -591,7 +591,7 @@ across space. Species distribution models (SDMs) are increasingly ubiquitous in
 macroecology--- these models predict the range of a species based on known
 occurrences and environmental conditions, such as climate and land cover
 [@Guisan2005PreSpe; @Elith2006NovMet]. Including interactions or co-occurrences
-in SDMs generally improves predictive performance [@Wisz2013RolBio].Several
+in SDMs generally improves predictive performance [@Wisz2013RolBio]. Several
 approaches exist to combine multiple SDMs: community assemblage at a particular
 site can be predicted either by combining independent single-species SDMs
 (stacked-SDMs, SSDMs) or by directly modelling the entire species assemblage and
@@ -614,7 +614,7 @@ prior knowledge of interactions. This could potentially be solved through our
 framework of predicting networks first, interactions next, and finally the
 realized species pool.
 
-### How do we combine spatial and network predictions? (5)
+### How do we combine spatial and network predictions?
 
 In order to predict networks across space, we need to combine multiple
 models---one which predicts what the species pool will be at a given location,
