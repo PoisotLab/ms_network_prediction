@@ -195,7 +195,7 @@ populations [@Poisot2016StrPro]. In turn, this effort is supported by a thriving
 ecosystem of data sources and computational tools. In this section, we give a
 brief overview of these resources.
 
-### Open Tools and Methods
+### Novel Machine Learning Methods
 
 Machine learning encompasses a broad variety of techniques applied with or
 without human supervision. These techniques can often be more flexible and
