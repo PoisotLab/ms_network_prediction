@@ -195,7 +195,7 @@ populations [@Poisot2016StrPro]. In turn, this effort is supported by a thriving
 ecosystem of data sources and computational tools. In this section, we give a
 brief overview of these resources.
 
-### Open Tools and Methods
+### Novel Machine Learning Methods
 
 Machine learning encompasses a broad variety of techniques applied with or
 without human supervision. These techniques can often be more flexible and
@@ -243,7 +243,7 @@ explicit models of network structure. Sections labeled with a number correspond 
 networks. Starting with the input of data from multiple sources, followed by a
 modelling framework for ecological networks and the landscape, which are then
 ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/conceptual_v2.png){#fig:conceptual}
+networks.](figures/conceptual_v3.png){#fig:conceptual}
 
 ## Data
 
@@ -315,7 +315,7 @@ modelling process.](figures/forecasting_v3.png){#fig:models}
 
 In order to build a predictive model under the Bayesian paradigm, one needs the
 following: first, **data**, split into features $\hat{x}$ and labels $\hat{y}$
-(Box Figure Label). Second, a **model** $f$, which maps features $x$ to labels
+(@fig:models). Second, a **model** $f$, which maps features $x$ to labels
 $y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$. Third, a loss
 function $L(\hat{y}, y)$, which describes how far a model's prediction $y$ is
 from an empirical estimate $\hat{y}$. Lastly, **priors** on parameters,
@@ -346,7 +346,7 @@ use-case of a model is prediction the relevant form of validation is _predictive
 accuracy_, which should be tested with _crossvalidation_. Crossvalidation
 methods divide the original dataset into two---one which is used to fit the
 model (called the _training_ set) and one used to validate its predictive
-accuracy on the data that is hasn't "seen" yet (called the _test_ set)
+accuracy on the data that it hasn't "seen" yet (called the _test_ set)
 [@Bishop2006PatRec]. This procedure is often repeated for different subdivisions
 of the dataset [@Arlot2010SurCro].
 
@@ -364,13 +364,13 @@ in a network typically do not exist. Therefore this "empty-matrix" model would
 always have an _accuracy_ of $1-C$, where $C$ is the observed connectance, which
 would almost always be greater than 50%! This emphasizes the importance of
 considering null models when validating a model's performance. One way to avoid
-is phenomena is to only consider the true-positive rate, which is the proportion
+this phenomena is to only consider the true-positive rate, which is the proportion
 of actually observed interaction that the model predicts correctly. A different
 metric is the true-skill statistic (TSS; @Allouche2006AssAcc), which is related
-to ability to avoid both false-negative and false-positives. The performance of
+to the ability to avoid both false-negative and false-positives. The performance of
 this proof-of-concept model in each of the metrics (accuracy, true positive,
 TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
-works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from for a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo]; that our model reaches a much higher accuracy with fewer initial data is a strong argument in favor of augmenting the training set with external data sources, as we argue in this manuscript.
+works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo]; that our model reaches a much higher accuracy with fewer initial data is a strong argument in favor of augmenting the training set with external data sources, as we argue in this manuscript.
 
 
 ![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
@@ -394,8 +394,7 @@ of the interactions forming the basis for network structure, and the network
 structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
 
-
-### What network properties should we should use to inform our predictions of interactions?
+### What network properties should we use to inform our predictions of interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet there
 are two reasons to begin with a single property, connectance (the ratio of
@@ -419,12 +418,13 @@ moment.
 A neutral approach would assume probability of an interaction occurring depends
 on the likelihood of co-occurrence in space and time [@Poisot2015SpeWhy;
 @Pichler2020MacLea], and that the effect of abundances and trait matching would
-have no effect [@Canard2012EmeStr]. However, functional-trait based proxies can
-enable better predictions of ecological interactions.  prediction of interaction
-could be informed by phylogenetic analyses at some scales. [@Davies2021EcoRed].
-[@Elmasri2020HieBay; @Gomez2010EcoInt]. Phylogenetic matching in bipartite
-networks is consistent across scales [@Poisot2018IntRet], even absent strong
-selective pressure [@Coelho2017NeuBio].
+have no effect [@Canard2012EmeStr]. However, functional-trait based proxies could enable better
+predictions of ecological interactions. Selection on functional traits could
+cause interactions to be conserved at some evolutionary scales, and therefore
+predictions of interaction could be informed by phylogenetic analyses
+[@Davies2021EcoRed; @Elmasri2020HieBay; @Gomez2010EcoInt]. Phylogenetic
+matching in bipartite networks is consistent across scales [@Poisot2018IntRet],
+even in the absence of strong selective pressure [@Coelho2017NeuBio].
 
 A separate family of methods are based on network embedding (as in the
 proof-of-concept). A network embedding projects each node of the network into a
@@ -475,11 +475,11 @@ to all definitions of interaction is that *at least* one of the species
 is affected by the presence of another, either positively or negatively
 [@Morales-Castilla2015InfBio]. Networks can
 be used to represent a variety of interaction types, including: *unipartite
-networks,* where each species can be linked any other species, species (these
+networks,* where each species can be linked to other species (these
 are typically used to represent food webs), *bipartite networks* where there are
 two pools of species, and all interactions occur between species in each pool,
 are typically used for pairwise interactions (e.g. hosts and parasites), and
-*k-partite networks:,* which serve as a way to expand to more than two discrete
+*k-partite networks,* which serve as a way to expand to more than two discrete
 sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
 pollination networks) [@Pocock2012RobRes].
 
@@ -487,7 +487,7 @@ pollination networks) [@Pocock2012RobRes].
 
 Species interaction networks can also be used as means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative
-presence or absence an interaction, is a continuous measurement which attempts
+presence or absence of an interaction, is a continuous measurement which attempts
 to quantify the effect of one species on another. Interaction strength can
 generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
@@ -520,7 +520,7 @@ availability [@Barnes2018EneFlu; @Berlow2009SimPre].
 Although network ecology often assumes that interactions go strictly from one
 node to the other, the web of life is made up of a variety of interactions.
 Indirect interactions---either higher-order interactions between species, or
-interaction strengths that themselves interact --- has gained interest in recent
+interaction strengths that themselves interact --- have gained interest in recent
 years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool to
 describe these situations is hypergraphs: hypergraphs are the generalization of
 a graph, allowing a broad yet manageable approach to complex interactions
@@ -544,8 +544,8 @@ linked to the taxonomic and spatial scale we are using in our prediction
 [@Wiens1989SpaSca]. At some scales we can use morphological traits of
 co-occurring species to assess the probability of interaction between them
 [@Bartomeus2016ComFra]. On broader taxonomic scales we can infer interaction
-probability through the phylogenetic distance, assuming their functional traits
-are themselves are conserved [@Gomez2010EcoInt]. In this case, we can think of
+probability through the phylogenetic distance, assuming that functional traits
+themselves are conserved [@Gomez2010EcoInt]. In this case, we can think of
 the probability that one species will interact with another as the distance
 between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be
 modeled by simulating neutral expectations of trait variation on phylogenetic
@@ -607,7 +607,7 @@ The next step is to constrain distribution predictions using network properties.
 This would also build on previous calls to adopt a probabilistic view: there
 have been calls for a probabilistic species pool [@Karger2016DelPro], and more
 importantly including interactions through Bayesian networks and propagating
-conditional dependencies has generated better range predictions
+conditional dependencies have generated better range predictions
 [@Staniczenko2017LinMac]. @Blanchet2020CooNot argue that the probabilistic view
 avoids confusion between interactions and co-occurrences, but that it requires
 prior knowledge of interactions. This could potentially be solved through our
@@ -619,8 +619,8 @@ realized species pool.
 In order to predict networks across space, we need to combine multiple
 models---one which predicts what the species pool will be at a given location,
 and one to predict what interaction networks composed from this species pool are
-likely (see @fig:conceptual). Both of these models contain uncertainty, and when
-we combine them our uncertainty from each to propagate into the combined model.
+likely to be (see @fig:conceptual). Both of these models contain uncertainty, and when
+we combine them the uncertainty from each model should be propagated into the combined model.
 The Bayesian paradigm provides a convenient solution to this---if we have a
 chain of models where each model feeds into the next, we can sample from the
 posterior of the input models. A different approach is _ensemble modeling_ which
@@ -667,7 +667,7 @@ change over time will give us critical information that could be communicated to
 decision-makers and the scientific community about what are future environmental
 risks awaiting and how to mitigate them [@Kindsvater2018OveDat]. Not only this,
 but how biodiversity is structured influence the functioning of the whole
-ecosystem, community stability and persistence [@Thompson2012FooWeb,
+ecosystem, community stability and persistence [@Thompson2012FooWeb;
 @Stouffer2010UndFoo]. Will climate change impact the distribution of network
 properties (e.g. connectance)? If so, which regions or species groups need
 special conservation efforts? These overarching questions are yet to be answered
@@ -695,7 +695,7 @@ environmental conditions and the potential species pool across space
 
 ### How can we validate a forecasting model?
 
-Often the purpose of building a forecasting model to inform _present_ action
+Often the purpose of building a forecasting model is to inform _present_ action
 [@Dietze2018IteNea]. Yet, the nature of forecasting---trying to predict the
 future---is that you can only know if a forecast is "right" once it is too late
 to change it. If we want to maximize the chance that reality falls within a
@@ -725,8 +725,8 @@ within the forecast's estimates, forecasts should incorporate as much
 uncertainty about the future scenario as possible---one way to do this is
 ensemble modeling [@Parker2013EnsMod]. However, as we increase the amount of
 uncertainty we incorporate into a forecasting model, the resolution of the
-forecast's predictions could shrink [@Lei2017EvaTra], and therefore the modeler be mindful of the
-trade-off between resolution and accuracy where developing any forecast.
+forecast's predictions could shrink [@Lei2017EvaTra], and therefore the modeler should be mindful of the
+trade-off between resolution and accuracy when developing any forecast.
 
 
 
@@ -748,7 +748,7 @@ International panels draw on models to establish scientific consensus
 [@Araujo2019StaDis], and they can be improved through more effective prediction
 of species distributions and interactions [@Syfert2014UsiSpe]. Further, recent
 studies argue for a shift in focus from species to interaction networks for
-biodiversity conservation to better ecosystem processes [@Harvey2017BriEco].
+biodiversity conservation to better understand ecosystem processes [@Harvey2017BriEco].
 
 
 We should invest in network prediction because the right
@@ -760,7 +760,7 @@ should be picked up by the community. Although novel technologies are bringing
 massive amounts of data to some parts of ecology (primarily environmental DNA
 and remote sensing, but now more commonly image analysis and bioacoustics), it
 is even more important to be intentional about *reconciling* data. This involves
-not only the scholarly work of understand the processes that the data encode,
+not only the scholarly work of understanding the processes that the data encode,
 and whether they speak to scales that are compatible, but also the groundwork of
 developing pipelines to bridge the ever-expanding gap between "high-throughput"
 and "low-throughput" sampling methods. An overall increase in the volume of data
@@ -775,7 +775,7 @@ to reconstruct networks.
 
 But the tools to which we feed these data, incomplete as they may be, are
 gradually getting better; that is, they can do predictions faster, they handle
-uncertainty and propagate it well, and they can accomodate data volumes than are
+uncertainty and propagate it well, and they can accomodate data volumes that are
 lower than we may expect [@Pichler2020MacLea]. It is clear attempting to predict the structure
 of ecological networks at any scale is a methodological and ecological
 challenge; yet it will result in qualitative changes in our understanding of
