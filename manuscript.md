@@ -367,6 +367,42 @@ works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar
 
 ## Networks and Interactions
 
+### What is an interaction, really?
+
+Interactions between species can be conceptualized in a multitude of ways
+(mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric, direct
+vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What is common
+to all definitions of interaction is that *at least* one of the species
+is affected by the presence of another, either positively or negatively
+[@Morales-Castilla2015InfBio]. Networks can
+be used to represent a variety of interaction types, including: *unipartite
+networks*, where each species can be linked to other species (these
+are typically used to represent food webs), *bipartite networks* where there are
+two pools of species, and all interactions occur between species in each pool,
+are typically used for pairwise interactions (e.g. hosts and parasites), and
+*k-partite networks,* which serve as a way to expand to more than two discrete
+sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
+pollination networks) [@Pocock2012RobRes].
+
+### What about interaction _strength_?
+
+Species interaction networks can also be used as means to quantify and
+understand _interaction strength_. Interaction strength, unlike the qualitative
+presence or absence of an interaction, is a continuous measurement which attempts
+to quantify the effect of one species on another. Interaction strength can
+generally be divided into two main categories (as suggested by
+@Berlow2004IntStr): 1) the strength of an interaction between individuals of
+each species, or 2) the effect that changes in one species population has on the
+dynamics of the other species. It can be measured as the effect over a period of
+time (in the units of biomass or energy flux [@Barnes2018EneFlu; @Brown2004MetThe]) or the
+relative importance of one species on another [@Heleno2014EcoNet;
+@Berlow2004IntStr; @Wootton2005MeaInt]. One recurring observation is that
+networks are often composed of many weak interactions and few strong
+interactions [@Berlow2004IntStr]. The distribution of interaction strength
+within a network effects its stability [@Neutel2002StaRea; @Ruiter1995EnePat]
+and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and serves to benefit
+multispecies models [@Wootton2005MeaInt].
+
 ### Why predict networks and interactions at the same time?
 
 Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a set
@@ -457,41 +493,6 @@ consideration is the multidimensional nature of "stability" and "feasibility"
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organization [@Kefi2019AdvOur; @Gravel2016StaCom].
 
-### What is an interaction, really?
-
-Interactions between species can be conceptualized in a multitude of ways
-(mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric, direct
-vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What is common
-to all definitions of interaction is that *at least* one of the species
-is affected by the presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. Networks can
-be used to represent a variety of interaction types, including: *unipartite
-networks*, where each species can be linked to other species (these
-are typically used to represent food webs), *bipartite networks* where there are
-two pools of species, and all interactions occur between species in each pool,
-are typically used for pairwise interactions (e.g. hosts and parasites), and
-*k-partite networks,* which serve as a way to expand to more than two discrete
-sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
-pollination networks) [@Pocock2012RobRes].
-
-### What about interaction _strength_?
-
-Species interaction networks can also be used as means to quantify and
-understand _interaction strength_. Interaction strength, unlike the qualitative
-presence or absence of an interaction, is a continuous measurement which attempts
-to quantify the effect of one species on another. Interaction strength can
-generally be divided into two main categories (as suggested by
-@Berlow2004IntStr): 1) the strength of an interaction between individuals of
-each species, or 2) the effect that changes in one species population has on the
-dynamics of the other species. It can be measured as the effect over a period of
-time (in the units of biomass or energy flux [@Barnes2018EneFlu; @Brown2004MetThe]) or the
-relative importance of one species on another [@Heleno2014EcoNet;
-@Berlow2004IntStr; @Wootton2005MeaInt]. One recurring observation is that
-networks are often composed of many weak interactions and few strong
-interactions [@Berlow2004IntStr]. The distribution of interaction strength
-within a network effects its stability [@Neutel2002StaRea; @Ruiter1995EnePat]
-and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and serves to benefit
-multispecies models [@Wootton2005MeaInt].
 
 ### How are interaction strengths actually estimated?
 
@@ -526,6 +527,7 @@ action [@Albert2017AppNet].  Ecological networks are intrinsically multi-layered
 we need to predict (the multiple layers rather than a single network) makes
 the problem more complicated. Yet, mutli-layer approaches improve prediction in social networks [@Jalili2017LinPre;
 @Najari2019LinPre; @Yasami2018NovMul], and they may prove useful going forward.
+
 
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
