@@ -243,7 +243,7 @@ explicit models of network structure. Sections labeled with a number correspond 
 networks. Starting with the input of data from multiple sources, followed by a
 modelling framework for ecological networks and the landscape, which are then
 ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/conceptual_v2.png){#fig:conceptual}
+networks.](figures/conceptual_v3.png){#fig:conceptual}
 
 ## Data
 
