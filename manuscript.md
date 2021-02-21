@@ -83,37 +83,33 @@ clustering of the tSNE
 output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so absent
-interactions for species pair that was not observed to co-occur were removed from the data.
-This ensures that the network is trained only on the subset of the data for
-which we have minimal ecological information. Second, the batches of 16 items
-used for training were constrained to have at least 10 positive interactions.
-The reasoning for this choice was made based on three observations: the network
-is sparse (*i.e.* the prevalence of interactions is low); negative interactions
-have a chance of being false negatives due to lack of reporting in the field;
-there are no true negative interactions reported, *i.e.* interactions for which
-we know that they almost never happen. Therefore, slightly inflating the dataset
-with positive interactions enables us to counterbalance these biases.
+in two ways: First by selecting features so absent interactions for species pair
+that was not observed to co-occur were removed from the data. This ensures that
+the network is trained only on the subset of the data for which we have actual
+information about the interaction. Second, the batches of 16 items used for
+training were constrained to have at least 10 positive interactions. The
+reasoning for this choice was made based on three observations: the network is
+sparse, meaning negative interactions have a chance of being false negatives due
+to lack of reporting in the field, and there is no way to ensure an interaction
+not observed to occur is a true negative. Slightly inflating the dataset with
+positive interactions enables us to counterbalance these biases.
 
 After the training ($2.5\times 10^4$ epochs in @fig:example), our model reached
 an accuracy of $\approx 0.8$, with no marked deviation between the training and
 testing sets (respectively 80% and 20% of the data), suggesting no to minimal
-overfitting, and is replicable across random partition of test and training
+overfitting, which is replicable across random partitions of test and training
 sets. Applying this model to the entire dataset (including species pairs never
 observed co-occuring in the dataset) identified 1831 new possible interactions
 -- 382 of which were in pairs of species never considered prior. This suggests
 that meaningful information about ecological interactions is structured within
-network data, and our core argument here is that we should embrace the
-prediction of species interaction networks as a worthy topic of concept , and
-specifically strive to adopt an explicitly spatial and temporal perspective on
-this question. Now, the question becomes: home do we make our prediction of
-ecological networks _better_?
+network data. Now, the question becomes: home do we make our prediction of
+interaction networks _better_?
 
 ## Challenges: the many constraints on prediction
 
 ### Ecological network data are scarce and hard to obtain
 
-At the moment, our understanding is primarily limited by the availability of
+At the moment, we are primarily limited by the availability of
 data. Although we have seen a growth in species occurrence data, this growth is
 much slower for ecological interactions because species interactions are
 challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]
