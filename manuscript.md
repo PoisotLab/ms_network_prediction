@@ -145,23 +145,23 @@ spatiotemporal variation in community composition
 
 This scarcity of data limits the range of computational tools than can be used
 by network ecologists. Most deep learning methods, for instance, are very data
-expensive. The paucity of data is compounded by a collection of biases that can
-be found in existing datasets. Species interaction datasets are typically
-dominated by food webs, pollination, and host-parasite networks
-[@Ings2009EcoNet; @Poisot2020EnvBia]. This could prove to be a limiting factor
-when trying to understand or predict networks of *underrepresented* interaction
-types or when trying to integrate networks of different types
-[@Fontaine2011EcoEvo], especially given the inherent structural variation of
-ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
-integrated, flexible, and data-efficient set of computational tools which will
-allow us to predict ecological networks accurately from existing and imperfect
-datasets, but also enable us to perform model validation and comparison with
-more flexibility than existing tools. We argue that @fig:example is an example
-of the promise of these tools *even* when facing datasets of small size. When
-carefully controlling for overfitting machine learning systems are at least
-adequate at generalizing. The ability to extract and engineer features also
-serves to bolster our predictive power. In short, the current lack of massive
-datasets must not be an obstacle to prediction; it is an ideal testing ground to
+expensive. The paucity of data is compounded by a collection of biases in
+existing datasets. Species interaction data are typically dominated by food
+webs, pollination, and host-parasite networks [@Ings2009EcoNet;
+@Poisot2020EnvBia]. This could prove to be a limiting factor when trying to
+understand or predict networks of underrepresented interaction types or when
+trying to integrate networks of different types [@Fontaine2011EcoEvo],
+especially given their inherent structural variation
+[@Michalska-Smith2019TelEco]. This stresses the need for an integrated,
+flexible, and data-efficient set of computational tools which will allow us to
+predict ecological networks accurately from existing and imperfect datasets, but
+also enable us to perform model validation and comparison with more flexibility
+than existing tools. We argue that @fig:example is an example of the promise of
+these tools *even* when facing datasets of small size. When carefully
+controlling for overfitting machine learning systems are at least adequate at
+generalizing. The ability to extract and engineer features also serves to
+bolster our predictive power. In short, the current lack of massive datasets
+must not be an obstacle to prediction; it is an ideal testing ground to
 understand how little data is sufficient to obtain actionable predictions.
 
 ### Scaling-up predictions requires scaled-up data
@@ -209,45 +209,38 @@ with a movement towards standardising data collection protocols (e.g.
 [DarwinCore](https://www.tdwg.org))---which facilitates interoperability and
 integration of datasets---as well as a growing interest at the government level
 [@Scholes2012BuiGlo] paints a positive picture for data access and usability in
-the coming years. If we wish to predict the interactions between species we have
-not observed together, using our knowledge of the structure of ecological
-networks is one of our most useful assets. We are able to infer species
-interactions using proxies such as traits, phylogenies, and geographical data,
-among others [@Morales-Castilla2015InfBio]. Drawing on further information about
-the what contributes to the realization of an interaction (abundance, traits
-matching in space and time) would further improve these predictions
-[@Poisot2016StrPro].
+the coming years.
 
 In turn, this effort is supported by a thriving ecosystem of data sources and
-computational tools. Machine learning encompasses a broad variety of techniques
-applied with or without human supervision. These techniques can often be more
-flexible and perform better than classical statistical methods, and can achieve
-a very high level of accuracy in many predictive and classification tasks in a
+novel tools. Machine learning encompasses a broad variety of techniques applied
+with or without human supervision. These techniques can often be more flexible
+and perform better than classical statistical methods, and can achieve a very
+high level of accuracy in many predictive and classification tasks in a
 relatively short amount of time [e.g. @Cutler2007RanFor; @Krizhevsky2017ImaCla].
 Increasing computing power combined with recent advances in machine learning
 techniques and applications shows promise in ecology and environmental science
-(see @Christin2019AppDee for an overview). Moreover, ongoing developments in the
-field of artificial intelligence are aimed at using deep learning more
-efficiently in low-data regimes [e.g. @Antoniou2018DatAug] and with unbalanced
-datasets [@Chawla2010DatMin]. Machine learning is emerging as the new standard
-in computational ecology in general [@Olden2008MacLea; @Christin2019AppDee], and
-in network ecology in-particular [@Bohan2017NexGlo], as long as sufficient
-relevant data are available. Many ecological and evolutionary processes underlie
-species interactions and the structure of their ecological networks [e.g.
-@Vazquez2009UniPat; @Segar2020RolEvo]. It can thus be difficult to choose
-relevant variables and model species interactions networks explicitly. A
-promising application of machine learning in natural sciences is
+(see @Christin2019AppDee for an overview). Moreover, ongoing developments in
+deep learning are aimed at improvement in low-data regimes and with unbalanced
+datasets [@Antoniou2018DatAug; @Chawla2010DatMin]. Considering the current
+biases in network ecology [@Poisot2020EnvBia] and the scarcity of data of
+species interactions, the prediction of ecological networks will undoubtedly
+benefit from these improvements. Machine learning methods are emerging as the
+new standard in computational ecology in general [@Olden2008MacLea;
+@Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo],
+as long as sufficient relevant data are available. As many ecological and
+evolutionary processes underlie species interactions and the structure of their
+ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo], it can be
+difficult to choose relevant variables and model species interactions networks
+explicitly. A promising application of machine learning in natural sciences is
 Scientific-Machine Learning (SciML), a framework that combines machine learning
-with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif]. Considering
-the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of
-data of species interactions, the prediction of ecological networks will
-undoubtedly benefit from these improvements. Many studies have used machine
-learning models specifically with ecological interactions. Relevant examples
-include species traits used to predict interactions and infer trait-matching
-rules [@Desjardins-Proulx2017EcoInt; @Pichler2020MacLea], automated discovery of
-food webs [@Bohan2011AutDis], reconstruction of ecological networks using
-next-generation sequencing data [@Bohan2017NexGlo], and network inference from
-presence-absence data [@Sander2017EcoNet].
+with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif].  Many
+studies have used machine learning models specifically with ecological
+interactions. Relevant examples include species traits used to predict
+interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
+@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
+reconstruction of ecological networks using next-generation sequencing data
+[@Bohan2017NexGlo], and network inference from presence-absence data
+[@Sander2017EcoNet].
 
 
 # A Primer on Predicting Ecological Networks
