@@ -35,36 +35,41 @@ approach.
 
 The core premise of this manuscript is that ecological networks can be
 predicted. In this section we provide a proof-of-concept, in which we use data
-from @Hadfield2014TalTwo, describing 51 host-parasite networks, where not all
-species pairs co-occur across sites. This implies that there may be "negative
+from @Hadfield2014TalTwo describing 51 host-parasite networks, where not all
+species pairs co-occur across sites.
+
+
+This implies that there may be "negative
 associations" --- interactions between species that might be biologically
 feasible but not observed because the two species have not been observed
-co-occurring. To do this we (i) aggregate a series of host-parasite interaction
-networks collected across space into a metaweb, (ii) extract species features
-based on species co-occurrence, (iii) use these features to train a neural
-network to predict interactions, and (iv) apply this classifier to the original
-features to predict possibly missing interactions across the entire species
-pool. The entire analysis is presented in @fig:example, and the code to
-reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
-carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
-learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
-as an *example only*, and should in practice be models should be fine-tuned according to the
+co-occurring.
+
+
+To do this we (i) aggregate a series of host-parasite interaction networks
+collected across space into a metaweb, (ii) extract species features based on
+species co-occurrence, (iii) use these features to train a neural network to
+predict interactions, and (iv) apply this classifier to the original features to
+predict possibly missing interactions across the entire species pool. The entire
+analysis is presented in @fig:example, and the code to reproduce it is available
+at `https://osf.io/6jp4b/`; the entire example was carried out in *Julia 1.5.3*
+[@Bezanson2017JulFre], using the *Flux* machine learning framework
+[@Innes2018FluEle]. Note that this analysis is meant to serve as an *example
+only*, and should in practice be models should be fine-tuned according to the
 state of the art [*e.g.* @Goodfellow2016DeeLea]. As this data has no features
-(like species traits) on which to base a predictive model, we have aggregated all
-interactions into a binary metaweb [@Dunne2006NetStr] to represent cooccurance
-among species, and then we transform this coccurance matrix via probabilistic PCA
-[@Tipping1999ProPri], so as to create a number of latent features for the
-species in a context where the dataset is both unbalanced and likely to have
-many missing values. The goal is then  to predict whether an interaction between two
-species $i$ and species $j$ occurs, and is predicted to be  as `true` or
-`false` based on a features vector $v_{ij} = [v_i, v_j]$ where $v_i$ is the
-values of the selected features for the parasite and $v_j$ is the features of
-the host Here, $v_i$ is the first 15 components of the co-occurance PCA. This
-features vector is then fed into the input layer of a neural network, which uses
-three hidden layers with appropriate dropout rates ($0.5$), and finally an
-output layer whose result is softmaxed to pick the most likely outcome--- the
-interaction bit describing an interaction when equal to 1, and no interaction
-when equal to 0.
+(like species traits) on which to base a predictive model, we have aggregated
+all interactions into a binary metaweb [@Dunne2006NetStr] to represent
+cooccurance among species, and then we transform this coccurance matrix via
+probabilistic PCA [@Tipping1999ProPri], so as to create a number of latent
+features for the species in a context where the dataset is both unbalanced and
+likely to have many missing values. The goal is then to predict whether an
+interaction between two species $i$ and species $j$ occurs based on a features
+vector $v_{ij} = [v_i, v_j]$ where $v_i$ is the values of the selected features
+for the parasite and $v_j$ is the features of the host Here, $v_i$ is the first
+15 components of the co-occurance PCA. This features vector is then fed into the
+input layer of a neural network, which uses three hidden layers with appropriate
+dropout rates ($0.5$), and finally an output layer whose result is softmaxed to
+pick the most likely outcome--- the interaction bit describing an interaction
+when equal to 1, and no interaction when equal to 0.
 
 ![ (A) A conceptual overview of the process of network prediction. Beginning
 with data of observed interaction between species, we aim to predict the metaweb
@@ -78,37 +83,33 @@ clustering of the tSNE
 output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so absent
-interactions for species pair that was not observed to co-occur were removed from the data.
-This ensures that the network is trained only on the subset of the data for
-which we have minimal ecological information. Second, the batches of 16 items
-used for training were constrained to have at least 10 positive interactions.
-The reasoning for this choice was made based on three observations: the network
-is sparse (*i.e.* the prevalence of interactions is low); negative interactions
-have a chance of being false negatives due to lack of reporting in the field;
-there are no true negative interactions reported, *i.e.* interactions for which
-we know that they almost never happen. Therefore, slightly inflating the dataset
-with positive interactions enables us to counterbalance these biases.
+in two ways: First by selecting features so absent interactions for species pair
+that was not observed to co-occur were removed from the data. This ensures that
+the network is trained only on the subset of the data for which we have actual
+information about the interaction. Second, the batches of 16 items used for
+training were constrained to have at least 10 positive interactions. The
+reasoning for this choice was made based on three observations: the network is
+sparse, meaning negative interactions have a chance of being false negatives due
+to lack of reporting in the field, and there is no way to ensure an interaction
+not observed to occur is a true negative. Slightly inflating the dataset with
+positive interactions enables us to counterbalance these biases.
 
 After the training ($2.5\times 10^4$ epochs in @fig:example), our model reached
 an accuracy of $\approx 0.8$, with no marked deviation between the training and
 testing sets (respectively 80% and 20% of the data), suggesting no to minimal
-overfitting, and is replicable across random partition of test and training
+overfitting, which is replicable across random partitions of test and training
 sets. Applying this model to the entire dataset (including species pairs never
 observed co-occuring in the dataset) identified 1831 new possible interactions
 -- 382 of which were in pairs of species never considered prior. This suggests
 that meaningful information about ecological interactions is structured within
-network data, and our core argument here is that we should embrace the
-prediction of species interaction networks as a worthy topic of concept , and
-specifically strive to adopt an explicitly spatial and temporal perspective on
-this question. Now, the question becomes: home do we make our prediction of
-ecological networks _better_?
+network data. Now, the question becomes: home do we make our prediction of
+interaction networks _better_?
 
 ## Challenges: the many constraints on prediction
 
 ### Ecological network data are scarce and hard to obtain
 
-At the moment, our understanding is primarily limited by the availability of
+At the moment, we are primarily limited by the availability of
 data. Although we have seen a growth in species occurrence data, this growth is
 much slower for ecological interactions because species interactions are
 challenging to sample comprehensively [@Bennett2019PotPit; @Jordano2016SamNet]
@@ -144,23 +145,23 @@ spatiotemporal variation in community composition
 
 This scarcity of data limits the range of computational tools than can be used
 by network ecologists. Most deep learning methods, for instance, are very data
-expensive. The paucity of data is compounded by a collection of biases that can
-be found in existing datasets. Species interaction datasets are typically
-dominated by food webs, pollination, and host-parasite networks
-[@Ings2009EcoNet; @Poisot2020EnvBia]. This could prove to be a limiting factor
-when trying to understand or predict networks of *underrepresented* interaction
-types or when trying to integrate networks of different types
-[@Fontaine2011EcoEvo], especially given the inherent structural variation of
-ecological networks [@Michalska-Smith2019TelEco]. This stresses the need for an
-integrated, flexible, and data-efficient set of computational tools which will
-allow us to predict ecological networks accurately from existing and imperfect
-datasets, but also enable us to perform model validation and comparison with
-more flexibility than existing tools. We argue that @fig:example is an example
-of the promise of these tools *even* when facing datasets of small size. When
-carefully controlling for overfitting machine learning systems are at least
-adequate at generalizing. The ability to extract and engineer features also
-serves to bolster our predictive power. In short, the current lack of massive
-datasets must not be an obstacle to prediction; it is an ideal testing ground to
+expensive. The paucity of data is compounded by a collection of biases in
+existing datasets. Species interaction data are typically dominated by food
+webs, pollination, and host-parasite networks [@Ings2009EcoNet;
+@Poisot2020EnvBia]. This could prove to be a limiting factor when trying to
+understand or predict networks of underrepresented interaction types or when
+trying to integrate networks of different types [@Fontaine2011EcoEvo],
+especially given their inherent structural variation
+[@Michalska-Smith2019TelEco]. This stresses the need for an integrated,
+flexible, and data-efficient set of computational tools which will allow us to
+predict ecological networks accurately from existing and imperfect datasets, but
+also enable us to perform model validation and comparison with more flexibility
+than existing tools. We argue that @fig:example is an example of the promise of
+these tools *even* when facing datasets of small size. When carefully
+controlling for overfitting machine learning systems are at least adequate at
+generalizing. The ability to extract and engineer features also serves to
+bolster our predictive power. In short, the current lack of massive datasets
+must not be an obstacle to prediction; it is an ideal testing ground to
 understand how little data is sufficient to obtain actionable predictions.
 
 ### Scaling-up predictions requires scaled-up data
@@ -208,45 +209,38 @@ with a movement towards standardising data collection protocols (e.g.
 [DarwinCore](https://www.tdwg.org))---which facilitates interoperability and
 integration of datasets---as well as a growing interest at the government level
 [@Scholes2012BuiGlo] paints a positive picture for data access and usability in
-the coming years. If we wish to predict the interactions between species we have
-not observed together, using our knowledge of the structure of ecological
-networks is one of our most useful assets. We are able to infer species
-interactions using proxies such as traits, phylogenies, and geographical data,
-among others [@Morales-Castilla2015InfBio]. Drawing on further information about
-the what contributes to the realization of an interaction (abundance, traits
-matching in space and time) would further improve these predictions
-[@Poisot2016StrPro].
+the coming years.
 
 In turn, this effort is supported by a thriving ecosystem of data sources and
-computational tools. Machine learning encompasses a broad variety of techniques
-applied with or without human supervision. These techniques can often be more
-flexible and perform better than classical statistical methods, and can achieve
-a very high level of accuracy in many predictive and classification tasks in a
+novel tools. Machine learning encompasses a broad variety of techniques applied
+with or without human supervision. These techniques can often be more flexible
+and perform better than classical statistical methods, and can achieve a very
+high level of accuracy in many predictive and classification tasks in a
 relatively short amount of time [e.g. @Cutler2007RanFor; @Krizhevsky2017ImaCla].
 Increasing computing power combined with recent advances in machine learning
 techniques and applications shows promise in ecology and environmental science
-(see @Christin2019AppDee for an overview). Moreover, ongoing developments in the
-field of artificial intelligence are aimed at using deep learning more
-efficiently in low-data regimes [e.g. @Antoniou2018DatAug] and with unbalanced
-datasets [@Chawla2010DatMin]. Machine learning is emerging as the new standard
-in computational ecology in general [@Olden2008MacLea; @Christin2019AppDee], and
-in network ecology in-particular [@Bohan2017NexGlo], as long as sufficient
-relevant data are available. Many ecological and evolutionary processes underlie
-species interactions and the structure of their ecological networks [e.g.
-@Vazquez2009UniPat; @Segar2020RolEvo]. It can thus be difficult to choose
-relevant variables and model species interactions networks explicitly. A
-promising application of machine learning in natural sciences is
+(see @Christin2019AppDee for an overview). Moreover, ongoing developments in
+deep learning are aimed at improvement in low-data regimes and with unbalanced
+datasets [@Antoniou2018DatAug; @Chawla2010DatMin]. Considering the current
+biases in network ecology [@Poisot2020EnvBia] and the scarcity of data of
+species interactions, the prediction of ecological networks will undoubtedly
+benefit from these improvements. Machine learning methods are emerging as the
+new standard in computational ecology in general [@Olden2008MacLea;
+@Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo],
+as long as sufficient relevant data are available. As many ecological and
+evolutionary processes underlie species interactions and the structure of their
+ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo], it can be
+difficult to choose relevant variables and model species interactions networks
+explicitly. A promising application of machine learning in natural sciences is
 Scientific-Machine Learning (SciML), a framework that combines machine learning
-with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif]. Considering
-the current biases in network ecology [@Poisot2020EnvBia] and the scarcity of
-data of species interactions, the prediction of ecological networks will
-undoubtedly benefit from these improvements. Many studies have used machine
-learning models specifically with ecological interactions. Relevant examples
-include species traits used to predict interactions and infer trait-matching
-rules [@Desjardins-Proulx2017EcoInt; @Pichler2020MacLea], automated discovery of
-food webs [@Bohan2011AutDis], reconstruction of ecological networks using
-next-generation sequencing data [@Bohan2017NexGlo], and network inference from
-presence-absence data [@Sander2017EcoNet].
+with mechanistic models [@Chuang2018AdvCon; @Rackauckas2020UniDif].  Many
+studies have used machine learning models specifically with ecological
+interactions. Relevant examples include species traits used to predict
+interactions and infer trait-matching rules [@Desjardins-Proulx2017EcoInt;
+@Pichler2020MacLea], automated discovery of food webs [@Bohan2011AutDis],
+reconstruction of ecological networks using next-generation sequencing data
+[@Bohan2017NexGlo], and network inference from presence-absence data
+[@Sander2017EcoNet].
 
 
 # A Primer on Predicting Ecological Networks
@@ -272,9 +266,9 @@ networks.](figures/conceptual_v3.png){#fig:conceptual}
 Models are used for many purposes, and the term "model" embodies a wide variety
 of meanings in scientific discourse. All models can be thought of as a function,
 $f$, that takes a set of inputs $x$ (also called features, descriptors, or
-independent variables) and some parameters $\theta$, and maps them to predicted
+independent variables) and parameters $\theta$, and maps them to predicted
 output states $y$ (also called label, response, or dependent variable) based on
-the input to the model: $y=f(x,\theta)$. However, any given model $f$ can be
+the input to the model: $y=f(x,\theta)$. However, a given model $f$ can be
 used for either descriptive or predictive purposes. Many forms of scientific
 inquiry are based around using models _descriptively_ (also called inference,
 the inverse problem, fitting a model, or training a model)
@@ -291,7 +285,7 @@ to determine its "significance" in influencing the outcome. Models designed for
 inference have utility, however, in order for ecology to develop as a predictive
 science [@Evans2012PreEco], interest has grown in developing models that are
 used not just for description of data, but also for prediction. Predictive
-models use _the forward problem_, where the aim is to predict new values of the
+models are based in _the forward problem_, where the aim is to predict new values of the
 output $y$ given an input $x$ and our estimate value of $\theta$
 [@Stouffer2019AllEco]. Because the forward problem relies on an estimate of
 $\theta$, then, the problem of inference is nested within the forward problem
