@@ -375,7 +375,7 @@ are typically used to represent food webs), *bipartite networks* where there are
 two pools of species, and all interactions occur between species in each pool,
 are typically used for pairwise interactions (e.g. hosts and parasites), and
 *k-partite networks,* which serve as a way to expand to more than two discrete
-sets of interacting species (e.g. parasitoid webs, seed dispersal networks, and
+sets of interacting species (e.g. some parasitoid webs, seed dispersal networks, and
 pollination networks) [@Pocock2012RobRes].
 
 ### What about interaction _strength_?
@@ -501,28 +501,6 @@ lumped data at the species level or trophic group, depending on data
 availability [@Barnes2018EneFlu; @Berlow2009SimPre].
 
 
-### What about indirect and higher-order interactions?
-
-Although network ecology often assumes that interactions go strictly from one
-node to the other, the web of life is made up of a variety of interactions.
-Indirect interactions---either higher-order interactions between species, or
-interaction strengths that themselves interact --- have gained interest in recent
-years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool to
-describe these situations is hypergraphs: hypergraphs are the generalization of
-a graph, allowing a broad yet manageable approach to complex interactions
-[@Carletti2020DynSys], allowing for particular interactions to occur beyond a
-pair of nodes. An additional degree of complexity is introduced by multi-layer
-networks [@Hutchinson2019SeeFor]. Multi-layer networks include edges across
-"variants" of the networks (timepoints, locations, or environments). These can
-be particularly useful to account for the metacommunity structure
-[@Gross2020ModMod], or to understand how dispersal can inform conservation
-action [@Albert2017AppNet].  Ecological networks are intrinsically multi-layered
-[@Pilosof2017MulNat]. However, *prima facie*, increasing the dimensionality of the object
-we need to predict (the multiple layers rather than a single network) makes
-the problem more complicated. Yet, mutli-layer approaches improve prediction in social networks [@Jalili2017LinPre;
-@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful going forward.
-
-
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
 If we use different trait-based proxies to predict
@@ -541,6 +519,30 @@ predicting behavioral traits like foraging behavior [@Bartomeus2016ComFra], and
 at this scale we may need to consider abundance's effect on probability of an
 encounter [@Wells2013SpeInt].
 
+
+### What about indirect and higher-order interactions?
+
+Although network ecology often assumes that interactions go strictly from one
+node to the other, the web of life is made up of a variety of interactions.
+Indirect interactions---either higher-order interactions between species, or
+interaction strengths that themselves interact --- have gained interest in
+recent years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool
+to describe these situations is hypergraphs: hypergraphs are the generalization
+of a graph, allowing a broad yet manageable approach to complex interactions
+[@Carletti2020DynSys], allowing for particular interactions to occur beyond a
+pair of nodes. An additional degree of complexity is introduced by multi-layer
+networks [@Hutchinson2019SeeFor]. Multi-layer networks include edges across
+"variants" of the networks (timepoints, locations, or environments). These can
+be particularly useful to account for the metacommunity structure
+[@Gross2020ModMod], or to understand how dispersal can inform conservation
+action [@Albert2017AppNet].  Ecological networks are intrinsically multi-layered
+[@Pilosof2017MulNat]. However, *prima facie*, increasing the dimensionality of
+the object we need to predict (the multiple layers rather than a single network)
+makes the problem more complicated. Yet, mutli-layer approaches improve
+prediction in social networks [@Jalili2017LinPre; @Najari2019LinPre;
+@Yasami2018NovMul], and they may prove useful going forward.
+
+
 ## Space
 
 Although networks were initially used to describe the interactions *within* a
@@ -557,18 +559,17 @@ and edges). Interestingly, variation in the structural properties of ecological
 networks primarily responds to changes in the size of the network. The number of
 links in ecological networks scales with the number of species
 [@MacDonald2020RevLin; @Brose2004UniSpa], and connectance and size drive the
-rest of network structure [@Poisot2014WheEco;
-@Dunne2002FooStr; @Riede2010ScaFoo]. Species turnover in space results in
-changes in the composition of ecological networks. But, this is not the only
-reason network composition varies [@Poisot2015SpeWhy]. Intraspecific variation
-can result in interaction turnovers without changes in species composition
+rest of network structure [@Poisot2014WheEco; @Dunne2002FooStr;
+@Riede2010ScaFoo]. Species turnover in space results in changes in the
+composition of ecological networks. But, this is not the only reason network
+composition varies [@Poisot2015SpeWhy]. Intraspecific variation can result in
+interaction turnovers without changes in species composition
 [@Bolnick2011WhyInt]. Similarly, changes in species abundances can lead to
 variation in interaction strengths [@Canard2014EmpEva; @Vazquez2007SpeAbu].
 Variation in the abiotic environment and indirect interactions
-[@Golubski2016EcoNet] could modify the occurrence and strength of
-individual interactions. Despite this, empirical networks tend to share a common
-backbone [@Mora2018IdeCom] and functional composition [@Dehling2020SimCom]
-across space.
+[@Golubski2016EcoNet] could modify the occurrence and strength of individual
+interactions. Despite this, empirical networks tend to share a common backbone
+[@Mora2018IdeCom] and functional composition [@Dehling2020SimCom] across space.
 
 ### How do we predict what the species pool at a particular location is?
 
