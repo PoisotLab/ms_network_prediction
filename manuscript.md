@@ -36,40 +36,34 @@ approach.
 The core premise of this manuscript is that ecological networks can be
 predicted. In this section we provide a proof-of-concept, in which we use data
 from @Hadfield2014TalTwo describing 51 host-parasite networks, where not all
-species pairs co-occur across sites.
-
-
-This implies that there may be "negative
+species pairs co-occur across sites. This implies that there may be "negative
 associations" --- interactions between species that might be biologically
 feasible but not observed because the two species have not been observed
-co-occurring.
-
-
-To do this we (i) aggregate a series of host-parasite interaction networks
-collected across space into a metaweb, (ii) extract species features based on
-species co-occurrence, (iii) use these features to train a neural network to
-predict interactions, and (iv) apply this classifier to the original features to
-predict possibly missing interactions across the entire species pool. The entire
-analysis is presented in @fig:example, and the code to reproduce it is available
-at `https://osf.io/6jp4b/`; the entire example was carried out in *Julia 1.5.3*
-[@Bezanson2017JulFre], using the *Flux* machine learning framework
-[@Innes2018FluEle]. Note that this analysis is meant to serve as an *example
-only*, and should in practice be models should be fine-tuned according to the
-state of the art [*e.g.* @Goodfellow2016DeeLea]. As this data has no features
-(like species traits) on which to base a predictive model, we have aggregated
-all interactions into a binary metaweb [@Dunne2006NetStr] to represent
-cooccurance among species, and then we transform this coccurance matrix via
-probabilistic PCA [@Tipping1999ProPri], so as to create a number of latent
-features for the species in a context where the dataset is both unbalanced and
-likely to have many missing values. The goal is then to predict whether an
-interaction between two species $i$ and species $j$ occurs based on a features
-vector $v_{ij} = [v_i, v_j]$ where $v_i$ is the values of the selected features
-for the parasite and $v_j$ is the features of the host Here, $v_i$ is the first
-15 components of the co-occurance PCA. This features vector is then fed into the
-input layer of a neural network, which uses three hidden layers with appropriate
-dropout rates ($0.5$), and finally an output layer whose result is softmaxed to
-pick the most likely outcome--- the interaction bit describing an interaction
-when equal to 1, and no interaction when equal to 0.
+co-occurring. To do this we (i) aggregate a series of host-parasite interaction
+networks collected across space into a metaweb, (ii) extract species features
+based on species co-occurrence, (iii) use these features to train a neural
+network to predict interactions, and (iv) apply this classifier to the original
+features to predict possibly missing interactions across the entire species
+pool. The entire analysis is presented in @fig:example, and the code to
+reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
+carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
+learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
+as an *example only*, and should in practice be models should be fine-tuned
+according to the state of the art [*e.g.* @Goodfellow2016DeeLea]. As this data
+has no features (like species traits) on which to base a predictive model, we
+have aggregated all interactions into a binary metaweb [@Dunne2006NetStr] to
+represent cooccurance among species, and then we transform this coccurance
+matrix via probabilistic PCA [@Tipping1999ProPri], so as to create a number of
+latent features for the species in a context where the dataset is both
+unbalanced and likely to have many missing values. The goal is then to predict
+whether an interaction between two species $i$ and species $j$ occurs based on a
+features vector $v_{ij} = [v_i, v_j]$ where $v_i$ is the values of the selected
+features for the parasite and $v_j$ is the features of the host Here, $v_i$ is
+the first 15 components of the co-occurance PCA. This features vector is then
+fed into the input layer of a neural network, which uses three hidden layers
+with appropriate dropout rates ($0.5$), and finally an output layer whose result
+is softmaxed to pick the most likely outcome--- the interaction bit describing
+an interaction when equal to 1, and no interaction when equal to 0.
 
 ![ (A) A conceptual overview of the process of network prediction. Beginning
 with data of observed interaction between species, we aim to predict the metaweb
