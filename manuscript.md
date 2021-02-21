@@ -266,9 +266,9 @@ networks.](figures/conceptual_v3.png){#fig:conceptual}
 Models are used for many purposes, and the term "model" embodies a wide variety
 of meanings in scientific discourse. All models can be thought of as a function,
 $f$, that takes a set of inputs $x$ (also called features, descriptors, or
-independent variables) and some parameters $\theta$, and maps them to predicted
+independent variables) and parameters $\theta$, and maps them to predicted
 output states $y$ (also called label, response, or dependent variable) based on
-the input to the model: $y=f(x,\theta)$. However, any given model $f$ can be
+the input to the model: $y=f(x,\theta)$. However, a given model $f$ can be
 used for either descriptive or predictive purposes. Many forms of scientific
 inquiry are based around using models _descriptively_ (also called inference,
 the inverse problem, fitting a model, or training a model)
@@ -285,7 +285,7 @@ to determine its "significance" in influencing the outcome. Models designed for
 inference have utility, however, in order for ecology to develop as a predictive
 science [@Evans2012PreEco], interest has grown in developing models that are
 used not just for description of data, but also for prediction. Predictive
-models use _the forward problem_, where the aim is to predict new values of the
+models are based in _the forward problem_, where the aim is to predict new values of the
 output $y$ given an input $x$ and our estimate value of $\theta$
 [@Stouffer2019AllEco]. Because the forward problem relies on an estimate of
 $\theta$, then, the problem of inference is nested within the forward problem
