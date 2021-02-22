@@ -10,6 +10,7 @@
       ],
       "familyname": "Strydom",
       "givennames": "Tanya",
+      "status": ["equal"],
       "orcid": "0000-0001-6067-1349"
     },
     {
@@ -19,6 +20,9 @@
       ],
       "familyname": "Catchen",
       "givennames": "Michael D.",
+      "status": [
+        "equal"
+      ],
       "orcid": "0000-0002-6506-6487"
     },
     {
@@ -101,6 +105,7 @@
       "familyname": "Poisot",
       "givennames": "Timothée",
       "email": "timothee.poisot@umontreal.ca",
+      "status": ["corresponding"],
       "orcid": "0000-0002-0735-5184"
     }
   ],
