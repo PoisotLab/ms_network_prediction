@@ -21,11 +21,15 @@ ${ _preprint() }
 ${ authors:_list_authors()[, ] }
 \vskip 1em
 ${ institutions:_list_institutions()[; ] }\\
-${ for(authors) }
-${ if(it.email) }
-\textsuperscript{*}\,\,\texttt{${ it.email }}
+${ if(metadata.equalcontributions) }
+${ metadata.equalcontributions:_list_institutions()[; ] }\\
 ${ endif }
-${ endfor }}
+\vskip 1em
+\textbf{Correspondance to:}\\
+${ for(metadata.corresponding) }
+${ metadata.corresponding.given } ${ metadata.corresponding.family } --- \texttt{${ metadata.corresponding.email }}\\
+${ endfor }
+}
 \end{flushleft}
 
 \vskip 2em
