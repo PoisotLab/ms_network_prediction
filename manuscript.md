@@ -21,23 +21,26 @@ models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
 @Seibold2018NecMul].
 
-Methods for predicting interactions between species exist, yet they remain
-limited because they are based around mechanisms represented at a single scale
-(position in the trophic niche, phylogenetic matching, functional traits, and so
-on). Species interaction networks are the product of ecological and evolutionary
+Methods for predicting interactions between species exist, but can be limited in
+that they are often built around mechanisms represented at a single
+organisational scale: position in the trophic niche [@Gravel2013InfFoo;
+@Petchey2008SizFor], phylogenetic matching [@Pomeranz2018InfPre;
+@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], and so on.
+Species interaction networks are the product of ecological and evolutionary
 mechanisms interacting across spatial and temporal scales. The interwoven nature
 of these processes imposes structure on biodiversity data which is invisible
-when examined only through a single mechanism or at a single scale. Machine
-learning methods show promise in finding structure in data of this kind, and
-synthesizing mechanistic models from different frameworks
-[@Desjardins-Proulx2019ArtInt]. Here we provide a proof-of-concept to show how
-machine-learning models can enable unreasonably effective prediction of species
-interactions, whereby we construct a metaweb of host-parasite interactions
-across space. We then provide a primer on the relevant tools and methods that
-could be incorporated these models in the future, in order to account for the
-spatial, temporal, and climatic dimensions of network prediction
-[@Burkle2011FutPla], and propose a roadmap forward for how to improve
-predictions using this approach.
+when examined only through a single mechanism or at a single scale. In addition
+to the recent application ensemble models [@Becker2020PreWil], machine learning
+methods show promise to take the field in a radically different direction, by
+finding structure in data, and synthesizing mechanistic models from different
+learning frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
+proof-of-concept to show how machine-learning models can enable unreasonably
+effective prediction of species interactions, whereby we construct a metaweb of
+host-parasite interactions across space. We then provide a primer on the
+relevant tools and methods that could be incorporated these models in the
+future, in order to account for the spatial, temporal, and climatic dimensions
+of network prediction [@Burkle2011FutPla], and propose a roadmap forward for how
+to improve predictions using this approach.
 
 
 # Proof-of-Concept
@@ -59,24 +62,24 @@ pool. The entire analysis is presented in @fig:example, and the code to
 reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
 carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
 learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
-as an *example only*, and the models should in practice be fine-tuned
-according to the state of the art [*e.g.* @Goodfellow2016DeeLea]. As these data
-have no features (like species traits) on which to base a predictive model, we
-have aggregated all interactions into a binary metaweb [@Dunne2006NetStr] to
-represent co-occurance among species, and then we transform this coccurance
+as an *example only*, and the models should in practice be fine-tuned according
+to the state of the art [*e.g.* @Goodfellow2016DeeLea]. As these data have no
+features (like species traits) on which to base a predictive model, we have
+aggregated all interactions into a binary metaweb [@Dunne2006NetStr] to
+represent co-occurrence among species, and then we transform this co-occurrence
 matrix via probabilistic PCA [@Tipping1999ProPri], so as to create a number of
 latent features for the species in a context where the dataset is both
 unbalanced and likely to have many missing values. The goal is then to predict
 whether an interaction between two species $i$ and species $j$ occurs based on a
 features vector $v_{ij} = [v_i, v_j]$ where $v_i$ is the values of the selected
-features for the parasite and $v_j$ is the features of the host Here, $v_i$ is
-the first 15 components of the co-occurance PCA. This features vector is then
+features for the parasite and $v_j$ is the features of the host. Here, $v_i$ is
+the first 15 components of the co-occurrence PCA. This features vector is then
 fed into the input layer of a neural network, which uses three hidden layers
 with appropriate dropout rates ($0.5$), and finally an output layer whose result
-is softmaxed to pick the most likely outcome--- the interaction bit describing
+is softmaxed to pick the most likely outcome --- the interaction bit describing
 an interaction when equal to 1, and no interaction when equal to 0.
 
-![ (A) A conceptual overview of the process of network prediction. Beginning
+![(A) A conceptual overview of the process of network prediction. Beginning
 with data of observed interaction between species, we aim to predict the metaweb
 of interaction across the entire species pool, even those that have not been
 observed together. (B) Proof-of-Concept: An empirical network [from
@@ -88,16 +91,17 @@ clustering of the tSNE
 output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so absent interactions for a species pair
-that was not observed to co-occur were removed from the data. This ensures that
-the network is trained only on the subset of the data for which we have actual
-information about the interaction. Second, the batches of 16 items used for
-training were constrained to have at least 10 positive interactions. The
+in two ways: First by selecting features so absent interactions for a species
+pair that was not observed to co-occur were removed from the data. This ensures
+that the network is trained only on the subset of the data for which we have
+actual information about the interaction. Second, the batches of 16 items used
+for training were constrained to have at least 10 positive interactions. The
 reasoning for this choice was made based on three observations: the network is
 sparse, meaning negative interactions have a chance of being false negatives due
 to lack of reporting in the field, and there is no way to ensure an interaction
 not observed to occur is a true negative. Slightly inflating the dataset with
-positive interactions enables us to counterbalance these biases.
+positive interactions enables us to counterbalance these biases
+[@Chawla2010DatMin].
 
 After the training ($2.5\times 10^4$ epochs in @fig:example), our model reached
 an accuracy of $\approx 0.8$, with no marked deviation between the training and
@@ -638,7 +642,7 @@ Forecasting species interactions are critical for informing ecosystem management
 shape species distributions at both local and broad spatial scales, and including
 interactions in SDM models typically improves predictive performance
 [@Araujo2007ImpBio; @Wisz2013RolBio; @Pigot2013SpeInt]. However, these tend to rely on
-approaches involving estimating pairwise dependencies based on cooccurance,
+approaches involving estimating pairwise dependencies based on cooccurrence,
 using surrogates for biotic-interaction gradients, and hybridizing SDMs with
 dynamic models [@Wisz2013RolBio]. Most existing models to predict the future
 distribution of species ignore interactions [@Urban2016ImpFor]. Changes in
