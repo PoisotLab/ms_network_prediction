@@ -461,7 +461,9 @@ role of that species in the network [@Becker2020PreWil]. Species close together
 in the latent space should interact with similar set of species
 [@Rossberg2006FooWeb; @Rohr2010ModFoo]. However, these models are sensitive to
 sampling biases as they are limited to species for which there is already
-interaction data [@Becker2020PreWil].
+interaction data [@Becker2020PreWil], and as a result a methodological breakthough
+is needed to extend these models to species for which there is little or no interaction data.
+
 
 ### How do we determine what interaction networks are feasible?
 
