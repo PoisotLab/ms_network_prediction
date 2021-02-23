@@ -19,7 +19,7 @@ contemporary actions have long-term, low-predictability consequences
 [@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
 models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
-@Seibold2018NecMul]. Here we provide a proof-on-concept to show how
+@Seibold2018NecMul]. Here we provide a proof-of-concept to show how
 machine-learning models can enable unreasonably effective prediction of species
 interactions, whereby we construct a metaweb of host-parasite interactions across
 space. We then provide a primer on the relevant tools and methods that could be
@@ -48,11 +48,11 @@ pool. The entire analysis is presented in @fig:example, and the code to
 reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
 carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
 learning framework [@Innes2018FluEle]. Note that this analysis is meant to serve
-as an *example only*, and should in practice be models should be fine-tuned
-according to the state of the art [*e.g.* @Goodfellow2016DeeLea]. As this data
-has no features (like species traits) on which to base a predictive model, we
+as an *example only*, and the models should in practice be fine-tuned
+according to the state of the art [*e.g.* @Goodfellow2016DeeLea]. As these data
+have no features (like species traits) on which to base a predictive model, we
 have aggregated all interactions into a binary metaweb [@Dunne2006NetStr] to
-represent cooccurance among species, and then we transform this coccurance
+represent co-occurance among species, and then we transform this coccurance
 matrix via probabilistic PCA [@Tipping1999ProPri], so as to create a number of
 latent features for the species in a context where the dataset is both
 unbalanced and likely to have many missing values. The goal is then to predict
@@ -77,7 +77,7 @@ clustering of the tSNE
 output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so absent interactions for species pair
+in two ways: First by selecting features so absent interactions for a species pair
 that was not observed to co-occur were removed from the data. This ensures that
 the network is trained only on the subset of the data for which we have actual
 information about the interaction. Second, the batches of 16 items used for
@@ -221,7 +221,7 @@ species interactions, the prediction of ecological networks will undoubtedly
 benefit from these improvements. Machine learning methods are emerging as the
 new standard in computational ecology in general [@Olden2008MacLea;
 @Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo],
-as long as sufficient relevant data are available. As many ecological and
+as long as sufficient, relevant data are available. As many ecological and
 evolutionary processes underlie species interactions and the structure of their
 ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo], it can be
 difficult to choose relevant variables and model species interactions networks
@@ -241,7 +241,7 @@ reconstruction of ecological networks using next-generation sequencing data
 
 Below we provide a primer on the background concepts necessary to build
 models to predict species interaction networks, with a focus
-on using machine learning approaches in the modeling process. We also present
+on using machine learning approaches in the modelling process. We also present
 a conceptual roadmap (@fig:conceptual) which we envisage to be the path toward
 improving our prediction of species interaction networks, and developing spatially
 explicit models of network structure.
@@ -374,7 +374,7 @@ pollination networks) [@Pocock2012RobRes].
 
 ### What about interaction _strength_?
 
-Species interaction networks can also be used as means to quantify and
+Species interaction networks can also be used as a means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative
 presence or absence of an interaction, is a continuous measurement which attempts
 to quantify the effect of one species on another. Interaction strength can
@@ -438,7 +438,7 @@ functional traits could cause interactions to be conserved at some evolutionary
 scales, and therefore predictions of interaction could be informed by
 phylogenetic analyses [@Davies2021EcoRed; @Elmasri2020HieBay; @Gomez2010EcoInt].
 Phylogenetic matching in bipartite networks is consistent across scales
-[@Poisot2018IntRet], even absent strong selective pressure
+[@Poisot2018IntRet], even in the absence of strong selective pressure
 [@Coelho2017NeuBio].
 
 A separate family of methods are based on network embedding (as in the
@@ -487,8 +487,7 @@ levels of biological organization [@Kefi2019AdvOur; @Gravel2016StaCom].
 In some contexts, interaction strength can be estimated via functional foraging
 [@Portalier2019MecPre], where the primary basis for inferring interaction is
 foraging behavior like searching, capture and handling times. In food-webs,
-metabolic based models use body mass, metabolic demands, and energy loss are
-used to infer energy fluxes between organisms [@Yodzis1992BodSiz;
+metabolic based models use body mass, metabolic demands, and energy loss to infer energy fluxes between organisms [@Yodzis1992BodSiz;
 @Berlow2009SimPre].  Food-web energetics models can be incorporated at various
 resolutions for a specific network, ranging from individual-based data to more
 lumped data at the species level or trophic group, depending on data
@@ -586,7 +585,7 @@ example, variation in species richness across space can constrain assemblage
 predictions [@DAmen2015UsiSpe].
 
 The next step is to constrain distribution predictions using network properties.
-This build on previous calls to adopt a probabilistic view: a probabilistic
+This builds on previous calls to adopt a probabilistic view: a probabilistic
 species pool [@Karger2016DelPro], and probabilistic interactions through
 Bayesian networks [@Staniczenko2017LinMac]. @Blanchet2020CooNot argue that the
 probabilistic view avoids confusion between interactions and co-occurrences, but
