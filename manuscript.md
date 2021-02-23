@@ -28,7 +28,7 @@ matching [@Davies2021EcoRed], and so on. Biodiversity data is the product of eco
 and evolutionary mechanisms interacting across spatial and temporal scales. The
 interwoven nature of these processes imposes structure which is invisible when
 examined only at a single scale, but machine learning methods show promise in
-finding structure in data if this kind, and synthesizing mechanistic models from
+finding structure in data of this kind, and synthesizing mechanistic models from
 different frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
 proof-of-concept to show how machine-learning models can enable unreasonably
 effective prediction of species interactions, whereby we construct a metaweb of
