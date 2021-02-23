@@ -19,14 +19,24 @@ contemporary actions have long-term, low-predictability consequences
 [@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
 models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
-@Seibold2018NecMul]. Here we provide a proof-of-concept to show how
-machine-learning models can enable unreasonably effective prediction of species
-interactions, whereby we construct a metaweb of host-parasite interactions across
-space. We then provide a primer on the relevant tools and methods that could be
-incorporated these models in the future, in order to account for the spatial,
-temporal, and climatic dimensions of network prediction [@Burkle2011FutPla],
-and propose a roadmap forward for how to improve predictions using this
-approach.
+@Seibold2018NecMul].
+
+Methods for predicting interactions between species exist, yet they remain
+limited because they are based around mechanistic models conceptualized at a
+single scale --- position in the trophic niche [@Albouy2019MarFis], phylogenetic
+matching [@Davies2021EcoRed, etc. Biodiversity data is the product of ecological
+and evolutionary mechanisms interacting across spatial and temporal scales. The
+interwoven nature of these processes imposes structure which is invisible when
+examined only at a single scale, but machine learning methods show promise in
+finding structure in data if this kind, and synthesizing mechanistic models from
+different frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
+proof-of-concept to show how machine-learning models can enable unreasonably
+effective prediction of species interactions, whereby we construct a metaweb of
+host-parasite interactions across space. We then provide a primer on the
+relevant tools and methods that could be incorporated these models in the
+future, in order to account for the spatial, temporal, and climatic dimensions
+of network prediction [@Burkle2011FutPla], and propose a roadmap forward for how
+to improve predictions using this approach.
 
 
 # Proof-of-Concept
