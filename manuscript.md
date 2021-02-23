@@ -24,7 +24,7 @@ of species interactions and the networks they form [@McCann2007ProBio;
 Methods for predicting interactions between species exist, yet they remain
 limited because they are based around mechanistic models conceptualized at a
 single scale --- position in the trophic niche [@Albouy2019MarFis], phylogenetic
-matching [@Davies2021EcoRed, etc. Biodiversity data is the product of ecological
+matching [@Davies2021EcoRed], and so on. Biodiversity data is the product of ecological
 and evolutionary mechanisms interacting across spatial and temporal scales. The
 interwoven nature of these processes imposes structure which is invisible when
 examined only at a single scale, but machine learning methods show promise in
