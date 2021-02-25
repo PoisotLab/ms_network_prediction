@@ -1,5 +1,5 @@
 ---
-  bibliography: [references.bib]
+bibliography: [references.bib]
 ---
 # Introduction
 
@@ -25,22 +25,23 @@ Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
 organisational scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic matching [@Pomeranz2018InfPre;
-@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], and so on.
-Species interaction networks are the product of ecological and evolutionary
-mechanisms interacting across spatial and temporal scales. The interwoven nature
-of these processes imposes structure on biodiversity data which is invisible
-when examined only through a single mechanism or at a single scale. In addition
-to the recent application ensemble models [@Becker2020PreWil], machine learning
-methods show promise to take the field in a radically different direction, by
-finding structure in data, and synthesizing mechanistic models from different
-learning frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
-proof-of-concept to show how machine-learning models can enable unreasonably
-effective prediction of species interactions, whereby we construct a metaweb of
-host-parasite interactions across space. We then provide a primer on the
-relevant tools and methods that could be incorporated these models in the
-future, in order to account for the spatial, temporal, and climatic dimensions
-of network prediction [@Burkle2011FutPla], and propose a roadmap forward for how
-to improve predictions using this approach.
+@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], or other network
+properties [@Terry2020FinMis; @Stock2017LinFil]. Species interaction networks
+are the product of ecological and evolutionary mechanisms interacting across
+spatial and temporal scales. The interwoven nature of these processes imposes
+structure on biodiversity data which is invisible when examined only through a
+single mechanism or at a single scale. In addition to the recent application
+ensemble models [@Becker2020PreWil], machine learning methods show promise to
+take the field in a radically different direction, by finding structure in data,
+and synthesizing mechanistic models from different learning frameworks
+[@Desjardins-Proulx2019ArtInt]. Here we provide a proof-of-concept to show how
+machine-learning models can enable unreasonably effective prediction of species
+interactions, whereby we construct a metaweb of host-parasite interactions
+across space. We then provide a primer on the relevant tools and methods that
+could be incorporated these models in the future, in order to account for the
+spatial, temporal, and climatic dimensions of network prediction
+[@Burkle2011FutPla], and propose a roadmap forward for how to improve
+predictions using this approach.
 
 
 # Proof-of-Concept
