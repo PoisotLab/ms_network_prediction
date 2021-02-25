@@ -30,7 +30,7 @@ Species interaction networks are the product of ecological and evolutionary
 mechanisms interacting across spatial and temporal scales. The interwoven nature
 of these processes imposes structure on biodiversity data which is invisible
 when examined only through a single mechanism or at a single scale. In addition
-to the recent application ensemble models [@Becker2020PreWil], machine learning
+to the recent application of ensemble models [@Becker2020PreWil], machine learning
 methods show promise to take the field in a radically different direction, by
 finding structure in data, and synthesizing mechanistic models from different
 learning frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
