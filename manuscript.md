@@ -431,12 +431,12 @@ models that account for network structure can "learn" this structure and
 reproduce it. Some recent models make interaction-level predictions [*e.g.*
 @Gravel2019BriElt]; these are not unlike stacked species distribution models,
 which are individually fit, but collectively outperformed by joint models or
-rule-based models. By relying on adequate testing of model performance of biases
-(*i.e.* optimizing not only accuracy, but paying attention to measures like
-false discovery and false omission rates), and developing models around a
-feedback loop between network and interaction prediction, it is likely that the
-quality of the predicted networks will be greatly improved compared to current
-models.
+rule-based models [@Zurell2020TesSpe]. By relying on adequate testing of model
+performance of biases (*i.e.* optimizing not only accuracy, but paying attention
+to measures like false discovery and false omission rates), and developing
+models around a feedback loop between network and interaction prediction, it is
+likely that the quality of the predicted networks will be greatly improved
+compared to current models.
 
 ### What network properties should we use to inform our predictions of interactions?
 
