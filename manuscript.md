@@ -1,5 +1,5 @@
 ---
-  bibliography: [references.bib]
+bibliography: [references.bib]
 ---
 # Introduction
 
@@ -25,7 +25,8 @@ Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
 organisational scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic matching [@Pomeranz2018InfPre;
-@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], and so on.
+@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], or other
+network properties [@Terry2020FinMis; @Stock2017LinFil].
 Species interaction networks are the product of ecological and evolutionary
 mechanisms interacting across spatial and temporal scales. The interwoven nature
 of these processes imposes structure on biodiversity data which is invisible
@@ -41,7 +42,6 @@ relevant tools and methods that could be incorporated these models in the
 future, in order to account for the spatial, temporal, and climatic dimensions
 of network prediction [@Burkle2011FutPla], and propose a roadmap forward for how
 to improve predictions using this approach.
-
 
 # Proof-of-Concept
 
@@ -422,6 +422,21 @@ interactions are possible. The realized structure of a network is the synthesis
 of the interactions forming the basis for network structure, and the network
 structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
+
+Another powerful argument for the joint prediction of networks and interactions
+is to reduce circularity and biases in the predictions. As an example, models
+like linear filtering [@Stock2017LinFil] generate probabilities of non-observed
+interactions existing, but do so based on measured network properties. Other
+models that account for network structure can "learn" this structure and
+reproduce it. Some recent models make interaction-level predictions [*e.g.*
+@Gravel2019BriElt]; these are not unlike stacked species distribution models,
+which are individually fit, but collectively outperformed by joint models or
+rule-based models. By relying on adequate testing of model performance of biases
+(*i.e.* optimizing not only accuracy, but paying attention to measures like
+false discovery and false omission rates), and developing models around a
+feedback loop between network and interaction prediction, it is likely that the
+quality of the predicted networks will be greatly improved compared to current
+models.
 
 ### What network properties should we use to inform our predictions of interactions?
 
