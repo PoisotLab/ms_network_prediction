@@ -309,8 +309,8 @@ modelling process.](figures/forecasting_v3.png){#fig:models}
 In order to build a predictive model under the Bayesian paradigm, one needs the
 following: first, **data**, split into features $\hat{x}$ and labels $\hat{y}$
 (@fig:models). Second, a **model** $f$, which maps features $x$ to labels
-$y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$. Third, a loss
-function $L(\hat{y}, y)$, which describes how far a model's prediction $y$ is
+$y$ as a function of parameters $\theta$, i.e. $y = f(x, \theta)$. Third, a **loss
+function** $L(\hat{y}, y)$, which describes how far a model's prediction $y$ is
 from an empirical estimate $\hat{y}$. Lastly, **priors** on parameters,
 $P(\theta)$. Often an important step before fitting a model is feature
 engineering: adjusting and reworking the predictors to better uncover
