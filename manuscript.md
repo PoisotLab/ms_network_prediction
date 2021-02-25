@@ -424,6 +424,21 @@ of the interactions forming the basis for network structure, and the network
 structure refining the possible interactions---"Part makes whole, and whole
 makes part" [@Levins1987DiaBio].
 
+Another powerful argument for the joint prediction of networks and interactions
+is to reduce circularity and biases in the predictions. As an example, models
+like linear filtering [@Stock2017LinFil] generate probabilities of non-observed
+interactions existing, but do so based on measured network properties. Other
+models that account for network structure can "learn" this structure and
+reproduce it. Some recent models make interaction-level predictions [*e.g.*
+@Gravel2019BriElt]; these are not unlike stacked species distribution models,
+which are individually fit, but collectively outperformed by joint models or
+rule-based models. By relying on adequate testing of model performance of biases
+(*i.e.* optimizing not only accuracy, but paying attention to measures like
+false discovery and false omission rates), and developing models around a
+feedback loop between network and interaction prediction, it is likely that the
+quality of the predicted networks will be greatly improved compared to current
+models.
+
 ### What network properties should we use to inform our predictions of interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet there
