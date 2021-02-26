@@ -21,6 +21,28 @@ models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
 @Seibold2018NecMul].
 
+A comprehensive and general approach is required because of the tremendous
+diversity of species interaction types --- and how difficult they may be to
+predict. @Haas2019MitBee, for example, show that mites of bumblebee are
+responding more to host taxonomy than to geographical factors. In mutualistic
+interactions, different categories of species can show different degree of
+interaction intimacy [@Guimaraes2007IntInt]; recent work by @Hembry2018DoeBio
+reveals that more intimate interactions are inherently more stable (and could be
+easier to predict), which nicely complements results by @Trojelsgaard2015GeoVar,
+namely that partner fidelity among mutualists are responding to life history,
+geography, and other factors. Other types of interaction have proven to be
+variable in their predictability: obligate parasites of rodents are more
+deterministic in their interactions than facultative ones [@Poisot2013FacObl],
+and a substantial fraction of fungal species can engage in opportunistic
+saprotrophy [@Smith2017GroEvi]. Facultative interactors are particularly
+important to predict, because they might represent evolutionary stepping stones
+towards obligate ones [@Luong2019FacPar]. Furthermore, the growing realization
+that interactions are changing drastically in response to almost all aspects of
+landscape modification [@Edwards2021TroLan; @Magioli2021DefLea;
+@Zhang2021PlaBre] should entice us to incorporate as many external data as
+possible in the prediction of networks, both extant (imputation) and future
+(forecasting).
+
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
 organisational scale: position in the trophic niche [@Gravel2013InfFoo;
