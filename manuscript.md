@@ -43,6 +43,8 @@ landscape modification [@Edwards2021TroLan; @Magioli2021DefLea;
 possible in the prediction of networks, both extant (imputation) and future
 (forecasting).
 
+**Paragraph on disease goes here**
+
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
 organisational scale: position in the trophic niche [@Gravel2013InfFoo;
