@@ -44,6 +44,9 @@ possible in the prediction of networks, both extant (imputation) and future
 (forecasting).
 
 **Paragraph on disease goes here**
+Understanding disease transmission requires different methodological approaches that deal with interaction complexity.
+Networks assessment of vector-borne diseases, which have several hosts and intricate transmission cycles, is one of the examples in the field of disease ecology research. 
+Few studies have implemented machine learning techniques for forecasting the incident cases of dengue, Chagas disease, rickettsiosis, leishmaniasis, as well as livestock and wildlife infectious diseases. [@Morand2020DisEcob ; Craft2015InfDisa ; Zhao2020MacLeaa ; Rengifo-Correa2017UndTraa; Stephens2009UsiBio]
 
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
