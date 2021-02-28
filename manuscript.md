@@ -30,7 +30,7 @@ interaction intimacy [@Guimaraes2007IntInt]; recent work by @Hembry2018DoeBio
 reveals that more intimate interactions are inherently more stable (and could be
 easier to predict), which nicely complements results by @Trojelsgaard2015GeoVar,
 namely that partner fidelity among mutualists are responding to life history,
-geography, and other factors. Other types of interaction have proven to be
+geography, and other factors. Other types of interactions have proven to be
 variable in their predictability: obligate parasites of rodents are more
 deterministic in their interactions than facultative ones [@Poisot2013FacObl],
 and a substantial fraction of fungal species can engage in opportunistic
