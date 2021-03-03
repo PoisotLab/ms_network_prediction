@@ -37,12 +37,13 @@ betacoronaviruses; @Becker2020PreWil, @Wardeh2021PreMam] has received much
 attention. Approaches relying on networks have been used for prediction of
 dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
 rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
-infectious diseases in livestock and wildlife [@Craft2015InfDisa]. Developing
-better models for interaction prediction will require assimilation of data from
-many sources [@Gibb2021DatPro], and the growing realization that interactions
-are changing drastically in response to landscape modification
-[@Edwards2021TroLan; @Magioli2021DefLea; @Zhang2021PlaBre] should entice us to
-incorporate an explicit spatial perspective on network prediction.
+infectious diseases in livestock and wildlife [@Craft2015InfDis]. Developing
+better models for interaction prediction will require assimilation of data from many
+sources [@Gibb2021DatPro], and the growing realization that interactions are
+changing drastically in response to landscape modification [@Edwards2021TroLan;
+@Magioli2021DefLea; @Zhang2021PlaBre] should entice us to incorporate an
+explicitly spatial perspective on network prediction.
+
 
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
