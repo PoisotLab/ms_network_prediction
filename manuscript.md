@@ -36,7 +36,7 @@ predicting potential hosts of novel disease [@Becker2020PreWil] has received
 much attention, and aims to build on existing network models for predicting
 dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
 rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
-infectious diseases in livestock and wildlife [@Craft2015InfDisa]. Developing
+infectious diseases in livestock and wildlife [@Craft2015InfDis]. Developing
 better models for interaction prediction will require assimilation of data from many
 sources [@Gibb2021DatPro], and the growing realization that interactions are
 changing drastically in response to landscape modification [@Edwards2021TroLan;
