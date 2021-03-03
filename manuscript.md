@@ -21,47 +21,27 @@ models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
 @Seibold2018NecMul].
 
-A comprehensive and general approach is required because of the tremendous
-diversity of species interaction types --- and how difficult they may be to
-predict. @Haas2019MitBee, for example, show that mites of bumblebee are
-responding more to host taxonomy than to geographical factors. In mutualistic
-interactions, different categories of species can show different degree of
-interaction intimacy [@Guimaraes2007IntInt]; recent work by @Hembry2018DoeBio
-reveals that more intimate interactions are inherently more stable (and could be
-easier to predict), which nicely complements results by @Trojelsgaard2015GeoVar,
-namely that partner fidelity among mutualists are responding to life history,
-geography, and other factors. Different types of interactions have proven to be
-variable in their predictability: obligate parasites of rodents are more
-deterministic in their interactions than facultative ones [@Poisot2013FacObl],
-and a substantial fraction of fungal species can engage in opportunistic
-saprotrophy [@Smith2017GroEvi]. Facultative interactors are particularly
-important to predict, because they might represent evolutionary stepping stones
-towards obligate ones [@Luong2019FacPar]. Furthermore, the growing realization
-that interactions are changing drastically in response to almost all aspects of
-landscape modification [@Edwards2021TroLan; @Magioli2021DefLea;
-@Zhang2021PlaBre] should entice us to incorporate as many external data as
-possible in the prediction of networks, both extant (imputation) and future
-(forecasting).
-
-<<<<<<< HEAD
-Understanding disease transmission requires different methodological approaches
-that deal with interaction complexity. Networks assessment of vector-borne
-diseases, which have several hosts and intricate transmission cycles, is one of
-the examples in the field of disease ecology research. Few studies have
-implemented machine learning techniques for forecasting the incident cases of
-dengue, Chagas disease, rickettsiosis, leishmaniasis, as well as livestock and
-wildlife infectious diseases. [@Morand2020DisEcob ; Craft2015InfDisa ;
-Zhao2020MacLeaa ; Rengifo-Correa2017UndTraa; Stephens2009UsiBio]
-=======
-**Paragraph on disease goes here**
-Understanding disease transmission requires different methodological approaches 
-that deal with interaction complexity. Networks assessment of vector-borne 
-diseases, which have several hosts and intricate transmission cycles, is one 
-of the examples in the field of disease ecology research. Few studies have 
-implemented machine learning techniques for forecasting the incident cases of 
-dengue, Chagas disease, rickettsiosis, leishmaniasis, as well as livestock and 
-wildlife infectious diseases [@Morand2020DisEcob; @Craft2015InfDisa; @Zhao2020MacLeaa; @Rengifo-Correa2017UndTraa; @Stephens2009UsiBio].
->>>>>>> 6e02580ea02c1b5a1ceedc6563adbded4890fb7b
+There is a tremendous diversity of species interaction types, highlighting the
+need for a comprehensive and general approach to interaction network prediction.
+Different types of interactions vary in their predictability. For example,
+obligate parasites are more deterministic in their interactions than facultative
+parasites [@Poisot2013FacObl], and a substantial number of fungal species engage
+in opportunistic saprotrophy [@Smith2017GroEvi]. Although facultative
+interactions are defined by the optional nature of their existence, they may
+prove important to predict as some suggest they represent evolutionary stepping
+stones towards obligation [@Luong2019FacPar]. In addition to this variance in
+predictability, the mechanisms that structure different types of interactions
+vary, and will require different data and approaches. For no particular reason,
+predicting potential hosts of novel disease [@Becker2020PreWil] has received
+much attention, and aims to build on existing network models for predicting
+dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
+rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
+infectious diseases in livestock and wildlife [@Craft2015InfDisa]. Developing
+better models for interaction prediction will require assimilation of data from many
+sources [@Gibb2021DatPro], and the growing realization that interactions are
+changing drastically in response to landscape modification [@Edwards2021TroLan;
+@Magioli2021DefLea; @Zhang2021PlaBre] should entice us to incorporate an
+explicitly spatial perspective on network prediction.
 
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
