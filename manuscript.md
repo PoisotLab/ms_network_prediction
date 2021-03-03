@@ -31,39 +31,40 @@ interactions are defined by the optional nature of their existence, they may
 prove important to predict as some suggest they represent evolutionary stepping
 stones towards obligation [@Luong2019FacPar]. In addition to this variance in
 predictability, the mechanisms that structure different types of interactions
-vary, and will require different data and approaches. For no particular reason,
-predicting potential hosts of novel disease [@Becker2020PreWil] has received
-much attention, and aims to build on existing network models for predicting
+vary, and will require different data and approaches. In the recent years,
+predicting potential hosts of novel disease [*e.g.* wildlife hosts of
+betacoronaviruses; @Becker2020PreWil, @Wardeh2021PreMam] has received much
+attention. Approaches relying on networks have been used for prediction of
 dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
 rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
 infectious diseases in livestock and wildlife [@Craft2015InfDisa]. Developing
-better models for interaction prediction will require assimilation of data from many
-sources [@Gibb2021DatPro], and the growing realization that interactions are
-changing drastically in response to landscape modification [@Edwards2021TroLan;
-@Magioli2021DefLea; @Zhang2021PlaBre] should entice us to incorporate an
-explicitly spatial perspective on network prediction.
+better models for interaction prediction will require assimilation of data from
+many sources [@Gibb2021DatPro], and the growing realization that interactions
+are changing drastically in response to landscape modification
+[@Edwards2021TroLan; @Magioli2021DefLea; @Zhang2021PlaBre] should entice us to
+incorporate an explicit spatial perspective on network prediction.
 
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
 organisational scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic matching [@Pomeranz2018InfPre;
-@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], or other
-network properties [@Terry2020FinMis; @Stock2017LinFil].
-Species interaction networks are the product of ecological and evolutionary
-mechanisms interacting across spatial and temporal scales. The interwoven nature
-of these processes imposes structure on biodiversity data which is invisible
-when examined only through a single mechanism or at a single scale. In addition
-to the recent application of ensemble models [@Becker2020PreWil], machine learning
-methods show promise to take the field in a radically different direction, by
-finding structure in data, and synthesizing mechanistic models from different
-learning frameworks [@Desjardins-Proulx2019ArtInt]. Here we provide a
-proof-of-concept to show how machine-learning models can enable unreasonably
-effective prediction of species interactions, whereby we construct a metaweb of
-host-parasite interactions across space. We then provide a primer on the
-relevant tools and methods that could be incorporated these models in the
-future, in order to account for the spatial, temporal, and climatic dimensions
-of network prediction [@Burkle2011FutPla], and propose a roadmap forward for how
-to improve predictions using this approach.
+@Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], or other network
+properties [@Terry2020FinMis; @Stock2017LinFil]. Species interaction networks
+are the product of ecological and evolutionary mechanisms interacting across
+spatial and temporal scales. The interwoven nature of these processes imposes
+structure on biodiversity data which is invisible when examined only through a
+single mechanism or at a single scale. In addition to the recent application of
+ensemble models [@Becker2020PreWil], machine learning methods show promise to
+take the field in a radically different direction, by finding structure in data,
+and synthesizing mechanistic models from different learning frameworks
+[@Desjardins-Proulx2019ArtInt]. Here we provide a proof-of-concept to show how
+machine-learning models can enable unreasonably effective prediction of species
+interactions, whereby we construct a metaweb of host-parasite interactions
+across space. We then provide a primer on the relevant tools and methods that
+could be incorporated these models in the future, in order to account for the
+spatial, temporal, and climatic dimensions of network prediction
+[@Burkle2011FutPla], and propose a roadmap forward for how to improve
+predictions using this approach.
 
 # Proof-of-Concept
 
