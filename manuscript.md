@@ -33,7 +33,7 @@ stones towards obligation [@Luong2019FacPar]. In addition to this variance in
 predictability, the mechanisms that structure different types of interactions
 vary, and will require different data and approaches. In the recent years,
 predicting potential hosts of novel disease [*e.g.* wildlife hosts of
-betacoronaviruses; @Becker2020PreWil, @Wardeh2021PreMam] has received much
+betacoronaviruses; @Becker2020PreWil; @Wardeh2021PreMam] has received much
 attention. Approaches relying on networks have been used for prediction of
 dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
 rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
