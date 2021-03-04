@@ -27,7 +27,7 @@ types of interactions vary in their predictability, both due to intrinsic
 variation in which interactions occur (e.g. obligate parasites are more
 deterministic in their interactions than facultative parasites
 [@Poisot2013FacObl; @Luong2019FacPar], a substantial number of fungal species engage in
- opportunistic saprotrophy [@Smith2017GroEvi]) and due to variation in
+ opportunistic saprotrophy [@Smith2017GroEvi] and due to variation in
 species abundances in space and time [@Poisot2015SpeWhy]. In addition to this
 variance in predictability, the mechanisms that structure interactions vary by
 interaction type, and different network types will require different data and
