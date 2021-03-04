@@ -21,29 +21,32 @@ models that enable prediction (for the present) and forecasting (for the future)
 of species interactions and the networks they form [@McCann2007ProBio;
 @Seibold2018NecMul].
 
-There is a tremendous diversity of species interaction types, highlighting the
-need for a comprehensive and general approach to interaction network prediction.
-Different types of interactions vary in their predictability. For example,
-obligate parasites are more deterministic in their interactions than facultative
-parasites [@Poisot2013FacObl], and a substantial number of fungal species engage
-in opportunistic saprotrophy [@Smith2017GroEvi]. Although facultative
-interactions are defined by the optional nature of their existence, they may
-prove important to predict as some suggest they represent evolutionary stepping
-stones towards obligation [@Luong2019FacPar]. In addition to this variance in
-predictability, the mechanisms that structure different types of interactions
-vary, and will require different data and approaches. In the recent years,
-predicting potential hosts of novel disease [*e.g.* wildlife hosts of
-betacoronaviruses; @Becker2020PreWil, @Wardeh2021PreMam] has received much
-attention. Approaches relying on networks have been used for prediction of
-dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
-rickettsiosis [@Morand2020DisEco], leishmaniasis [@Stephens2009UsiBio], and
-infectious diseases in livestock and wildlife [@Craft2015InfDis]. Developing
-better models for interaction prediction will require assimilation of data from many
-sources [@Gibb2021DatPro], and the growing realization that interactions are
-changing drastically in response to landscape modification [@Edwards2021TroLan;
-@Magioli2021DefLea; @Zhang2021PlaBre] should entice us to incorporate an
-explicitly spatial perspective on network prediction.
 
+Interaction networks are embodied in numerous forms: host and parasites, plants
+and pollinators, predators and prey, disease and host, and so on. Different
+types of interactions vary in their predictability, both due to intrinsic
+variation in which interactions occur (e.g. obligate parasites are more
+deterministic in their interactions than facultative parasites
+[@Poisot2013FacObl; @Luong2019FacPar], a substantial number of fungal species engage in
+ opportunistic saprotrophy [@Smith2017GroEvi]) and due to variation in
+species abundances in space and time [@Poisot2015SpeWhy]. In addition to this
+variance in predictability, the mechanisms that structure interactions vary by
+interaction type, and different network types will require different data and
+approaches. In the recent years, predicting potential hosts of novel disease
+[*e.g.* wildlife hosts of betacoronaviruses; @Becker2020PreWil,
+@Wardeh2021PreMam] has received much attention. Approaches relying on networks
+have been used for prediction of dengue [@Zhao2020MacLea], Chagas disease
+[@Rengifo-Correa2017UndTra], Rickettsiosis [@Morand2020DisEco], Leishmaniasis
+[@Stephens2009UsiBio], and infectious diseases in livestock and wildlife
+[@Craft2015InfDis]. Developing better models for interaction prediction will
+rely on assimilation of data from many sources, and the sources for this data
+may differ depending on the type of interaction we wish to predict
+[@Gibb2021DatPro]. Developing both a conceptual framework and a flexible set of
+tools to predict interactions is imperative to next-generation biodiversity
+monitoring, and the growing realization that interaction networks are changing
+rapidly due to landscape modification [@Edwards2021TroLan; @Magioli2021DefLea;
+@Zhang2021PlaBre] encourages us to incorporate an explicitly spatial and
+temporal perspective on network prediction.
 
 Methods for predicting interactions between species exist, but can be limited in
 that they are often built around mechanisms represented at a single
