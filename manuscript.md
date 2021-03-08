@@ -303,28 +303,31 @@ of meanings in scientific discourse. All models can be thought of as a function,
 $f$, that takes a set of inputs $x$ (also called features, descriptors, or
 independent variables) and parameters $\theta$, and maps them to predicted
 output states $y$ (also called label, response, or dependent variable) based on
-the input to the model: $y=f(x,\theta)$. However, a given model $f$ can be
-used for either descriptive or predictive purposes. Many forms of scientific
-inquiry are based around using models _descriptively_ (also called inference,
-the inverse problem, fitting a model, or training a model)
-[@Stouffer2019AllEco]. In this context, the goal of using a model is to estimate
-the parameters, $\theta$, that best explain a set of empirical observations,
-$\{\hat{x}, \hat{y}\}$. In some cases, these parameter values are themselves of
-interest (e.g the strength of selection, intrinsic growth rate, dispersal
-distance), but in others cases, the goal is to compare a set of competing models $f_1,
-f_2, \dots$ to determine which provides the most parsimonious explanation for a dataset. The quantitative
+the input to the model: $y=f(x,\theta)$. However, a given model $f$ can be used
+for either descriptive or predictive purposes. Many forms of scientific inquiry
+are based around using models _descriptively_ (also called inference, the
+inverse problem, fitting a model, or training a model) [@Stouffer2019AllEco]. In
+this context, the goal of using a model is to estimate the parameters, $\theta$,
+that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$. In
+some cases, these parameter values are themselves of interest (e.g the strength
+of selection, intrinsic growth rate, dispersal distance), but in others cases,
+the goal is to compare a set of competing models $f_1, f_2, \dots$ to determine
+which provides the most parsimonious explanation for a dataset. The quantitative
 representation of "effects" in these models---the influence of each input on the
 output---is often assumed to be linear, and in the frequentist context, the goal
 is often to determine if the coeffecient corresponding with an input is non-zero
-to determine its "significance" in influencing the outcome. Models designed for
-inference have utility, however, in order for ecology to develop as a predictive
-science [@Evans2012PreEco], interest has grown in developing models that are
-used not just for description of data, but also for prediction. Predictive
-models are based in _the forward problem_, where the aim is to predict new values of the
-output $y$ given an input $x$ and our estimate value of $\theta$
-[@Stouffer2019AllEco]. Because the forward problem relies on an estimate of
-$\theta$, then, the problem of inference is nested within the forward problem
-(@fig:models).
+to determine its "significance" in influencing the outcome.
+
+Models designed for inference have utility---descriptive models of networks can
+reveal underlying mechanisms that structure ecological communities, given a
+proper null model [@Connor2017UsiNul]. However, in order for ecology to develop
+as a predictive science [@Evans2012PreEco], interest has grown in developing
+models that are used not just for description of data, but also for prediction.
+Predictive models are based in _the forward problem_, where the aim is to
+predict new values of the output $y$ given an input $x$ and our estimate value
+of $\theta$ [@Stouffer2019AllEco]. Because the forward problem relies on an
+estimate of $\theta$, then, the problem of inference is nested within the
+forward problem (@fig:models).
 
 ![The nested nature of developing predictive and forecasting models, showcases
 the _forward problem_ and how this relies on a hierarchical structure of the
