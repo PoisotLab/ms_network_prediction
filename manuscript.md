@@ -26,8 +26,7 @@ and pollinators, predators and prey, disease and host, and so on. Different
 types of interactions vary in their predictability, both due to intrinsic
 variation in which interactions occur (e.g. obligate parasites are more
 deterministic in their interactions than facultative parasites
-[@Poisot2013FacObl; @Luong2019FacPar], a substantial number of fungal species engage in
- opportunistic saprotrophy [@Smith2017GroEvi]) and due to variation in
+[@Poisot2013FacObl; @Luong2019FacPar], a substantial number of fungal species engage in opportunistic saprotrophy [@Smith2017GroEvi]) and due to variation in
 species abundances in space and time [@Poisot2015SpeWhy]. In addition to this
 variance in predictability, the mechanisms that structure interactions vary by
 interaction type, and different network types will require different data and
@@ -42,21 +41,22 @@ rely on assimilation of data from many sources, and the sources for this data
 may differ depending on the type of interaction we wish to predict
 [@Gibb2021DatPro]. Developing both a conceptual framework and a flexible set of
 tools to predict interactions is imperative to next-generation biodiversity
-monitoring, and the growing realization that interaction networks are changing
+monitoring. While the growing realization that interaction networks are changing
 rapidly due to landscape modification [@Edwards2021TroLan; @Magioli2021DefLea;
 @Zhang2021PlaBre] encourages us to incorporate an explicitly spatial and
 temporal perspective on network prediction.
 
+Species interaction networks are the product of ecological and evolutionary 
+mechanisms interacting across spatial and temporal scales. The interwoven 
+nature of these processes imposes structure on biodiversity data which is 
+invisible when examined only through a single mechanism or at a single scale.
 Methods for predicting interactions between species exist, but can be limited in
-that they are often built around mechanisms represented at a single
-organisational scale: position in the trophic niche [@Gravel2013InfFoo;
+that they are often built to represent a single mechanism or
+organisational scale, such as: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic matching [@Pomeranz2018InfPre;
 @Elmasri2020HieBay], functional traits [@Bartomeus2016ComFra], or other network
-properties [@Terry2020FinMis; @Stock2017LinFil]. Species interaction networks
-are the product of ecological and evolutionary mechanisms interacting across
-spatial and temporal scales. The interwoven nature of these processes imposes
-structure on biodiversity data which is invisible when examined only through a
-single mechanism or at a single scale. In addition to the recent application of
+properties [@Terry2020FinMis; @Stock2017LinFil]. In addition to the recent 
+application of
 ensemble models [@Becker2020PreWil], machine learning methods show promise to
 take the field in a radically different direction, by finding structure in data,
 and synthesizing mechanistic models from different learning frameworks
@@ -117,7 +117,7 @@ clustering of the tSNE
 output.](figures/example_network_prediction.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so absent interactions for a species
+in two ways: First by selecting features so that absent interactions for a species
 pair that was not observed to co-occur were removed from the data. This ensures
 that the network is trained only on the subset of the data for which we have
 actual information about the interaction. Second, the batches of 16 items used
@@ -164,7 +164,8 @@ environmental conditions, especially in environments for which there are no
 analogous data.
 
 Further, empirical estimation of interaction _strength_ is highly prone to bias as
-existing data is usually lumped together, making it difficult to differentiate
+existing data are usually lumped together, thereby losing information at 
+individual-level and making it difficult to differentiate
 the strength in per-individual interactions from the strength of a whole species
 interaction [@Wells2013SpeInt]. Empirical estimations of interaction strength
 are still crucial [@Novak2008EstNon], but are a hard task to quantify in natural
@@ -438,7 +439,8 @@ multispecies models [@Wootton2005MeaInt].
 ### Why predict networks and interactions at the same time?
 
 Ecological networks are quite sparse [@MacDonald2020RevLin]---composed of a set
-of interactions, but also a larger set of non-interactions. If we aim to predict
+of interactions, but also a larger set of species that do not interact. 
+If we aim to predict
 the structure of networks from the "bottom-up"--- by considering each pairwise
 combination of $S$ different species---we are left with $S^2$ interaction values
 to estimate. Instead, we can use our existing understanding of the mechanisms
