@@ -439,7 +439,7 @@ interaction strength can be estimated via functional foraging
 [@Portalier2019MecPre], where the primary basis for inferring interaction is
 foraging behavior like searching, capture and handling times. In food-webs,
 metabolic based models use body mass, metabolic demands, and energy loss to
-infer energy fluxes between organisms [@Yodzis1992BodSiz; @Berlow2009SimPre]. IN
+infer energy fluxes between organisms [@Yodzis1992BodSiz; @Berlow2009SimPre]. In
 addition, food-web energetics models can be incorporated at various resolutions
 for a specific network, ranging from individual-based data to more lumped data
 at the species level or trophic group, depending on data availability
