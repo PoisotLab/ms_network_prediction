@@ -23,10 +23,10 @@ of species interactions and the networks they form [@McCann2007ProBio;
 
 Interaction networks are embodied in numerous forms: host and parasites, plants
 and pollinators, predators and prey, disease and host, and so on. Different
-types of interactions vary in their predictability, both due to intrinsic
+types of interactions vary in their predictability, due to intrinsic
 variation in which interactions occur (e.g. obligate parasites are more
 deterministic in their interactions than facultative parasites
-[@Poisot2013FacObl; @Luong2019FacPar], a substantial number of fungal species engage in opportunistic saprotrophy [@Smith2017GroEvi]) and due to variation in
+[@Poisot2013FacObl; @Luong2019FacPar], or some fungal species engage in opportunistic saprotrophy [@Smith2017GroEvi]) as well as the variation in
 species abundances in space and time [@Poisot2015SpeWhy]. In addition to this
 variance in predictability, the mechanisms that structure interactions vary by
 interaction type, and different network types will require different data and
@@ -61,7 +61,7 @@ ensemble models [@Becker2020PreWil], machine learning methods show promise to
 take the field in a radically different direction, by finding structure in data,
 and synthesizing mechanistic models from different learning frameworks
 [@Desjardins-Proulx2019ArtInt]. Here we provide a proof-of-concept to show how
-machine-learning models can enable unreasonably effective prediction of species
+machine-learning models can enable reasonably effective prediction of species
 interactions, whereby we construct a metaweb of host-parasite interactions
 across space. We then provide a primer on the relevant tools and methods that
 could be incorporated these models in the future, in order to account for the
@@ -164,7 +164,7 @@ environmental conditions, especially in environments for which there are no
 analogous data.
 
 Further, empirical estimation of interaction _strength_ is highly prone to bias as
-existing data are usually lumped together, thereby losing information at 
+existing data are usually lumped together, thereby losing information at the 
 individual-level and making it difficult to differentiate
 the strength in per-individual interactions from the strength of a whole species
 interaction [@Wells2013SpeInt]. Empirical estimations of interaction strength
