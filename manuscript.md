@@ -427,14 +427,25 @@ generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
 each species, or 2) the effect that changes in one species population has on the
 dynamics of the other species. It can be measured as the effect over a period of
-time (in the units of biomass or energy flux [@Barnes2018EneFlu; @Brown2004MetThe]) or the
-relative importance of one species on another [@Heleno2014EcoNet;
+time (in the units of biomass or energy flux [@Barnes2018EneFlu; @Brown2004MetThe]) 
+or the relative importance of one species on another [@Heleno2014EcoNet;
 @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring observation is that
 networks are often composed of many weak interactions and few strong
 interactions [@Berlow2004IntStr]. The distribution of interaction strength
 within a network effects its stability [@Neutel2002StaRea; @Ruiter1995EnePat]
 and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and serves to benefit
 multispecies models [@Wootton2005MeaInt].
+
+Quantifying interaction strenght in the field is (much like quantifying the 
+presence of interactions (challenging). However, in some contexts, 
+interaction strength can be estimated via functional foraging
+[@Portalier2019MecPre], where the primary basis for inferring interaction is
+foraging behavior like searching, capture and handling times. In food-webs,
+metabolic based models use body mass, metabolic demands, and energy loss to infer energy fluxes between organisms [@Yodzis1992BodSiz;
+@Berlow2009SimPre]. IN addition, food-web energetics models can be incorporated at various
+resolutions for a specific network, ranging from individual-based data to more
+lumped data at the species level or trophic group, depending on data
+availability [@Barnes2018EneFlu; @Berlow2009SimPre].
 
 ### Why predict networks and interactions at the same time?
 
@@ -543,19 +554,6 @@ consideration is the multidimensional nature of "stability" and "feasibility"
 (e.g resilience to environmental change vs extinctions)
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organization [@Kefi2019AdvOur; @Gravel2016StaCom].
-
-
-### How are interaction strengths actually estimated?
-
-In some contexts, interaction strength can be estimated via functional foraging
-[@Portalier2019MecPre], where the primary basis for inferring interaction is
-foraging behavior like searching, capture and handling times. In food-webs,
-metabolic based models use body mass, metabolic demands, and energy loss to infer energy fluxes between organisms [@Yodzis1992BodSiz;
-@Berlow2009SimPre].  Food-web energetics models can be incorporated at various
-resolutions for a specific network, ranging from individual-based data to more
-lumped data at the species level or trophic group, depending on data
-availability [@Barnes2018EneFlu; @Berlow2009SimPre].
-
 
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
