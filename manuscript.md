@@ -426,13 +426,18 @@ Table of shit
 
 
 In the machine learning literature, a common way of visualizing this extensive
-list of possible metrics is through the use of AUC-ROC (Area-Under-the-Curve Receiver-Operator-Curve)  and AOC-PR (Area-Under-the-Curve Precision-Recall) curves.  
+list of possible metrics is through the use of ROC (receiver-operating-characteristic) and PR (precision-recall) curves.  
 
 ![TODO](./figures/auc.png){@fig:auc}
 
-Note that that area-under-the-curve (AUC) of the random model is $0.5$, and
-the AUC of the perfect classifier is $1.0$. This means that we can compare
-the AUC of different models, with being closer to 1.0 being better. 
+Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the random model is $0.5$, and the AUC of the perfect classifier is $1.0$.
+This means that we can compare
+the AUC of different models, with being closer to 1.0 being better.
+These metrics are typically called AUC-ROC (Area-Under-the-Curve Receiver-Operator-Curve)  and AUC-PR (Area-Under-the-Curve Precision-Recall)
+
+It is also important to determine the uncertainty associated with our measures
+of predictive accuracy. Bootstrapping, monte-carlo crossvalidation, idk.
+
 
 TSS is shown in @fig:validation, and reflects that the proof-of-concept model
 works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar
@@ -442,13 +447,8 @@ reaches a much higher accuracy with fewer initial data is a strong argument in
 favor of augmenting the training set with external data sources, as we argue in
 this manuscript.
 
-
-
-
 ![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
 
-It is also important to determine the uncertainty associated with our measures
-of predictive accuracy. Bootstrapping, monte-carlo crossvalidation, idk.
 
 
 ## Networks and Interactions
