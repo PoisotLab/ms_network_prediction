@@ -430,6 +430,10 @@ list of possible metrics is through the use of AUC-ROC (Area-Under-the-Curve Rec
 
 ![TODO](./figures/auc.png){@fig:auc}
 
+Note that that area-under-the-curve (AUC) of the random model is $0.5$, and
+the AUC of the perfect classifier is $1.0$. This means that we can compare
+the AUC of different models, with being closer to 1.0 being better. 
+
 TSS is shown in @fig:validation, and reflects that the proof-of-concept model
 works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar
 to the skill levels derived from a predictive model of food-webs that uses a
