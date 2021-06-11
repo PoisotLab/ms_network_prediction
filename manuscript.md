@@ -36,7 +36,7 @@ of betacoronaviruses; @Becker2020PreWil; @Wardeh2021PreMam] has received much
 attention. Network approaches have been used for prediction of dengue
 [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra], Rickettsiosis
 [@Morand2020DisEco], Leishmaniasis [@Stephens2009UsiBio], and infectious
-diseases in livestock and wildlife [@Craft2015InfDis]. Additionally, prediction of interaction networks is a growing imperative for
+diseases in livestock and wildlife [@Craft2015InfDis].Additionally, prediction of interaction networks is a growing imperative for
 next-generation biodiversity monitoring, requiring a conceptual framework and a
 flexible set of tools to predict interactions that is explicitly spatial and
 temporal in perspective [@Edwards2021TroLan; @Magioli2021DefLea;
@@ -404,14 +404,14 @@ Table of shit
 
 | Name        | description           | Computation  |
 | - | - | - |
-| Accuracy | percentage of corrent predictions     |    $\frac{TP+FP}{TP+FP+TN+FN}$ |
-| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{TP}{TP+FN}$ |
-| Specificity | synonymous with true negative rate     |    $\frac{TN}{TP+FP}$ |
-| Precision | f     |    $\frac{TP}{TP+FP}$ |
-| True Skill ($TSS$) | f     |    $\frac{TP+FP}{TP+FP+TN+FN}$ |
-| F-1 score ($F_1$) | f     |    $F_1 =  \frac{TP}{TP+ 0.5(FN+FP)}$ |
-| General F-Score ($F_\alpha$) | f     |    $F_\alpha =  \frac{(1+\alpha^2)*TP}{(1+\alpha^2)*TP+ \alpha^2*FN+FP}$ |
-| Cohen's $\kappa$ | f     |    $\kappa =  \frac{2(TP*TN - FN*FP)}{(TP+FP)(FP+TN)+(TP+FN)(FN+TN)}$ |
+| Accuracy | percentage of corrent predictions     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
+| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
+| Specificity | synonymous with true negative rate     |    $\frac{\text{TN}}{\text{TP}+\text{FP}}$ |
+| Precision | f     |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
+| True Skill ($TSS$) | f     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
+| F-1 score ($F_1$) | f     |    $F_1 =  \frac{\text{TP}}{\text{TP}+ 0.5(\text{FN}+\text{FP})}$ |
+| General F-Score ($F_\alpha$) | f     |    $F_\alpha =  \frac{(1+\alpha^2)*\text{TP}}{(1+\alpha^2)*\text{TP}+ \alpha^2*\text{FN}+\text{FP}}$ |
+| Cohen's $\kappa$ | f     |    $\kappa =  \frac{2(\text{TP}*\text{TN} - \text{FN}*\text{FP})}{(\text{TP}+\text{FP})(\text{FP}+\text{TN})+(\text{TP}+\text{FN})(\text{FN}+\text{TN})}$ |
 
 
 In the machine learning literature, a common way of visualizing this extensive
