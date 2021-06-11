@@ -394,12 +394,13 @@ does exist (a _false negative_).
 
 Many different metrics exist to validate the performance of a
 binary classifier.
+These can be divided into two general categories:
+those in the precision-recall space and those in the
+sensitivity-specificity space.
 
 
 An initial approach is _accuracy_, the proportion of values it got
 correct.
-
-
 However, consider what we know about interaction networks: they are
 often vary sparse, with connectance between $0.1$ and $0.3$.  If we built a model
 that always guesses there will be no interaction between two species, it will be
@@ -409,23 +410,40 @@ always have an _accuracy_ of $1-C$, where $C$ is the observed connectance, which
 would almost always be greater than 50%! This emphasizes the importance of
 considering null models when validating a model's performance.
 
+Table of shit
 
-One way to avoid this phenomena is to only consider the true-positive rate, which is the proportion
-of actually observed interaction that the model predicts correctly.
+| Name        | description           | Computation  |
+| - | - | - |
+| Accuracy | percentage of corrent predictions     |    $\frac{TP+FP}{TP+FP+TN+FN}$ |
+| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{TP}{TP+FN}$ |
+| Specificity | synonymous with true negative rate     |    $\frac{TN}{TP+FP}$ |
+| Precision | f     |    $\frac{TP}{TP+FP}$ |
+| True Skill ($TSS$) | f     |    $\frac{TP+FP}{TP+FP+TN+FN}$ |
+| F-1 score ($F_1$) | f     |    $F_1 =  \frac{TP}{TP+ 0.5(FN+FP)}$ |
+| General F-Score ($F_\alpha$) | f     |    $F_\alpha =  \frac{(1+\alpha^2)*TP}{(1+\alpha^2)*TP+ \alpha^2*FN+FP}$ |
+| Cohen's $\kappa$ | f     |    $\kappa =  \frac{2(TP*TN - FN*FP)}{(TP+FP)(FP+TN)+(TP+FN)(FN+TN)}$ |
 
 
 
+AUC-ROC (Area-Under-the-Curve Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve Precision-Recall)
 
-A different metric is the true-skill statistic (TSS; @Allouche2006AssAcc), which is related
-to the ability to avoid both false-negative and false-positives. The performance of
-this proof-of-concept model in each of the metrics (accuracy, true positive,
-TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
-works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo]; that our model reaches a much higher accuracy with fewer initial data is a strong argument in favor of augmenting the training set with external data sources, as we argue in this manuscript.
+
+TSS is shown in @fig:validation, and reflects that the proof-of-concept model
+works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar
+to the skill levels derived from a predictive model of food-webs that uses a
+niche model parameterized with allometry [@Gravel2013InfFoo]; that our model
+reaches a much higher accuracy with fewer initial data is a strong argument in
+favor of augmenting the training set with external data sources, as we argue in
+this manuscript.
 
 
 
 
 ![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}
+
+It is also important to determine the uncertainty associated with our measures
+of predictive accuracy. Bootstrapping, monte-carlo crossvalidation, idk.
+
 
 ## Networks and Interactions
 
