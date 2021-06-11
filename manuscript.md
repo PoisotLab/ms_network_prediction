@@ -361,9 +361,7 @@ sampling to generate a posterior estimate of parameters, $P(\theta | \hat{x},
 ### How do we validate a predictive model?
 
 After model fitting, we inevitably want to see how "good" it is.
-
 Model selection vs model assessment [@ElementsofStatisticalLearning].
-
 One of the context for validation is _model comparison_, where we aim to see
 which of a competing set of models provides the best explanation for a data set.
 
@@ -380,9 +378,12 @@ _crossvalidation_. Crossvalidation methods divide the original dataset into
 two---one which is used to fit the model (called the _training_ set) and one
 used to validate its predictive accuracy on the data that it hasn't "seen" yet
 (called the _test_ set) [@Bishop2006PatRec]. This procedure is often repeated
-for different subdivisions of the dataset [@Arlot2010SurCro].
+across different test and training subdivisions of the dataset
+to determine the uncertainty associated with our measurement due to our choice
+of test and training sets [@Arlot2010SurCro], in the same conceptual vein as
+data bootstrapping.
 
-We still have define what _predictive accuracy_ means in the contexts of
+We still have define what _predictive accuracy_ means in the context of
 interaction network prediction. In the proof-of-concept, we used a
 neural-network to perform binary classification by predicting the
 presence/absence of an interaction between any two species. There are two ways
@@ -392,20 +393,17 @@ _true negative_). Similarly, there are two ways for the model to be wrong: the
 model predicts an interaction which does not exist (a _false positive_), or the
 model predicts no interaction but it does exist (a _false negative_).
 
-Many different metrics exist to validate the performance of a
-binary classifier. An naive initial approach is _accuracy_, the proportion of
-values it got correct.
-
-However, consider what we know about interaction networks: they are
-often vary sparse, with connectance between $0.1$ and $0.3$.  If we built a model
-that always guesses there will be no interaction between two species, it will be
-correct in the majority of cases because the majority of potential interactions
-in a network typically do not exist. Therefore this "empty-matrix" model would
-always have an _accuacy_ of $1-C$, where $C$ is the observed connectance, which
-would almost always be greater than 50%.
-
-These can be divided into two general categories:
-those in the precision-recall space and those in the
+A naive initial approach to meausure how well a model does is _accuracy_, the
+proportion of values it got correct. However, consider what we know about
+interaction networks: they are often vary sparse, with connectance between $0.1$
+and $0.3$.  If we built a model that always guesses there will be no interaction
+between two species, it will be correct in the majority of cases because the
+majority of potential interactions in a network typically do not exist.
+Therefore this "empty-matrix" model would always have an _accuracy_ of $1-C$,
+where $C$ is the observed connectance, which would almost always be greater than
+50%. In response to this general problem, many metrics have been proposed to
+measure the accuracy of binary-classifiers (@table). These can be divided into
+two general categories: those in the precision-recall space and those in the
 sensitivity-specificity space.
 
 
@@ -434,9 +432,6 @@ Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the rand
 This means that we can compare
 the AUC of different models, with being closer to 1.0 being better.
 These metrics are typically called AUC-ROC (Area-Under-the-Curve Receiver-Operator-Curve)  and AUC-PR (Area-Under-the-Curve Precision-Recall)
-
-It is also important to determine the uncertainty associated with our measures
-of predictive accuracy. Bootstrapping, monte-carlo crossvalidation, idk.
 
 
 TSS is shown in @fig:validation, and reflects that the proof-of-concept model
