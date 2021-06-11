@@ -370,40 +370,59 @@ which of a competing set of models provides the best explanation for a data set.
 
 A naive initial approach is to simply compute the average error between the model's
 prediction and the true data we have, and choose the model with the smallest
-error---however this approach inevitably results in _overfitting_. One approach
-to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL) based
+error---however this approach inevitably results in _overfitting_.
+One approach to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL) based
 around the heuristic that good models maximize the ratio of information provided
-by the model to the number of parameters it has.
-
-However, when the intended use-case of a model is prediction the relevant form
-of validation is _predictive accuracy_, which should be tested with _crossvalidation_. Crossvalidation
-methods divide the original dataset into two---one which is used to fit the
+by the model to the number of parameters it has. However, when the intended use-case of a model is prediction the relevant form
+of validation is _predictive accuracy_, which should be tested with _crossvalidation_. Crossvalidation methods divide the original dataset into two---one which is used to fit the
 model (called the _training_ set) and one used to validate its predictive
 accuracy on the data that it hasn't "seen" yet (called the _test_ set)
 [@Bishop2006PatRec]. This procedure is often repeated for different subdivisions
 of the dataset [@Arlot2010SurCro].
 
+We still have define what _predictive accuracy_ means in the contexts of
+interaction network prediction.
 In the proof-of-concept, we used a neural-network to perform binary
 classification by predicting the presence/absence of an interaction between any
-two species. Many different metrics exist to validate the performance of a
-binary classifier. One approach is _accuracy_, the proportion of values it got
-correct.  However, consider what we know about interaction networks: they are
-often vary sparse, with connectance between $0.1$ and $0.3$. There are two ways
-for the model to be right: the model predicts an interaction and there is one,
-or the model predicts no interaction and there isn't one. If we built a model
+two species.
+There are two ways for the model to be right: the model predicts an interaction
+and there is one (a _true positive_), or the model predicts no interaction and
+there isn't one (a _true negative_).
+Similarly, there are two ways for the model to be wrong: the model predicts an interaction
+which does not exist (a _false positive_), or the model predicts no interaction but it
+does exist (a _false negative_).
+
+Many different metrics exist to validate the performance of a
+binary classifier.
+
+
+An initial approach is _accuracy_, the proportion of values it got
+correct.
+
+
+However, consider what we know about interaction networks: they are
+often vary sparse, with connectance between $0.1$ and $0.3$.  If we built a model
 that always guesses there will be no interaction between two species, it will be
 correct in the majority of cases because the majority of potential interactions
 in a network typically do not exist. Therefore this "empty-matrix" model would
 always have an _accuracy_ of $1-C$, where $C$ is the observed connectance, which
 would almost always be greater than 50%! This emphasizes the importance of
-considering null models when validating a model's performance. One way to avoid
-this phenomena is to only consider the true-positive rate, which is the proportion
-of actually observed interaction that the model predicts correctly. A different
-metric is the true-skill statistic (TSS; @Allouche2006AssAcc), which is related
+considering null models when validating a model's performance.
+
+
+One way to avoid this phenomena is to only consider the true-positive rate, which is the proportion
+of actually observed interaction that the model predicts correctly.
+
+
+
+
+A different metric is the true-skill statistic (TSS; @Allouche2006AssAcc), which is related
 to the ability to avoid both false-negative and false-positives. The performance of
 this proof-of-concept model in each of the metrics (accuracy, true positive,
 TSS) is shown in @fig:validation, and reflects that the proof-of-concept model
 works well with limited data, yielding $\text{TSS} \approx 0.5$. This is similar to the skill levels derived from a predictive model of food-webs that uses a niche model parameterized with allometry [@Gravel2013InfFoo]; that our model reaches a much higher accuracy with fewer initial data is a strong argument in favor of augmenting the training set with external data sources, as we argue in this manuscript.
+
+
 
 
 ![Example validation plots from the proof-of-concept. (A) Accuracy for the neural network model on the training set (blue) and validation set (red), and the null model accuracy for both global connectance (solid gray) and cooccuring connectance (dashed gray). (B) True-positive rate for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance (solid gray) and cooccuring connectance (dashed gray) (C) True-Skill Statistic (TSS) for the neural network model on the training set (blue) and validation set (red), and null model true-positive rate for both global connectance and cooccuring connectance (both gray lines at $0$). ](./figures/validation.png){#fig:validation}

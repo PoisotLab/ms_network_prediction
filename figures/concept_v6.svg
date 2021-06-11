@@ -14,7 +14,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (1.0.1+r74)"
-   sodipodi:docname="concept_v6.svg">
+   sodipodi:docname="concept_v6.svg"
+   inkscape:export-filename="/home/michael/papers/ms_network_prediction/figures/concept_v6.png"
+   inkscape:export-xdpi="144"
+   inkscape:export-ydpi="144">
   <defs
      id="defs2">
     <g
@@ -207,9 +210,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.30273235"
-     inkscape:cx="628.91011"
-     inkscape:cy="855.39436"
+     inkscape:zoom="0.41491318"
+     inkscape:cx="1672.41"
+     inkscape:cy="549.60856"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -7327,7 +7330,7 @@
        inkscape:export-ydpi="245.24001" />
     <path
        style="fill:none;stroke:#8e8e8e;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 390.70488,253.91712 -45.52967,0.18572"
+       d="m 384.59815,253.77939 -39.42294,0.32345"
        id="path48537"
        sodipodi:nodetypes="cc" />
     <path
@@ -16136,5 +16139,28 @@
        x="221.51588"
        y="78.264053"
        ry="9.0327593e-17" />
+    <path
+       style="fill:none;stroke:#8e8e8e;stroke-width:0.487;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 436.45842,220.50507 0.0158,-15.30645"
+       id="path24284"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#a6a6a6;fill-opacity:1;fill-rule:evenodd;stroke:#a6a6a6;stroke-width:0.542666;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path24286"
+       sodipodi:sides="3"
+       sodipodi:cx="260.43802"
+       sodipodi:cy="-271.28622"
+       sodipodi:r1="3.2674627"
+       sodipodi:r2="1.6337314"
+       sodipodi:arg1="-0.52781018"
+       sodipodi:arg2="0.51938738"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 263.26082,-272.93186 -1.40452,2.45654 -1.40452,2.45653 -1.42516,-2.44462 -1.42516,-2.44461 2.82968,-0.0119 z"
+       inkscape:transform-center-x="-0.012268203"
+       inkscape:transform-center-y="0.80621982"
+       transform="matrix(0.49714629,0.86766673,0.86766673,-0.49714629,542.48774,-149.0136)" />
   </g>
 </svg>
