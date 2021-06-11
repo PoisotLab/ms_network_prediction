@@ -405,7 +405,7 @@ Table of shit
 | Name        | description           | Computation  |
 | - | - | - |
 | Accuracy | percentage of corrent predictions     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
-| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
+| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
 | Specificity | synonymous with true negative rate     |    $\frac{\text{TN}}{\text{TN}+\text{FN}}$ |
 | Precision | f     |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
 | True Skill ($TSS$) | f     |  $\frac{\text{TP}}{\text{TP}+\text{FN}} + \frac{\text{TN}}{\text{TN}+\text{FP}} - 1$ |
