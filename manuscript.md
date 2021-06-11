@@ -22,28 +22,35 @@ of species interactions and the networks they form [@McCann2007ProBio;
 @Seibold2018NecMul].
 
 Interaction networks are embodied in numerous forms: host and parasites, plants
-and pollinators, predators and prey, disease and host, and so on. Different
+and pollinators, predators and prey, disease and host, and so on.
+
+Different
 types of interactions vary in their predictability, due to intrinsic variation
-in which interactions occur (e.g. obligate parasites are more deterministic in
+in which interactions occur (e.g. some fungal species engage in opportunistic saprotrophy
+[@Smith2017GroEvi], obligate parasites are more deterministic in
 their interactions than facultative parasites [@Poisot2013FacObl;
-@Luong2019FacPar], or some fungal species engage in opportunistic saprotrophy
-[@Smith2017GroEvi]). This is compounded by variation in species abundances in
+@Luong2019FacPar]).
+
+This is compounded by variation in species abundances in
 space and time [@Poisot2015SpeWhy]. In addition to this variance in
-predictability, the mechanisms that structure interactions vary by interaction
-type, and different network types will require different data and approaches. In
-the recent years, predicting potential hosts of novel disease [*e.g.* wildlife
-hosts of betacoronaviruses; @Becker2020PreWil; @Wardeh2021PreMam] has received
-much attention. Approaches relying on networks have been used for prediction of
-dengue [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra],
-Rickettsiosis [@Morand2020DisEco], Leishmaniasis [@Stephens2009UsiBio], and
-infectious diseases in livestock and wildlife [@Craft2015InfDis]. Developing
-better models for interaction prediction will rely on assimilation of data from
-many sources, and the sources for this data may differ depending on the type of
-interaction we wish to predict [@Gibb2021DatPro]. This is a growing
-imperative for next-generation biodiversity monitoring: a conceptual framework
-and a flexible set of tools to predict interactions that is explicitly spatial
-and temporal in perspective [@Edwards2021TroLan; @Magioli2021DefLea;
-@Zhang2021PlaBre].
+predictability, the mechanisms that structure interactions vary by
+interaction type.
+
+One domain of application is disease ecology.
+In the recent years, predicting potential hosts of novel
+disease [*e.g.* wildlife hosts of betacoronaviruses; @Becker2020PreWil;
+@Wardeh2021PreMam] has received much attention. Network approaches
+have been used for prediction of dengue [@Zhao2020MacLea], Chagas disease
+[@Rengifo-Correa2017UndTra], Rickettsiosis [@Morand2020DisEco], Leishmaniasis
+[@Stephens2009UsiBio], and infectious diseases in livestock and wildlife
+[@Craft2015InfDis].
+
+Developing better models for prediction of these interactions will rely on assimilation of data from many sources, and the sources for this data
+may differ depending on the type of interaction we wish to predict
+[@Gibb2021DatPro]. This is a growing imperative for next-generation biodiversity
+monitoring: a conceptual framework and a flexible set of tools to predict
+interactions that is explicitly spatial and temporal in perspective
+[@Edwards2021TroLan; @Magioli2021DefLea; @Zhang2021PlaBre].
 
 Species interaction networks are the product of ecological and evolutionary
 mechanisms interacting across spatial and temporal scales. The interwoven nature
@@ -112,7 +119,7 @@ then used to train a deep neural network to predict species interactions. The
 initial and imputed networks are represented as their tSNE embedding, and the
 colors of nodes are the cluster to which they are assigned based on a $k$-means
 clustering of the tSNE
-output.](figures/example_network_prediction.png){#fig:example}
+output.](figures/new_figure1.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
 in two ways: First by selecting features so that absent interactions for a species
@@ -289,7 +296,7 @@ explicit models of network structure.
 networks. Starting with the input of data from multiple sources, followed by a
 modelling framework for ecological networks and the landscape, which are then
 ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/conceptual_v3.png){#fig:conceptual}
+networks.](figures/concept_v6.png){#fig:conceptual}
 
 
 ## Models
@@ -353,17 +360,23 @@ sampling to generate a posterior estimate of parameters, $P(\theta | \hat{x},
 
 ### How do we validate a predictive model?
 
-After model fitting, we inevitably want to see how "good" it is. One of the
-context for validation is _model comparison_, where we aim to see which of a
-competing set of models provides the best explanation for a data set. A naive
-initial approach is to simply compute the average error between the model's
+After model fitting, we inevitably want to see how "good" it is.
+
+Model selection vs model assessment [@ElementsofStatisticalLearning].
+
+One of the context for validation is _model comparison_, where we aim to see
+which of a competing set of models provides the best explanation for a data set.
+
+
+A naive initial approach is to simply compute the average error between the model's
 prediction and the true data we have, and choose the model with the smallest
 error---however this approach inevitably results in _overfitting_. One approach
 to avoid overfitting is using information criteria (*e.g.* AIC, BIC, MDL) based
 around the heuristic that good models maximize the ratio of information provided
-by the model to the number of parameters it has. However, when the intended
-use-case of a model is prediction the relevant form of validation is _predictive
-accuracy_, which should be tested with _crossvalidation_. Crossvalidation
+by the model to the number of parameters it has.
+
+However, when the intended use-case of a model is prediction the relevant form
+of validation is _predictive accuracy_, which should be tested with _crossvalidation_. Crossvalidation
 methods divide the original dataset into two---one which is used to fit the
 model (called the _training_ set) and one used to validate its predictive
 accuracy on the data that it hasn't "seen" yet (called the _test_ set)
