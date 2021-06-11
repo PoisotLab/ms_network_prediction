@@ -406,9 +406,9 @@ Table of shit
 | - | - | - |
 | Accuracy | percentage of corrent predictions     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
 | Sensitivity | synonymous with true positive rate or  recall     |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
-| Specificity | synonymous with true negative rate     |    $\frac{\text{TN}}{\text{TP}+\text{FP}}$ |
+| Specificity | synonymous with true negative rate     |    $\frac{\text{TN}}{\text{TN}+\text{FN}}$ |
 | Precision | f     |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
-| True Skill ($TSS$) | f     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
+| True Skill ($TSS$) | f     |  $\frac{\text{TP}}{\text{TP}+\text{FN}} + \frac{\text{TN}}{\text{TN}+\text{FP}} - 1$ |
 | F-1 score ($F_1$) | f     |    $F_1 =  \frac{\text{TP}}{\text{TP}+ 0.5(\text{FN}+\text{FP})}$ |
 | General F-Score ($F_\alpha$) | f     |    $F_\alpha =  \frac{(1+\alpha^2)*\text{TP}}{(1+\alpha^2)*\text{TP}+ \alpha^2*\text{FN}+\text{FP}}$ |
 | Cohen's $\kappa$ | f     |    $\kappa =  \frac{2(\text{TP}*\text{TN} - \text{FN}*\text{FP})}{(\text{TP}+\text{FP})(\text{FP}+\text{TN})+(\text{TP}+\text{FN})(\text{FN}+\text{TN})}$ |
