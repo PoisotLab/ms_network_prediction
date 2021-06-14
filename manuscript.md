@@ -363,27 +363,27 @@ sampling to generate a posterior estimate of parameters, $P(\theta | \hat{x},
 ### How do we validate a predictive model?
 
 After model fitting, we inevitably want to see how "good" it is.
-Model selection vs model assessment [@ElementsofStatisticalLearning].
-One of the context for validation is _model comparison_, where we aim to see
-which of a competing set of models provides the best explanation for a data set.
 
+This process can be divided into two parts: 1) Model selection, where the modeller
+chooses from a set of possible models and 2) Model assessment, where the modeler
+determines the performance characteristics of the chosen model [@Hastie2009EleSta].
 
-A naive initial approach is to simply compute the average error between the
-model's prediction and the true data we have, and choose the model with the
-smallest error---however this approach inevitably results in _overfitting_. One
-approach to avoid overfitting is using information criteria (*e.g.* AIC, BIC,
-MDL) based around the heuristic that good models maximize the ratio of
-information provided by the model to the number of parameters it has. However,
-when the intended use-case of a model is prediction the relevant form of
-validation is _predictive accuracy_, which should be tested with
-_crossvalidation_. Crossvalidation methods divide the original dataset into
+In the context of _model selection_, a naive initial approach is to simply
+compute the average error between the model's prediction and the true data we
+have, and choose the model with the smallest error---however this approach
+inevitably results in _overfitting_. One approach to avoid overfitting is using
+information criteria (*e.g.* AIC, BIC, MDL) based around the heuristic that good
+models maximize the ratio of information provided by the model to the number of
+parameters it has. However, when the intended use-case of a model is prediction
+the relevant form of validation is _predictive accuracy_, which should be tested
+with _crossvalidation_. Crossvalidation methods divide the original dataset into
 two---one which is used to fit the model (called the _training_ set) and one
 used to validate its predictive accuracy on the data that it hasn't "seen" yet
 (called the _test_ set) [@Bishop2006PatRec]. This procedure is often repeated
-across different test and training subdivisions of the dataset
-to determine the uncertainty associated with our measurement due to our choice
-of test and training sets [@Arlot2010SurCro], in the same conceptual vein as
-data bootstrapping.
+across different test and training subdivisions of the dataset to determine the
+uncertainty associated with our measurement due to our choice of test and
+training sets [@Arlot2010SurCro], in the same conceptual vein as data
+bootstrapping.
 
 We still have define what _predictive accuracy_ means in the context of
 interaction network prediction. In the proof-of-concept, we used a
@@ -395,7 +395,7 @@ _true negative_). Similarly, there are two ways for the model to be wrong: the
 model predicts an interaction which does not exist (a _false positive_), or the
 model predicts no interaction but it does exist (a _false negative_).
 
-A naive initial approach to meausure how well a model does is _accuracy_, the
+A naive initial approach to measure how well a model does is _accuracy_, the
 proportion of values it got correct. However, consider what we know about
 interaction networks: they are often vary sparse, with connectance between $0.1$
 and $0.3$.  If we built a model that always guesses there will be no interaction
@@ -403,8 +403,8 @@ between two species, it will be correct in the majority of cases because the
 majority of potential interactions in a network typically do not exist.
 Therefore this "empty-matrix" model would always have an _accuracy_ of $1-C$,
 where $C$ is the observed connectance, which would almost always be greater than
-50%. In response to this general problem, many metrics have been proposed to
-measure the accuracy of binary-classifiers (@table). These can be divided into
+50%. In response to the general problem of biases in classifiers,
+many metrics have been proposed measure binary-classifiers (@table). These can be divided into
 two general categories: those in the precision-recall space and those in the
 sensitivity-specificity space.
 
