@@ -403,10 +403,10 @@ between two species, it will be correct in the majority of cases because the
 majority of potential interactions in a network typically do not exist.
 Therefore this "empty-matrix" model would always have an _accuracy_ of $1-C$,
 where $C$ is the observed connectance, which would almost always be greater than
-50%. In response to the general problem of biases in classifiers,
-many metrics have been proposed measure binary-classifiers (@table). These can be divided into
-two general categories: those in the precision-recall space and those in the
-sensitivity-specificity space.
+50%. In response to the general problem of biases in classifiers, many metrics
+have been proposed measure binary-classifiers (@table). These can be divided
+into two general categories: those in the precision-recall space and those in
+the sensitivity-specificity space.
 
 
 Table of shit
