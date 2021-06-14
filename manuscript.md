@@ -3,7 +3,7 @@ bibliography: [references.bib]
 ---
 # Introduction
 
-Ecosystems *are* interactions -- organisms interact with one-another and with
+Ecosystems *are* interactions --- organisms interact with one-another and with
 their environment, either directly or indirectly. Between organisms, these
 interactions form networks of varying complexity, drive ecological and
 evolutionary dynamics, and maintain ecosystem diversity and functioning
@@ -11,61 +11,68 @@ evolutionary dynamics, and maintain ecosystem diversity and functioning
 interactions underpin our understanding of key ecological processes
 [@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge of species
 interactions (like being able to list them, or guess which ones may exist) is
-one of the most severe shortfalls in biodiversity science [@Hortal2015SevSho].
-This is due in large part to the tedious, time-consuming, and expensive data
-collection process. As with many ecological systems, networks of species
-interactions have entered their "long now" [@Carpenter2002EcoFut], where
-contemporary actions have long-term, low-predictability consequences
-[@Burkle2013PlaInt]. Therefore, our field needs a conceptual path forward toward
-models that enable prediction (for the present) and forecasting (for the future)
-of species interactions and the networks they form [@McCann2007ProBio;
-@Seibold2018NecMul].
+one of the most severe shortfalls in biodiversity science [@Hortal2015SevSho],
+in large part due to the tedious, time-consuming, and expensive process of
+collecting species interaction data.
 
-Interaction networks are embodied in numerous forms: host and parasites, plants
-and pollinators, predators and prey, disease and host, and so on. Different
-types of interactions vary in their predictability. This is in part because of
-intrinsic variation in which interactions occur (e.g. some fungal species engage
-in opportunistic saprotrophy [@Smith2017GroEvi], obligate parasites are more
-deterministic in their interactions than facultative parasites
-[@Poisot2013FacObl; @Luong2019FacPar]), but then is compounded by variation in
-species abundances in space and time [@Poisot2015SpeWhy]. In addition to this
-variance in predictability, networks from different systems are structured by
-different mechanisms. One domain of application is disease ecology. In the
-recent years, predicting potential hosts of novel disease [*e.g.* wildlife hosts
-of betacoronaviruses; @Becker2020PreWil; @Wardeh2021PreMam] has received much
-attention. Network approaches have been used for prediction of dengue
+Given the sheer number of species on Earth, comprehensively sampling every
+possible interaction is not feasible. Further, the data we can collect about
+interactions is biased and noisy [@deAguiar2019RevBia]. This is then compounded
+because interactions between species are often not all-or-nothing---interactions
+change due to variation in species abundances in space and time
+[@Poisot2015SpeWhy], and further different types of interactions vary in their
+intrinsic predictability (e.g. some fungal species engage in opportunistic
+saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic in
+their interactions than facultative parasites [@Poisot2013FacObl;
+@Luong2019FacPar]). In addition to this variance in predictability, networks
+from different systems are structured by different mechanisms. Interaction
+networks are embodied in numerous forms: host and parasites, plants and
+pollinators, predators and prey, disease and host, and so on, and network types
+may require different methods for prediction.
+
+Still, species interaction networks have entered their "long now"
+[@Carpenter2002EcoFut], where anthropogenic change will have long-term,
+low-predictability consequences [@Burkle2013PlaInt] for our planet's ecology.
+Therefore, our field needs a conceptual path forward toward models that enable
+prediction (for the present) and forecasting (for the future) of species
+interactions and the networks they form which accounts for their spatial and
+temporal variation [@McCann2007ProBio; @Seibold2018NecMul]. For example, in
+disease ecology, predicting potential hosts of novel disease [*e.g.* wildlife
+hosts of betacoronaviruses; @Becker2020PreWil; @Wardeh2021PreMam] has received
+much attention. Network approaches have been used for prediction of dengue
 [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra], Rickettsiosis
 [@Morand2020DisEco], Leishmaniasis [@Stephens2009UsiBio], and infectious
-diseases in livestock and wildlife [@Craft2015InfDis].Additionally, prediction of interaction networks is a growing imperative for
-next-generation biodiversity monitoring, requiring a conceptual framework and a
-flexible set of tools to predict interactions that is explicitly spatial and
-temporal in perspective [@Edwards2021TroLan; @Magioli2021DefLea;
-@Zhang2021PlaBre]. Developing better models for prediction of these interactions
-will rely on assimilation of data from many sources, and the sources for this
-data may differ depending on the type of interaction we wish to predict
-[@Gibb2021DatPro].
+diseases in livestock and wildlife [@Craft2015InfDis]. Additionally, prediction
+of interaction networks is a growing imperative for next-generation biodiversity
+monitoring, requiring a conceptual framework and a flexible set of tools to
+predict interactions that is explicitly spatial and temporal in perspective
+[@Edwards2021TroLan; @Magioli2021DefLea; @Zhang2021PlaBre]. Developing better
+models for prediction of these interactions will rely on assimilation of data
+from many sources, and the sources for this data may differ depending on the
+type of interaction we wish to predict [@Gibb2021DatPro].
 
-Species interaction networks are the product of ecological and evolutionary
-mechanisms interacting across spatial and temporal scales. The interwoven nature
-of these processes imposes structure on biodiversity data which is invisible
-when examined only through the lens of a single scale. Methods for predicting
-interactions between species exist, but can be limited in that they are often
-conceptualized around a single mechanism or organisational scale: position in
-the trophic niche [@Gravel2013InfFoo; @Petchey2008SizFor], phylogenetic matching
-[@Pomeranz2018InfPre; @Elmasri2020HieBay], functional traits
-[@Bartomeus2016ComFra], or other network properties [@Terry2020FinMis;
-@Stock2017LinFil]. In addition to the recent application of ensemble models
-[@Becker2020PreWil], machine learning methods show promise to take the field in
-a radically different direction, by finding structure in data, and synthesizing
-mechanistic models from different learning frameworks
-[@Desjardins-Proulx2019ArtInt]. Here we provide a proof-of-concept to show how
-machine-learning models can enable unreasonably effective prediction of species
-interactions, whereby we construct a metaweb of host-parasite interactions
-across space. We then provide a primer on the relevant tools and methods that
-could be incorporated these models in the future, in order to account for the
-spatial, temporal, and climatic dimensions of network prediction
-[@Burkle2011FutPla], and propose a roadmap forward for how to improve
-predictions using this approach.
+Methods for predicting interactions between species exist, but at the moment are
+limited in that they are typically based around a single mechanism at a single
+scale: position in the trophic niche [@Gravel2013InfFoo; @Petchey2008SizFor],
+phylogenetic distance [@Pomeranz2018InfPre; @Elmasri2020HieBay], functional
+trait matching [@Bartomeus2016ComFra], or other network properties
+[@Terry2020FinMis; @Stock2017LinFil]. Species interaction networks are the
+product of ecological and evolutionary mechanisms interacting across spatial,
+temporal and organizational scales. The interwoven nature of these processes
+imposes structure on biodiversity data which is invisible when examined only
+through the lens of a single scale. Machine learning methods have enormous
+potential in finding this structure in biodiversity data
+[@Desjardins-Proulx2019ArtInt], and have the potential to be used together with
+mechanistic models in order to make prediction of ecological dynamics more
+robust [@Rackauckas2020UniDif; @Becker2020PreWil],
+
+Here we provide a proof-of-concept to show how machine-learning models can
+enable unreasonably effective prediction of species interactions, whereby we
+construct a metaweb of host-parasite interactions across space. We then propose
+a roadmap forward for how to improve predictions using this approach, and
+provide a primer on the relevant tools and methods that could be incorporated
+these models in the future, in order to account for the spatial, temporal, and
+climatic dimensions of network prediction [@Burkle2011FutPla].
 
 # Proof-of-Concept
 
@@ -301,20 +308,22 @@ of meanings in scientific discourse. All models can be thought of as a function,
 $f$, that takes a set of inputs $x$ (also called features, descriptors, or
 independent variables) and parameters $\theta$, and maps them to predicted
 output states $y$ (also called label, response, or dependent variable) based on
-the input to the model: $y=f(x,\theta)$. However, a given model $f$ can be used
-for either descriptive or predictive purposes. Many forms of scientific inquiry
-are based around using models _descriptively_ (also called inference, the
-inverse problem, fitting a model, or training a model) [@Stouffer2019AllEco]. In
-this context, the goal of using a model is to estimate the parameters, $\theta$,
-that best explain a set of empirical observations, $\{\hat{x}, \hat{y}\}$. In
-some cases, these parameter values are themselves of interest (e.g the strength
-of selection, intrinsic growth rate, dispersal distance), but in others cases,
-the goal is to compare a set of competing models $f_1, f_2, \dots$ to determine
-which provides the most parsimonious explanation for a dataset. The quantitative
-representation of "effects" in these models---the influence of each input on the
-output---is often assumed to be linear, and in the frequentist context, the goal
-is often to determine if the coeffecient corresponding with an input is non-zero
-to determine its "significance" in influencing the outcome.
+the input to the model: $y=f(x,\theta)$.
+
+A given model $f$ can be used for either descriptive or predictive purposes.
+Many forms of scientific inquiry are based around using models _descriptively_
+(also called inference, the inverse problem, fitting a model, or training a
+model) [@Stouffer2019AllEco]. In this context, the goal of using a model is to
+estimate the parameters, $\theta$, that best explain a set of empirical
+observations, $\{\hat{x}, \hat{y}\}$. In some cases, these parameter values are
+themselves of interest (e.g the strength of selection, intrinsic growth rate,
+dispersal distance), but in others cases, the goal is to compare a set of
+competing models $f_1, f_2, \dots$ to determine which provides the most
+parsimonious explanation for a dataset. The quantitative representation of
+"effects" in these models---the influence of each input on the output---is often
+assumed to be linear, and in the frequentist context, the goal is often to
+determine if the coeffecient corresponding with an input is non-zero to
+determine its "significance" in influencing the outcome.
 
 Models designed for inference have utility---descriptive models of networks can
 reveal underlying mechanisms that structure ecological communities, given a
