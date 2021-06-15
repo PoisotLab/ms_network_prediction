@@ -9,27 +9,27 @@ with their environment, either directly or indirectly. Between organisms,
 these interactions form networks of varying complexity, drive ecological
 and evolutionary dynamics, and maintain ecosystem diversity and functioning
 [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Networks of
-species interactions underpin our understanding of key ecological processes
+species interactions underpin our understanding of numerous ecological processes
 [@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge of species
 interactions (like being able to list them, or guess which ones may exist) is
-one of the most severe shortfalls in biodiversity science [@Hortal2015SevSho],
-in large part due to the tedious, time-consuming, and expensive process of
-collecting species interaction data.
-
-Given the sheer number of species on Earth, comprehensively sampling every
-possible interaction is not feasible. Further, the data we can collect
-about interactions is biased and noisy [@deAguiar2019RevBia]. This
-is then compounded because interactions between species are often not
-all-or-nothing---interactions change due to variation in species abundances
-in space and time [@Poisot2015SpeWhy], and further different types of
-interactions vary in their intrinsic predictability (e.g. some fungal species
-engage in opportunistic saprotrophy [@Smith2017GroEvi], obligate parasites
-are more deterministic in their interactions than facultative parasites
-[@Poisot2013FacObl; @Luong2019FacPar]). In addition to this variance in
-predictability, networks from different systems are structured by different
-mechanisms. Interaction networks are embodied in numerous forms: host and
-parasites, plants and pollinators, predators and prey, disease and host,
-and so on, and network types may require different methods for prediction.
+still one of the most severe shortfalls in biodiversity science
+[@Hortal2015SevSho], in large part due to the tedious, time-consuming, and
+expensive process of collecting species interaction data.
+Comprehensively sampling every possible interaction is not feasible given the
+sheer number of species on Earth, and the data we can collect about interactions
+is biased and noisy [@deAguiar2019RevBia]. This is then compounded as species
+interactions are typically measured as a binary variable---present or absent---
+even though it is evident interactions are not all-or-nothing. Species
+interactions occur probabilistically due to variation in species abundances in
+space and time [@Poisot2015SpeWhy]. Different types of interactions vary in
+their intrinsic predictability (e.g. some fungal species engage in opportunistic
+saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic in
+their interactions than facultative parasites [@Poisot2013FacObl;
+@Luong2019FacPar]). In addition to this variance in predictability, networks
+from different systems are structured by different mechanisms. Interaction
+networks are embodied in numerous forms: host and parasites, plants and
+pollinators, predators and prey, disease and host, and so on, and network types
+may require different methods for prediction.
 
 Still, species interaction networks have entered their "long now"
 [@Carpenter2002EcoFut], where anthropogenic change will have long-term,
