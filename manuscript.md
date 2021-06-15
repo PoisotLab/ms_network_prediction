@@ -67,14 +67,16 @@ examined only through the lens of a single scale. Machine learning methods
 have enormous potential in finding this structure
 [@Desjardins-Proulx2019ArtInt], and have the potential to be used together
 with mechanistic models in order to make prediction of ecological dynamics
-more robust [@Rackauckas2020UniDif; @Becker2020PreWil],
+more robust [@Rackauckas2020UniDif; @Becker2020PreWil].
 
 Here we use a case study to show how machine-learning models can
 enable unreasonably effective prediction of species interactions, whereby we
-construct a metaweb of host-parasite interactions across space. We then propose
-a roadmap forward for how to improve predictions using this approach, and
-provide a primer on the relevant tools and methods that could be incorporated
-these models in the future, in order to account for the spatial, temporal,
+construct a metaweb of host-parasite interactions across space. We then outline
+the roadmap forward for improving predictions using open data and
+machine-learning methods. We then provide a primer on the
+literature on interaction prediction, and identify the tools and
+methods most suited to be the future of interaction network prediction models,
+which for the spatial, temporal,
 and climatic dimensions of network prediction [@Burkle2011FutPla].
 
 # A Case Study: Predicting a Host-Parasite Network
