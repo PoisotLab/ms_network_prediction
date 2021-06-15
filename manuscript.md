@@ -36,7 +36,7 @@ Still, species interaction networks have entered their "long now"
 low-predictability consequences [@Burkle2013PlaInt] for our planet's ecology.
 Therefore, our field needs a conceptual path forward toward models that
 enable prediction (for the present) and forecasting (for the future) of
-species interactions and the networks they form which accounts for their
+species interactions and the networks they form, which accounts for their
 spatial and temporal variation [@McCann2007ProBio; @Seibold2018NecMul]. For
 example, in disease ecology, predicting potential hosts of novel
 disease [*e.g.* wildlife hosts of betacoronaviruses; @Becker2020PreWil;
