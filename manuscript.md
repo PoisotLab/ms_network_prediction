@@ -400,18 +400,18 @@ the model to be wrong: the model predicts an interaction which does not exist
 (a _false positive_ (FP)), or the model predicts no interaction but it does
 exist (a _false negative_ (FN)).
 
-A naïve initial approach to measure how well a model does is _accuracy_
-- the proportion of values it got correct. However, consider what we know
-about interaction networks: they are often very sparse, with connectance
-between $0.1$ and $0.3$.  If we build a model that always guesses there will
+A naïve initial approach to measure how well a model does is _accuracy_,
+*i.e.* the proportion of values it got correct. However, consider what we
+know about interaction networks: they are often very sparse, with connectance
+between $0.1$ and $0.3$. If we build a model that always guesses there will
 be no interaction between two species, it will be correct in the majority of
 cases because the majority of potential interactions in a network typically
 do not exist.  Therefore this "empty-matrix" model would always have an
 _accuracy_ of $1-C$, where $C$ is the observed connectance, which would almost
 always be greater than 50%. In response to the general problem of biases in
 classifiers, many metrics have been proposed to measure binary-classifiers
-(@tbl:table). These can be divided into two general categories: those in
-the precision-recall space and those in the sensitivity-specificity space.
+(@tbl:validation). These can be divided into two general categories: those
+in the precision-recall space and those in the sensitivity-specificity space.
 
 | Name                      | Value | Success         | Description                                                   |
 |:--------------------------|:------|:----------------|:--------------------------------------------------------------|
@@ -426,7 +426,7 @@ the precision-recall space and those in the sensitivity-specificity space.
 |                           |       |                 |                                                               |
 | ROC-AUC                   | 0.86  | $\rightarrow 1$ | Proximity to a perfect prediction (ROC-AUC=1)                 |
 | Youden's J                | 0.60  | $\rightarrow 1$ | Informedness of predictions (trust in invidual prediction)    |
-| Cohen's $\kappa$          | 0.58  | $ \ge 0.5$      |                                                               |
+| Cohen's $\kappa$          | 0.58  | $\ge 0.5$       |                                                               |
 |                           |       |                 |                                                               |
 | Positive Predictive Value | 0.66  | $\rightarrow 1$ | Confidence in predicted interactions                          |
 | Negative Predictive Value | 0.89  | $\rightarrow 1$ | Confidence in predicted non-interactions                      |
