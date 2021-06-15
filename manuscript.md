@@ -123,7 +123,7 @@ which they are assigned based on a $k$-means clustering of the tSNE
 output.](figures/figure1.png){#fig:example}
 
 During the training of this neural network, the batches of 16 items used for
-training were constrained to have at least 10 positive interactions.
+training were constrained to have at least 10 positive interactions, as
 @timpreprintcite show slightly inflating the dataset with
 positive interactions enables us to counterbalance sampling biases.
 
