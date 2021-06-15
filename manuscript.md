@@ -64,7 +64,7 @@ networks are the product of ecological and evolutionary mechanisms interacting
 across spatial, temporal and organizational scales. The interwoven nature of
 these processes imposes structure on biodiversity data which is invisible when
 examined only through the lens of a single scale. Machine learning methods
-have enormous potential in finding this structure in biodiversity data
+have enormous potential in finding this structure
 [@Desjardins-Proulx2019ArtInt], and have the potential to be used together
 with mechanistic models in order to make prediction of ecological dynamics
 more robust [@Rackauckas2020UniDif; @Becker2020PreWil],
