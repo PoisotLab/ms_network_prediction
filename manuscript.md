@@ -390,38 +390,37 @@ interaction network prediction. In the proof-of-concept, we used a
 neural-network to perform binary classification by predicting the
 presence/absence of an interaction between any two species. There are two ways
 for the model to be right: the model predicts an interaction and there is one (a
-_true positive_), or the model predicts no interaction and there isn't one (a
-_true negative_). Similarly, there are two ways for the model to be wrong: the
-model predicts an interaction which does not exist (a _false positive_), or the
-model predicts no interaction but it does exist (a _false negative_).
+_true positive_ (TP)), or the model predicts no interaction and there isn't one (a
+_true negative_ (TN)). Similarly, there are two ways for the model to be wrong: the
+model predicts an interaction which does not exist (a _false positive_ (FP)), or the
+model predicts no interaction but it does exist (a _false negative_ (FN)).
 
-A naive initial approach to measure how well a model does is _accuracy_, the
+A naïve initial approach to measure how well a model does is _accuracy_ - the
 proportion of values it got correct. However, consider what we know about
-interaction networks: they are often vary sparse, with connectance between $0.1$
-and $0.3$.  If we built a model that always guesses there will be no interaction
+interaction networks: they are often very sparse, with connectance between $0.1$
+and $0.3$.  If we build a model that always guesses there will be no interaction
 between two species, it will be correct in the majority of cases because the
 majority of potential interactions in a network typically do not exist.
 Therefore this "empty-matrix" model would always have an _accuracy_ of $1-C$,
 where $C$ is the observed connectance, which would almost always be greater than
 50%. In response to the general problem of biases in classifiers, many metrics
-have been proposed measure binary-classifiers (@table). These can be divided
+have been proposed to measure binary-classifiers (@tbl:table). These can be divided
 into two general categories: those in the precision-recall space and those in
 the sensitivity-specificity space.
 
 
-Table of shit
+| Name                         | Description                                  | Computation  |
+|-----------------------------:|---------------------------------------------:|-------------:|
+| Accuracy                     | percentage of correct predictions            |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
+| Sensitivity                  | synonymous with true positive rate or recall |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
+| Specificity                  | synonymous with true negative rate           |    $\frac{\text{TN}}{\text{TN}+\text{FP}}$ |
+| Precision                    | f                                            |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
+| True Skill ($TSS$)           | f                                            |  $\frac{\text{TP}}{\text{TP}+\text{FN}} + \frac{\text{TN}}{\text{TN}+\text{FP}} - 1$ |
+| F-1 score ($F_1$)            | f                                            |    $F_1 =  \frac{\text{TP}}{\text{TP}+ 0.5(\text{FN}+\text{FP})}$ |
+| General F-Score ($F_\alpha$) | f                                            |    $F_\alpha =  \frac{(1+\alpha^2)*\text{TP}}{(1+\alpha^2)*\text{TP}+ \alpha^2*\text{FN}+\text{FP}}$ |
+| Cohen's $\kappa$             | f                                            |    $\kappa =  \frac{2(\text{TP}*\text{TN} - \text{FN}*\text{FP})}{(\text{TP}+\text{FP})(\text{FP}+\text{TN})+(\text{TP}+\text{FN})(\text{FN}+\text{TN})}$ |
 
-| Name        | description           | Computation  |
-| - | - | - |
-| Accuracy | percentage of corrent predictions     |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
-| Sensitivity | synonymous with true positive rate or  recall     |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
-| Specificity | synonymous with true negative rate     |    $\frac{\text{TN}}{\text{TN}+\text{FP}}$ |
-| Precision | f     |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
-| True Skill ($TSS$) | f     |  $\frac{\text{TP}}{\text{TP}+\text{FN}} + \frac{\text{TN}}{\text{TN}+\text{FP}} - 1$ |
-| F-1 score ($F_1$) | f     |    $F_1 =  \frac{\text{TP}}{\text{TP}+ 0.5(\text{FN}+\text{FP})}$ |
-| General F-Score ($F_\alpha$) | f     |    $F_\alpha =  \frac{(1+\alpha^2)*\text{TP}}{(1+\alpha^2)*\text{TP}+ \alpha^2*\text{FN}+\text{FP}}$ |
-| Cohen's $\kappa$ | f     |    $\kappa =  \frac{2(\text{TP}*\text{TN} - \text{FN}*\text{FP})}{(\text{TP}+\text{FP})(\text{FP}+\text{TN})+(\text{TP}+\text{FN})(\text{FN}+\text{TN})}$ |
-
+Table: Table of shit. {#tbl:table}
 
 In the machine learning literature, a common way of visualizing this extensive
 list of possible metrics is through the use of ROC (receiver-operating-characteristic) and PR (precision-recall) curves.  
