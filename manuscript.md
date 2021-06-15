@@ -413,32 +413,48 @@ classifiers, many metrics have been proposed to measure binary-classifiers
 (@tbl:table). These can be divided into two general categories: those in
 the precision-recall space and those in the sensitivity-specificity space.
 
+| Name                      | Value | Success         | Description                                                   |
+|:--------------------------|:------|:----------------|:--------------------------------------------------------------|
+| Random accuracy           | 0.56  |                 | Fraction of correct predictions if the classifier is random   |
+| Accuracy                  | 0.81  | $\rightarrow 1$ | Observed fraction of correct predictions                      |
+| Balanced accuracy         | 0.80  | $\rightarrow 1$ | Average fraction of correct positive and negative predictions |
+|                           |       |                 |                                                               |
+| True Positive Rate        | 0.77  | $\rightarrow 1$ | Fraction of interactions predicted                            |
+| True Negative Rate        | 0.83  | $\rightarrow 1$ | Fraction of non-interactions predicted                        |
+| False Positive Rate       | 0.16  | $\rightarrow 0$ | Fraction of non-interactions predicted as interactions        |
+| False Negative Rate       | 0.22  | $\rightarrow 0$ | Fraction of interactions predicted as non-interactions        |
+|                           |       |                 |                                                               |
+| ROC-AUC                   | 0.86  | $\rightarrow 1$ | Proximity to a perfect prediction (ROC-AUC=1)                 |
+| Youden's J                | 0.60  | $\rightarrow 1$ | Informedness of predictions (trust in invidual prediction)    |
+| Cohen's $\kappa$          | 0.58  | $ \ge 0.5$      |                                                               |
+|                           |       |                 |                                                               |
+| Positive Predictive Value | 0.66  | $\rightarrow 1$ | Confidence in predicted interactions                          |
+| Negative Predictive Value | 0.89  | $\rightarrow 1$ | Confidence in predicted non-interactions                      |
+| False Omission Rate       | 0.10  | $\rightarrow 0$ | Expected proportion of missed interactions                    |
+| False Discovery Rate      | 0.33  | $\rightarrow 0$ | Expected proportion of wrongly imputed interactions           |
 
-| Name                         | Description                                  | Computation  |
-|-----------------------------:|---------------------------------------------:|-------------:|
-| Accuracy                     | percentage of correct predictions            |    $\frac{\text{TP}+\text{FP}}{\text{TP}+\text{FP}+\text{TN}+\text{FN}}$ |
-| Sensitivity                  | synonymous with true positive rate or recall |    $\frac{\text{TP}}{\text{TP}+\text{FN}}$ |
-| Specificity                  | synonymous with true negative rate           |    $\frac{\text{TN}}{\text{TN}+\text{FP}}$ |
-| Precision                    | f                                            |    $\frac{\text{TP}}{\text{TP}+\text{FP}}$ |
-| True Skill ($TSS$)           | f                                            |  $\frac{\text{TP}}{\text{TP}+\text{FN}} + \frac{\text{TN}}{\text{TN}+\text{FP}} - 1$ |
-| F-1 score ($F_1$)            | f                                            |    $F_1 =  \frac{\text{TP}}{\text{TP}+ 0.5(\text{FN}+\text{FP})}$ |
-| General F-Score ($F_\alpha$) | f                                            |    $F_\alpha =  \frac{(1+\alpha^2)*\text{TP}}{(1+\alpha^2)*\text{TP}+ \alpha^2*\text{FN}+\text{FP}}$ |
-| Cohen's $\kappa$             | f                                            |    $\kappa =  \frac{2(\text{TP}*\text{TN} - \text{FN}*\text{FP})}{(\text{TP}+\text{FP})(\text{FP}+\text{TN})+(\text{TP}+\text{FN})(\text{FN}+\text{TN})}$ |
-
-Table: Table of shit. {#tbl:table}
+Table: Overview of the validation statistics applied to the case study,
+alongside the criteria indicating a successful classifier and a guide to
+interpretation of the values. It must be noted that in ecological networks,
+there is no guarantee that the "non-interactions" (assumed true negatives)
+in the original dataset are indeed true negatives [@Jordano2016ChaEco;
+@Jordano2016SamNet]. This can result in the positive/negative values, and the
+false omission/discovery being artificially worse, and specifically decrease
+our confidence in predicted interactions. Taken together, these validation
+measures indicate that the model performs well, especially considering that
+it is trained from a small volume of data. {#tbl:validation}
 
 In the machine learning literature, a common way of visualizing
 this extensive list of possible metrics is through the use of ROC
 (receiver-operating-characteristic) and PR (precision-recall) curves.
-
-![TODO](./figures/auc.png){@fig:auc}
-
 Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the
 random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
 means that we can compare the AUC of different models, with $0.5$ being
 the floor and the closer to 1.0 being better. These metrics are typically
 called AUC-ROC (Area-Under-the-Curve Receiver-Operator-Curve)  and AUC-PR
 (Area-Under-the-Curve Precision-Recall).
+
+![TODO](./figures/auc.png){@fig:auc}
 
 ## Networks and Interactions
 
