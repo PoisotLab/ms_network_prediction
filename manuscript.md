@@ -68,7 +68,7 @@ have enormous potential in finding this structure in biodiversity data
 with mechanistic models in order to make prediction of ecological dynamics
 more robust [@Rackauckas2020UniDif; @Becker2020PreWil],
 
-Here we provide a proof-of-concept to show how machine-learning models can
+Here we use a case study to show how machine-learning models can
 enable unreasonably effective prediction of species interactions, whereby we
 construct a metaweb of host-parasite interactions across space. We then propose
 a roadmap forward for how to improve predictions using this approach, and
@@ -76,9 +76,7 @@ provide a primer on the relevant tools and methods that could be incorporated
 these models in the future, in order to account for the spatial, temporal,
 and climatic dimensions of network prediction [@Burkle2011FutPla].
 
-# Proof-of-Concept
-
-## Can we predict ecological networks?
+# A Case Study: Predicting a Host-Parasite Network
 
 The core premise of this manuscript is that ecological networks can be
 predicted. In this section we provide a proof-of-concept, in which we use
@@ -122,7 +120,7 @@ probabilistic PCA, then used to train a deep neural network to predict
 species interactions. The initial and imputed networks are represented
 as their tSNE embedding, and the colors of nodes are the cluster to
 which they are assigned based on a $k$-means clustering of the tSNE
-output.](figures/new_figure1.png){#fig:example}
+output.](figures/figure1.png){#fig:example}
 
 During the training of this neural network, we exploited ecological constraints
 in two ways: First by selecting features so that absent interactions for
