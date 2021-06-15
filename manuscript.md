@@ -104,11 +104,12 @@ We first aggregate all interactions into a cooccurence matrix $C$ which
 represents whether a given pair of species $(i,j)$ was observed coexisting
 across any location [@Dunne2006NetStr]. We then transform this cooccurence
 matrix $C$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
-values from this as the features vector for each species $i$. For each pair of
-(host, parasite) species $(i,j)$, we then feed the features vectors $[v_i, v_j]$
-into a neural network. The neural-network uses four feed-forward layers (the
-first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates ($0.5$).
-This produces an output layer which is the probability-score for the  interaction between the species $i$ and $j$.
+values from this PCA as the features vector for each species $i$. For each pair
+of (host, parasite) species $(i,j)$, we then feed the features vectors $[v_i,
+v_j]$ into a neural network. The neural-network uses four feed-forward layers
+(the first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates
+($0.5$). This produces an output layer which is the probability-score for
+interaction between species $i$ and $j$.
 
 ![(A) A conceptual overview of the process of network prediction. Beginning
 with data of observed interaction between species, we aim to predict the
@@ -121,29 +122,25 @@ as their tSNE embedding, and the colors of nodes are the cluster to
 which they are assigned based on a $k$-means clustering of the tSNE
 output.](figures/figure1.png){#fig:example}
 
-During the training of this neural network, we exploited ecological constraints
-in two ways: First by selecting features so that absent interactions for
-a species pair that was not observed to co-occur were removed from the
-data. This ensures that the network is trained only on the subset of the
-data for which we have actual information about the interaction. Second,
+During the training of this neural network,
 the batches of 16 items used for training were constrained to have at least
 10 positive interactions. The reasoning for this choice was made based on
 three observations: the network is sparse, meaning negative interactions
 have a chance of being false negatives due to lack of reporting in the field,
 and there is no way to ensure an interaction not observed to occur is a true
 negative. Slightly inflating the dataset with positive interactions enables
-us to counterbalance these biases [@Chawla2010DatMin].
+us to counterbalance these biases [@Chawla2010DatMin; @timpreprintcite].
 
-After the training ($2.5\times 10^4$ epochs in @fig:example), our model
-reached an accuracy of $\approx 0.8$, with no marked deviation between the
-training and testing sets (respectively 80% and 20% of the data), suggesting
-no to minimal overfitting, which is replicable across random partitions of
-test and training sets. Applying this model to the entire dataset (including
-species pairs never observed co-occuring in the dataset) identified 1831
-new possible interactions -- 382 of which were in pairs of species never
-considered prior. This suggests that meaningful information about ecological
-interactions is structured within network data. Now, the question becomes:
-home do we make our prediction of interaction networks _better_?
+<-- have to make the point that this simple neural net is very effective in
+preictive, show ROC/PR validation figures, etc. -->
+
+Applying this model to the entire dataset (including
+species pairs never observed co-occuring in the dataset) identified N
+new possible interactions -- M of which were in pairs of species never
+considered prior.
+
+Now, the question becomes: home do we make our prediction of interaction
+networks _better_?
 
 ## Challenges: the many constraints on prediction
 
