@@ -90,7 +90,7 @@ that these species have never been observed because of negative associations,
 however it is also possible this is only due to random chance in what
 species are observed.
 
-Without any species-level information to predict interactions, we resort to
+Without any species-level information, we resort to
 using cooccurence to predict interactions. To do this we (i) extract features
 for each species based on co-occurrence, (ii) use these features to train a
 neural network to predict interactions, and (iii) apply this classifier to the
@@ -100,17 +100,15 @@ reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
 carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
 learning framework [@Innes2018FluEle].
 
-We first aggregate all interactions into a binary metaweb [@Dunne2006NetStr] to
-represent co-occurrence among species, and then transform this co-occurrence
-matrix via probabilistic PCA [@Tipping1999ProPri] to create a features vector
-$v_i$ for each species $i$, which are the first 15 components of the
-co-occurrence PCA.
-
-We then feed the features vectors $[v_i, v_j]$, where $v_i$ is the values of the
-selected features for the parasite and $v_j$ is the features of the host, into a
-neural network, which uses four feed-forward layers (the first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates
-($0.5$) as inputs to an output layer whose result is the probability of
-interaction between two species.
+We first aggregate all interactions into a cooccurence matrix $C$ which
+represents whether a given pair of species $(i,j)$ was observed coexisting
+across any location [@Dunne2006NetStr]. We then transform this cooccurence
+matrix $C$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
+values from this as the features vector for each species $i$. For each pair of
+(host, parasite) species $(i,j)$, we then feed the features vectors $[v_i, v_j]$
+into a neural network. The neural-network uses four feed-forward layers (the
+first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates ($0.5$).
+This produces an output layer which is the probability-score for the  interaction between the species $i$ and $j$.
 
 ![(A) A conceptual overview of the process of network prediction. Beginning
 with data of observed interaction between species, we aim to predict the
