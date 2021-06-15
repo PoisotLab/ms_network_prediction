@@ -122,20 +122,17 @@ as their tSNE embedding, and the colors of nodes are the cluster to
 which they are assigned based on a $k$-means clustering of the tSNE
 output.](figures/figure1.png){#fig:example}
 
-During the training of this neural network,
-the batches of 16 items used for training were constrained to have at least
-10 positive interactions. The reasoning for this choice was made based on
-three observations: the network is sparse, meaning negative interactions
-have a chance of being false negatives due to lack of reporting in the field,
-and there is no way to ensure an interaction not observed to occur is a true
-negative. Slightly inflating the dataset with positive interactions enables
-us to counterbalance these biases [@Chawla2010DatMin; @timpreprintcite].
+During the training of this neural network, the batches of 16 items used for
+training were constrained to have at least 10 positive interactions.
+@timpreprintcite show slightly inflating the dataset with
+positive interactions enables us to counterbalance sampling biases.
 
-<-- have to make the point that this simple neural net is very effective in
-preictive, show ROC/PR validation figures, etc. -->
+<--  make the point that this simple neural net is very effective in
+prediction. compare to previous studies using more information [@2014],
+show ROC/PR validation figures, etc. -->
 
 Applying this model to the entire dataset (including
-species pairs never observed co-occuring in the dataset) identified N
+species pairs never observed cooccuring) identified N
 new possible interactions -- M of which were in pairs of species never
 considered prior.
 
