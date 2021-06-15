@@ -408,7 +408,7 @@ do not exist.  Therefore this "empty-matrix" model would always have an
 _accuracy_ of $1-C$, where $C$ is the observed connectance, which would almost
 always be greater than 50%. In response to the general problem of biases in
 classifiers, many metrics have been proposed to measure binary-classifiers
-(@tbl:validation). These can be divided into two general categories: those
+(@tbl:validation), [@Gu2009EvaMea; @Drummond2006CosCur] These can be divided into two general categories: those
 in the precision-recall space and those in the sensitivity-specificity space.
 
 | Name                      | Value | Success         | Description                                                   |
