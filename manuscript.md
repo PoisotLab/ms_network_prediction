@@ -58,7 +58,8 @@ are limited in that they are typically based around a single mechanism
 at a single scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic distance [@Pomeranz2018InfPre;
 @Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra], or other
-network properties [@Terry2020FinMis; @Stock2017LinFil]. Species interaction
+network properties [@Terry2020FinMis; @Stock2017LinFil]. These approaches are
+difficult to generalize across systems as species interaction
 networks are the product of ecological and evolutionary mechanisms interacting
 across spatial, temporal and organizational scales. The interwoven nature of
 these processes imposes structure on biodiversity data which is invisible when
