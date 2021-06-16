@@ -79,6 +79,7 @@ methods most suited to be the future of interaction network prediction models,
 which for the spatial, temporal,
 and climatic dimensions of network prediction [@Burkle2011FutPla].
 
+
 # A Case Study: Predicting a Host-Parasite Network
 
 The premise of this manuscript is that we can predict interactions between
