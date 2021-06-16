@@ -269,7 +269,7 @@ applied with or without human supervision. These techniques can often be
 more flexible and perform better than classical statistical methods, and can
 achieve a very high level of accuracy in many predictive and classification
 tasks in a relatively short amount of time [e.g. @Cutler2007RanFor;
-@Krizhevsky2017ImaCla].  Increasing computing power combined with
+@Krizhevsky2017ImaCla]. Increasing computing power combined with
 recent advances in machine learning techniques and applications shows
 promise in ecology and environmental science (see @Christin2019AppDee
 for an overview). Moreover, ongoing developments in deep learning are
@@ -332,7 +332,7 @@ can reveal underlying mechanisms that structure ecological communities,
 given a proper null model [@Connor2017UsiNul]. However, in order for ecology
 to develop as a predictive science [@Evans2012PreEco], interest has grown
 in developing models that are used not just for description of data, but
-also for prediction.  Predictive models are based in _the forward problem_,
+also for prediction. Predictive models are based in _the forward problem_,
 where the aim is to predict new values of the output $y$ given an input $x$
 and our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward
 problem relies on an estimate of $\theta$, then, the problem of inference
@@ -370,7 +370,7 @@ chooses from a set of possible models and 2) Model assessment, where the
 modeler determines the performance characteristics of the chosen model
 [@Hastie2009EleSta].
 
-In the context of _model selection_, a naive initial approach is to simply
+In the context of _model selection_, a naïve initial approach is to simply
 compute the average error between the model's prediction and the true data we
 have, and choose the model with the smallest error---however this approach
 inevitably results in _overfitting_. One approach to avoid overfitting is
