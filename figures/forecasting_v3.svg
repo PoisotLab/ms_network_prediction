@@ -15,7 +15,7 @@
    viewBox="0 0 2735.1895 1215.4392"
    height="1215.4392"
    width="2735.1895"
-   inkscape:export-filename="/home/michael/papers/ms_network_prediction/figures/forecasting_v3.png"
+   inkscape:export-filename="/home/michael/ms_network_prediction/figures/forecasting_v3.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -1548,16 +1548,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.3526066"
-     inkscape:cx="1557.1756"
-     inkscape:cy="369.31358"
+     inkscape:cx="1358.1835"
+     inkscape:cy="479.50468"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="660"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:lockguides="true"
      showguides="false"
@@ -1599,7 +1599,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1609,12 +1609,12 @@
      id="layer1"
      transform="translate(240.45372,154.03551)">
     <rect
-       style="fill:#f2f2f2;fill-opacity:0.996078;stroke:none;stroke-width:12.998;stroke-opacity:1"
+       style="fill:#f2f2f2;fill-opacity:0.996078;stroke:none;stroke-width:13.2679;stroke-opacity:1"
        id="rect8396"
-       width="2592.2434"
-       height="1286.2993"
-       x="-137.9633"
-       y="-224.8956" />
+       width="2735.1895"
+       height="1215.4392"
+       x="-240.45372"
+       y="-154.03551" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke-width:3.46032"
        id="rect1951"
@@ -1630,19 +1630,19 @@
        x="-89.772644"
        y="349.79874" />
     <rect
-       style="fill:#ffffff;fill-opacity:0.995926;stroke:#58d1d4;stroke-width:9.95451;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:0.995926;stroke:#58d1d4;stroke-width:9.505;stroke-opacity:1"
        id="rect1982"
        width="1832.344"
-       height="1021.2639"
-       x="564.55096"
-       y="-106.96203" />
+       height="931.11298"
+       x="559.94946"
+       y="-14.427086" />
     <rect
        style="fill:#58d1d4;fill-opacity:0.995187;stroke-width:2.84386"
        id="rect1458"
        width="1828.4698"
        height="83.528526"
-       x="565.24146"
-       y="-103.00051" />
+       x="559.94946"
+       y="-14.427086" />
     <rect
        style="fill:#ffffff;fill-opacity:0.554283;stroke:#3fbacf;stroke-width:6.80394;stroke-opacity:1"
        id="rect1976"
@@ -1710,16 +1710,15 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;stroke-width:1.21242">Prediction</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:49.0654px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.22664"
-       x="2216.4138"
-       y="-42.4986"
-       id="text1996"
-       transform="scale(0.95484349,1.0472921)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.8498px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.17125"
+       x="2116.3284"
+       y="40.832283"
+       id="text1996"><tspan
          sodipodi:role="line"
          id="tspan1994"
-         x="2216.4138"
-         y="-42.4986"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;stroke-width:1.22664">Forecasting</tspan></text>
+         x="2116.3284"
+         y="40.832283"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;stroke-width:1.17125">Forecasting</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:4.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 175.53955,455.52197 1.81449,245.11994 249.63162,0.83572"
@@ -2181,6 +2180,19 @@
         </g>
       </g>
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2137.1899,172.00073 -0.8301,171.79802"
+       id="path1580"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#37cbb6;fill-opacity:0.995187;stroke-width:1.81227"
+       id="rect1527"
+       width="485.27768"
+       height="127.80949"
+       x="-2357.5059"
+       y="108.74335"
+       transform="scale(-1,1)" />
     <rect
        style="fill:none;fill-opacity:0.996078;stroke-width:1.92566"
        id="rect7907"
@@ -2188,17 +2200,22 @@
        height="0"
        x="1502.3656"
        y="-88.330399" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2140.9971,335.06244 c -0.8563,3.08549 -2.9324,8.3716 -4.52,8.78186 -2.8812,0.74455 -3.3471,-9.92473 -3.3471,-9.92473"
+       id="path1582"
+       sodipodi:nodetypes="csc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.993322"
-       x="2064.5073"
-       y="46.625549"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.7327px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.993322"
+       x="1909.66"
+       y="184.73122"
        id="text7911"><tspan
          sodipodi:role="line"
          id="tspan7909"
-         x="2064.5073"
-         y="46.625549"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#1a1a1a;fill-opacity:1;stroke-width:0.993322">forecast of features</tspan></text>
+         x="1909.66"
+         y="184.73122"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;stroke-width:0.993322">input forecast</tspan></text>
     <rect
        style="fill:#336f88;fill-opacity:0.450121;stroke-width:1.21002"
        id="rect3318"
@@ -2346,7 +2363,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="matrix(4.5782193,0,0,4.8709009,1365.8406,181.8787)"
+       transform="matrix(4.5782193,0,0,4.8709009,1368.3757,199.57625)"
        id="g3258"
        style="fill:#000000;fill-opacity:1">
       <g
@@ -2644,16 +2661,23 @@
         </g>
       </g>
     </g>
+    <rect
+       style="fill:#336f88;fill-opacity:0.450121;stroke-width:0.834433"
+       id="rect3320"
+       width="147.70511"
+       height="89.022179"
+       x="2193.0215"
+       y="128.74335" />
     <g
        inkscape:label=""
-       transform="matrix(5.2301987,0,0,5.3893021,1476.1255,-257.1961)"
+       transform="matrix(5.2301987,0,0,5.3893021,1740.1702,-254.92919)"
        id="g3342"
-       style="fill:#000000;fill-opacity:1">
+       style="fill:#ffffff">
       <g
          id="g5953"
-         style="fill:#000000;fill-opacity:1">
+         style="fill:#ffffff">
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="g1112">
           <use
              xlink:href="#symbol2097"
@@ -2662,10 +2686,10 @@
              id="use1739"
              width="100%"
              height="100%"
-             style="fill:#000000;fill-opacity:1" />
+             style="fill:#ffffff" />
         </g>
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="g5396">
           <use
              xlink:href="#symbol6546"
@@ -2674,10 +2698,10 @@
              id="use2852"
              width="100%"
              height="100%"
-             style="fill:#000000;fill-opacity:1" />
+             style="fill:#ffffff" />
         </g>
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="g2919">
           <use
              xlink:href="#symbol5525"
@@ -2686,10 +2710,10 @@
              id="use1882"
              width="100%"
              height="100%"
-             style="fill:#000000;fill-opacity:1" />
+             style="fill:#ffffff" />
         </g>
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="g3307">
           <use
              xlink:href="#symbol8165"
@@ -2698,7 +2722,7 @@
              id="use256"
              width="100%"
              height="100%"
-             style="fill:#000000;fill-opacity:1" />
+             style="fill:#ffffff" />
         </g>
       </g>
     </g>
@@ -2814,7 +2838,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;stroke-width:1.0892">Data</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009"
        x="786.42413"
        y="395.9808"
        id="text1484"><tspan
@@ -2822,10 +2846,10 @@
          id="tspan1482"
          x="786.42413"
          y="395.9808"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#1a1a1a;stroke-width:1.63009;">parameter inference</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#1a1a1a;stroke-width:1.63009">parameter inference</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009"
        x="1561.5798"
        y="379.9808"
        id="text1540"><tspan
@@ -2833,22 +2857,22 @@
          id="tspan1538"
          x="1561.5798"
          y="379.9808"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009;">prediction given </tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009">prediction given </tspan><tspan
          sodipodi:role="line"
          x="1561.5798"
          y="423.31418"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009"
          id="tspan1542">novel inputs</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009"
-       x="2184.1396"
-       y="435.40845"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63009"
+       x="2137.5798"
+       y="409.9808"
        id="text1548"><tspan
          sodipodi:role="line"
-         x="2184.1396"
-         y="435.40845"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009"
+         x="2137.5798"
+         y="409.9808"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:1.63009"
          id="tspan1552">forecasted future state</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2870,158 +2894,6 @@
        style="fill:none;stroke:#000000;stroke-width:2.57057;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 749.81013,255.69025 c 5.10952,0.82877 13.87215,2.85758 14.57327,4.44153 1.27234,2.87444 -16.3453,3.43542 -16.3453,3.43542"
        id="path1586"
-       sodipodi:nodetypes="csc" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26134"
-       cx="2110.9519"
-       cy="-196.43883"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:3.46677;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2075.5963,75.63506 1.5496,195.55101 213.1909,0.66672"
-       id="path26124" />
-    <g
-       inkscape:label=""
-       transform="matrix(7.1187358,0,0,6.6499024,1516.2425,-219.02535)"
-       id="g26132"
-       style="fill:#000000;fill-opacity:1">
-      <g
-         id="g26130"
-         style="fill:#000000;fill-opacity:1">
-        <g
-           style="fill:#000000;fill-opacity:1"
-           id="g26128">
-          <use
-             xlink:href="#symbol8870"
-             x="91.925003"
-             y="81.962997"
-             id="use26126"
-             width="100%"
-             height="100%"
-             style="fill:#000000;fill-opacity:1" />
-        </g>
-      </g>
-    </g>
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26136"
-       cx="2131.7317"
-       cy="-172.46686"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26138"
-       cx="2180.262"
-       cy="-154.56711"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26140"
-       cx="2087.5608"
-       cy="-188.4557"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26142"
-       cx="2158.6267"
-       cy="-172.04753"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26152"
-       cx="2200.6165"
-       cy="-135.63062"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26154"
-       cx="2222.6121"
-       cy="-144.56711"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26156"
-       cx="2242.1567"
-       cy="-123.99243"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26158"
-       cx="2266.8879"
-       cy="-120.65419"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#abd1ea;fill-opacity:1;fill-rule:evenodd;stroke:#3e98d1;stroke-width:1.43405;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="ellipse26160"
-       cx="2282.6121"
-       cy="-98.567108"
-       rx="6.2290211"
-       ry="6.1150427"
-       transform="scale(1,-1)" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2093.5191,190.66484 11.4518,4.04014"
-       id="path26164" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2115.6485,192.40538 12.443,-14.83274"
-       id="path26166" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2138.0895,171.78316 13.9601,-0.18889"
-       id="path26168" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2164.3257,168.98487 11.1432,-10.30805"
-       id="path26170" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2184.5553,149.68285 11.5039,-9.82393"
-       id="path26172" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2206.542,138.34996 10.375,3.69339"
-       id="path26174" />
-    <path
-       style="fill:none;stroke:#439bd2;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2238.1746,128.81073 -10.0988,13.77794"
-       id="path26176" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2248.7243,122.89768 11.5499,-1.20553"
-       id="path26178" />
-    <path
-       style="fill:none;stroke:#3e98d1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2270.623,115.96228 8.8285,-12.14054"
-       id="path26180" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2117.1831,285.90497 -3.173,99.01925"
-       id="path26182"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2118.5032,376.11288 c -0.8055,3.09914 -2.7943,8.41865 -4.3751,8.85496 -2.8685,0.7918 -3.5097,-9.86838 -3.5097,-9.86838"
-       id="path26184"
        sodipodi:nodetypes="csc" />
   </g>
 </svg>
