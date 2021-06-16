@@ -131,7 +131,7 @@ output.](figures/figure1.png){#fig:example}
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed to cooccur) identified *N* new possible interactions -- *M* of which were
+observed to cooccur) identified _N_ new possible interactions -- _M_ of which were
 in pairs of species never considered prior. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data and
 mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
