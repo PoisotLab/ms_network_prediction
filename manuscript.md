@@ -114,7 +114,7 @@ interaction between species $i$ and $j$.
 We then train this neural network by dividing the original dataset into test and
 training sets. During the training of this neural network, the batches of 16
 items used for training were constrained to have at least 10 positive
-interactions, as @timpreprintcite show slightly inflating the dataset with
+interactions, as @Poisot2021ImpMam show slightly inflating the dataset with
 positive interactions enables us to counterbalance sampling biases. Validating
 this model on the test data shows our model provides highly effective prediction
 of interactions between pairs of species not present in the training data
