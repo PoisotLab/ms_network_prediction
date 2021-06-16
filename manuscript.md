@@ -84,7 +84,7 @@ and climatic dimensions of network prediction [@Burkle2011FutPla].
 The premise of this manuscript is that we can predict interactions between
 species. In this section we provide a proof-of-concept, where we use data from
 @Hadfield2014TalTwo describing 51 host-parasite networks sampled across space.
-In this data not all species co-occur across sites, so there are pairs of
+In this data not all species cooccur across sites, so there are pairs of
 species that may or may not interact for which we have no data. It is possible
 that these species have never been observed because of negative associations,
 however it is also possible this is only due to random chance in what
@@ -142,7 +142,7 @@ However, in the process of writing this manuscript we later found trait data
 associated with this system collected by [@citationhere]. This emphasizes the
 need for open data to make the prediction of species interaction networks.
 
-# A Roadmap Toward Predicting Species Interaction Networks
+# A Roadmap Toward Predicting Species Interaction Networks across Space
 
 Here we present a conceptual roadmap (@fig:conceptual) which we envisage to be
 the path toward improving our prediction of species interaction networks, and
@@ -541,8 +541,7 @@ and developing models around a feedback loop between network and interaction
 prediction, it is likely that the quality of the predicted networks will be
 greatly improved compared to current models.
 
-### What network properties should we use to inform our predictions of
-interactions?
+### What network properties should we use to inform our predictions of interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet
 there are two arguments to support basing network prediction around a single
