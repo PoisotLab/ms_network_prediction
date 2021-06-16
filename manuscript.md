@@ -139,15 +139,16 @@ mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
 potential for including external sources of data  for improving our prediction
 of interaction networks.
 
-However, we later found trait data. This emphasizes the need for open data
-to make the prediction of species interaction networks.
+However, in the process of writing this manuscript we later found trait data
+associated with this system collected by [@citationhere]. This emphasizes the
+need for open data to make the prediction of species interaction networks.
 
 # A Roadmap Toward Predicting Species Interaction Networks
 
-Here we present a conceptual
-roadmap (@fig:conceptual) which we envisage to be the path toward improving
-our prediction of species interaction networks, and developing spatially
-explicit models of network structure. We discuss the challenges and opportunities going forward for this research agenda. 
+Here we present a conceptual roadmap (@fig:conceptual) which we envisage to be
+the path toward improving our prediction of species interaction networks, and
+developing spatially explicit models of network structure. We discuss the
+challenges and opportunities going forward for this research agenda.
 
 ![A conceptual roadmap highlighting key areas for the prediction of ecological
 networks. Starting with the input of data from multiple sources, followed by
