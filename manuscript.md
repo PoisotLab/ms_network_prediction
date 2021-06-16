@@ -111,14 +111,14 @@ v_j]$ into a neural network. The neural-network uses four feed-forward layers
 ($0.5$). This produces an output layer which is the probability-score for
 interaction between species $i$ and $j$.
 
-We then train this neural network by dividing the original dataset into
-test and training sets.
-During the training of this neural network, the batches of 16 items used for
-training were constrained to have at least 10 positive interactions, as
-@timpreprintcite show slightly inflating the dataset with
-positive interactions enables us to counterbalance sampling biases.
-Validating this model on the test data shows our model provides highly effective
-prediction of interactions between pairs of species not present in the original data (@fig:example).
+We then train this neural network by dividing the original dataset into test and
+training sets. During the training of this neural network, the batches of 16
+items used for training were constrained to have at least 10 positive
+interactions, as @timpreprintcite show slightly inflating the dataset with
+positive interactions enables us to counterbalance sampling biases. Validating
+this model on the test data shows our model provides highly effective prediction
+of interactions between pairs of species not present in the original data
+(@fig:example).
 
 ![Proof-of-Concept: An empirical network
 [from @Hadfield2014TalTwo] is converted intro latent features using
@@ -127,7 +127,6 @@ species interactions. The initial and imputed networks are represented
 as their tSNE embedding, and the colors of nodes are the cluster to
 which they are assigned based on a $k$-means clustering of the tSNE
 output.](figures/figure1.png){#fig:example}
-
 
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional data about each species.
