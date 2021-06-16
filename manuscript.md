@@ -121,7 +121,7 @@ of interactions between pairs of species not present in the training data
 (@fig:example).
 
 ![Proof-of-Concept: An empirical network
-[from @Hadfield2014TalTwo] is converted intro latent features using
+[from @Hadfield2014TalTwo] is converted into latent features using
 probabilistic PCA, then used to train a deep neural network to predict
 species interactions. The initial and imputed networks are represented
 as their tSNE embedding, and the colors of nodes are the cluster to
@@ -131,7 +131,7 @@ output.](figures/figure1.png){#fig:example}
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed cooccuring) identified N new possible interactions -- M of which were
+observed to cooccur) identified *N* new possible interactions -- *M* of which were
 in pairs of species never considered prior. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data and
 mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
