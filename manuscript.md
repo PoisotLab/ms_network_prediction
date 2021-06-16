@@ -111,10 +111,16 @@ v_j]$ into a neural network. The neural-network uses four feed-forward layers
 ($0.5$). This produces an output layer which is the probability-score for
 interaction between species $i$ and $j$.
 
-![(A) A conceptual overview of the process of network prediction. Beginning
-with data of observed interaction between species, we aim to predict the
-metaweb of interaction across the entire species pool, even those that have
-not been observed together. (B) Proof-of-Concept: An empirical network
+We then train this neural network by dividing the original dataset into
+test and training sets.
+During the training of this neural network, the batches of 16 items used for
+training were constrained to have at least 10 positive interactions, as
+@timpreprintcite show slightly inflating the dataset with
+positive interactions enables us to counterbalance sampling biases.
+Validating this model on the test data shows our model provides highly effective
+prediction of interactions between pairs of species not present in the original data (@fig:example).
+
+![Proof-of-Concept: An empirical network
 [from @Hadfield2014TalTwo] is converted intro latent features using
 probabilistic PCA, then used to train a deep neural network to predict
 species interactions. The initial and imputed networks are represented
@@ -122,22 +128,19 @@ as their tSNE embedding, and the colors of nodes are the cluster to
 which they are assigned based on a $k$-means clustering of the tSNE
 output.](figures/figure1.png){#fig:example}
 
-During the training of this neural network, the batches of 16 items used for
-training were constrained to have at least 10 positive interactions, as
-@timpreprintcite show slightly inflating the dataset with
-positive interactions enables us to counterbalance sampling biases.
 
-<--  make the point that this simple neural net is very effective in
-prediction. compare to previous studies using more information [@2014],
-show ROC/PR validation figures, etc. -->
+This case study shows that a simple neural network can be very effective in
+predicting species interactions even without additional data about each species.
+Applying this model to the entire dataset (including species pairs never
+observed cooccuring) identified N new possible interactions -- M of which were
+in pairs of species never considered prior. This model reaches similar levels of
+predictive efficacy as previous studies that use far more species-level data and
+mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
+potential for including external sources of data  for improving our prediction
+of interaction networks.
 
-Applying this model to the entire dataset (including
-species pairs never observed cooccuring) identified N
-new possible interactions -- M of which were in pairs of species never
-considered prior.
-
-Now, the question becomes: home do we make our prediction of interaction
-networks _better_?
+However, we later found trait data. This emphasizes the need for open data
+to make the prediction of species interaction networks.
 
 ## Challenges: the many constraints on prediction
 
