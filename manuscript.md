@@ -142,6 +142,19 @@ of interaction networks.
 However, we later found trait data. This emphasizes the need for open data
 to make the prediction of species interaction networks.
 
+# A Roadmap Toward Predicting Species Interaction Networks
+
+Here we present a conceptual
+roadmap (@fig:conceptual) which we envisage to be the path toward improving
+our prediction of species interaction networks, and developing spatially
+explicit models of network structure. We discuss the challenges and opportunities going forward for this research agenda. 
+
+![A conceptual roadmap highlighting key areas for the prediction of ecological
+networks. Starting with the input of data from multiple sources, followed by
+a modelling framework for ecological networks and the landscape, which are
+then ultimately combined to allow for the prediction of spatially explicit
+networks.](figures/concept_v6.png){#fig:conceptual}
+
 ## Challenges: the many constraints on prediction
 
 ### Ecological network data are scarce and hard to obtain
@@ -286,16 +299,8 @@ data [@Bohan2017NexGlo], and network inference from presence-absence data
 
 Below we provide a primer on the background concepts necessary to build
 models to predict species interaction networks, with a focus on using machine
-learning approaches in the modelling process. We also present a conceptual
-roadmap (@fig:conceptual) which we envisage to be the path toward improving
-our prediction of species interaction networks, and developing spatially
-explicit models of network structure.
+learning approaches in the modelling process.
 
-![A conceptual roadmap highlighting key areas for the prediction of ecological
-networks. Starting with the input of data from multiple sources, followed by
-a modelling framework for ecological networks and the landscape, which are
-then ultimately combined to allow for the prediction of spatially explicit
-networks.](figures/concept_v6.png){#fig:conceptual}
 
 ## Models
 
