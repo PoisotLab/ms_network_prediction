@@ -17,7 +17,7 @@ of the prediction exercise. These discussions need to be added to this section t
 
 > We have now included a table in the validation section showcasing the various metrics, 
 > what is considered the 'best' outcome and a brief description of the metric. This should 
-> help in addressing point 2 raised above.
+> help address point 2 in this section.
 
 Considering the above, validation of proof of concept/and Figure 4 must be updated to 
 reflect the different values/natures of these metrics (e.g., in addition to TSS, a metric 
@@ -28,9 +28,6 @@ instead of accuracy, but what does a roughly around random TSS means? The author
 very strong claims with regards to their proof of concept which need to be backed up. 
 For instance, when measured, proof of concept might yield good performance on the 
 PR-metrics, which could strengthen the argument for it.
-
-> See again the new table 1 that includes these (and additional metrics), which should 
-> help support claims with regards to the proof-of-concept.
 
 Uncertainties and variations in models’ outcomes must be discussed more prominently. 
 This is becoming increasingly important, particularly with DL/ML algorithms being 
@@ -53,10 +50,6 @@ the network). This needs to be described in more details, and qualified with evi
 subsampling/instance-synthesis techniques, and their effect on the predictions 
 (as per above). Furthermore, clarification needs to be made if performance metrics 
 were derived from the raw or the slightly inflated data.
-
-> we now refer to a preprint (Poisot et al 2021 - l. 117) as rationale - which shows 
-> that slightly inflating the dataset with positive interactions enables us to 
-> counterbalance sampling biases
 
 **Becker et al 2020:** I am aware of this study and its limitations. Here, it is 
 presented in the same way peer-reviewed studies are (see below), without discussing 
