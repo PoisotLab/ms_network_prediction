@@ -15,6 +15,9 @@ of the prediction exercise. These discussions need to be added to this section t
 1) correct (see below), and 
 2) provide an explanation of these metrics and their utilisation that I think would be invaluable to the community at large.
 
+> We have now included a table in the validation section showcasing the various metrics, 
+> what is considered the 'best' outcome and a brief description of the metric. This should 
+> help in addressing point 2 raised above.
 
 Considering the above, validation of proof of concept/and Figure 4 must be updated to 
 reflect the different values/natures of these metrics (e.g., in addition to TSS, a metric 
