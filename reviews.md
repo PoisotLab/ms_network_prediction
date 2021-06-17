@@ -29,6 +29,9 @@ very strong claims with regards to their proof of concept which need to be backe
 For instance, when measured, proof of concept might yield good performance on the 
 PR-metrics, which could strengthen the argument for it.
 
+> As opposed to updating figure 4 see the new table 1 that includes these metrics, 
+> which should help support claims with regards to the proof-of-concept. Figure 4 
+> has been changed to reflect...
 
 Uncertainties and variations in models’ outcomes must be discussed more prominently. 
 This is becoming increasingly important, particularly with DL/ML algorithms being 
