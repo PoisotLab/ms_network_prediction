@@ -114,14 +114,14 @@ interaction between species $i$ and $j$.
 We then train this neural network by dividing the original dataset into test and
 training sets. During the training of this neural network, the batches of 16
 items used for training were constrained to have at least 10 positive
-interactions, as @timpreprintcite show slightly inflating the dataset with
+interactions, as @Poisot2021ImpMam show slightly inflating the dataset with
 positive interactions enables us to counterbalance sampling biases. Validating
 this model on the test data shows our model provides highly effective prediction
 of interactions between pairs of species not present in the training data
 (@fig:example).
 
 ![Proof-of-Concept: An empirical network
-[from @Hadfield2014TalTwo] is converted intro latent features using
+[from @Hadfield2014TalTwo] is converted into latent features using
 probabilistic PCA, then used to train a deep neural network to predict
 species interactions. The initial and imputed networks are represented
 as their tSNE embedding, and the colors of nodes are the cluster to
@@ -131,7 +131,7 @@ output.](figures/figure1.png){#fig:example}
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed cooccuring) identified N new possible interactions -- M of which were
+observed to cooccur) identified _N_ new possible interactions -- _M_ of which were
 in pairs of species never considered prior. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data and
 mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
@@ -269,7 +269,7 @@ applied with or without human supervision. These techniques can often be
 more flexible and perform better than classical statistical methods, and can
 achieve a very high level of accuracy in many predictive and classification
 tasks in a relatively short amount of time [e.g. @Cutler2007RanFor;
-@Krizhevsky2017ImaCla].  Increasing computing power combined with
+@Krizhevsky2017ImaCla]. Increasing computing power combined with
 recent advances in machine learning techniques and applications shows
 promise in ecology and environmental science (see @Christin2019AppDee
 for an overview). Moreover, ongoing developments in deep learning are
@@ -332,7 +332,7 @@ can reveal underlying mechanisms that structure ecological communities,
 given a proper null model [@Connor2017UsiNul]. However, in order for ecology
 to develop as a predictive science [@Evans2012PreEco], interest has grown
 in developing models that are used not just for description of data, but
-also for prediction.  Predictive models are based in _the forward problem_,
+also for prediction. Predictive models are based in _the forward problem_,
 where the aim is to predict new values of the output $y$ given an input $x$
 and our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward
 problem relies on an estimate of $\theta$, then, the problem of inference
@@ -370,7 +370,7 @@ chooses from a set of possible models and 2) Model assessment, where the
 modeler determines the performance characteristics of the chosen model
 [@Hastie2009EleSta].
 
-In the context of _model selection_, a naive initial approach is to simply
+In the context of _model selection_, a naïve initial approach is to simply
 compute the average error between the model's prediction and the true data we
 have, and choose the model with the smallest error---however this approach
 inevitably results in _overfitting_. One approach to avoid overfitting is
