@@ -477,7 +477,7 @@ interactions occur between species in each pool, are typically used for
 pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
 which serve as a way to expand to more than two discrete sets of interacting
 species (e.g. some parasitoid webs, seed dispersal networks, and pollination
-networks @Pocock2012RobRes). These different network types can be leveraged 
+networks [@Pocock2012RobRes]). These different network types can be leveraged 
 within the modeling process and may dictate what is the best approach _e.g._ 
 using network-based features for _k-partite networks_ as a means to account 
 for indirect interactions.
@@ -487,7 +487,9 @@ for indirect interactions.
 Species interaction networks can also be used as a means to quantify
 and understand _interaction strength_. Interaction strength, unlike the
 qualitative presence or absence of an interaction, is a continuous measurement
-which attempts to quantify the effect of one species on another. Interaction
+which attempts to quantify the effect of one species on another. This results 
+in weighted networks that representing different patterns of 'flows' between 
+nodes - which can be modeled in a variety of ways [@Borrett2019WalPar]. Interaction
 strength can generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
 each species, or 2) the effect that changes in one species population has on
@@ -499,7 +501,10 @@ observation is that networks are often composed of many weak interactions and
 few strong interactions [@Berlow2004IntStr]. The distribution of interaction
 strength within a network effects its stability [@Neutel2002StaRea;
 @Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb],
-and serves to benefit multispecies models [@Wootton2005MeaInt].
+and serves to benefit multispecies models [@Wootton2005MeaInt]. Alternatively, 
+understanding flow in modules within networks can aid in understanding the 
+organization of networks [@Farage2021IdeFlo] or the cascading effects of 
+perturbations [@Gaiarsa2019IntStr].
 
 Much like quantifying the occurrence of an interaction, quantifying interaction
 _strength_ in the field is challenging. However, in some contexts, interaction
