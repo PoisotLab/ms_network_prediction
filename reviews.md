@@ -86,6 +86,11 @@ interactions: for instance, in complex k-partite networks, network-based feature
 might prove invaluable (because they can be computed to quantify indirect interactions 
 in ways that other methods might not account for).
 
+> what is a nice way to say we added some word fluff?? We have introduced the concept 
+> of different interaction types earlier in the manuscript (~l. 30) as well as  
+> expanding on how network type (uni-, bi- k,) plays a role in the modeling 
+> process (~l. 480)
+
 **Lines 318-340:** There are few other models that connect networks/their structures 
 to predict interactions within the networks/subset of nodes in networks. They need 
 to be sited here.

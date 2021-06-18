@@ -29,7 +29,7 @@ their interactions than facultative parasites [@Poisot2013FacObl;
 from different systems are structured by different mechanisms. Interaction
 networks are embodied in numerous forms: host and parasites, plants and
 pollinators, predators and prey, disease and host, and so on, and network types
-may require different methods for prediction.
+may require different approaches and methods for prediction.
 
 Still, species interaction networks have entered their "long now"
 [@Carpenter2002EcoFut], where anthropogenic change will have long-term,
@@ -299,7 +299,7 @@ data [@Bohan2017NexGlo], and network inference from presence-absence data
 
 Below we provide a primer on the background concepts necessary to build
 models to predict species interaction networks, with a focus on using machine
-learning approaches in the modelling process.
+learning approaches in the modeling process.
 
 ## Models
 
@@ -477,7 +477,10 @@ interactions occur between species in each pool, are typically used for
 pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
 which serve as a way to expand to more than two discrete sets of interacting
 species (e.g. some parasitoid webs, seed dispersal networks, and pollination
-networks) [@Pocock2012RobRes].
+networks @Pocock2012RobRes). These different network types can be leveraged 
+within the modeling process and may dictate what is the best approach _e.g._ 
+using network-based features for _k-partite networks_ as a means to account 
+for indirect interactions.
 
 ### What about interaction _strength_?
 
