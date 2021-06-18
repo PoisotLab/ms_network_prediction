@@ -406,9 +406,17 @@ be no interaction between two species, it will be correct in the majority of
 cases because the majority of potential interactions in a network typically
 do not exist.  Therefore this "empty-matrix" model would always have an
 _accuracy_ of $1-C$, where $C$ is the observed connectance, which would almost
-always be greater than 50%. In response to the general problem of biases in
+always be greater than 50%. Understanding model performance within 
+sensitivity-specificity space may be more informative, where sensitivity 
+evaluates how good the model is at predicting true interactions (TPs) and 
+specificity refers to the prediction of true non-interactions (TNs).
+
+In response to the general problem of biases in
 classifiers, many metrics have been proposed to measure binary-classifiers
-(@tbl:validation), [@Gu2009EvaMea; @Drummond2006CosCur]
+(see @tbl:validation, [@Gu2009EvaMea; @Drummond2006CosCur]) and are indicative 
+of how well the model performs with regards to some aspect of accuracy, 
+sensitivity, specificity and/or precision. Where, ultimately the choice of 
+metric will depend on the intended use of the model.
 
 | Name                      | Value | Success         | Description                                                   |
 |:--------------------------|:------|:----------------|:--------------------------------------------------------------|
@@ -422,7 +430,7 @@ classifiers, many metrics have been proposed to measure binary-classifiers
 | False Negative Rate       | 0.22  | $\rightarrow 0$ | Fraction of interactions predicted as non-interactions        |
 |                           |       |                 |                                                               |
 | ROC-AUC                   | 0.86  | $\rightarrow 1$ | Proximity to a perfect prediction (ROC-AUC=1)                 |
-| Youden's J                | 0.60  | $\rightarrow 1$ | Informedness of predictions (trust in invidual prediction)    |
+| Youden's J                | 0.60  | $\rightarrow 1$ | Informedness of predictions (trust in individual prediction)  |
 | Cohen's $\kappa$          | 0.58  | $\ge 0.5$       |                                                               |
 |                           |       |                 |                                                               |
 | Positive Predictive Value | 0.66  | $\rightarrow 1$ | Confidence in predicted interactions                          |
