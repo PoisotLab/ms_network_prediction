@@ -16,8 +16,9 @@ of the prediction exercise. These discussions need to be added to this section t
 2) provide an explanation of these metrics and their utilisation that I think would be invaluable to the community at large.
 
 > We have now included a table in the validation section showcasing the various metrics, 
-> what is considered the 'best' outcome and a brief description of the metric. This should 
-> help in addressing point 2 raised above.
+> what is considered the 'best' outcome and a brief description of the metric. We have 
+> also expanded the discussion around accuracy, sensitivity, and specificity. This should 
+> specifically help in addressing point 2 raised above.
 
 Considering the above, validation of proof of concept/and Figure 4 must be updated to 
 reflect the different values/natures of these metrics (e.g., in addition to TSS, a metric 
@@ -30,8 +31,7 @@ For instance, when measured, proof of concept might yield good performance on th
 PR-metrics, which could strengthen the argument for it.
 
 > As opposed to updating figure 4 see the new table 1 that includes these metrics, 
-> which should help support claims with regards to the proof-of-concept. Figure 4 
-> has been changed to reflect...
+> which should help support claims with regards to the proof-of-concept. 
 
 Uncertainties and variations in models’ outcomes must be discussed more prominently. 
 This is becoming increasingly important, particularly with DL/ML algorithms being 
@@ -72,10 +72,14 @@ or 3) remove these citations. Furthermore, there are few cases where the aforeme
 has been cited to the exclusion of other peer-reviewed work (e.g., in discussion of 
 node-embedding: line 365).
 
+> @tpoisot is on this one
+
 **How do we predict how species that we have never observed together will interact (355-374):** 
 there are other ways to incorporate network-structure into models to predict interactions within 
 a given network, such as calculating network-based features, they need to be mentioned here for 
 completeness.
+
+> @gottacatchenall pls respond here RE #124
 
 ## Minor points:
 
@@ -95,13 +99,14 @@ in ways that other methods might not account for).
 to predict interactions within the networks/subset of nodes in networks. They need 
 to be sited here.
 
+> @gottacatchenall pls respond here RE #124
+
 **Lines 375-397:** this section could benefit from discussion of various types of 
 flow in networks, for instance there are few examples in the literature (needs to 
 be cited), were authors looked at the concept of flow in subtypes of ecological 
 networks, and its meaning. Particularly for unipartite ecological networks – 
 flow can be misleading in some scenarios, and very powerful in others.
 
-> 
 
 In addition to interaction strength, weighted networks need to be mentioned 
 somewhere, even if only for completeness.
