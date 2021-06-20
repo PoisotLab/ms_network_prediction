@@ -107,6 +107,9 @@ be cited), were authors looked at the concept of flow in subtypes of ecological
 networks, and its meaning. Particularly for unipartite ecological networks – 
 flow can be misleading in some scenarios, and very powerful in others.
 
+> We have now included references to studies that have addressed network 
+> flows (Borret et al 2019, Farage et al 2021) within the interaction 
+> strength section
 
 In addition to interaction strength, weighted networks need to be mentioned 
 somewhere, even if only for completeness.
