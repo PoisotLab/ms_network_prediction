@@ -136,11 +136,10 @@ in pairs of species never considered prior. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data and
 mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
 potential for including external sources of data for improving our prediction
-of interaction networks.
-
-However, in the process of writing this manuscript we later found trait data
-associated with this system collected by [@citationhere]. This emphasises the
-need for open data to make the prediction of species interaction networks.
+of interaction networks. For example @Krasnov2016TraPhy collected traits 
+data for this system that could be added to the model. However, trait data 
+were not publicly available and emphasises the need for open data to make 
+the prediction of species interaction networks.
 
 # A Roadmap Toward Predicting Species Interaction Networks across Space
 
