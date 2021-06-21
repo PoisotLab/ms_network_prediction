@@ -163,7 +163,7 @@ network-based features, they need to be mentioned here for completeness.
 > Most of what this comment wants is in the previous section (_What network
 > properties should we use to inform our predictions of interactions?_) in which
 > we discuss the potential and limitations of using network properties for
-> prediction.  In the former section we argue that the network-based feature
+> prediction. In the former section we argue that the network-based feature
 > most likely to provide useful predictions is connectance, as most network
 > properties highly covary with it. We have added an addition mention to this
 > section on using other network properties (modularity and embedding) for
@@ -179,6 +179,9 @@ bi- k,) plays a role in the modelling process (ca. line 480)
 structures to predict interactions within the networks/subset of nodes in
 networks. They need to be cited here.
 
+> See our response about to _How do we predict how species that we have never
+> observed together will *interact (355-374), which now includes further
+> mentions and citations of these methods.
 
 **Lines 375-397:** this section could benefit from discussion of various types
 *of flow in networks, for instance there are few examples in the literature
@@ -251,4 +254,3 @@ structure of the sections are outlined within each section.
 
 > Reviewer 1 commented on the proof of concept, and we have expanded this
 section.
-
