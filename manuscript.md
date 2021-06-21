@@ -119,12 +119,14 @@ interaction between species $i$ and $j$.
 
 We then train this neural network by dividing the original dataset into
 test and training sets. During the training of this neural network, the
-batches of 16 items used for training were constrained to have at least 10
-positive interactions, as @Poisot2021ImpMam show slightly inflating the
-dataset with positive interactions enables us to counterbalance sampling
-biases. Validating this model on the test data shows our model provides
-highly effective prediction of interactions between pairs of species not
-present in the training data (@fig:example).
+batches of 64 items used for training were constrained to have at least 25%
+of positive interactions, as @Poisot2021ImpMam show slightly inflating
+the dataset with positive interactions enables us to counterbalance
+sampling biases. Furthermore, setting a minimum threshold of response
+balance is an established approach for datasets with strong biases
+[@Lemaitre2017ImbPyt]. Validating this model on the test data shows our
+model provides highly effective prediction of interactions between pairs of
+species not present in the training data (@fig:example).
 
 ![Proof-of-Concept: An empirical network [from @Hadfield2014TalTwo] is
 converted into latent features using probabilistic PCA, then used to train a
@@ -179,7 +181,7 @@ strength, when it is known that co-occurrence is not the only prerequisite
 for an interaction to occur [@Blanchet2020CooNot]. Spatial biases in data
 coverage are prevalent at the global scale (with South America, Africa and
 Asia being under-represented) and different interaction types show biases
-towards different biomes [@Poisot2020EnvBia]. These "spatial gaps" serve as
+towards different biomes [@Poisot2021GloKno]. These "spatial gaps" serve as
 a limitation to our ability to confidently make predictions when accounting
 for real-world environmental conditions, especially in environments for
 which there are no analogous data.
