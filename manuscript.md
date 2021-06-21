@@ -14,7 +14,7 @@ processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge
 of species interactions (like being able to list them, or guess which ones
 may exist) is still one of the most severe shortfalls in biodiversity science
 [@Hortal2015SevSho], in large part due to the tedious, time-consuming, and
-expensive process of collecting species interaction data.  Comprehensively
+expensive process of collecting species interaction data. Comprehensively
 sampling every possible interaction is not feasible given the sheer number of
 species on Earth, and the data we can collect about interactions is biased and
 noisy [@deAguiar2019RevBia]. This is then compounded as species interactions
@@ -71,12 +71,19 @@ make prediction of ecological dynamics more robust [@Rackauckas2020UniDif;
 
 Here we use a case study to show how machine-learning models can enable
 unreasonably effective prediction of species interactions, whereby we
-construct a metaweb of host-parasite interactions across space. We then
-outline the roadmap forward for improving predictions using open data and
-machine-learning methods. We then provide a primer on the literature on
-interaction prediction, and identify the tools and methods most suited to be
-the future of interaction network prediction models, which for the spatial,
-temporal, and climatic dimensions of network prediction [@Burkle2011FutPla].
+construct a metaweb of host-parasite interactions across space. We then use
+this case study to illustrate a roadmap for improving predictions using
+open data and machine-learning methods. We then provide a non-exhaustive
+primer on the literature on interaction prediction, and identify the tools
+and methods most suited to be the future of interaction network prediction
+models, which for the spatial, temporal, and climatic dimensions of network
+prediction [@Burkle2011FutPla]. Adopting more predictive approaches to complex
+ecological systems (like networks) will establish a positive feedback loop
+with our understanding of these systems [@Houlahan2017PriPre]: the tasks of
+understanding and predictive are neither separate not opposed; instead, ML
+tools have the ability to capture a lot of our understanding into working
+assumptions, and comparing predictions to empirical data gives us better
+insights about how much we ignore about the systems we model.
 
 # A Case Study: Predicting a Host-Parasite Network
 
@@ -560,8 +567,7 @@ and developing models around a feedback loop between network and interaction
 prediction, it is likely that the quality of the predicted networks will be
 greatly improved compared to current models.
 
-### What network properties should we use to inform our predictions of
-interactions?
+### What network properties should we use to inform our predictions of interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet
 there are two arguments to support basing network prediction around a single
@@ -579,8 +585,7 @@ properties from richness estimates alone.  Therefore we suggest that predicting
 the value of network connectance across space (and eventually time) is most
 likely to be the most practical to formulate at the moment.
 
-### How do we predict how species that we have never observed together
-will interact?
+### How do we predict how species that we have never observed together will interact?
 
 A neutral approach would assume the probability of an interaction is the same
 as the likelihood of co-occurrence [@Poisot2015SpeWhy; @Pichler2020MacLea],
@@ -595,16 +600,16 @@ Phylogenetic matching in bipartite networks is consistent across scales
 [@Coelho2017NeuBio].
 
 A separate family of methods are based on network embedding (as in the
-proof-of-concept). A network embedding projects each node of the network into
-a lower-dimensional latent space. This enables us to represent the structure
-of a network, which previously required the $S^2$ dimensions of an adjacency
-matrix, with a smaller number of dimensions. The position of each node in this
-lower dimensional space is then treated as a latent measurement corresponding
-to the role of that species in the network [@Becker2020PreWil]. Species close
-together in the latent space should interact with similar set of species
-[@Rossberg2006FooWeb; @Rohr2010ModFoo]. However, these models are sensitive
-to sampling biases as they are limited to species for which there is already
-interaction data [@Becker2020PreWil], and as a result a methodological
+proof-of-concept). A network embedding projects each node of the network
+into a lower-dimensional latent space. This enables us to represent the
+structure of a network, which previously required the $S^2$ dimensions
+of an adjacency matrix, with a smaller number of dimensions. The position
+of each node in this lower dimensional space is then treated as a latent
+measurement corresponding to the role of that species in the network [*e.g.*
+@Poisot2021ImpMam]. Species close together in the latent space should interact
+with similar set of species [@Rossberg2006FooWeb; @Rohr2010ModFoo]. However,
+these models are sensitive to sampling biases as they are limited to species
+for which there is already interaction data, and as a result a methodological
 breakthrough is needed to extend these models to species for which there is
 little or no interaction data.
 
@@ -636,8 +641,7 @@ and "feasibility" (e.g resilience to environmental change vs extinctions)
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organisation [@Kefi2019AdvOur; @Gravel2016StaCom].
 
-### What taxonomic scales are suitable for the prediction of species
-interactions?
+### What taxonomic scales are suitable for the prediction of species interactions?
 
 If we use different trait-based proxies to predict potential interactions
 between species. The choice of such proxies should be theoretically
@@ -848,7 +852,12 @@ is ensemble modelling [@Parker2013EnsMod]. However, as we increase the amount
 of uncertainty we incorporate into a forecasting model, the resolution of
 the forecast's predictions could shrink [@Lei2017EvaTra], and therefore the
 modeller should be mindful of the trade-off between resolution and accuracy
-when developing any forecast.
+when developing any forecast. Finally, ensemble models are not guaranteed
+to give more accurate results: for example, @Becker2020PreWil noted that
+the ensemble model outperforms the best-in-class models, which should be
+take as an indication that careful model building and selection is of the
+utmost importance when dealing with a problem as complex as the prediction
+of species interactions.
 
 # Conclusion: why should we predict species interaction networks?
 
