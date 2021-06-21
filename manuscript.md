@@ -128,34 +128,40 @@ balance is an established approach for datasets with strong biases
 model provides highly effective prediction of interactions between pairs of
 species not present in the training data (@fig:example).
 
-![Proof-of-Concept: An empirical network [from @Hadfield2014TalTwo] is
-converted into latent features using probabilistic PCA, then used to train a
-deep neural network to predict species interactions. The initial and imputed
+![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], *i.e.*
+a list of known possible interactions within a species pool, is converted
+into latent features using probabilistic PCA, then used to train a deep
+neural network to predict species interactions. The initial and imputed
 networks are represented as their tSNE embedding, and the colours of nodes
 are the cluster to which they are assigned based on a $k$-means clustering
-of the tSNE output.](figures/figure1.png){#fig:example}
+of the tSNE output. Panels A and B represent, respectively, the ROC curve
+and the precision-recall curve, with the selected classifier represented by
+a black dot.](figures/figure1.png){#fig:example}
 
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed to cooccur) identified _N_ new possible interactions -- _M_ of
-which were <!-- TS Can someone put the correct values in? Please and thank
-you :) --> in pairs of species never considered prior. This model reaches
-similar levels of predictive efficacy as previous studies that use far
-more species-level data and mechanistic assumptions [@Gravel2013InfFoo],
-which serves to highlight the potential for including external sources of
-data for improving our prediction of interaction networks. <!-- TS Tone
-check! --> For example @Krasnov2016TraPhy collected traits data for this
-system that could be added to the model, however trait data were not publicly
-available. This emphasises the need for open data to make the prediction of
-species interaction networks.
+observed to co-occur) identified 1546 new possible interactions -- 746
+(48%) of which were between pairs of species for which no co-occurrence
+was observed in the original dataset. This model reaches similar levels of
+predictive efficacy as previous studies that use far more species-level data
+and mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
+potential for including external sources of data for improving our prediction
+of interaction networks. For example, @Krasnov2016TraPhy collected traits
+data for this system that could be added to the model, in addition or in
+substitution to latent variables derived from observed interactions. As in
+@fig:conceptual, this highlights how much data sources can be consumed by
+models predicting species interactions.
 
-# A Roadmap Toward Predicting Species Interaction Networks across Space
+# Predicting species interaction networks across space: challenges and opportunities
 
 Here we present a conceptual roadmap (@fig:conceptual) which we envisage to
-be the path toward improving our prediction of species interaction networks,
+be the path towards improving our prediction of species interaction networks,
 and developing spatially explicit models of network structure. We discuss
-the challenges and opportunities going forward for this research agenda.
+the challenges and opportunities going forward for this research agenda,
+and highlight two specific areas where it can have a strong impact: the
+temporal forecasting of species interaction networks structure, and the use
+of predicted networks for applied ecology or conservation biology.
 
 ![A conceptual roadmap highlighting key areas for the prediction of ecological
 networks. Starting with the input of data from multiple sources, followed by
@@ -218,13 +224,20 @@ flexibility than existing tools. We argue that @fig:example is an example of
 the promise of these tools *even* when facing datasets of small size. When
 carefully controlling for overfitting machine learning systems are at least
 adequate at generalising. The ability to extract and engineer features also
-serves to bolster our predictive power. In short, the current lack of massive
-datasets must not be an obstacle to prediction; it is an ideal testing ground
-to understand how little data is sufficient to obtain actionable predictions.
+serves to bolster our predictive power. Although it may be tempting to
+rely on approaches like bootstrapping to estimate the consistency of the
+predictions, the low data volume, and the fact that we are more likely to
+observe interactions between some pairs of species [*i.e.* those that co-occur
+a lot, *e.g.* @Cazelles2015TheSpe, and those that reach high abundances,
+*e.g.* @Vazquez2009UniPat], introduces a significant risk to train models on
+pseudo-replicated data. In short, the current lack of massive datasets must
+not be an obstacle to prediction; it is an ideal testing ground to understand
+how little data is sufficient to obtain actionable predictions, and how much
+we can rely on data inflation procedures to reach this minimal amount.
 
 ### Scaling-up predictions requires scaled-up data
 
-We are also currently limited by the the level of biological organisation
+We are also currently limited by the level of biological organisation
 at which we can describe ecological networks. For instance, our
 understanding of individual based networks [*e.g.* @Araujo2008NetAna;
 @Tinker2012StrMec] is still in its infancy [@Guimaraes2020StrEco] and acts as
@@ -303,7 +316,7 @@ reconstruction of ecological networks using next-generation sequencing
 data [@Bohan2017NexGlo], and network inference from presence-absence data
 [@Sander2017EcoNet].
 
-# A Primer on Predicting Ecological Networks
+# A primer on predicting ecological networks
 
 Below we provide a primer on the background concepts necessary to build
 models to predict species interaction networks, with a focus on using machine
@@ -347,8 +360,11 @@ problem relies on an estimate of $\theta$, then, the problem of inference
 is nested within the forward problem (@fig:models).
 
 ![The nested nature of developing predictive and forecasting models, showcases
-the _forward problem_ and how this relies on a hierarchical structure of
-the modelling process.](figures/forecasting_v3.png){#fig:models}
+the _forward problem_ and how this relies on a hierarchical structure of the
+modelling process. The choice of a specific modeling technique and framework,
+as well as the data retained to be part of this model, proceed directly from
+our assumptions about which ecological mechanisms are important in shaping
+both extant and future data.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
@@ -475,10 +491,11 @@ random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
 means that we can compare the AUC of different models, with $0.5$ being the
 floor and the closer to 1.0 being better.
 
-<!-- TS I suck at captions so please do jump in here -->
-![Hypothetical receiver-operating-characteristic (ROC) and precision-recall (PR)
-curves ranging from 'perfect' (light green) to 'decent' (blue) relative to a
-random model (dashed line).](./figures/auc.png){@fig:auc}
+![Hypothetical receiver-operating-characteristic (ROC) and precision-recall
+(PR) curves ranging from 'perfect' (light green) to 'decent' (blue) relative
+to a random model (dashed line). Comparing these hypotheticals to data
+presented in @fig:exampple gives an idea of how accurate the model in the
+case study is.](./figures/auc.png){@fig:auc}
 
 ## Networks and Interactions
 
@@ -509,7 +526,7 @@ understand _interaction strength_. Interaction strength, unlike the qualitative
 presence or absence of an interaction, is a continuous measurement which
 attempts to quantify the effect of one species on another. This results in
 weighted networks that representing different patterns of 'flows' between nodes
-- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
+-- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
 strength can generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
 each species, or 2) the effect that changes in one species population has on
@@ -582,16 +599,16 @@ connectance relates to network stability [@Landi2018ComSta]. Second, most
 (if not all) network properties covary with connectance [@Poisot2014WheEco;
 @Dunne2002FooStr].
 
-Within the network science literature, there are numerous methods for predicting
-edges based on network properties (e.g. block models [@Yen2020ComDet] based on
-modularity, hierarchical models [@Kawakatsu2021EmeHie] based on embedding,
-etc.). However, in the context of species interactin networks, these properties
-often covary with connectance. As a result we suggest that using connectance as
-the primary property of interest is most likely to be practical to formulate at
-the moment. We have models to estimate species richness over space
-[@Jenkins2013GloPat], and because we can predict connectance from species
-richness [@MacDonald2020RevLin], we can then derive distributions of network
-properties from richness estimates alone.  
+Within the network science literature, there are numerous methods
+for predicting edges based on network properties (e.g. block
+models [@Yen2020ComDet] based on modularity, hierarchical models
+[@Kawakatsu2021EmeHie] based on embedding, etc.). However, in the context of
+species interactin networks, these properties often covary with connectance. As
+a result we suggest that using connectance as the primary property of interest
+is most likely to be practical to formulate at the moment. We have models
+to estimate species richness over space [@Jenkins2013GloPat], and because we
+can predict connectance from species richness [@MacDonald2020RevLin], we can
+then derive distributions of network properties from richness estimates alone.
 
 ### How do we predict how species that we have never observed together will interact?
 
@@ -636,18 +653,22 @@ assumptions can be split into dynamical assumptions and topological
 assumptions.  Topologically, we know that ecological networks are not
 structured randomly.  Some properties, like the aforementioned connectance,
 are highly predictable [@MacDonald2020RevLin]. Generative models of food-webs
-(based on network embeddings) fit empirical networks more effectively than
-random models [@Allesina2008GenMod]. These models have long used allometry as a
-single-dimensional niche space---naturally we want to extend this to traits in
-general. The second approach stability is through _dynamics_. Early models of
-community dynamics rely on the assumption of linear interaction effects, but
-in recent years models of bioenergetic community dynamics have shown promise
-in basing our understanding of energy flow in food-webs in the understood
-relationship between allometry and metabolism [@Delmas2017SimBio]. An
-additional consideration is the multidimensional nature of "stability"
-and "feasibility" (e.g resilience to environmental change vs extinctions)
-[@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
-levels of biological organisation [@Kefi2019AdvOur; @Gravel2016StaCom].
+(based on network embeddings) fit empirical networks more effectively
+than random models [@Allesina2008GenMod]. These models have long used
+allometry as a single-dimensional niche space---naturally we want to
+extend this to traits in general. The second approach stability is through
+_dynamics_. Early models of community dynamics rely on the assumption of
+linear interaction effects, but in recent years models of bioenergetic
+community dynamics have shown promise in basing our understanding of
+energy flow in food-webs in the understood relationship between allometry
+and metabolism [@Delmas2017SimBio]. An additional consideration is the
+multidimensional nature of "stability" and "feasibility" (e.g resilience to
+environmental change vs extinctions) [@Dominguez-Garcia2019UnvDim] and how
+different disturbances propagate across levels of biological organisation
+[@Kefi2019AdvOur; @Gravel2016StaCom]. Recent approaches such as structural
+stability [@Saavedra2017StrApp; @Ferrera2016EffCom] allow to think of
+network feasibility in rigorous mathematical terms, which may end up as
+usable parameters to penalize network predictions.
 
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
@@ -927,15 +948,16 @@ on networks in space or time will make this information more actionable.
 
 **Acknowledgements:** We acknowledge that this study was conducted on land
 within the traditional unceded territory of the Saint Lawrence Iroquoian,
-Anishinabewaki, Mohawk, Huron-Wendat, and Omàmiwininiwak nations. TS, NF,
-TP are funded by a donation from the Courtois Foundation; FB, NF, and TP
-are funded by IVADO; BM is funded by the NSERC Alexander Graham Bell Canada
-Graduate Scholarship and the FRQNT master's scholarship; FB, GD, NF, and
-GH are funded by the NSERC BIOS² CREATE program; DC, TS, LP, and TP are
-funded by the Canadian Institute of Ecology & Evolution; this research was
-enabled in part by support provided by Calcul Québec (www.calculquebec.ca)
-and Compute Canada (www.computecanada.ca). This work was supported by funding
-to the Viral Emergence Research Initiative (VERENA) consortium including
-NSF BII 2021909. AG and MDC are supported in part by the Liber Ero Chair.
+Anishinabewaki, Mohawk, Huron-Wendat, and Omàmiwininiwak nations. TS,
+NF, TP are funded by a donation from the Courtois Foundation; FB, NF, and
+TP are funded by IVADO; BM is funded by the NSERC Alexander Graham Bell
+Canada Graduate Scholarship and the FRQNT master's scholarship; FB, GD,
+NF, and GH are funded by the NSERC BIOS$^2$ CREATE program; GD is funded
+by the FRQNT doctoral scholarship; DC, TS, LP, and TP are funded by the
+Canadian Institute of Ecology & Evolution; this research was enabled in part
+by support provided by Calcul Québec (www.calculquebec.ca) and Compute
+Canada (www.computecanada.ca). This work was supported by funding to the
+Viral Emergence Research Initiative (VERENA) consortium including NSF BII
+2021909. AG and MDC are supported in part by the Liber Ero Chair.
 
 # References
