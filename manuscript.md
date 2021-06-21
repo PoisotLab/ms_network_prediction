@@ -575,14 +575,15 @@ connectance relates to network stability [@Landi2018ComSta]. Second, most
 @Dunne2002FooStr].
 
 Within the network science literature, there are numerous methods for predicting
-edges based on network properties (e.g. block models [@citeSBMpaper] based on
-modularity, hierarchical models [@citeLarremorePaper] based on embedding).
-However, because these properties often covary with connectance, we suggest that
-using connectance as the primary properties of interest  is most likely to be
-the most practical to formulate at the moment. We have models to estimate
-species richness over space [@Jenkins2013GloPat], and because we can predict
-connectance from species richness [@MacDonald2020RevLin], we can then derive
-distributions of network properties from richness estimates alone.  
+edges based on network properties (e.g. block models [@Yen2020ComDet] based on
+modularity, hierarchical models [@Kawakatsu2021EmeHie] based on embedding,
+etc.). However, in the context of species interactin networks, these properties
+often covary with connectance. As a result we suggest that using connectance as
+the primary property of interest is most likely to be practical to formulate at
+the moment. We have models to estimate species richness over space
+[@Jenkins2013GloPat], and because we can predict connectance from species
+richness [@MacDonald2020RevLin], we can then derive distributions of network
+properties from richness estimates alone.  
 
 ### How do we predict how species that we have never observed together
 will interact?

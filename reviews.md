@@ -98,13 +98,14 @@ structure?
 into models to predict interactions within a given network, such as calculating
 network-based features, they need to be mentioned here for completeness.
 
-> We have an entire section on this (_What network properties should we use to
-> inform our predictions of interactions?_), in which we discuss the potential
-> and limitations of only using network properties. We argue that the
-> network-based feature most likely to provide useful predictions is
-> connectance, as most network properties highly covary with it. We have added
-> an addition mention of using other properties (modularity or embedding) to
-> this section.
+> Most of what this comment wants is in the previous section (_What network
+> properties should we use to inform our predictions of interactions?_) in which
+> we discuss the potential and limitations of using network properties for
+> prediction.  In the former section we argue that the network-based feature
+> most likely to provide useful predictions is connectance, as most network
+> properties highly covary with it. We have added an addition mention to this
+> section on using other network properties (modularity and embedding) for
+> prediction.
 
 ## Minor points:
 
