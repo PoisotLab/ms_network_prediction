@@ -108,8 +108,8 @@ networks, and its meaning. Particularly for unipartite ecological networks –
 flow can be misleading in some scenarios, and very powerful in others.
 
 > We have now included references to studies that have addressed network 
-> flows (Borret et al 2019, Farage et al 2021) within the interaction 
-> strength section
+> flows (aiarsa et al., 2019, Borret et al., 2019, Farage et al., 2021,
+> Montoya & Solé 2002) within the 'What about interaction _strength_?' section.
 
 In addition to interaction strength, weighted networks need to be mentioned 
 somewhere, even if only for completeness.

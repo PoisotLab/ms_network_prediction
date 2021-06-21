@@ -511,13 +511,13 @@ strength within a network effects its stability [@Neutel2002StaRea;
 @Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb],
 and serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively, 
 understanding flow in modules within networks can aid in understanding the 
-organisation of networks [@Farage2021IdeFlo] or the cascading effects of 
-perturbations [@Gaiarsa2019IntStr].
+organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the cascading 
+effects of perturbations [@Gaiarsa2019IntStr].
 
 Much like quantifying the occurrence of an interaction, quantifying interaction
 _strength_ in the field is challenging. However, in some contexts, interaction
 strength can be estimated via functional foraging [@Portalier2019MecPre],
-where the primary basis for inferring interaction is foraging behavior like
+where the primary basis for inferring interaction is foraging behaviour like
 searching, capture and handling times. In food-webs, metabolic based models
 use body mass, metabolic demands, and energy loss to infer energy fluxes
 between organisms [@Yodzis1992BodSiz; @Berlow2009SimPre]. In addition,
