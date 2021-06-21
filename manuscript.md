@@ -9,27 +9,27 @@ with their environment, either directly or indirectly. Between organisms,
 these interactions form networks of varying complexity, drive ecological
 and evolutionary dynamics, and maintain ecosystem diversity and functioning
 [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Networks of
-species interactions underpin our understanding of numerous ecological processes
-[@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge of species
-interactions (like being able to list them, or guess which ones may exist) is
-still one of the most severe shortfalls in biodiversity science
+species interactions underpin our understanding of numerous ecological
+processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge
+of species interactions (like being able to list them, or guess which ones
+may exist) is still one of the most severe shortfalls in biodiversity science
 [@Hortal2015SevSho], in large part due to the tedious, time-consuming, and
-expensive process of collecting species interaction data.
-Comprehensively sampling every possible interaction is not feasible given the
-sheer number of species on Earth, and the data we can collect about interactions
-is biased and noisy [@deAguiar2019RevBia]. This is then compounded as species
-interactions are typically measured as a binary variable---present or absent---
-even though it is evident interactions are not all-or-nothing. Species
-interactions occur probabilistically due to variation in species abundances in
-space and time [@Poisot2015SpeWhy]. Different types of interactions vary in
-their intrinsic predictability (e.g. some fungal species engage in opportunistic
-saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic in
-their interactions than facultative parasites [@Poisot2013FacObl;
+expensive process of collecting species interaction data.  Comprehensively
+sampling every possible interaction is not feasible given the sheer number of
+species on Earth, and the data we can collect about interactions is biased and
+noisy [@deAguiar2019RevBia]. This is then compounded as species interactions
+are typically measured as a binary variable---present or absent--- even though
+it is evident interactions are not all-or-nothing. Species interactions
+occur probabilistically due to variation in species abundances in space
+and time [@Poisot2015SpeWhy]. Different types of interactions vary in their
+intrinsic predictability (e.g. some fungal species engage in opportunistic
+saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic
+in their interactions than facultative parasites [@Poisot2013FacObl;
 @Luong2019FacPar]). In addition to this variance in predictability, networks
 from different systems are structured by different mechanisms. Interaction
 networks are embodied in numerous forms: host and parasites, plants and
-pollinators, predators and prey, disease and host, and so on, and network types
-may require different approaches and methods for prediction.
+pollinators, predators and prey, disease and host, and so on, and network
+types may require different approaches and methods for prediction.
 
 Still, species interaction networks have entered their "long now"
 [@Carpenter2002EcoFut], where anthropogenic change will have long-term,
@@ -59,25 +59,24 @@ at a single scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic distance [@Pomeranz2018InfPre;
 @Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra], or other
 network properties [@Terry2020FinMis; @Stock2017LinFil]. These approaches are
-difficult to generalise across systems as species interaction
-networks are the product of ecological and evolutionary mechanisms interacting
-across spatial, temporal and organisational scales. The interwoven nature of
-these processes imposes structure on biodiversity data which is invisible when
-examined only through the lens of a single scale. Machine learning methods
-have enormous potential in finding this structure
-[@Desjardins-Proulx2019ArtInt], and have the potential to be used together
-with mechanistic models in order to make prediction of ecological dynamics
-more robust [@Rackauckas2020UniDif; @Becker2020PreWil].
+difficult to generalise across systems as species interaction networks are the
+product of ecological and evolutionary mechanisms interacting across spatial,
+temporal and organisational scales. The interwoven nature of these processes
+imposes structure on biodiversity data which is invisible when examined only
+through the lens of a single scale. Machine learning methods have enormous
+potential in finding this structure [@Desjardins-Proulx2019ArtInt], and
+have the potential to be used together with mechanistic models in order to
+make prediction of ecological dynamics more robust [@Rackauckas2020UniDif;
+@Becker2020PreWil].
 
-Here we use a case study to show how machine-learning models can
-enable unreasonably effective prediction of species interactions, whereby we
-construct a metaweb of host-parasite interactions across space. We then outline
-the roadmap forward for improving predictions using open data and
-machine-learning methods. We then provide a primer on the
-literature on interaction prediction, and identify the tools and
-methods most suited to be the future of interaction network prediction models,
-which for the spatial, temporal,
-and climatic dimensions of network prediction [@Burkle2011FutPla].
+Here we use a case study to show how machine-learning models can enable
+unreasonably effective prediction of species interactions, whereby we
+construct a metaweb of host-parasite interactions across space. We then
+outline the roadmap forward for improving predictions using open data and
+machine-learning methods. We then provide a primer on the literature on
+interaction prediction, and identify the tools and methods most suited to be
+the future of interaction network prediction models, which for the spatial,
+temporal, and climatic dimensions of network prediction [@Burkle2011FutPla].
 
 # A Case Study: Predicting a Host-Parasite Network
 
@@ -87,18 +86,18 @@ species. In this section we provide a proof-of-concept, where we use data from
 In this data not all species cooccur across sites, so there are pairs of
 species that may or may not interact for which we have no data. It is possible
 that these species have never been observed because of negative associations,
-however it is also possible this is only due to random chance in what
-species are observed.
+however it is also possible this is only due to random chance in what species
+are observed.
 
-Without any species-level information, we resort to
-using cooccurrence to predict interactions. To do this we (i) extract features
-for each species based on co-occurrence, (ii) use these features to train a
-neural network to predict interactions, and (iii) apply this classifier to the
-original features to predict possibly missing interactions across the entire
-species pool. The outputs of the analysis are presented in @fig:example, and
-the code to reproduce it is available at `https://osf.io/6jp4b/`; the entire
-example was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the
-*Flux* machine learning framework [@Innes2018FluEle].
+Without any species-level information, we resort to using cooccurrence to
+predict interactions. To do this we (i) extract features for each species
+based on co-occurrence, (ii) use these features to train a neural network
+to predict interactions, and (iii) apply this classifier to the original
+features to predict possibly missing interactions across the entire species
+pool. The outputs of the analysis are presented in @fig:example, and the code
+to reproduce it is available at `https://osf.io/6jp4b/`; the entire example
+was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux*
+machine learning framework [@Innes2018FluEle].
 
 We first aggregate all interactions into a cooccurrence matrix $C$ which
 represents whether a given pair of species $(i,j)$ was observed coexisting
@@ -111,42 +110,43 @@ v_j]$ into a neural network. The neural-network uses four feed-forward layers
 ($0.5$). This produces an output layer which is the probability-score for
 interaction between species $i$ and $j$.
 
-We then train this neural network by dividing the original dataset into test and
-training sets. During the training of this neural network, the batches of 16
-items used for training were constrained to have at least 10 positive
-interactions, as @Poisot2021ImpMam show slightly inflating the dataset with
-positive interactions enables us to counterbalance sampling biases. Validating
-this model on the test data shows our model provides highly effective prediction
-of interactions between pairs of species not present in the training data
-(@fig:example).
+We then train this neural network by dividing the original dataset into
+test and training sets. During the training of this neural network, the
+batches of 16 items used for training were constrained to have at least 10
+positive interactions, as @Poisot2021ImpMam show slightly inflating the
+dataset with positive interactions enables us to counterbalance sampling
+biases. Validating this model on the test data shows our model provides
+highly effective prediction of interactions between pairs of species not
+present in the training data (@fig:example).
 
-![Proof-of-Concept: An empirical network
-[from @Hadfield2014TalTwo] is converted into latent features using
-probabilistic PCA, then used to train a deep neural network to predict
-species interactions. The initial and imputed networks are represented
-as their tSNE embedding, and the colours of nodes are the cluster to
-which they are assigned based on a $k$-means clustering of the tSNE
-output.](figures/figure1.png){#fig:example}
+![Proof-of-Concept: An empirical network [from @Hadfield2014TalTwo] is
+converted into latent features using probabilistic PCA, then used to train a
+deep neural network to predict species interactions. The initial and imputed
+networks are represented as their tSNE embedding, and the colours of nodes
+are the cluster to which they are assigned based on a $k$-means clustering
+of the tSNE output.](figures/figure1.png){#fig:example}
 
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed to cooccur) identified _N_ new possible interactions -- _M_ of which were <!-- TS Can someone put the correct values in? Please and thank you :) -->
-in pairs of species never considered prior. This model reaches similar levels of
-predictive efficacy as previous studies that use far more species-level data and
-mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
-potential for including external sources of data for improving our prediction
-of interaction networks. <!-- TS Tone check! --> For example @Krasnov2016TraPhy collected traits
-data for this system that could be added to the model, however trait data
-were not publicly available. This emphasises the need for open data to make
-the prediction of species interaction networks.
+observed to cooccur) identified _N_ new possible interactions -- _M_ of
+which were <!-- TS Can someone put the correct values in? Please and thank
+you :) --> in pairs of species never considered prior. This model reaches
+similar levels of predictive efficacy as previous studies that use far
+more species-level data and mechanistic assumptions [@Gravel2013InfFoo],
+which serves to highlight the potential for including external sources of
+data for improving our prediction of interaction networks. <!-- TS Tone
+check! --> For example @Krasnov2016TraPhy collected traits data for this
+system that could be added to the model, however trait data were not publicly
+available. This emphasises the need for open data to make the prediction of
+species interaction networks.
 
 # A Roadmap Toward Predicting Species Interaction Networks across Space
 
-Here we present a conceptual roadmap (@fig:conceptual) which we envisage to be
-the path toward improving our prediction of species interaction networks, and
-developing spatially explicit models of network structure. We discuss the
-challenges and opportunities going forward for this research agenda.
+Here we present a conceptual roadmap (@fig:conceptual) which we envisage to
+be the path toward improving our prediction of species interaction networks,
+and developing spatially explicit models of network structure. We discuss
+the challenges and opportunities going forward for this research agenda.
 
 ![A conceptual roadmap highlighting key areas for the prediction of ecological
 networks. Starting with the input of data from multiple sources, followed by
@@ -404,24 +404,24 @@ between $0.1$ and $0.3$. If we build a model that always guesses there will
 be no interaction between two species, it will be correct in the majority of
 cases because the majority of potential interactions in a network typically
 do not exist.  Therefore this "empty-matrix" model would always have an
-_accuracy_ of $1-C$, where $C$ is the observed connectance, which would almost
-always be greater than 50%. Understanding model performance within
+_accuracy_ of $1-C$, where $C$ is the observed connectance, which would
+almost always be greater than 50%. Understanding model performance within
 sensitivity-specificity space may be more informative, where sensitivity
-evaluates how good the model is at predicting true interactions (True Positive Rate)
-and specificity refers to the prediction of true "non-interactions" (False Positive
-Rate). It must be noted that in ecological networks, there is no guarantee
-that the "non-interactions" (assumed true negatives)
+evaluates how good the model is at predicting true interactions (True Positive
+Rate) and specificity refers to the prediction of true "non-interactions"
+(False Positive Rate). It must be noted that in ecological networks,
+there is no guarantee that the "non-interactions" (assumed true negatives)
 in the original dataset are indeed true negatives [@Jordano2016ChaEco;
-@Jordano2016SamNet]. This can result in the positive/negative values, and the
-false omission/discovery being artificially worse, and specifically decrease
-our confidence in predicted interactions.
+@Jordano2016SamNet]. This can result in the positive/negative values, and
+the false omission/discovery being artificially worse, and specifically
+decrease our confidence in predicted interactions.
 
-In response to the general problem of biases in
-classifiers, many metrics have been proposed to measure binary-classifiers
-(see @tbl:validation, [@Gu2009EvaMea; @Drummond2006CosCur]) and are indicative
-of how well the model performs with regards to some aspect of accuracy,
-sensitivity, specificity and/or precision. Where, ultimately the choice of
-metric will depend on the intended use of the model.
+In response to the general problem of biases in classifiers, many metrics
+have been proposed to measure binary-classifiers (see @tbl:validation,
+[@Gu2009EvaMea; @Drummond2006CosCur]) and are indicative of how well the model
+performs with regards to some aspect of accuracy, sensitivity, specificity
+and/or precision. Where, ultimately the choice of metric will depend on the
+intended use of the model.
 
 | Name                      | Value | Success         | Description                                                   |
 |:--------------------------|:------|:----------------|:--------------------------------------------------------------|
@@ -445,26 +445,26 @@ metric will depend on the intended use of the model.
 
 Table: Overview of the validation statistics applied to the case study,
 alongside the criteria indicating a successful classifier and a guide to
-interpretation of the values. Taken together, these validation
-measures indicate that the model performs well, especially considering that
-it is trained from a small volume of data. {#tbl:validation}
+interpretation of the values. Taken together, these validation measures
+indicate that the model performs well, especially considering that it is
+trained from a small volume of data. {#tbl:validation}
 
-In the machine learning literature, a common way of visualising this extensive
-list of possible metrics is through the use of ROC
-(receiver-operating-characteristic; False Positive Rate on the x-axis, and
-True Positive Rate on the y-axis) and PR (precision-recall; True-Positive-Rate
-on the x-axis, Positive-predictive-value on the y-axis) curves. These
-curves are generated by considering a continuum of thresholds of
-classifier acceptance, and computing the values of ROC/PR metrics for each value
-of the threshold. The area-under-the-curve (AUC) is then used as a
-validation metric and are typically called AUC-ROC (Area-Under-the-Curve
+In the machine learning literature, a common way of visualising
+this extensive list of possible metrics is through the use of ROC
+(receiver-operating-characteristic; False Positive Rate on the
+x-axis, and True Positive Rate on the y-axis) and PR (precision-recall;
+True-Positive-Rate on the x-axis, Positive-predictive-value on the y-axis)
+curves. These curves are generated by considering a continuum of thresholds
+of classifier acceptance, and computing the values of ROC/PR metrics for
+each value of the threshold. The area-under-the-curve (AUC) is then used as
+a validation metric and are typically called AUC-ROC (Area-Under-the-Curve
 Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve Precision-Recall)
 (_e.g_ ROC-AUC in @tbl:validation).
 
-Note that for both plots in @fig:auc, the area-under-the-curve (AUC)
-of the random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
-means that we can compare the AUC of different models, with $0.5$ being
-the floor and the closer to 1.0 being better.
+Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the
+random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
+means that we can compare the AUC of different models, with $0.5$ being the
+floor and the closer to 1.0 being better.
 
 <!-- TS I suck at captions so please do jump in here -->
 ![Hypothetical receiver-operating-characteristic (ROC) and precision-recall (PR)
@@ -477,14 +477,14 @@ random model (dashed line).](./figures/auc.png){@fig:auc}
 
 Interactions between species can be conceptualised in a multitude of ways
 (mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
-direct vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What is
-common to all definitions of an interaction is that *at least* one of the species
-is affected by the presence of another, either positively or negatively
-[@Morales-Castilla2015InfBio]. Networks can be used to represent a variety
-of interaction types, including: *unipartite networks*, where each species
-can be linked to other species (these are typically used to represent food
-webs), *bipartite networks* where there are two pools of species, and all
-interactions occur between species in each pool, are typically used for
+direct vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What
+is common to all definitions of an interaction is that *at least* one of
+the species is affected by the presence of another, either positively or
+negatively [@Morales-Castilla2015InfBio]. Networks can be used to represent
+a variety of interaction types, including: *unipartite networks*, where each
+species can be linked to other species (these are typically used to represent
+food webs), *bipartite networks* where there are two pools of species, and
+all interactions occur between species in each pool, are typically used for
 pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
 which serve as a way to expand to more than two discrete sets of interacting
 species (e.g. some parasitoid webs, seed dispersal networks, and pollination
@@ -495,12 +495,12 @@ for indirect interactions.
 
 ### What about interaction _strength_?
 
-Species interaction networks can also be used as a means to quantify
-and understand _interaction strength_. Interaction strength, unlike the
-qualitative presence or absence of an interaction, is a continuous measurement
-which attempts to quantify the effect of one species on another. This results
-in weighted networks that representing different patterns of 'flows' between
-nodes - which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
+Species interaction networks can also be used as a means to quantify and
+understand _interaction strength_. Interaction strength, unlike the qualitative
+presence or absence of an interaction, is a continuous measurement which
+attempts to quantify the effect of one species on another. This results in
+weighted networks that representing different patterns of 'flows' between nodes
+- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
 strength can generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
 each species, or 2) the effect that changes in one species population has on
@@ -508,14 +508,14 @@ the dynamics of the other species. It can be measured as the effect over a
 period of time (in the units of biomass or energy flux [@Barnes2018EneFlu;
 @Brown2004MetThe]) or the relative importance of one species on another
 [@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
-observation is that networks are often composed of many weak interactions and
-few strong interactions [@Berlow2004IntStr]. The distribution of interaction
-strength within a network effects its stability [@Neutel2002StaRea;
-@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb],
-and serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
+observation is that networks are often composed of many weak interactions
+and few strong interactions [@Berlow2004IntStr]. The distribution of
+interaction strength within a network effects its stability [@Neutel2002StaRea;
+@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and
+serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
 understanding flow in modules within networks can aid in understanding the
-organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the cascading
-effects of perturbations [@Gaiarsa2019IntStr].
+organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
+cascading effects of perturbations [@Gaiarsa2019IntStr].
 
 Much like quantifying the occurrence of an interaction, quantifying interaction
 _strength_ in the field is challenging. However, in some contexts, interaction
@@ -560,7 +560,8 @@ and developing models around a feedback loop between network and interaction
 prediction, it is likely that the quality of the predicted networks will be
 greatly improved compared to current models.
 
-### What network properties should we use to inform our predictions of interactions?
+### What network properties should we use to inform our predictions of
+interactions?
 
 There are many dimensions of network structure [@Delmas2018AnaEco], yet
 there are two arguments to support basing network prediction around a single
@@ -583,7 +584,8 @@ species richness over space [@Jenkins2013GloPat], and because we can predict
 connectance from species richness [@MacDonald2020RevLin], we can then derive
 distributions of network properties from richness estimates alone.  
 
-### How do we predict how species that we have never observed together will interact?
+### How do we predict how species that we have never observed together
+will interact?
 
 A neutral approach would assume the probability of an interaction is the same
 as the likelihood of co-occurrence [@Poisot2015SpeWhy; @Pichler2020MacLea],
@@ -639,7 +641,8 @@ and "feasibility" (e.g resilience to environmental change vs extinctions)
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organisation [@Kefi2019AdvOur; @Gravel2016StaCom].
 
-### What taxonomic scales are suitable for the prediction of species interactions?
+### What taxonomic scales are suitable for the prediction of species
+interactions?
 
 If we use different trait-based proxies to predict potential interactions
 between species. The choice of such proxies should be theoretically
@@ -910,17 +913,17 @@ despite this being recognised as an important task [@McCann2007ProBio],
 either implicitly or explicitly. Being able to generate reliable datasets
 on networks in space or time will make this information more actionable.
 
-**Acknowledgements:** We acknowledge that this study was conducted on
-land within the traditional unceded territory of the Saint Lawrence Iroquoian,
+**Acknowledgements:** We acknowledge that this study was conducted on land
+within the traditional unceded territory of the Saint Lawrence Iroquoian,
 Anishinabewaki, Mohawk, Huron-Wendat, and Omàmiwininiwak nations. TS, NF,
 TP are funded by a donation from the Courtois Foundation; FB, NF, and TP
 are funded by IVADO; BM is funded by the NSERC Alexander Graham Bell Canada
-Graduate Scholarship and the FRQNT master's scholarship; FB, GD, NF, and GH
-are funded by the NSERC BIOS² CREATE program; DC, TS, LP, and TP are funded by
-the Canadian Institute of Ecology & Evolution; this research was enabled in
-part by support provided by Calcul Québec (www.calculquebec.ca) and Compute
-Canada (www.computecanada.ca). This work was supported by funding to the Viral
-Emergence Research Initiative (VERENA) consortium including NSF BII 2021909.
-AG and MDC are supported in part by the Liber Ero Chair.
+Graduate Scholarship and the FRQNT master's scholarship; FB, GD, NF, and
+GH are funded by the NSERC BIOS² CREATE program; DC, TS, LP, and TP are
+funded by the Canadian Institute of Ecology & Evolution; this research was
+enabled in part by support provided by Calcul Québec (www.calculquebec.ca)
+and Compute Canada (www.computecanada.ca). This work was supported by funding
+to the Viral Emergence Research Initiative (VERENA) consortium including
+NSF BII 2021909. AG and MDC are supported in part by the Liber Ero Chair.
 
 # References
