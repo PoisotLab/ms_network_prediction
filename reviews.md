@@ -92,7 +92,7 @@ in ways that other methods might not account for).
 
 > We have introduced the concept 
 > of different interaction types earlier in the manuscript (~l. 30) as well as  
-> expanding on how network type (uni-, bi- k,) plays a role in the modeling 
+> expanding on how network type (uni-, bi- k,) plays a role in the modelling 
 > process (~l. 480)
 
 **Lines 318-340:** There are few other models that connect networks/their structures 
@@ -108,7 +108,7 @@ networks, and its meaning. Particularly for unipartite ecological networks –
 flow can be misleading in some scenarios, and very powerful in others.
 
 > We have now included references to studies that have addressed network 
-> flows (aiarsa et al., 2019, Borret et al., 2019, Farage et al., 2021,
+> flows (Gaiarsa et al., 2019, Borret et al., 2019, Farage et al., 2021,
 > Montoya & Solé 2002) within the 'What about interaction _strength_?' section.
 
 In addition to interaction strength, weighted networks need to be mentioned 
