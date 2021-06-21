@@ -95,10 +95,10 @@ using cooccurrence to predict interactions. To do this we (i) extract features
 for each species based on co-occurrence, (ii) use these features to train a
 neural network to predict interactions, and (iii) apply this classifier to the
 original features to predict possibly missing interactions across the entire
-species pool. The entire analysis is presented in @fig:example, and the code to
-reproduce it is available at `https://osf.io/6jp4b/`; the entire example was
-carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux* machine
-learning framework [@Innes2018FluEle].
+species pool. The outputs of the analysis are presented in @fig:example, and 
+the code to reproduce it is available at `https://osf.io/6jp4b/`; the entire 
+example was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the 
+*Flux* machine learning framework [@Innes2018FluEle].
 
 We first aggregate all interactions into a cooccurrence matrix $C$ which
 represents whether a given pair of species $(i,j)$ was observed coexisting
@@ -131,14 +131,14 @@ output.](figures/figure1.png){#fig:example}
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
 Applying this model to the entire dataset (including species pairs never
-observed to cooccur) identified _N_ new possible interactions -- _M_ of which were
+observed to cooccur) identified _N_ new possible interactions -- _M_ of which were <!-- TS Can someone put the correct values in? Please and thank you :) -->
 in pairs of species never considered prior. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data and
 mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
 potential for including external sources of data for improving our prediction
-of interaction networks. For example @Krasnov2016TraPhy collected traits 
-data for this system that could be added to the model. However, trait data 
-were not publicly available and emphasises the need for open data to make 
+of interaction networks. <!-- TS Tone check! --> For example @Krasnov2016TraPhy collected traits 
+data for this system that could be added to the model, however trait data 
+were not publicly available. This emphasises the need for open data to make 
 the prediction of species interaction networks.
 
 # A Roadmap Toward Predicting Species Interaction Networks across Space
@@ -172,7 +172,7 @@ strength, when it is known that co-occurrence is not the only prerequisite
 for an interaction to occur [@Blanchet2020CooNot]. Spatial biases in data
 coverage are prevalent at the global scale (with South America, Africa and
 Asia being under-represented) and different interaction types show biases
-towards different biomes  [@Poisot2020EnvBia]. These "spatial gaps" serve as
+towards different biomes [@Poisot2020EnvBia]. These "spatial gaps" serve as
 a limitation to our ability to confidently make predictions when accounting
 for real-world environmental conditions, especially in environments for
 which there are no analogous data.
@@ -192,7 +192,7 @@ and spatiotemporal variation in community composition [@Wootton2005MeaInt].
 
 ### Powerful predictive tools work better on large data volumes
 
-This scarcity of data limits the range of computational tools than
+This scarcity of data limits the range of computational tools that
 can be used by network ecologists. Most deep learning methods, for
 instance, are very data expensive. The paucity of data is compounded by
 a collection of biases in existing datasets. Species interaction data are
@@ -249,7 +249,7 @@ and model biodiversity at the global scale. For species interactions data,
 at the moment [Mangal](https://mangal.io/#/) is the most comprehensive
 open database of published ecological networks [@Poisot2016ManMak],
 and [GloBI](https://www.globalbioticinteractions.org/about) is an
-extensive database of realized and potential species interactions
+extensive database of realised and potential species interactions
 [@Poelen2014GloBio]. Developing standard practices in data integration
 and quality control [@Kissling2018BuiEss] and in next-generation
 biomonitoring [NGB; @Makiola2020KeyQue] would improve our ability to
@@ -386,7 +386,7 @@ test and training subdivisions of the dataset to determine the uncertainty
 associated with our measurement due to our choice of test and training sets
 [@Arlot2010SurCro], in the same conceptual vein as data bootstrapping.
 
-We still have define what _predictive accuracy_ means in the context
+We still have to define what _predictive accuracy_ means in the context
 of interaction network prediction. In the proof-of-concept, we used
 a neural-network to perform binary classification by predicting the
 presence/absence of an interaction between any two species. There are two
@@ -410,7 +410,7 @@ sensitivity-specificity space may be more informative, where sensitivity
 evaluates how good the model is at predicting true interactions (True Positive Rate) 
 and specificity refers to the prediction of true "non-interactions" (False Positive 
 Rate). It must be noted that in ecological networks, there is no guarantee 
-that the"non-interactions" (assumed true negatives)
+that the "non-interactions" (assumed true negatives)
 in the original dataset are indeed true negatives [@Jordano2016ChaEco;
 @Jordano2016SamNet]. This can result in the positive/negative values, and the
 false omission/discovery being artificially worse, and specifically decrease
@@ -466,7 +466,10 @@ of the random model is $0.5$, and the AUC of the perfect classifier is $1.0$. Th
 means that we can compare the AUC of different models, with $0.5$ being
 the floor and the closer to 1.0 being better.
 
-![TODO](./figures/auc.png){@fig:auc}
+<!-- TS I suck at captions so please do jump in here --> 
+![Hypothetical receiver-operating-characteristic (ROC) and precision-recall (PR) 
+curves ranging from 'perfect' (light green) to 'decent' (blue) relative to a 
+random model (dashed line).](./figures/auc.png){@fig:auc}
 
 ## Networks and Interactions
 
