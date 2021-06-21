@@ -478,7 +478,7 @@ random model (dashed line).](./figures/auc.png){@fig:auc}
 Interactions between species can be conceptualised in a multitude of ways
 (mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
 direct vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What is
-common to all definitions of interaction is that *at least* one of the species
+common to all definitions of an interaction is that *at least* one of the species
 is affected by the presence of another, either positively or negatively
 [@Morales-Castilla2015InfBio]. Networks can be used to represent a variety
 of interaction types, including: *unipartite networks*, where each species
@@ -634,8 +634,7 @@ and "feasibility" (e.g resilience to environmental change vs extinctions)
 [@Dominguez-Garcia2019UnvDim] and how different disturbances propagate across
 levels of biological organisation [@Kefi2019AdvOur; @Gravel2016StaCom].
 
-### What taxonomic scales are suitable for the prediction of species
-interactions?
+### What taxonomic scales are suitable for the prediction of species interactions?
 
 If we use different trait-based proxies to predict potential interactions
 between species. The choice of such proxies should be theoretically
@@ -647,7 +646,7 @@ probability through the phylogenetic distance, assuming that functional traits
 themselves are conserved [@Gomez2010EcoInt]. In this case, we can think of
 the probability that one species will interact with another as the distance
 between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be
-modeled by simulating neutral expectations of trait variation on phylogenetic
+modelled by simulating neutral expectations of trait variation on phylogenetic
 tree [@Davies2021EcoRed]. At the narrowest scales, we may be interested in
 predicting behavioural traits like foraging behaviour [@Bartomeus2016ComFra],
 and at this scale we may need to consider abundance's effect on probability
@@ -718,13 +717,13 @@ site can be predicted either by combining independent single-species SDMs
 and multiple species at the same time (joint SDMs, JSDMs) [@Norberg2019ComEva].
 Building on the JSDM framework, hierarchical modelling of species communities
 [@Ovaskainen2017HowMak] has the advantage of capturing processes that
-structure communities. Spatially Explicit Species Assemblage Modeling (SESAM)
+structure communities. Spatially Explicit Species Assemblage Modelling (SESAM)
 constrains SDM predictions using macro-ecological models [@Guisan2011SesNew]
 --- for example, variation in species richness across space can constrain
 assemblage predictions [@DAmen2015UsiSpe].
 
 The next step is to constrain distribution predictions using network
-properties.  This builds on previous calls to adopt a probabilistic view: a
+properties. This builds on previous calls to adopt a probabilistic view: a
 probabilistic species pool [@Karger2016DelPro], and probabilistic interactions
 through Bayesian networks [@Staniczenko2017LinMac]. @Blanchet2020CooNot
 argue that the probabilistic view avoids confusion between interactions and
@@ -739,7 +738,7 @@ models---one which predicts what the species pool will be at a given
 location, and one to predict what interaction networks composed from this
 species pool are likely to be (see @fig:conceptual). Both of these models
 contain uncertainty, and when we combine them the uncertainty from each
-model should be propagated into the combined model.  The Bayesian paradigm
+model should be propagated into the combined model. The Bayesian paradigm
 provides a convenient solution to this---if we have a chain of models where
 each model feeds into the next, we can sample from the posterior of the
 input models. A different approach is _ensemble modelling_ which combines
@@ -765,8 +764,8 @@ shape species distributions at both local and broad spatial scales,
 and including interactions in SDM models typically improves predictive
 performance [@Araujo2007ImpBio; @Wisz2013RolBio; @Pigot2013SpeInt]. However,
 these tend to rely on approaches involving estimating pairwise dependencies
-based on cooccurrence, using surrogates for biotic-interaction gradients,
-and hybridizing SDMs with dynamic models [@Wisz2013RolBio]. Most existing
+based on co-occurrence, using surrogates for biotic-interaction gradients,
+and hybridising SDMs with dynamic models [@Wisz2013RolBio]. Most existing
 models to predict the future distribution of species ignore interactions
 [@Urban2016ImpFor]. Changes in species ranges and phenology will inevitably
 create spatiotemporal mismatches and affect encounter rates between species
@@ -809,7 +808,7 @@ like primary production will be at a maximum in the summer, is likely to be
 true much further into the future than a higher resolution forecast. If we
 want to forecast the structure of ecological networks beyond the forecasting
 horizon of time-series based methods, we need forecasts of our predictive
-model's inputs--- a forecast of the distribution of both environmental
+model's inputs---a forecast of the distribution of both environmental
 conditions and the potential species pool across space (@fig:models).
 
 ### How can we validate a forecasting model?
@@ -862,7 +861,7 @@ Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably
 predict and forecast species interactions would inform conservation efforts
 for protecting species, communities, and ecosystems.  Integration of species
 interactions into the assessment of vulnerability to climate change is a
-needed methodological advance [@Foden2016IucSsc].  International panels draw
+needed methodological advance [@Foden2016IucSsc]. International panels draw
 on models to establish scientific consensus [@Araujo2019StaDis], and they can
 be improved through more effective prediction of species distributions and
 interactions [@Syfert2014UsiSpe]. Further, recent studies argue for a shift
