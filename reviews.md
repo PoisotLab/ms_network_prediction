@@ -55,9 +55,9 @@ subsampling/instance-synthesis techniques, and their effect on the predictions
 (as per above). Furthermore, clarification needs to be made if performance metrics 
 were derived from the raw or the slightly inflated data.
 
-> we now refer to a preprint (Poisot et al 2021 - l. 117) as rationale - which shows 
+> We now refer to a preprint (Poisot et al 2021 - l. 117) as rationale - which shows 
 > that slightly inflating the dataset with positive interactions enables us to 
-> counterbalance sampling biases
+> counterbalance sampling biases.
 
 **Becker et al 2020:** I am aware of this study and its limitations. Here, it is 
 presented in the same way peer-reviewed studies are (see below), without discussing 
@@ -91,9 +91,9 @@ might prove invaluable (because they can be computed to quantify indirect intera
 in ways that other methods might not account for).
 
 > We have introduced the concept 
-> of different interaction types earlier in the manuscript (~l. 30) as well as  
+> of different interaction types earlier in the manuscript (ca. line 30) as well as  
 > expanding on how network type (uni-, bi- k,) plays a role in the modelling 
-> process (~l. 480)
+> process (ca. line 480)
 
 **Lines 318-340:** There are few other models that connect networks/their structures 
 to predict interactions within the networks/subset of nodes in networks. They need 
@@ -110,11 +110,12 @@ flow can be misleading in some scenarios, and very powerful in others.
 > We have now included references to studies that have addressed network 
 > flows (Gaiarsa et al., 2019, Borret et al., 2019, Farage et al., 2021,
 > Montoya & Solé 2002) within the 'What about interaction _strength_?' section.
+> (ca. lines 495 - 515)
 
 In addition to interaction strength, weighted networks need to be mentioned 
 somewhere, even if only for completeness.
 
 > Weighted networks are interaction strength - we have clarified this in the 
-> text (l. 490)
+> text (ca. line 490)
 
 # Reviewer 2
