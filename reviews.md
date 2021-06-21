@@ -93,6 +93,12 @@ structure?
 
 > @tpoisot is on this one
 
+**Lines 318-340:** There are few other models that connect networks/their
+*structures to predict interactions within the networks/subset of nodes in
+*networks. They need to be sited [sic] here.
+
+and
+
 **How do we predict how species that we have never observed together will
 *interact (355-374):* there are other ways to incorporate network-structure
 into models to predict interactions within a given network, such as calculating
@@ -121,11 +127,6 @@ network-based features, they need to be mentioned here for completeness.
 > manuscript (ca. line 30) as well as   expanding on how network type (uni-, bi-
 > k,) plays a role in the modelling process (ca. line 480)
 
-**Lines 318-340:** There are few other models that connect networks/their
-*structures to predict interactions within the networks/subset of nodes in
-*networks. They need to be sited here.
-
-> @gottacatchenall pls respond here RE #124
 
 **Lines 375-397:** this section could benefit from discussion of various types
 *of flow in networks, for instance there are few examples in the literature
