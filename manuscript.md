@@ -473,9 +473,9 @@ random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
 means that we can compare the AUC of different models, with $0.5$ being the
 floor and the closer to 1.0 being better.
 
-<!-- TS I suck at captions so please do jump in here --> 
-![Hypothetical receiver-operating-characteristic (ROC) and precision-recall (PR) 
-curves ranging from 'perfect' (light green) to 'decent' (blue) relative to a 
+<!-- TS I suck at captions so please do jump in here -->
+![Hypothetical receiver-operating-characteristic (ROC) and precision-recall (PR)
+curves ranging from 'perfect' (light green) to 'decent' (blue) relative to a
 random model (dashed line).](./figures/auc.png){@fig:auc}
 
 ## Networks and Interactions
@@ -577,13 +577,19 @@ to resilience to invasion [@Baiser2010ConDet; @Smith-Ramesh2016GloSyn],
 can increase robustness to extinction in food webs [@Dunne2002NetStr],
 while decreasing it in mutualistic networks [@Vieira2015SimSto], and
 connectance relates to network stability [@Landi2018ComSta]. Second, most
-(if not all) network properties co-vary with connectance [@Poisot2014WheEco;
-@Dunne2002FooStr]. We have models to estimate species richness over space
+(if not all) network properties covary with connectance [@Poisot2014WheEco;
+@Dunne2002FooStr].
+
+Within the network science literature, there are numerous methods for predicting
+edges based on network properties (e.g. block models [@Yen2020ComDet] based on
+modularity, hierarchical models [@Kawakatsu2021EmeHie] based on embedding,
+etc.). However, in the context of species interactin networks, these properties
+often covary with connectance. As a result we suggest that using connectance as
+the primary property of interest is most likely to be practical to formulate at
+the moment. We have models to estimate species richness over space
 [@Jenkins2013GloPat], and because we can predict connectance from species
-richness, [@MacDonald2020RevLin], we can then derive distributions of network
-properties from richness estimates alone.  Therefore we suggest that predicting
-the value of network connectance across space (and eventually time) is most
-likely to be the most practical to formulate at the moment.
+richness [@MacDonald2020RevLin], we can then derive distributions of network
+properties from richness estimates alone.  
 
 ### How do we predict how species that we have never observed together will interact?
 
