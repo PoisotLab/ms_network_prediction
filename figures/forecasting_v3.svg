@@ -8,14 +8,14 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0.1 (1.0.1+r74)"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
    sodipodi:docname="forecasting_v3.svg"
    id="SVGRoot"
    version="1.1"
    viewBox="0 0 2735.1895 1215.4392"
    height="1215.4392"
    width="2735.1895"
-   inkscape:export-filename="/home/michael/papers/ms_network_prediction/figures/forecasting_v3.png"
+   inkscape:export-filename="/Users/tanyastrydom/Documents/Uni/ms_network_prediction/figures/forecasting_v3.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -1548,16 +1548,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.3526066"
-     inkscape:cx="1557.1756"
+     inkscape:cx="1062.2898"
      inkscape:cy="369.31358"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-width="1440"
+     inkscape:window-height="847"
      inkscape:window-x="0"
-     inkscape:window-y="660"
+     inkscape:window-y="173"
      inkscape:window-maximized="1"
      inkscape:lockguides="true"
      showguides="false"
@@ -1569,27 +1569,33 @@
     <sodipodi:guide
        position="1582.671,729.94698"
        orientation="0,-1"
-       id="guide3379" />
+       id="guide3379"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="2128.6559,255.9742"
        orientation="0,-1"
-       id="guide1556" />
+       id="guide1556"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1930.1242,212.85873"
        orientation="0,-1"
-       id="guide1558" />
+       id="guide1558"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1898.0383,282.04401"
        orientation="0,-1"
-       id="guide1560" />
+       id="guide1560"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1282.3896,433.44946"
        orientation="0,-1"
-       id="guide1562" />
+       id="guide1562"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1885.0124,383.31521"
        orientation="0,-1"
-       id="guide1564" />
+       id="guide1564"
+       inkscape:locked="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata1405">
@@ -1609,7 +1615,7 @@
      id="layer1"
      transform="translate(240.45372,154.03551)">
     <rect
-       style="fill:#f2f2f2;fill-opacity:0.996078;stroke:none;stroke-width:12.998;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:0.996078;stroke:none;stroke-width:12.998;stroke-opacity:1"
        id="rect8396"
        width="2592.2434"
        height="1286.2993"
