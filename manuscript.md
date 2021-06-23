@@ -249,7 +249,7 @@ a hindrance with time [@Makiola2020KeyQue]. Ecosystems are a quintessential
 complex-adaptive-system [@Levin1998EcoBio] with a myriad of ways in which
 processes at different spatial, temporal, and organisational scales can
 influence and respond to one another. Understanding how the product of these
-different processes drive the properties of ecosystem across different scales
+different processes drive the properties of ecosystems across different scales
 remains a central challenge of ecological research, and we should strive to
 work on methods that will integrate different empirical "snapshots" of this
 larger system.
@@ -278,8 +278,8 @@ and quality control [@Kissling2018BuiEss] and in next-generation
 biomonitoring [NGB; @Makiola2020KeyQue] would improve our ability to
 make reliable predictions of ecosystem properties on increasing spatial
 and temporal scales. The advancement of prediction techniques coupled
-with a movement towards standardising data collection protocols (e.g.
-@Perez-Harguindeguy2013NewHan for plant functional traits) and metadata (e.g.
+with a movement towards standardising data collection protocols (*e.g.*
+@Perez-Harguindeguy2013NewHan for plant functional traits) and metadata (*e.g.*
 [DarwinCore](https://www.tdwg.org))---which facilitates interoperability and
 integration of datasets---as well as a growing interest at the government
 level [@Scholes2012BuiGlo] paints a positive picture for data access and
@@ -290,7 +290,7 @@ and novel tools. Machine learning encompasses a broad variety of techniques
 applied with or without human supervision. These techniques can often be
 more flexible and perform better than classical statistical methods, and can
 achieve a very high level of accuracy in many predictive and classification
-tasks in a relatively short amount of time [e.g. @Cutler2007RanFor;
+tasks in a relatively short amount of time [*e.g.* @Cutler2007RanFor;
 @Krizhevsky2017ImaCla]. Increasing computing power combined with
 recent advances in machine learning techniques and applications shows
 promise in ecology and environmental science (see @Christin2019AppDee
@@ -340,7 +340,7 @@ Many forms of scientific inquiry are based around using models _descriptively_
 model) [@Stouffer2019AllEco]. In this context, the goal of using a model is
 to estimate the parameters, $\theta$, that best explain a set of empirical
 observations, $\{\hat{x}, \hat{y}\}$. In some cases, these parameter values
-are themselves of interest (e.g the strength of selection, intrinsic growth
+are themselves of interest (*e.g.* the strength of selection, intrinsic growth
 rate, dispersal distance), but in others cases, the goal is to compare a set
 of competing models $f_1, f_2, \dots$ to determine which provides the most
 parsimonious explanation for a dataset. The quantitative representation of
@@ -362,8 +362,8 @@ is nested within the forward problem (@fig:models).
 
 ![The nested nature of developing predictive and forecasting models, showcases
 the _forward problem_ and how this relies on a hierarchical structure of the
-modelling process. The choice of a specific modeling technique and framework,
-as well as the data retained to be part of this model, proceed directly from
+modelling process. The choice of a specific modelling technique and framework,
+as well as the data retained to be part of this model, proceeds directly from
 our assumptions about which ecological mechanisms are important in shaping
 both extant and future data.](figures/forecasting_v3.png){#fig:models}
 
@@ -375,7 +375,8 @@ $\hat{y}$ (@fig:models). Second, a **model** $f$, which maps features
 $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x,
 \theta)$. Third, a **loss function** $L(\hat{y}, y)$, which describes how
 far a model's prediction $y$ is from an empirical estimate $\hat{y}$. Lastly,
-**priors** on parameters, $P(\theta)$. Often an important step before fitting
+**priors** on parameters, $P(\theta)$, which describe the modellers belief 
+about the value of the parameters. Often an important step before fitting
 a model is feature engineering: adjusting and reworking the predictors to
 better uncover predictor-response relationships [@Kuhn2019FeaEng]. This can
 include projecting the predictors into a lower dimensional space, as in our
@@ -485,7 +486,7 @@ of classifier acceptance, and computing the values of ROC/PR metrics for
 each value of the threshold. The area-under-the-curve (AUC) is then used as
 a validation metric and are typically called AUC-ROC (Area-Under-the-Curve
 Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve Precision-Recall)
-(_e.g_ ROC-AUC in @tbl:validation).
+(_e.g._ ROC-AUC in @tbl:validation).
 
 Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the
 random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
@@ -526,7 +527,7 @@ Species interaction networks can also be used as a means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative
 presence or absence of an interaction, is a continuous measurement which
 attempts to quantify the effect of one species on another. This results in
-weighted networks that representing different patterns of 'flows' between nodes
+weighted networks representing different patterns of 'flows' between nodes
 -- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
 strength can generally be divided into two main categories (as suggested by
 @Berlow2004IntStr): 1) the strength of an interaction between individuals of
@@ -604,7 +605,7 @@ Within the network science literature, there are numerous methods
 for predicting edges based on network properties (e.g. block
 models [@Yen2020ComDet] based on modularity, hierarchical models
 [@Kawakatsu2021EmeHie] based on embedding, etc.). However, in the context of
-species interactin networks, these properties often covary with connectance. As
+species interaction networks, these properties often covary with connectance. As
 a result we suggest that using connectance as the primary property of interest
 is most likely to be practical to formulate at the moment. We have models
 to estimate species richness over space [@Jenkins2013GloPat], and because we
@@ -663,7 +664,7 @@ linear interaction effects, but in recent years models of bioenergetic
 community dynamics have shown promise in basing our understanding of
 energy flow in food-webs in the understood relationship between allometry
 and metabolism [@Delmas2017SimBio]. An additional consideration is the
-multidimensional nature of "stability" and "feasibility" (e.g resilience to
+multidimensional nature of "stability" and "feasibility" (*e.g.* resilience to
 environmental change vs extinctions) [@Dominguez-Garcia2019UnvDim] and how
 different disturbances propagate across levels of biological organisation
 [@Kefi2019AdvOur; @Gravel2016StaCom]. Recent approaches such as structural
@@ -819,9 +820,9 @@ to assess population declines or landscape ability to support populations
 [@Araujo2019StaDis]. Reliable predictions about how ecological networks
 will change over time will give us critical information that could
 be communicated to decision-makers and the scientific community about
-what are future environmental risks awaiting and how to mitigate them
+what future environmental risks we are awaiting and how to mitigate them
 [@Kindsvater2018OveDat]. Not only this, but how biodiversity is structured
-influence the functioning of the whole ecosystem, community stability and
+influences the functioning of the whole ecosystem, community stability and
 persistence [@Thompson2012FooWeb; @Stouffer2010UndFoo]. Will climate change
 impact the distribution of network properties (e.g. connectance)? If so,
 which regions or species groups need special conservation efforts? These
@@ -885,7 +886,7 @@ modeller should be mindful of the trade-off between resolution and accuracy
 when developing any forecast. Finally, ensemble models are not guaranteed
 to give more accurate results: for example, @Becker2020PreWil noted that
 the ensemble model outperforms the best-in-class models, which should be
-take as an indication that careful model building and selection is of the
+taken as an indication that careful model building and selection is of the
 utmost importance when dealing with a problem as complex as the prediction
 of species interactions.
 
