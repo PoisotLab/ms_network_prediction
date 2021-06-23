@@ -157,7 +157,7 @@ models predicting species interactions.
 
 # Predicting species interaction networks across space: challenges and opportunities
 
-Here we present a conceptual roadmap (@fig:conceptual) which we envisage to
+Here we present a conceptual roadmap (@fig:conceptual), which we envisage to
 be the path towards improving our prediction of species interaction networks,
 and developing spatially explicit models of network structure. We discuss
 the challenges and opportunities going forward for this research agenda,
