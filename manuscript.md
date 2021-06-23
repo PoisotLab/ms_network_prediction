@@ -494,8 +494,8 @@ floor and the closer to 1.0 being better.
 ![Hypothetical receiver-operating-characteristic (ROC) and precision-recall
 (PR) curves ranging from 'perfect' (light green) to 'decent' (blue) relative
 to a random model (dashed line). Comparing these hypotheticals to data
-presented in @fig:exampple gives an idea of how accurate the model in the
-case study is.](./figures/auc.png){@fig:auc}
+presented in @fig:example gives an idea of how accurate the model in the
+case study is.](figures/auc.png){#fig:auc}
 
 ## Networks and Interactions
 
