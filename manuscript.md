@@ -437,7 +437,7 @@ almost always be greater than 50%. Understanding model performance within
 sensitivity-specificity space may be more informative, where sensitivity
 evaluates how good the model is at predicting true interactions (True Positive
 Rate) and specificity refers to the prediction of true "non-interactions"
-(True Positive Rate). It must be noted that in ecological networks,
+(True Negative Rate). It must be noted that in ecological networks,
 there is no guarantee that the "non-interactions" (assumed true negatives)
 in the original dataset are indeed true negatives [@Jordano2016ChaEco;
 @Jordano2016SamNet]. This can result in the positive/negative values, and
