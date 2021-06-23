@@ -106,10 +106,10 @@ to reproduce it is available at `https://osf.io/6jp4b/`; the entire example
 was carried out in *Julia 1.5.3* [@Bezanson2017JulFre], using the *Flux*
 machine learning framework [@Innes2018FluEle].
 
-We first aggregate all interactions into a cooccurrence matrix $C$ which
+We first aggregate all species into a co-occurrence matrix $A$ which
 represents whether a given pair of species $(i,j)$ was observed coexisting
-across any location [@Dunne2006NetStr]. We then transform this cooccurrence
-matrix $C$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
+across any location. We then transform this co-occurrence
+matrix $A$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
 values from this PCA as the features vector for each species $i$. For each pair
 of (host, parasite) species $(i,j)$, we then feed the features vectors $(v_i,
 v_j)$ into a neural network. The neural-network uses four feed-forward layers
@@ -118,7 +118,8 @@ v_j)$ into a neural network. The neural-network uses four feed-forward layers
 interaction between species $i$ and $j$.
 
 We then train this neural network by dividing the original dataset into
-test and training sets. During the training of this neural network, the
+test and training sets (split 80-20 for training and testing respectively). 
+During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
 of positive interactions. As @Poisot2021ImpMam show slightly inflating
 the dataset with positive interactions enables us to counterbalance
