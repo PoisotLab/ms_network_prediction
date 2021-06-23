@@ -63,7 +63,7 @@ difficult to generalise across systems as species interaction networks are the
 product of ecological and evolutionary mechanisms interacting across spatial,
 temporal and organisational scales. The interwoven nature of these processes
 imposes structure on biodiversity data which is invisible when examined only
-through the lens of a single scale. Machine learning methods have enormous
+through the lens of a single scale. Machine learning (ML) methods have enormous
 potential in finding this structure [@Desjardins-Proulx2019ArtInt], and
 have the potential to be used together with mechanistic models in order to
 make prediction of ecological dynamics more robust [@Rackauckas2020UniDif;
@@ -75,12 +75,12 @@ construct a metaweb of host-parasite interactions across space. We then use
 this case study to illustrate a roadmap for improving predictions using
 open data and machine-learning methods. We then provide a non-exhaustive
 primer on the literature on interaction prediction, and identify the tools
-and methods most suited to be the future of interaction network prediction
-models, which for the spatial, temporal, and climatic dimensions of network
+and methods most suited for the future of interaction network prediction
+models, covering the spatial, temporal, and climatic dimensions of network
 prediction [@Burkle2011FutPla]. Adopting more predictive approaches to complex
 ecological systems (like networks) will establish a positive feedback loop
 with our understanding of these systems [@Houlahan2017PriPre]: the tasks of
-understanding and predictive are neither separate not opposed; instead, ML
+understanding and predicting are neither separate nor opposed; instead, ML
 tools have the ability to capture a lot of our understanding into working
 assumptions, and comparing predictions to empirical data gives us better
 insights about how much we ignore about the systems we model.
@@ -90,13 +90,13 @@ insights about how much we ignore about the systems we model.
 The premise of this manuscript is that we can predict interactions between
 species. In this section we provide a proof-of-concept, where we use data from
 @Hadfield2014TalTwo describing 51 host-parasite networks sampled across space.
-In this data not all species cooccur across sites, so there are pairs of
+In this data not all species co-occur across sites, so there are pairs of
 species that may or may not interact for which we have no data. It is possible
 that these species have never been observed because of negative associations,
 however it is also possible this is only due to random chance in what species
 are observed.
 
-Without any species-level information, we resort to using cooccurrence to
+Without any species-level information, we resort to using co-occurrence to
 predict interactions. To do this we (i) extract features for each species
 based on co-occurrence, (ii) use these features to train a neural network
 to predict interactions, and (iii) apply this classifier to the original
@@ -111,8 +111,8 @@ represents whether a given pair of species $(i,j)$ was observed coexisting
 across any location [@Dunne2006NetStr]. We then transform this cooccurrence
 matrix $C$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
 values from this PCA as the features vector for each species $i$. For each pair
-of (host, parasite) species $(i,j)$, we then feed the features vectors $[v_i,
-v_j]$ into a neural network. The neural-network uses four feed-forward layers
+of (host, parasite) species $(i,j)$, we then feed the features vectors $(v_i,
+v_j)$ into a neural network. The neural-network uses four feed-forward layers
 (the first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates
 ($0.5$). This produces an output layer which is the probability-score for
 interaction between species $i$ and $j$.
@@ -120,7 +120,7 @@ interaction between species $i$ and $j$.
 We then train this neural network by dividing the original dataset into
 test and training sets. During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
-of positive interactions, as @Poisot2021ImpMam show slightly inflating
+of positive interactions. As @Poisot2021ImpMam show slightly inflating
 the dataset with positive interactions enables us to counterbalance
 sampling biases. Furthermore, setting a minimum threshold of response
 balance is an established approach for datasets with strong biases
@@ -132,7 +132,8 @@ species not present in the training data (@fig:example).
 a list of known possible interactions within a species pool, is converted
 into latent features using probabilistic PCA, then used to train a deep
 neural network to predict species interactions. The initial and imputed
-networks are represented as their tSNE embedding, and the colours of nodes
+networks are represented as their t-distributed stochastic neighbour 
+embedding (tSNE) embedding, and the colours of nodes
 are the cluster to which they are assigned based on a $k$-means clustering
 of the tSNE output. Panels A and B represent, respectively, the ROC curve
 and the precision-recall curve, with the selected classifier represented by
@@ -193,7 +194,7 @@ for real-world environmental conditions, especially in environments for
 which there are no analogous data.
 
 Further, empirical estimation of interaction _strength_ is highly prone
-to bias as existing data are usually summarise at the taxonomic scale of
+to bias as existing data are usually summarised at the taxonomic scale of
 the species or higher, thereby losing information that differentiates the
 strength in per-individual interactions from the strength of a whole species
 interaction [@Wells2013SpeInt]. Empirical estimations of interaction strength
@@ -227,9 +228,9 @@ adequate at generalising. The ability to extract and engineer features also
 serves to bolster our predictive power. Although it may be tempting to
 rely on approaches like bootstrapping to estimate the consistency of the
 predictions, the low data volume, and the fact that we are more likely to
-observe interactions between some pairs of species [*i.e.* those that co-occur
+observe interactions between some pairs of species (*i.e.* those that co-occur
 a lot, *e.g.* @Cazelles2015TheSpe, and those that reach high abundances,
-*e.g.* @Vazquez2009UniPat], introduces a significant risk to train models on
+*e.g.* @Vazquez2009UniPat), introduces a significant risk to train models on
 pseudo-replicated data. In short, the current lack of massive datasets must
 not be an obstacle to prediction; it is an ideal testing ground to understand
 how little data is sufficient to obtain actionable predictions, and how much
