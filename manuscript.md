@@ -614,8 +614,9 @@ then derive distributions of network properties from richness estimates alone.
 
 ### How do we predict how species that we have never observed together will interact?
 
-A neutral approach would assume the probability of an interaction is the same
-as the likelihood of co-occurrence [@Poisot2015SpeWhy; @Pichler2020MacLea],
+A neutral approach would assume the probability of an interaction is 
+only a function of abundance and trait variation would have no 
+effect [@Poisot2015SpeWhy; @Pichler2020MacLea],
 and that the effect of abundances and traits would have no effect
 [@Canard2012EmeStr]. However, functional-trait based proxies could enable
 better predictions of ecological interactions. Selection on functional
