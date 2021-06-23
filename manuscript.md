@@ -41,7 +41,7 @@ spatial and temporal variation [@McCann2007ProBio; @Seibold2018NecMul]. For
 example, in disease ecology, predicting potential hosts of novel
 disease [*e.g.* wildlife hosts of betacoronaviruses; @Becker2020PreWil;
 @Wardeh2021PreMam] has received much attention. Network approaches have
-been used for prediction of dengue [@Zhao2020MacLea], Chagas disease
+been used for the prediction of dengue [@Zhao2020MacLea], Chagas disease
 [@Rengifo-Correa2017UndTra], Rickettsiosis [@Morand2020DisEco], Leishmaniasis
 [@Stephens2009UsiBio], and infectious diseases in livestock and wildlife
 [@Craft2015InfDis]. Additionally, prediction of interaction networks is a
@@ -93,7 +93,7 @@ species. In this section we provide a proof-of-concept, where we use data from
 In this data not all species co-occur across sites, so there are pairs of
 species that may or may not interact for which we have no data. It is possible
 that these species have never been observed because of negative associations,
-however it is also possible this is only due to random chance in what species
+however it is also possible this is only due to random chance as to which species
 are observed.
 
 Without any species-level information, we resort to using co-occurrence to
@@ -112,7 +112,7 @@ across any location. We then transform this co-occurrence
 matrix $A$ via probabilistic PCA [@Tipping1999ProPri] and use the first 15
 values from this PCA as the features vector for each species $i$. For each pair
 of (host, parasite) species $(i,j)$, we then feed the features vectors $(v_i,
-v_j)$ into a neural network. The neural-network uses four feed-forward layers
+v_j)$ into a neural network. The neural network uses four feed-forward layers
 (the first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates
 ($0.5$). This produces an output layer which is the probability-score for
 interaction between species $i$ and $j$.
@@ -148,8 +148,8 @@ observed to co-occur) identified 1546 new possible interactions -- 746
 was observed in the original dataset. This model reaches similar levels of
 predictive efficacy as previous studies that use far more species-level data
 and mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
-potential for including external sources of data for improving our prediction
-of interaction networks. For example, @Krasnov2016TraPhy collected traits
+potential for including external sources of data for *improving* our prediction
+of interaction networks even further. For example, @Krasnov2016TraPhy collected traits
 data for this system that could be added to the model, in addition or in
 substitution to latent variables derived from observed interactions. As in
 @fig:conceptual, this highlights how much data sources can be consumed by
@@ -224,7 +224,7 @@ predict ecological networks accurately from existing and imperfect datasets,
 but also enable us to perform model validation and comparison with more
 flexibility than existing tools. We argue that @fig:example is an example of
 the promise of these tools *even* when facing datasets of small size. When
-carefully controlling for overfitting machine learning systems are at least
+carefully controlling for overfitting, machine learning systems are at least
 adequate at generalising. The ability to extract and engineer features also
 serves to bolster our predictive power. Although it may be tempting to
 rely on approaches like bootstrapping to estimate the consistency of the
@@ -241,7 +241,7 @@ we can rely on data inflation procedures to reach this minimal amount.
 
 We are also currently limited by the level of biological organisation
 at which we can describe ecological networks. For instance, our
-understanding of individual based networks [*e.g.* @Araujo2008NetAna;
+understanding of individual-based networks [*e.g.* @Araujo2008NetAna;
 @Tinker2012StrMec] is still in its infancy [@Guimaraes2020StrEco] and acts as
 a resolution-limit. Similarly, the resolution of environmental (or landscape)
 data also limits our ability to predict networks at small scales, although
@@ -302,7 +302,7 @@ network ecology [@Poisot2020EnvBia] and the scarcity of data of species
 interactions, the prediction of ecological networks will undoubtedly
 benefit from these improvements. Machine learning methods are emerging
 as the new standard in computational ecology in general [@Olden2008MacLea;
-@Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo],
+@Christin2019AppDee], and in network ecology in particular [@Bohan2017NexGlo],
 as long as sufficient, relevant data are available. As many ecological and
 evolutionary processes underlie species interactions and the structure of their
 ecological networks [*e.g.* @Vazquez2009UniPat; @Segar2020RolEvo], it can be
@@ -321,7 +321,7 @@ data [@Bohan2017NexGlo], and network inference from presence-absence data
 # A primer on predicting ecological networks
 
 Below we provide a primer on the background concepts necessary to build
-models to predict species interaction networks, with a focus on using machine
+predictive models of species interaction networks, with a focus on using machine
 learning approaches in the modelling process.
 
 ## Models
@@ -437,7 +437,7 @@ almost always be greater than 50%. Understanding model performance within
 sensitivity-specificity space may be more informative, where sensitivity
 evaluates how good the model is at predicting true interactions (True Positive
 Rate) and specificity refers to the prediction of true "non-interactions"
-(False Positive Rate). It must be noted that in ecological networks,
+(True Positive Rate). It must be noted that in ecological networks,
 there is no guarantee that the "non-interactions" (assumed true negatives)
 in the original dataset are indeed true negatives [@Jordano2016ChaEco;
 @Jordano2016SamNet]. This can result in the positive/negative values, and
@@ -448,7 +448,7 @@ In response to the general problem of biases in classifiers, many metrics
 have been proposed to measure binary-classifiers (see @tbl:validation,
 [@Gu2009EvaMea; @Drummond2006CosCur]) and are indicative of how well the model
 performs with regards to some aspect of accuracy, sensitivity, specificity
-and/or precision. Where, ultimately the choice of metric will depend on the
+and/or precision. Ultimately the choice of metric will depend on the
 intended use of the model.
 
 | Name                      | Value | Success         | Description                                                   |
@@ -660,7 +660,7 @@ are highly predictable [@MacDonald2020RevLin]. Generative models of food-webs
 (based on network embeddings) fit empirical networks more effectively
 than random models [@Allesina2008GenMod]. These models have long used
 allometry as a single-dimensional niche space---naturally we want to
-extend this to traits in general. The second approach stability is through
+extend this to traits in general. The second approach to stability is through
 _dynamics_. Early models of community dynamics rely on the assumption of
 linear interaction effects, but in recent years models of bioenergetic
 community dynamics have shown promise in basing our understanding of
@@ -677,7 +677,7 @@ usable parameters to penalize network predictions.
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
 If we use different trait-based proxies to predict potential interactions
-between species. The choice of such proxies should be theoretically
+between species the choice of such proxies should be theoretically
 linked to the taxonomic and spatial scale we are using in our prediction
 [@Wiens1989SpaSca]. At some scales we can use morphological traits of
 co-occurring species to assess the probability of interaction between them
@@ -687,9 +687,9 @@ themselves are conserved [@Gomez2010EcoInt]. In this case, we can think of
 the probability that one species will interact with another as the distance
 between them in niche-space [@Desjardins-Proulx2017EcoInt], and this can be
 modelled by simulating neutral expectations of trait variation on phylogenetic
-tree [@Davies2021EcoRed]. At the narrowest scales, we may be interested in
+trees [@Davies2021EcoRed]. At the narrowest scales, we may be interested in
 predicting behavioural traits like foraging behaviour [@Bartomeus2016ComFra],
-and at this scale we may need to consider abundance's effect on probability
+and at this scale we may need to consider abundance's effect on the probability
 of an encounter [@Wells2013SpeInt].
 
 ### What about indirect and higher-order interactions?
@@ -701,7 +701,7 @@ or interaction strengths that themselves interact --- have gained interest in
 recent years [@Golubski2016EcoNet; @Golubski2011ModMod]. One mathematical tool
 to describe these situations is hypergraphs: hypergraphs are the generalisation
 of a graph, allowing a broad yet manageable approach to complex interactions
-[@Carletti2020DynSys], allowing for particular interactions to occur beyond a
+[@Carletti2020DynSys], by allowing for particular interactions to occur beyond a
 pair of nodes. An additional degree of complexity is introduced by multi-layer
 networks [@Hutchinson2019SeeFor]. Multi-layer networks include edges across
 "variants" of the networks (timepoints, locations, or environments). These
@@ -712,7 +712,8 @@ multi-layered [@Pilosof2017MulNat]. However, *prima facie*, increasing the
 dimensionality of the object we need to predict (the multiple layers rather
 than a single network) makes the problem more complicated. Yet, multi-layer
 approaches improve prediction in social networks [@Jalili2017LinPre;
-@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful going forward.
+@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful  in 
+network ecology going forward.
 
 ## Space
 
@@ -782,7 +783,7 @@ model should be propagated into the combined model. The Bayesian paradigm
 provides a convenient solution to this---if we have a chain of models where
 each model feeds into the next, we can sample from the posterior of the
 input models. A different approach is _ensemble modelling_ which combines
-the predictions made be several models, where each model is predicting the
+the predictions made by several models, where each model is predicting the
 same thing [@Parker2013EnsMod]. Error propagation, an important step in
 building any ecological model, describes the effect of the uncertainty of
 input variables on the uncertainty of output variables [@Draper1995AssPro;
