@@ -22,7 +22,7 @@ are typically measured as a binary variable---present or absent--- even though
 it is evident interactions are not all-or-nothing. Species interactions
 occur probabilistically due to variation in species abundances in space
 and time [@Poisot2015SpeWhy]. Different types of interactions vary in their
-intrinsic predictability (e.g. some fungal species engage in opportunistic
+intrinsic predictability (*e.g.* some fungal species engage in opportunistic
 saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic
 in their interactions than facultative parasites [@Poisot2013FacObl;
 @Luong2019FacPar]). In addition to this variance in predictability, networks
@@ -304,7 +304,7 @@ as the new standard in computational ecology in general [@Olden2008MacLea;
 @Christin2019AppDee], and in network ecology in-particular [@Bohan2017NexGlo],
 as long as sufficient, relevant data are available. As many ecological and
 evolutionary processes underlie species interactions and the structure of their
-ecological networks [e.g. @Vazquez2009UniPat; @Segar2020RolEvo], it can be
+ecological networks [*e.g.* @Vazquez2009UniPat; @Segar2020RolEvo], it can be
 difficult to choose relevant variables and model species interactions networks
 explicitly. A promising application of machine learning in natural sciences
 is Scientific-Machine Learning (SciML), a framework that combines machine
@@ -372,7 +372,7 @@ both extant and future data.](figures/forecasting_v3.png){#fig:models}
 In order to build a predictive model under the Bayesian paradigm, one needs
 the following: first, **data**, split into features $\hat{x}$ and labels
 $\hat{y}$ (@fig:models). Second, a **model** $f$, which maps features
-$x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x,
+$x$ to labels $y$ as a function of parameters $\theta$, *i.e.* $y = f(x,
 \theta)$. Third, a **loss function** $L(\hat{y}, y)$, which describes how
 far a model's prediction $y$ is from an empirical estimate $\hat{y}$. Lastly,
 **priors** on parameters, $P(\theta)$, which describe the modellers belief 
@@ -513,9 +513,9 @@ a variety of interaction types, including: *unipartite networks*, where each
 species can be linked to other species (these are typically used to represent
 food webs), *bipartite networks* where there are two pools of species, and
 all interactions occur between species in each pool, are typically used for
-pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
+pairwise interactions (*e.g.* hosts and parasites), and *k-partite networks,*
 which serve as a way to expand to more than two discrete sets of interacting
-species (e.g. some parasitoid webs, seed dispersal networks, and pollination
+species (*e.g.* some parasitoid webs, seed dispersal networks, and pollination
 networks [@Pocock2012RobRes]). These different network types can be leveraged
 within the modelling process and may dictate what is the best approach _e.g._
 using network-based features for _k-partite networks_ as a means to account
@@ -602,7 +602,7 @@ connectance relates to network stability [@Landi2018ComSta]. Second, most
 @Dunne2002FooStr].
 
 Within the network science literature, there are numerous methods
-for predicting edges based on network properties (e.g. block
+for predicting edges based on network properties (*e.g.* block
 models [@Yen2020ComDet] based on modularity, hierarchical models
 [@Kawakatsu2021EmeHie] based on embedding, etc.). However, in the context of
 species interaction networks, these properties often covary with connectance. As
@@ -722,7 +722,7 @@ emerging component of biogeography and macroecology.
 
 ### How much do networks vary over space?
 
-Networks can vary across space either in their structural properties (e.g.
+Networks can vary across space either in their structural properties (*e.g.*
 connectance or degree distribution) or in their composition (identity of
 nodes and edges). Interestingly, variation in the structural properties
 of ecological networks primarily responds to changes in the size of the
@@ -824,7 +824,7 @@ what future environmental risks we are awaiting and how to mitigate them
 [@Kindsvater2018OveDat]. Not only this, but how biodiversity is structured
 influences the functioning of the whole ecosystem, community stability and
 persistence [@Thompson2012FooWeb; @Stouffer2010UndFoo]. Will climate change
-impact the distribution of network properties (e.g. connectance)? If so,
+impact the distribution of network properties (*e.g.* connectance)? If so,
 which regions or species groups need special conservation efforts? These
 overarching questions are yet to be answered [but see @Albouy2013ProCli;
 @Kortsch2015CliCha; @Hattab2016ForFin]. We believe that the path toward
