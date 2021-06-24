@@ -149,9 +149,7 @@ and mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
 potential for including external sources of data for improving our prediction
 of interaction networks. For example, @Krasnov2016TraPhy collected traits
 data for this system that could be added to the model, in addition or in
-substitution to latent variables derived from observed interactions. As in
-@fig:conceptual, this highlights how much data sources can be consumed by
-models predicting species interactions.
+substitution to latent variables derived from observed interactions.
 
 # Predicting species interaction networks across space: challenges and opportunities
 
