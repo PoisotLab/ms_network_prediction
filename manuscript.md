@@ -25,7 +25,7 @@ and time [@Poisot2015SpeWhy]. Different types of interactions vary in their
 intrinsic predictability (*e.g.* some fungal species engage in opportunistic
 saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic
 in their interactions than facultative parasites [@Poisot2013FacObl;
-@Luong2019FacPar]). In addition to this variance in predictability, networks
+@Luong2019FacPar]. In addition to this variance in predictability, networks
 from different systems are structured by different mechanisms. Interaction
 networks are embodied in numerous forms: host and parasites, plants and
 pollinators, predators and prey, disease and host, and so on, and network
@@ -54,20 +54,20 @@ and the sources for this data may differ depending on the type of interaction
 we wish to predict [@Gibb2021DatPro].
 
 Methods for predicting interactions between species exist, but at the moment
-are limited in that they are typically based around a single mechanism
-at a single scale: position in the trophic niche [@Gravel2013InfFoo;
+are limited in that they are typically based around a single mechanism at a
+single scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic distance [@Pomeranz2018InfPre;
-@Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra], or other
-network properties [@Terry2020FinMis; @Stock2017LinFil]. These approaches are
-difficult to generalise across systems as species interaction networks are the
-product of ecological and evolutionary mechanisms interacting across spatial,
-temporal and organisational scales. The interwoven nature of these processes
-imposes structure on biodiversity data which is invisible when examined only
-through the lens of a single scale. Machine learning (ML) methods have enormous
-potential in finding this structure [@Desjardins-Proulx2019ArtInt], and
-have the potential to be used together with mechanistic models in order to
-make prediction of ecological dynamics more robust [@Rackauckas2020UniDif;
-@Becker2020PreWil].
+@Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra],
+interaction frequency [@Young2021RecPla], or other network properties
+[@Terry2020FinMis; @Stock2017LinFil]. These approaches are difficult to
+generalise across systems as species interaction networks are the product of
+ecological and evolutionary mechanisms interacting across spatial, temporal and
+organisational scales. The interwoven nature of these processes imposes
+structure on biodiversity data which is invisible when examined only through the
+lens of a single scale. Machine learning (ML) methods have enormous potential in
+finding this structure [@Desjardins-Proulx2019ArtInt], and have the potential to
+be used together with mechanistic models in order to make prediction of
+ecological dynamics more robust [@Rackauckas2020UniDif; @Becker2020PreWil].
 
 Here we use a case study to show how machine-learning models can enable
 unreasonably effective prediction of species interactions, whereby we
@@ -121,7 +121,7 @@ We then train this neural network by dividing the original dataset into
 test and training sets (split 80-20 for training and testing respectively).
 During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
-of positive interactions. As @Poisot2021ImpMam show slightly inflating
+of positive interactions, as @Poisot2021ImpMam show slightly inflating
 the dataset with positive interactions enables us to counterbalance
 sampling biases. Furthermore, setting a minimum threshold of response
 balance is an established approach for datasets with strong biases
@@ -129,16 +129,18 @@ balance is an established approach for datasets with strong biases
 model provides highly effective prediction of interactions between pairs of
 species not present in the training data (@fig:example).
 
-![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], *i.e.*
-a list of known possible interactions within a species pool, is converted
-into latent features using probabilistic PCA, then used to train a deep
-neural network to predict species interactions. The initial and imputed
-networks are represented as their t-distributed stochastic neighbour
-embedding (tSNE) embedding, and the colours of nodes
-are the cluster to which they are assigned based on a $k$-means clustering
-of the tSNE output. Panels A and B represent, respectively, the ROC curve
-and the precision-recall curve, with the selected classifier represented by
-a black dot.](figures/figure1.png){#fig:example}
+![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], *i.e.* a
+list of known possible interactions within a species pool, is converted into
+latent features using probabilistic PCA, then used to train a deep neural
+network to predict species interactions. The imputed networks are represented as
+their t-distributed stochastic neighbour embedding (tSNE) embedding, and the
+colours of nodes are the cluster to which they are assigned based on a $k$-means
+clustering of the tSNE output. Empirical interactions are shown in purple, and
+imputed interactions in grey. Panels A and B represent, respectively, the ROC
+curve and the precision-recall curve, with the best classifier (according to
+Youden's J) represented by a black dot. The expected performance of a neutral
+"random-guessing" classifier is shown with a dashed
+line.](figures/figure1.png){#fig:example}
 
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
@@ -374,24 +376,24 @@ split into features $\hat{x}$ and labels $\hat{y}$ (@fig:models). Second, a
 $\theta$, i.e. $y = f(x, \theta)$. Third, a **loss function** $L(\hat{y}, y)$,
 which describes how far a model's prediction $y$ is from an empirical value
 $\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$, which describe the
-modeller's a priori belief about the value of the parameters". Often an
+modeller's _a priori_ belief about the value of the parameters. Often an
 important step before fitting a model is feature engineering: adjusting and
-reworking the predictors to better uncover predictor-response relationships
-[@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
-dimensional space, as in our proof-of-concept. Then, when a model is fitted
-(synonymous with parameter inference or the inverse problem, see @fig:models), a
-fitting algorithm attempts to estimate the values of $\theta$ that minimises the
-mean value of loss function $L(\hat{y},y)$ for all labels $y$ in the provided
-data $Y$. These typically rely on drawing candidate parameter values from priors
-and applying some form of Bayesian sampling to generate a posterior estimate of
-parameters, $P(\theta | \hat{x}, \hat{y})$.
+reworking the features to better uncover feature-label relationships
+[@Kuhn2019FeaEng]. This can include projecting the features into a lower
+dimensional space, as we did via PCA in the case study. Then, when a model is
+fitted (synonymous with parameter inference or the inverse problem, see
+@fig:models), a fitting algorithm attempts to estimate the values of $\theta$
+that minimises the mean value of loss function $L(\hat{y},y)$ for all labels $y$
+in the provided data $Y$. These typically rely on drawing candidate parameter
+values from priors and applying some form of Bayesian sampling to generate a
+posterior estimate of parameters, $P(\theta | \hat{x}, \hat{y})$.
 
 
 ### How do we validate a predictive model?
 
-After model fitting, we inevitably want to see how "good" it is. This process
-can be divided into two parts: 1) Model selection, where the modeller
-chooses from a set of possible models and 2) Model assessment, where the
+After we fit a model, we inevitably want to see how "good" it is. This process
+can be divided into two parts: 1) model selection, where the modeller
+chooses from a set of possible models and 2) model assessment, where the
 modeller determines the performance characteristics of the chosen model
 [@Hastie2009EleSta].
 
@@ -660,7 +662,7 @@ different disturbances propagate across levels of biological organisation
 [@Kefi2019AdvOur; @Gravel2016StaCom]. Recent approaches such as structural
 stability [@Saavedra2017StrApp; @Ferrera2016EffCom] allow to think of
 network feasibility in rigorous mathematical terms, which may end up as
-usable parameters to penalize network predictions.
+usable parameters to penalise network predictions.
 
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
