@@ -118,7 +118,7 @@ v_j)$ into a neural network. The neural network uses four feed-forward layers
 interaction between species $i$ and $j$.
 
 We then train this neural network by dividing the original dataset into
-test and training sets (split 80-20 for training and testing respectively). 
+test and training sets (split 80-20 for training and testing respectively).
 During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
 of positive interactions. As @Poisot2021ImpMam show slightly inflating
@@ -133,7 +133,7 @@ species not present in the training data (@fig:example).
 a list of known possible interactions within a species pool, is converted
 into latent features using probabilistic PCA, then used to train a deep
 neural network to predict species interactions. The initial and imputed
-networks are represented as their t-distributed stochastic neighbour 
+networks are represented as their t-distributed stochastic neighbour
 embedding (tSNE) embedding, and the colours of nodes
 are the cluster to which they are assigned based on a $k$-means clustering
 of the tSNE output. Panels A and B represent, respectively, the ROC curve
@@ -372,18 +372,19 @@ To build a (Bayesian) predictive model one needs the following: first, **data**,
 split into features $\hat{x}$ and labels $\hat{y}$ (@fig:models). Second, a
 **model** $f$, which maps features $x$ to labels $y$ as a function of parameters
 $\theta$, i.e. $y = f(x, \theta)$. Third, a **loss function** $L(\hat{y}, y)$,
-which describes how far a model's prediction $y$ is from an empirical estimate
-$\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$. Often an important
-step before fitting a model is feature engineering: adjusting and reworking the
-predictors to better uncover predictor-response relationships [@Kuhn2019FeaEng].
-This can include projecting the predictors into a lower dimensional space, as in
-our proof-of-concept. Then, when a model is fitted (synonymous with parameter
-inference or the inverse problem, see @fig:models), a fitting algorithm attempts
-to estimate the values of $\theta$ that minimises the mean value of loss
-function $L(\hat{y},y)$ for all labels $y$ in the provided data $Y$. These
-typically rely on drawing candidate parameter values from priors and applying
-some form of Bayesian sampling to generate a posterior estimate of parameters,
-$P(\theta | \hat{x}, \hat{y})$.
+which describes how far a model's prediction $y$ is from an empirical value
+$\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$, which describe the
+modeller's a priori belief about the value of the parameters". Often an
+important step before fitting a model is feature engineering: adjusting and
+reworking the predictors to better uncover predictor-response relationships
+[@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
+dimensional space, as in our proof-of-concept. Then, when a model is fitted
+(synonymous with parameter inference or the inverse problem, see @fig:models), a
+fitting algorithm attempts to estimate the values of $\theta$ that minimises the
+mean value of loss function $L(\hat{y},y)$ for all labels $y$ in the provided
+data $Y$. These typically rely on drawing candidate parameter values from priors
+and applying some form of Bayesian sampling to generate a posterior estimate of
+parameters, $P(\theta | \hat{x}, \hat{y})$.
 
 
 ### How do we validate a predictive model?
@@ -602,8 +603,8 @@ then derive distributions of network properties from richness estimates alone.
 
 ### How do we predict how species that we have never observed together will interact?
 
-A neutral approach would assume the probability of an interaction is 
-only a function of abundance and trait variation would have no 
+A neutral approach would assume the probability of an interaction is
+only a function of abundance and trait variation would have no
 effect [@Poisot2015SpeWhy; @Pichler2020MacLea],
 and that the effect of abundances and traits would have no effect
 [@Canard2012EmeStr]. However, functional-trait based proxies could enable
@@ -699,7 +700,7 @@ multi-layered [@Pilosof2017MulNat]. However, *prima facie*, increasing the
 dimensionality of the object we need to predict (the multiple layers rather
 than a single network) makes the problem more complicated. Yet, multi-layer
 approaches improve prediction in social networks [@Jalili2017LinPre;
-@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful  in 
+@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful  in
 network ecology going forward.
 
 ## Space
