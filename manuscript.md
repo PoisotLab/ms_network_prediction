@@ -6,13 +6,14 @@ bibliography: [references.bib]
 
 Ecosystems *are* interactions --- organisms interact with one-another and
 with their environment, either directly or indirectly. Between organisms,
-these interactions form networks of varying complexity, drive ecological
-and evolutionary dynamics, and maintain ecosystem diversity and functioning
-[@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. Networks of
-species interactions underpin our understanding of numerous ecological
-processes [@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge
-of species interactions (like being able to list them, or guess which ones
-may exist) is still one of the most severe shortfalls in biodiversity science
+these interactions are assembled in networks of varying complexity, that
+drive ecological and evolutionary dynamics, and maintain coexistence,
+diversity and ecosystem functioning [@Delmas2018AnaEco; @Landi2018ComSta;
+@Albrecht2018PlaAni]. A knowledge of the structure of networks of species
+interactions underpin our understanding of numerous ecological processes
+[@Pascual2006EcoNet; @Heleno2014EcoNet]. Yet, even basic knowledge of
+species interactions (like being able to list them, or guess which ones may
+exist) is still one of the most severe shortfalls in biodiversity science
 [@Hortal2015SevSho], in large part due to the tedious, time-consuming, and
 expensive process of collecting species interaction data. Comprehensively
 sampling every possible interaction is not feasible given the sheer number of
