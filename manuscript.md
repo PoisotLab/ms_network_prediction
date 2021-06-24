@@ -121,7 +121,7 @@ We then train this neural network by dividing the original dataset into
 test and training sets (split 80-20 for training and testing respectively).
 During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
-of positive interactions. As @Poisot2021ImpMam show slightly inflating
+of positive interactions, as @Poisot2021ImpMam show slightly inflating
 the dataset with positive interactions enables us to counterbalance
 sampling biases. Furthermore, setting a minimum threshold of response
 balance is an established approach for datasets with strong biases
