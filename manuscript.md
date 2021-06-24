@@ -390,9 +390,9 @@ posterior estimate of parameters, $P(\theta | \hat{x}, \hat{y})$.
 
 ### How do we validate a predictive model?
 
-After model fitting, we inevitably want to see how "good" it is. This process
-can be divided into two parts: 1) Model selection, where the modeller
-chooses from a set of possible models and 2) Model assessment, where the
+After we fit a model, we inevitably want to see how "good" it is. This process
+can be divided into two parts: 1) model selection, where the modeller
+chooses from a set of possible models and 2) model assessment, where the
 modeller determines the performance characteristics of the chosen model
 [@Hastie2009EleSta].
 
