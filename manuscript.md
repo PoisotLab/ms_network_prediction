@@ -368,23 +368,22 @@ both extant and future data.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
-To build a (Bayesian) predictive model one needs
-the following: first, **data**, split into features $\hat{x}$ and labels
-$\hat{y}$ (@fig:models). Second, a **model** $f$, which maps features
-$x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x,
-\theta)$. Third, a **loss function** $L(\hat{y}, y)$, which describes how
-far a model's prediction $y$ is from an empirical estimate $\hat{y}$. Lastly,
-**priors** on parameters, $P(\theta)$. Often an important step before fitting
-a model is feature engineering: adjusting and reworking the predictors to
-better uncover predictor-response relationships [@Kuhn2019FeaEng]. This can
-include projecting the predictors into a lower dimensional space, as in our
-proof-of-concept. Then, when a model is fitted (synonymous with parameter
-inference or the inverse problem, see @fig:models), a fitting algorithm
-attempts to estimate the values of $\theta$ that minimises the mean value
-of loss function $L(\hat{y},y)$ for all labels $y$ in the provided data
-$Y$. These typically rely on drawing candidate parameter values from priors
-and applying some form of Bayesian sampling to generate a posterior estimate
-of parameters, $P(\theta | \hat{x}, \hat{y})$.
+To build a (Bayesian) predictive model one needs the following: first, **data**,
+split into features $\hat{x}$ and labels $\hat{y}$ (@fig:models). Second, a
+**model** $f$, which maps features $x$ to labels $y$ as a function of parameters
+$\theta$, i.e. $y = f(x, \theta)$. Third, a **loss function** $L(\hat{y}, y)$,
+which describes how far a model's prediction $y$ is from an empirical estimate
+$\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$. Often an important
+step before fitting a model is feature engineering: adjusting and reworking the
+predictors to better uncover predictor-response relationships [@Kuhn2019FeaEng].
+This can include projecting the predictors into a lower dimensional space, as in
+our proof-of-concept. Then, when a model is fitted (synonymous with parameter
+inference or the inverse problem, see @fig:models), a fitting algorithm attempts
+to estimate the values of $\theta$ that minimises the mean value of loss
+function $L(\hat{y},y)$ for all labels $y$ in the provided data $Y$. These
+typically rely on drawing candidate parameter values from priors and applying
+some form of Bayesian sampling to generate a posterior estimate of parameters,
+$P(\theta | \hat{x}, \hat{y})$.
 
 ### How do we validate a predictive model?
 
