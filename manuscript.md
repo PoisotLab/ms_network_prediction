@@ -129,16 +129,17 @@ balance is an established approach for datasets with strong biases
 model provides highly effective prediction of interactions between pairs of
 species not present in the training data (@fig:example).
 
-![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], *i.e.*
-a list of known possible interactions within a species pool, is converted
-into latent features using probabilistic PCA, then used to train a deep
-neural network to predict species interactions. The initial and imputed
-networks are represented as their t-distributed stochastic neighbour
-embedding (tSNE) embedding, and the colours of nodes
-are the cluster to which they are assigned based on a $k$-means clustering
-of the tSNE output. Panels A and B represent, respectively, the ROC curve
-and the precision-recall curve, with the selected classifier represented by
-a black dot.](figures/figure1.png){#fig:example}
+![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], *i.e.* a
+list of known possible interactions within a species pool, is converted into
+latent features using probabilistic PCA, then used to train a deep neural
+network to predict species interactions. The initial and imputed networks are
+represented as their t-distributed stochastic neighbour embedding (tSNE)
+embedding, and the colours of nodes are the cluster to which they are assigned
+based on a $k$-means clustering of the tSNE output. Panels A and B represent,
+respectively, the ROC curve and the precision-recall curve, with the best
+classifier (according to Youden's J) represented by a black dot. The expected
+performance of a neutral "random-guessing" classifier is shown with a dashed
+line.](figures/figure1.png){#fig:example}
 
 This case study shows that a simple neural network can be very effective in
 predicting species interactions even without additional species-level data.
