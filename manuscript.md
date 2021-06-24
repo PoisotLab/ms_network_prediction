@@ -118,7 +118,7 @@ v_j)$ into a neural network. The neural network uses four feed-forward layers
 interaction between species $i$ and $j$.
 
 We then train this neural network by dividing the original dataset into
-test and training sets (split 80-20 for training and testing respectively). 
+test and training sets (split 80-20 for training and testing respectively).
 During the training of this neural network, the
 batches of 64 items used for training were constrained to have at least 25%
 of positive interactions. As @Poisot2021ImpMam show slightly inflating
@@ -133,7 +133,7 @@ species not present in the training data (@fig:example).
 a list of known possible interactions within a species pool, is converted
 into latent features using probabilistic PCA, then used to train a deep
 neural network to predict species interactions. The initial and imputed
-networks are represented as their t-distributed stochastic neighbour 
+networks are represented as their t-distributed stochastic neighbour
 embedding (tSNE) embedding, and the colours of nodes
 are the cluster to which they are assigned based on a $k$-means clustering
 of the tSNE output. Panels A and B represent, respectively, the ROC curve
@@ -151,9 +151,7 @@ and mechanistic assumptions [@Gravel2013InfFoo], which serves to highlight the
 potential for including external sources of data for *improving* our prediction
 of interaction networks even further. For example, @Krasnov2016TraPhy collected traits
 data for this system that could be added to the model, in addition or in
-substitution to latent variables derived from observed interactions. As in
-@fig:conceptual, this highlights how much data sources can be consumed by
-models predicting species interactions.
+substitution to latent variables derived from observed interactions.
 
 # Predicting species interaction networks across space: challenges and opportunities
 
@@ -366,28 +364,28 @@ the _forward problem_ and how this relies on a hierarchical structure of the
 modelling process. The choice of a specific modelling technique and framework,
 as well as the data retained to be part of this model, proceeds directly from
 our assumptions about which ecological mechanisms are important in shaping
-both extant and future data.](figures/forecasting_v3.png){#fig:models}
+both extant and future data.](figures/forecasting_v4.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
-In order to build a predictive model under the Bayesian paradigm, one needs
-the following: first, **data**, split into features $\hat{x}$ and labels
-$\hat{y}$ (@fig:models). Second, a **model** $f$, which maps features
-$x$ to labels $y$ as a function of parameters $\theta$, *i.e.* $y = f(x,
-\theta)$. Third, a **loss function** $L(\hat{y}, y)$, which describes how
-far a model's prediction $y$ is from an empirical estimate $\hat{y}$. Lastly,
-**priors** on parameters, $P(\theta)$, which describe the modellers belief 
-about the value of the parameters. Often an important step before fitting
-a model is feature engineering: adjusting and reworking the predictors to
-better uncover predictor-response relationships [@Kuhn2019FeaEng]. This can
-include projecting the predictors into a lower dimensional space, as in our
-proof-of-concept. Then, when a model is fitted (synonymous with parameter
-inference or the inverse problem, see @fig:models), a fitting algorithm
-attempts to estimate the values of $\theta$ that minimises the mean value
-of loss function $L(\hat{y},y)$ for all labels $y$ in the provided data
-$Y$. These typically rely on drawing candidate parameter values from priors
-and applying some form of Bayesian sampling to generate a posterior estimate
-of parameters, $P(\theta | \hat{x}, \hat{y})$.
+To build a (Bayesian) predictive model one needs the following: first, **data**,
+split into features $\hat{x}$ and labels $\hat{y}$ (@fig:models). Second, a
+**model** $f$, which maps features $x$ to labels $y$ as a function of parameters
+$\theta$, i.e. $y = f(x, \theta)$. Third, a **loss function** $L(\hat{y}, y)$,
+which describes how far a model's prediction $y$ is from an empirical value
+$\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$, which describe the
+modeller's a priori belief about the value of the parameters". Often an
+important step before fitting a model is feature engineering: adjusting and
+reworking the predictors to better uncover predictor-response relationships
+[@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
+dimensional space, as in our proof-of-concept. Then, when a model is fitted
+(synonymous with parameter inference or the inverse problem, see @fig:models), a
+fitting algorithm attempts to estimate the values of $\theta$ that minimises the
+mean value of loss function $L(\hat{y},y)$ for all labels $y$ in the provided
+data $Y$. These typically rely on drawing candidate parameter values from priors
+and applying some form of Bayesian sampling to generate a posterior estimate of
+parameters, $P(\theta | \hat{x}, \hat{y})$.
+
 
 ### How do we validate a predictive model?
 
@@ -482,23 +480,13 @@ this extensive list of possible metrics is through the use of ROC
 (receiver-operating-characteristic; False Positive Rate on the
 x-axis, and True Positive Rate on the y-axis) and PR (precision-recall;
 True-Positive-Rate on the x-axis, Positive-predictive-value on the y-axis)
-curves. These curves are generated by considering a continuum of thresholds
+curves (see @fig:example). These curves are generated by considering a continuum of thresholds
 of classifier acceptance, and computing the values of ROC/PR metrics for
 each value of the threshold. The area-under-the-curve (AUC) is then used as
 a validation metric and are typically called AUC-ROC (Area-Under-the-Curve
 Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve Precision-Recall)
 (_e.g._ ROC-AUC in @tbl:validation).
 
-Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the
-random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
-means that we can compare the AUC of different models, with $0.5$ being the
-floor and the closer to 1.0 being better.
-
-![Hypothetical receiver-operating-characteristic (ROC) and precision-recall
-(PR) curves ranging from 'perfect' (light green) to 'decent' (blue) relative
-to a random model (dashed line). Comparing these hypotheticals to data
-presented in @fig:example gives an idea of how accurate the model in the
-case study is.](figures/auc.png){#fig:auc}
 
 ## Networks and Interactions
 
@@ -615,8 +603,8 @@ then derive distributions of network properties from richness estimates alone.
 
 ### How do we predict how species that we have never observed together will interact?
 
-A neutral approach would assume the probability of an interaction is 
-only a function of abundance and trait variation would have no 
+A neutral approach would assume the probability of an interaction is
+only a function of abundance and trait variation would have no
 effect [@Poisot2015SpeWhy; @Pichler2020MacLea],
 and that the effect of abundances and traits would have no effect
 [@Canard2012EmeStr]. However, functional-trait based proxies could enable
@@ -712,7 +700,7 @@ multi-layered [@Pilosof2017MulNat]. However, *prima facie*, increasing the
 dimensionality of the object we need to predict (the multiple layers rather
 than a single network) makes the problem more complicated. Yet, multi-layer
 approaches improve prediction in social networks [@Jalili2017LinPre;
-@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful  in 
+@Najari2019LinPre; @Yasami2018NovMul], and they may prove useful  in
 network ecology going forward.
 
 ## Space
