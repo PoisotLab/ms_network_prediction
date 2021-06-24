@@ -15,7 +15,7 @@
    viewBox="0 0 2735.1895 1215.4392"
    height="1215.4392"
    width="2735.1895"
-   inkscape:export-filename="/home/michael/papers/ms_network_prediction/figures/forecasting_v3.png"
+   inkscape:export-filename="/home/michael/papers/ms_network_prediction/figures/forecasting_v4.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -1547,20 +1547,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.3526066"
-     inkscape:cx="1557.1756"
-     inkscape:cy="369.31358"
+     inkscape:zoom="0.24933052"
+     inkscape:cx="879.57609"
+     inkscape:cy="1106.1628"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="660"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:lockguides="true"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1569,27 +1569,33 @@
     <sodipodi:guide
        position="1582.671,729.94698"
        orientation="0,-1"
-       id="guide3379" />
+       id="guide3379"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="2128.6559,255.9742"
        orientation="0,-1"
-       id="guide1556" />
+       id="guide1556"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1930.1242,212.85873"
        orientation="0,-1"
-       id="guide1558" />
+       id="guide1558"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1898.0383,282.04401"
        orientation="0,-1"
-       id="guide1560" />
+       id="guide1560"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1282.3896,433.44946"
        orientation="0,-1"
-       id="guide1562" />
+       id="guide1562"
+       inkscape:locked="true" />
     <sodipodi:guide
        position="1885.0124,383.31521"
        orientation="0,-1"
-       id="guide1564" />
+       id="guide1564"
+       inkscape:locked="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata1405">
@@ -1609,13 +1615,6 @@
      id="layer1"
      transform="translate(240.45372,154.03551)">
     <rect
-       style="fill:#f2f2f2;fill-opacity:0.996078;stroke:none;stroke-width:12.998;stroke-opacity:1"
-       id="rect8396"
-       width="2592.2434"
-       height="1286.2993"
-       x="-137.9633"
-       y="-224.8956" />
-    <rect
        style="fill:#ffffff;fill-opacity:1;stroke-width:3.46032"
        id="rect1951"
        width="415.2038"
@@ -1623,7 +1622,7 @@
        x="647.55103"
        y="278.10855" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:14.9244;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#9a7db1;stroke-width:10;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect1468"
        width="582.133"
        height="553.74139"
@@ -2795,7 +2794,7 @@
          y="598.56891"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#1a1a1a;stroke-width:1.63009">labels</tspan></text>
     <rect
-       style="fill:#48c2d0;fill-opacity:1;stroke:#3fbacf;stroke-width:1.64307;stroke-opacity:1"
+       style="fill:#9a7db1;fill-opacity:1;stroke:none;stroke-width:6.7;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect1472"
        width="582.133"
        height="87.580215"
