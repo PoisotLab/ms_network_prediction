@@ -377,15 +377,15 @@ which describes how far a model's prediction $y$ is from an empirical value
 $\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$, which describe the
 modeller's _a priori_ belief about the value of the parameters. Often an
 important step before fitting a model is feature engineering: adjusting and
-reworking the predictors to better uncover predictor-response relationships
-[@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
-dimensional space, as in our proof-of-concept. Then, when a model is fitted
-(synonymous with parameter inference or the inverse problem, see @fig:models), a
-fitting algorithm attempts to estimate the values of $\theta$ that minimises the
-mean value of loss function $L(\hat{y},y)$ for all labels $y$ in the provided
-data $Y$. These typically rely on drawing candidate parameter values from priors
-and applying some form of Bayesian sampling to generate a posterior estimate of
-parameters, $P(\theta | \hat{x}, \hat{y})$.
+reworking the features to better uncover feature-label relationships
+[@Kuhn2019FeaEng]. This can include projecting the features into a lower
+dimensional space, as we did via PCA in the case study. Then, when a model is
+fitted (synonymous with parameter inference or the inverse problem, see
+@fig:models), a fitting algorithm attempts to estimate the values of $\theta$
+that minimises the mean value of loss function $L(\hat{y},y)$ for all labels $y$
+in the provided data $Y$. These typically rely on drawing candidate parameter
+values from priors and applying some form of Bayesian sampling to generate a
+posterior estimate of parameters, $P(\theta | \hat{x}, \hat{y})$.
 
 
 ### How do we validate a predictive model?
