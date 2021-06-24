@@ -183,8 +183,8 @@ readers, and we thank the reviewer for pointing out the lack of clarity.
 ## Minor points:
 
 > We have introduced the concept of different interaction types earlier in
-the manuscript (ca. line 30) as well as expanding on how network type (uni-,
-bi- k,) plays a role in the modelling process (ca. line 480)
+the manuscript (lines 20 - 22) as well as expanding on how network type 
+(uni-, bi- k,) plays a role in the modelling process (ca. lines 333 - 335)
 
 **Lines 318-340:** There are few other models that connect networks/their
 structures to predict interactions within the networks/subset of nodes in
@@ -221,7 +221,7 @@ behavior. We want to unambiguously point out that, when confronted with a
 review as aggressive as review 2 was, it is very unclear which of the points
 are made in good faith or out of spite (this is true in this specific instance
 as authors, but we also hold this to be true in our collective experiences
-as reviewers and editors). Therefore, we have veered on the size of caution,
+as reviewers and editors). Therefore, we have veered on the side of caution,
 and discarded most of the points, including all of the minor ones, which
 were written in the most acerbic way. The main comments in this section are
 summaries of the second review made by the last author, and all replies and
