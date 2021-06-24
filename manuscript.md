@@ -486,16 +486,6 @@ a validation metric and are typically called AUC-ROC (Area-Under-the-Curve
 Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve Precision-Recall)
 (_e.g_ ROC-AUC in @tbl:validation).
 
-Note that for both plots in @fig:auc, the area-under-the-curve (AUC) of the
-random model is $0.5$, and the AUC of the perfect classifier is $1.0$. This
-means that we can compare the AUC of different models, with $0.5$ being the
-floor and the closer to 1.0 being better.
-
-![Hypothetical receiver-operating-characteristic (ROC) and precision-recall
-(PR) curves ranging from 'perfect' (light green) to 'decent' (blue) relative
-to a random model (dashed line). Comparing these hypotheticals to data
-presented in @fig:exampple gives an idea of how accurate the model in the
-case study is.](./figures/auc.png){@fig:auc}
 
 ## Networks and Interactions
 
