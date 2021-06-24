@@ -25,7 +25,7 @@ and time [@Poisot2015SpeWhy]. Different types of interactions vary in their
 intrinsic predictability (*e.g.* some fungal species engage in opportunistic
 saprotrophy [@Smith2017GroEvi], obligate parasites are more deterministic
 in their interactions than facultative parasites [@Poisot2013FacObl;
-@Luong2019FacPar]). In addition to this variance in predictability, networks
+@Luong2019FacPar]. In addition to this variance in predictability, networks
 from different systems are structured by different mechanisms. Interaction
 networks are embodied in numerous forms: host and parasites, plants and
 pollinators, predators and prey, disease and host, and so on, and network
