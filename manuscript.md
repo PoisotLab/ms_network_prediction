@@ -374,7 +374,7 @@ split into features $\hat{x}$ and labels $\hat{y}$ (@fig:models). Second, a
 $\theta$, i.e. $y = f(x, \theta)$. Third, a **loss function** $L(\hat{y}, y)$,
 which describes how far a model's prediction $y$ is from an empirical value
 $\hat{y}$. Lastly, **priors** on parameters, $P(\theta)$, which describe the
-modeller's a priori belief about the value of the parameters". Often an
+modeller's _a priori_ belief about the value of the parameters. Often an
 important step before fitting a model is feature engineering: adjusting and
 reworking the predictors to better uncover predictor-response relationships
 [@Kuhn2019FeaEng]. This can include projecting the predictors into a lower
