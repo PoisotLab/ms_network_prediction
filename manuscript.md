@@ -368,7 +368,7 @@ both extant and future data.](figures/forecasting_v3.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
-In order to build a predictive model under the Bayesian paradigm, one needs
+To build a (Bayesian) predictive model one needs
 the following: first, **data**, split into features $\hat{x}$ and labels
 $\hat{y}$ (@fig:models). Second, a **model** $f$, which maps features
 $x$ to labels $y$ as a function of parameters $\theta$, i.e. $y = f(x,
