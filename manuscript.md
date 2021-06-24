@@ -362,7 +362,7 @@ the _forward problem_ and how this relies on a hierarchical structure of the
 modelling process. The choice of a specific modeling technique and framework,
 as well as the data retained to be part of this model, proceed directly from
 our assumptions about which ecological mechanisms are important in shaping
-both extant and future data.](figures/forecasting_v3.png){#fig:models}
+both extant and future data.](figures/forecasting_v4.png){#fig:models}
 
 ### What do you need to build a predictive model?
 
