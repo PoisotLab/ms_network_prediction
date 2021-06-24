@@ -662,7 +662,7 @@ different disturbances propagate across levels of biological organisation
 [@Kefi2019AdvOur; @Gravel2016StaCom]. Recent approaches such as structural
 stability [@Saavedra2017StrApp; @Ferrera2016EffCom] allow to think of
 network feasibility in rigorous mathematical terms, which may end up as
-usable parameters to penalize network predictions.
+usable parameters to penalise network predictions.
 
 ### What taxonomic scales are suitable for the prediction of species interactions?
 
