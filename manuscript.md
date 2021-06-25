@@ -132,7 +132,7 @@ interaction between species $i$ and $j$.
 
 We then train this neural network by dividing the original dataset into
 testing and training sets (split 80-20 for training and testing respectively).
-During the training of this neural network (using the ADAM optimizer),
+During the training of this neural network (using the ADAM optimiser),
 the $5\times 10^4$ batches of 64 items used for training were constrained
 to have at least 25% of positive interactions, as @Poisot2021ImpMam show
 slightly inflating the dataset with positive interactions enables us to
@@ -140,7 +140,7 @@ counterbalance sampling biases. Furthermore, setting a minimum threshold of
 response balance is an established approach for datasets with strong biases
 [@Lemaitre2017ImbPyt]. Validating this model on the test data shows our
 model provides highly effective prediction of interactions between pairs of
-species not present in the training data (@fig:example). The behavior of the
+species not present in the training data (@fig:example). The behaviour of the
 model was, in addition, checked by measuring the training and testing loss
 (using mean squared error) and stopping well before they diverged.
 
