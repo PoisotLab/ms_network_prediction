@@ -252,8 +252,9 @@ of exhaustiveness. Reviewer 2 identified articles that we could have cited,
 but that did not made it into the final version. They have all been covered,
 some in depth, in recent reviews on ecological networks, some of which were
 written by co-authors of this manuscript. We do want to point out that the
-original submission had about 100 references, and the revised version has
-more; claims that the manuscript is insufficiently referenced are unsupported.
+original submission had (to our best recollection) over 190 references,
+and the revised version has a little over 210; claims that the manuscript
+is insufficiently referenced are unsupported.
 
 **Comment 3**: the manuscript focuses both on understanding and prediction
 
