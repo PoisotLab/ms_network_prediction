@@ -61,16 +61,16 @@ are limited in that they are typically based around a single mechanism
 at a single scale: position in the trophic niche [@Gravel2013InfFoo;
 @Petchey2008SizFor], phylogenetic distance [@Pomeranz2018InfPre;
 @Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra],
-interaction frequency [@Young2021RecPla], or other network properties
-[@Terry2020FinMis; @Stock2017LinFil]. These approaches are difficult to
-generalise across systems as species interaction networks are the product of
-ecological and evolutionary mechanisms interacting across spatial, temporal
-and organisational scales. The interwoven nature of these processes imposes
-structure on biodiversity data which is invisible when examined only through
-the lens of a single scale. Machine learning (ML) methods have enormous
-potential in finding this structure [@Desjardins-Proulx2019ArtInt], and have
-the potential to be used together with mechanistic models in order to make
-prediction of ecological dynamics more robust [@Rackauckas2020UniDif].
+interaction frequency [@Weinstein2017ComTra; @Vazquez2005IntFre], or other
+network properties [@Terry2020FinMis; @Stock2017LinFil]. These approaches are
+difficult to generalise across systems as species interaction networks are the
+product of ecological and evolutionary mechanisms interacting across spatial,
+temporal and organisational scales. The interwoven nature of these processes
+imposes structure on biodiversity data which is invisible when examined
+only through the lens of a single scale. Machine learning (ML) methods have
+enormous potential in finding this structure [@Desjardins-Proulx2019ArtInt],
+and have the potential to be used together with mechanistic models in order
+to make prediction of ecological dynamics more robust [@Rackauckas2020UniDif].
 
 Here we use a case study to show how machine-learning models (specifically a
 deep neural network) can enable prediction of species interactions, whereby
