@@ -1,3 +1,25 @@
+Dear Editors,
+
+We are grateful for the ability to resubmit our manuscript. As you will see
+from the responses below, and from the new document, we have conducted an
+extensive revision that not only addressed all comments by the reviewers,
+but also added additional information. Notably, we have:
+
+1. Updated the case study entirely, in order to better introduce its place
+in the manuscript
+
+1. Added an entire section on model validation, including a table explaining what the various summary statistics mean and how they can be used
+
+1. Added clarifications at several places as to our choice of integrating
+the notions of "prediction" and "understanding"
+
+1. Added introductory paragraphs to the main sections in order to guide the reader
+
+1. Added a number of references suggested by the reviewers
+
+We hope that this revised version will exceed the standards of *Phil Trans*,
+and look forward to your decision on the manuscript.
+
 # Reviewer 1
 
 ## Major points
@@ -37,15 +59,15 @@ Considering the above, validation of proof of concept/and Figure 4 must be
 updated to reflect the different values/natures of these metrics (e.g., in
 addition to TSS, a metric from precision-recall space must be shown). The
 discussion around validation of proof of concept needs to be expanded with:
-1) the additional metrics as per above;
+the additional metrics as per above;
 
 > The additional measures have been added in a table, and the precision-recall
 curve is now presented alongside the ROC curve. Both show extremely good
 performance given the relative paucity of data in the starting dataset.
 
-2) backing up of why a TSS around 0.5/50% is actually any good; yes, it
-should undoubtedly be used instead of accuracy, but what does a roughly
-around random TSS means?
+backing up of why a TSS around 0.5/50% is actually any good; yes, it should
+undoubtedly be used instead of accuracy, but what does a roughly around
+random TSS means?
 
 > We emphasize the use of Youden's J, and adopt a more holistic view of the
 validation by looking at a broader range of measures. That being said, we want
@@ -111,7 +133,7 @@ needs to be made if performance metrics were derived from the raw or the
 slightly inflated data.
 
 > We now refer to other work that outline the importance of balancing the
-dataset in terms of postive/negative interactions: creating balanced datasets
+dataset in terms of positive/negative interactions: creating balanced datasets
 allowed to reach high predictive value in a species interaction models, even
 when the initial amount of data was much lower (in terms of connectance, at
 least). We further add a reference to an article showing that setting threshold
@@ -129,8 +151,8 @@ do, but our manuscript is not the place to raise these concerns -- there is,
 indeed, nothing we can do to remedy them. Nevertheless, as the editors will
 see, we have responded to the comments on this study that we can address.
 
-1) Study design – the overall performance of the final ensemble is
-significantly worse than some of components.
+Study design – the overall performance of the final ensemble is significantly
+worse than some of components.
 
 > We agree with the reviewer, and we have highlighted this fact as a more
 general recommendation of being careful about the actual performance of the
@@ -140,7 +162,7 @@ attention to the validity of ensembles for specific problems. It is, indeed,
 likely that many studies will suffer from the issue of having ensembles that
 underperform their best component models.
 
-2) Lack of any quantification of uncertainties (e.g., as per discussion above).
+Lack of any quantification of uncertainties (e.g., as per discussion above).
 
 > We have no control on this part of the Becker et al. preprint (though
 there is a discussion of the disagreement between models in Becker et al.,
@@ -222,12 +244,15 @@ review as aggressive as review 2 was, it is very unclear which of the points
 are made in good faith or out of spite (this is true in this specific instance
 as authors, but we also hold this to be true in our collective experiences
 as reviewers and editors). Therefore, we have veered on the side of caution,
-and discarded most of the points, including all of the minor ones, which
-were written in the most acerbic way. The main comments in this section are
-summaries of the second review made by the last author, and all replies and
-in-text modifications have been made by the last author. We want to clarify
-that we have read the review several times over, and made changes to the
-manuscript when appropriate including based on the minor comments.
+and discarded most of the points, including a lot of the minor ones which
+were written in the most acerbic way; this being said, we have addressed
+the phrasing issues raised by the reviewer when we agreed that they would
+improve the text, and added a number of references they suggested. The main
+comments in this section are summaries of the second review made by the last
+author, and all replies and in-text modifications have been made by the last
+author. We want to clarify that we have read the review several times over,
+and made changes to the manuscript when appropriate including based on the
+minor comments.
 
 **Comment 1**: the aim of the manuscript is unclear
 
@@ -261,9 +286,11 @@ is insufficiently referenced are unsupported.
 > This is correct, and widely regarded as a best practice in predictive
 ecology. We have added a sentence at the end of the introduction to make
 explicit the fact that we think of prediction as being fundamentally a
-component of understanding, and vice versa. We do sincerely hope that
-readers will get the message that prediction and understanding advance at
-the same pace.
+component of understanding, and vice versa. We further make this point when
+discussing forecasting, by showing how the models required to advance our
+understanding are building blocks of forecasting models. We do sincerely
+hope that readers will get the message that prediction and understanding
+advance at the same pace.
 
 **Comment 4**: the flow of the manuscript is nonsensical
 
@@ -271,7 +298,8 @@ the same pace.
 structure of the manuscript is guided by the conceptual figure, and the
 structure of the sections are outlined within each section. Based on the
 detailed comments by reviewer 1, we have identified areas where the flow
-may be improved, and made the relevant edits.
+may be improved, and made the relevant edits. We have also added small
+introductory paragraphs to the main sections in order to primer the readers.
 
 **Comment 5**: the proof of concept does not bring new information
 
