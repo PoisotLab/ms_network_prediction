@@ -418,7 +418,7 @@ or removing the covariance structure using a Whitening approach. Then, when a
 model is fitted (synonymous with parameter inference or the inverse problem,
 see @fig:models), a fitting algorithm attempts to estimate the values of
 $\theta$ that minimises the mean value of loss function $L(\hat{y},y)$ for all
-labels $y$ in the provided data $Y$. In a Bayesian approach, this typically
+labels $\hat{y}$ in the provided data $Y$. In a Bayesian approach, this typically
 rely on drawing candidate parameter values from priors and applying some
 form of sampling to generate a posterior estimate of parameters, $P(\theta |
 \hat{x}, \hat{y})$. In the training of neural network, this usually involves
