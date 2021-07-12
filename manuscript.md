@@ -481,7 +481,7 @@ the false omission/discovery being artificially worse, and specifically
 decrease our confidence in predicted interactions.
 
 In response to the general problem of biases in classifiers, many metrics
-have been proposed to measure binary-classifiers [see @tbl:validation,
+have been proposed to measure binary-classifiers [see @tbl:validation;
 @Gu2009EvaMea; @Drummond2006CosCur] and are indicative of how well the model
 performs with regards to some aspect of accuracy, sensitivity, specificity
 and/or precision. Ultimately the choice of metric will depend on the
