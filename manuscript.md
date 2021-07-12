@@ -441,7 +441,7 @@ using information criteria (e.g., AIC, BIC, MDL) based around the heuristic
 that good models maximise the ratio of information provided by the model
 to the number of parameters it has. However, when the intended use-case
 of a model is prediction the relevant form of validation is _predictive
-accuracy_, which should be tested with _crossvalidation_. Crossvalidation
+accuracy_, which should be tested with _cross-validation_. Cross-validation
 methods divide the original dataset into two---one which is used to fit the
 model (called the _training_ set) and one used to validate its predictive
 accuracy on the data that it hasn't "seen" yet (called the _test_ set)
@@ -529,7 +529,7 @@ Precision-Recall) (e.g. ROC-AUC in @tbl:validation).
 
 ## Networks and interactions as predictable objects
 
-### Interactions from, and exist within, networks
+### Interactions form, and exist within, networks
 
 Interactions between species can be conceptualised in a multitude of ways
 (mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
@@ -589,7 +589,7 @@ data at the species level or trophic group, depending on data availability
 
 Ecological networks are quite sparse, and larger networks tend to get sparser
 [@MacDonald2020RevLin]; in other words, although networks are composed of a
-set of species pairs in interactions, they are also former of a much larger
+set of species pairs in interactions, they also form a much larger
 set of species pairs that do not interact. If we aim to predict the structure
 of networks from the "bottom-up"--- by considering each pairwise combination of
 $S$ different species---we are left with $S^2$ interaction values to estimate,
@@ -641,7 +641,7 @@ primary property of interest is most likely to be practical to formulate
 at the moment. We have models to estimate species richness over space
 [@Jenkins2013GloPat], and because we can predict connectance from species
 richness alone [@MacDonald2020RevLin], we can then derive distributions
-of network properties from richness estimates, that can serve to penalize
+of network properties from richness estimates, that can serve to penalise
 further models that formulate their predictions at the scale of each possible
 interaction.
 
@@ -903,7 +903,7 @@ late to change it. If we want to maximise the chance that reality falls within
 a forecasting model's predictions, there are two directions to approach this
 problem: the first is to extend model validation techniques to a forecasting
 context, and the second is to attempt to maximise the amount of uncertainty
-in the forecast without compromising its resolution. Crossvalidation (see
+in the forecast without compromising its resolution. Cross-validation (see
 _How do we validate a predictive model?_) can be used to test the efficacy
 of a forecasting model. Given a time-series of $N$ observations, a model
 can iteratively be trained on the first $n$ time-points of data, and the
