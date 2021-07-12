@@ -56,6 +56,26 @@ interactions will rely on integration of data from many sources, and the
 sources for this data may differ depending on the type of interaction we
 wish to predict [@Gibb2021DatPro].
 
+## Interactions are the building blocks of networks
+
+Interactions between species can be conceptualised in a multitude of ways
+(mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
+direct vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What
+is common to all definitions of an interaction is that *at least* one of
+the species is affected by the presence of another, either positively or
+negatively [@Morales-Castilla2015InfBio]. Networks can be used to represent
+a variety of interaction types, including: *unipartite networks*, where each
+species can be linked to other species (these are typically used to represent
+food webs), *bipartite networks* where there are two pools of species, and
+all interactions occur between species in each pool, are typically used for
+pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
+which serve as a way to expand to more than two discrete sets of interacting
+species (e.g., some parasitoid webs, seed dispersal networks, and pollination
+networks [@Pocock2012RobRes]). These different network types can be leveraged
+within the modelling process and may dictate what is the best approach e.g.
+using network-based features for _k-partite networks_ as a means to account
+for indirect interactions.
+
 Methods for predicting interactions between species exist, but at the moment
 are limited in that they are typically based around a single mechanism
 at a single scale: position in the trophic niche [@Gravel2013InfFoo;
@@ -72,10 +92,50 @@ enormous potential in finding this structure [@Desjardins-Proulx2019ArtInt],
 and have the potential to be used together with mechanistic models in order
 to make prediction of ecological dynamics more robust [@Rackauckas2020UniDif].
 
+## Interactions vary in occurrence and intensity
+
+Species interaction networks can also be used as a means to quantify and
+understand _interaction strength_. Interaction strength, unlike the qualitative
+presence or absence of an interaction, is a continuous measurement which
+attempts to quantify the effect of one species on another. This results in
+weighted networks representing different patterns of 'flows' between nodes
+-- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
+strength can generally be divided into two main categories (as suggested by
+@Berlow2004IntStr): 1) the strength of an interaction between individuals of
+each species, or 2) the effect that changes in one species population has on
+the dynamics of the other species. It can be measured as the effect over a
+period of time (in the units of biomass or energy flux [@Barnes2018EneFlu;
+@Brown2004MetThe]) or the relative importance of one species on another
+[@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
+observation is that networks are often composed of many weak interactions
+and few strong interactions [@Berlow2004IntStr]. The distribution of
+interaction strength within a network effects its stability [@Neutel2002StaRea;
+@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and
+serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
+understanding flow in modules within networks can aid in understanding the
+organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
+cascading effects of perturbations [@Gaiarsa2019IntStr].
+
+Much like quantifying the occurrence of an interaction, quantifying interaction
+_strength_ in the field is challenging. However, in some contexts, interaction
+strength can be estimated via functional foraging [@Portalier2019MecPre],
+where the primary basis for inferring interaction is foraging behaviour like
+searching, capture and handling times. In food-webs, metabolic based models
+use body mass, metabolic demands, and energy loss to infer energy fluxes
+between organisms [@Yodzis1992BodSiz; @Berlow2009SimPre]. In addition,
+food-web energetics models can be incorporated at various resolutions
+for a specific network, ranging from individual-based data to more lumped
+data at the species level or trophic group, depending on data availability
+[@Barnes2018EneFlu; @Berlow2009SimPre]. Taken together, these considerations
+about the variability of interactions (and therefore, of networks) highlight
+the need for a spatio-temporal approach to their prediction.
+
+## Summary
+
 Here we use a case study to show how machine-learning models (specifically a
 deep neural network) can enable prediction of species interactions, whereby
-we construct a metaweb of host-parasite interactions across space. We then
-use this case study to illustrate a roadmap for improving predictions using
+we construct a metaweb of host-parasite interactions across space. We use
+this case study to illustrate a roadmap for improving predictions using
 open data and machine-learning methods. We then provide a non-exhaustive
 primer on the literature on interaction prediction, and identify the tools
 and methods most suited for the future of interaction network prediction
@@ -87,12 +147,12 @@ the tasks of understanding and predicting are neither separate nor opposed
 [@Maris2017PreEco]; instead, ML tools have the ability to capture a lot of
 our understanding into working assumptions, and comparing predictions to
 empirical data gives us better insights about how much we ignore about the
-systems we model. Although data on species interaction networks are currently
-limited in the size and spatial coverage, machine learning approaches have
-a demonstrated track record of revealing the "unreasonable effectiveness"
-of data [@Halevy2009UnrEff]; we argue that with a clear roadmap guiding
-the use of these methods, the task of predicting the structure of species
-interaction networks will become more attainable.
+systems we model [@Borowiec2021DeeLea]. Although data on species interaction
+networks are currently limited in the size and spatial coverage, machine
+learning approaches have a demonstrated track record of revealing the
+"unreasonable effectiveness" of data [@Halevy2009UnrEff]; we argue that with
+a clear roadmap guiding the use of these methods, the task of predicting
+the structure of species interaction networks will become more attainable.
 
 # A case study: deep learning of spatially sparse host-parasite interactions
 
@@ -540,62 +600,6 @@ Precision-Recall) (e.g. ROC-AUC in @tbl:validation).
 
 ## Networks and interactions as predictable objects
 
-### Interactions form, and exist within, networks
-
-Interactions between species can be conceptualised in a multitude of ways
-(mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
-direct vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What
-is common to all definitions of an interaction is that *at least* one of
-the species is affected by the presence of another, either positively or
-negatively [@Morales-Castilla2015InfBio]. Networks can be used to represent
-a variety of interaction types, including: *unipartite networks*, where each
-species can be linked to other species (these are typically used to represent
-food webs), *bipartite networks* where there are two pools of species, and
-all interactions occur between species in each pool, are typically used for
-pairwise interactions (e.g. hosts and parasites), and *k-partite networks,*
-which serve as a way to expand to more than two discrete sets of interacting
-species (e.g., some parasitoid webs, seed dispersal networks, and pollination
-networks [@Pocock2012RobRes]). These different network types can be leveraged
-within the modelling process and may dictate what is the best approach e.g.
-using network-based features for _k-partite networks_ as a means to account
-for indirect interactions.
-
-### Interactions vary in occurrence and intensity
-
-Species interaction networks can also be used as a means to quantify and
-understand _interaction strength_. Interaction strength, unlike the qualitative
-presence or absence of an interaction, is a continuous measurement which
-attempts to quantify the effect of one species on another. This results in
-weighted networks representing different patterns of 'flows' between nodes
--- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
-strength can generally be divided into two main categories (as suggested by
-@Berlow2004IntStr): 1) the strength of an interaction between individuals of
-each species, or 2) the effect that changes in one species population has on
-the dynamics of the other species. It can be measured as the effect over a
-period of time (in the units of biomass or energy flux [@Barnes2018EneFlu;
-@Brown2004MetThe]) or the relative importance of one species on another
-[@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
-observation is that networks are often composed of many weak interactions
-and few strong interactions [@Berlow2004IntStr]. The distribution of
-interaction strength within a network effects its stability [@Neutel2002StaRea;
-@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and
-serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
-understanding flow in modules within networks can aid in understanding the
-organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
-cascading effects of perturbations [@Gaiarsa2019IntStr].
-
-Much like quantifying the occurrence of an interaction, quantifying interaction
-_strength_ in the field is challenging. However, in some contexts, interaction
-strength can be estimated via functional foraging [@Portalier2019MecPre],
-where the primary basis for inferring interaction is foraging behaviour like
-searching, capture and handling times. In food-webs, metabolic based models
-use body mass, metabolic demands, and energy loss to infer energy fluxes
-between organisms [@Yodzis1992BodSiz; @Berlow2009SimPre]. In addition,
-food-web energetics models can be incorporated at various resolutions
-for a specific network, ranging from individual-based data to more lumped
-data at the species level or trophic group, depending on data availability
-[@Barnes2018EneFlu; @Berlow2009SimPre].
-
 ### Why predict networks and interactions at the same time?
 
 Ecological networks are quite sparse, and larger networks tend to get sparser
@@ -991,7 +995,7 @@ scale). These limitations are affecting our ability to reconstruct networks.
 
 But the tools to which we feed these data, incomplete as they may be,
 are gradually getting better; that is, they can do predictions faster,
-they handle uncertainty and propagate it well, and they can accomodate
+they handle uncertainty and propagate it well, and they can accommodate
 data volumes that are lower than we may expect [@Pichler2020MacLea]. It is
 clear attempting to predict the structure of ecological networks at any
 scale is a methodological and ecological challenge; yet it will result
