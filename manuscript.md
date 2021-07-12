@@ -109,40 +109,51 @@ associations in the metaweb [*sensu* @Dunne2006NetStr] are false negatives.
 
 Without any species-level information, we resort to using both co-occurrence
 and known interactions to predict novel interactions. To do this we (i)
-extract features for each species based on co-occurrence, (ii) use these
-features to train a neural network to predict interactions, and (iii)
-apply this classifier to the original features to predict possibly missing
-interactions across the entire species pool. The outputs of the analysis
-are presented in @fig:example, and the code to reproduce it is available
-at `https://osf.io/6jp4b/`; the entire example was carried out in *Julia
-1.6.2* [@Bezanson2017JulFre], using the *Flux* machine learning framework
-[@Innes2018FluEle].
+extract features (equivalent to explanatory variables in a statistical
+model) for each species based on co-occurrence, (ii) use these features to
+train an artificial neural network to predict interactions, and (iii) apply
+this classifier (a learner returning a class from a categorical variable;
+a binary classifier such as we train here returns a yes/no answer) to the
+original features to predict possibly missing interactions across the entire
+species pool. Machine learning relies on a lexicon that shares some terms
+with statistics, albeit with different meaning; we expand on the precise
+meanings in the "How to validate a predictive model" section below. The
+outputs of the analysis are presented in @fig:example, and the code to
+reproduce it is available at `https://osf.io/6jp4b/`; the entire example
+was carried out in *Julia 1.6.2* [@Bezanson2017JulFre], using the *Flux*
+machine learning framework [@Innes2018FluEle].
 
 We first aggregate all species into a co-occurrence matrix $A$ which
 represents whether a given pair of species $(i,j)$ was observed coexisting
 across any location. We then transform this co-occurrence matrix $A$ via
-probabilistic PCA [@Tipping1999ProPri] and use the first 15 values from this
-PCA as the features vector for each species $i$. For each pair of (host,
-parasite) species $(i,j)$, we then feed the features vectors $(v_i, v_j)$
-into a neural network. The neural network uses four feed-forward layers
-(the first $\text{RELU}$, the rest $\sigma$) with appropriate dropout rates
-($0.8$ for the first layer, $0.6$ for the subsequent ones). This produces
-an output layer with a single node, which is the probability-score for
-interaction between species $i$ and $j$.
+probabilistic PCA [@Tipping1999ProPri] and use the first 15 values from
+this PCA space as the features vector for each species $i$. For each pair of
+(host, parasite) species $(i,j)$, we then feed the features vectors $(v_i,
+v_j)$ into a neural network. The neural network uses four feed-forward layers
+(each layer is independent from the one before and after); the first layer
+uses the $\text{RELU}$ activation function (which ignores input below
+a threshold), the rest use a $\sigma$ function (which transforms linear
+activation energies into logistic responses). All layers have appropriate
+dropout rates (in order to avoid over-fitting, only a fraction of the
+network is updated on each iteration: $1-0.8$ for the first layer, $1-0.6$
+for the subsequent ones). This produces an output layer with a single node,
+which is the probability-score for interaction between species $i$ and $j$.
 
-We then train this neural network by dividing the original dataset into
-testing and training sets (split 80-20 for training and testing respectively).
-During the training of this neural network (using the ADAM optimiser),
-the $5\times 10^4$ batches of 64 items used for training were constrained
-to have at least 25% of positive interactions, as @Poisot2021ImpMam show
-slightly inflating the dataset with positive interactions enables us to
+We then train (equiv. fit) this neural network by dividing the original
+dataset into testing and training sets (split 80-20 for training and testing
+respectively).  During the training of this neural network (using the ADAM
+optimiser), the $5\times 10^4$ batches of 64 items used for training were
+constrained to have at least 25% of positive interactions, as @Poisot2021ImpMam
+show slightly inflating the dataset with positive interactions enables us to
 counterbalance sampling biases. Furthermore, setting a minimum threshold of
 response balance is an established approach for datasets with strong biases
 [@Lemaitre2017ImbPyt]. Validating this model on the test data shows our
 model provides highly effective prediction of interactions between pairs of
 species not present in the training data (@fig:example). The behaviour of the
 model was, in addition, checked by measuring the training and testing loss
-(using mean squared error) and stopping well before they diverged.
+(difference between the actual value and the prediction, here using mean
+squared error) and stopping well before they diverged (which is one sign
+of overfitting).
 
 ![Proof-of-Concept: An empirical metaweb [from @Hadfield2014TalTwo], i.e. a
 list of known possible interactions within a species pool, is converted into
