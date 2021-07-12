@@ -641,7 +641,7 @@ primary property of interest is most likely to be practical to formulate
 at the moment. We have models to estimate species richness over space
 [@Jenkins2013GloPat], and because we can predict connectance from species
 richness alone [@MacDonald2020RevLin], we can then derive distributions
-of network properties from richness estimates, that can serve to penalize
+of network properties from richness estimates, that can serve to penalise
 further models that formulate their predictions at the scale of each possible
 interaction.
 
