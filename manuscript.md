@@ -513,17 +513,25 @@ compute the average error between the model's prediction and the true data we
 have, and choose the model with the smallest error---however this approach
 inevitably results in _overfitting_. One approach to avoid overfitting is
 using information criteria (e.g., AIC, BIC, MDL) based around the heuristic
-that good models maximise the ratio of information provided by the model
-to the number of parameters it has. However, when the intended use-case
-of a model is prediction the relevant form of validation is _predictive
-accuracy_, which should be tested with _cross-validation_. Cross-validation
-methods divide the original dataset into two---one which is used to fit the
-model (called the _training_ set) and one used to validate its predictive
-accuracy on the data that it hasn't "seen" yet (called the _test_ set)
-[@Bishop2006PatRec]. This procedure is often repeated across different
-test and training subdivisions of the dataset to determine the uncertainty
-associated with our measurement due to our choice of test and training sets
-[@Arlot2010SurCro], in the same conceptual vein as data bootstrapping.
+that good models maximise the ratio of information provided by the model to
+the number of parameters it has. However, when the intended use-case of a
+model is prediction the relevant form of validation is _predictive accuracy_,
+which should be tested with _cross-validation_. Cross-validation methods divide
+the original dataset into two---one which is used to fit the model (called the
+_training_ set) and one used to validate its predictive accuracy on the data
+that it hasn't "seen" yet (called the _test_ set) [@Bishop2006PatRec]. This
+procedure is often repeated across different test and training subdivisions
+of the dataset (either picked randomly or stratified by some criteria,
+like balance between positive and negative interactions in the case study)
+to determine the uncertainty associated with our measurement due to our
+choice of test and training sets [@Arlot2010SurCro], in the same conceptual
+vein as data bootstrapping: the mean value of the validation metric gives
+an overall estimate of its performance, and the variance around this mean
+represents the effect of using different data for training and testing. In a
+robust model/dataset combination, we expect this variance to be low, although
+there are no prescriptive guidelines as to how little variance is acceptable;
+the choice of whether to use a model is often left to the best judgement of
+the modeller.
 
 We still have to define what _predictive accuracy_ means in the context
 of interaction network prediction. In the proof-of-concept, we used
