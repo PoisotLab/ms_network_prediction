@@ -132,24 +132,28 @@ the need for a spatio-temporal approach to their prediction.
 
 ## Summary
 
-Here we use a case study to show how machine-learning models (specifically a
-deep neural network) can enable prediction of species interactions, whereby
-we construct a metaweb of host-parasite interactions across space. We use
-this case study to illustrate a roadmap for improving predictions using
-open data and machine-learning methods. We then provide a non-exhaustive
-primer on the literature on interaction prediction, and identify the tools
-and methods most suited for the future of interaction network prediction
-models, covering the spatial, temporal, and climatic dimensions of network
-prediction [@Burkle2011FutPla]. Adopting more predictive approaches
-to complex ecological systems (like networks) will establish a positive
-feedback loop with our understanding of these systems [@Houlahan2017PriPre]:
-the tasks of understanding and predicting are neither separate nor opposed
-[@Maris2017PreEco]; instead, ML tools have the ability to capture a lot of
-our understanding into working assumptions, and comparing predictions to
-empirical data gives us better insights about how much we ignore about the
-systems we model [@Borowiec2021DeeLea]. Although data on species interaction
-networks are currently limited in the size and spatial coverage, machine
-learning approaches have a demonstrated track record of revealing the
+Here we use a case study to show how machine-learning models (specifically
+a deep neural network) can enable prediction of species interactions: we
+construct a metaweb of host-parasite interactions across space, using latent
+variables extracted from empirical data and accounting for the structure
+of co-occurrence between species. We use this case study to illustrate a
+roadmap for improving predictions using open data and machine-learning methods;
+specifically, we focus on how emerging tools from AI/ML can be used to deliver
+more accurate and more efficient predictions of ecological systems, and how the
+potential of these approaches will be magnified with increased data access. We
+then provide a non-exhaustive primer on the literature on interaction
+prediction, and identify the tools and methods most suited for the future
+of interaction network prediction models, covering the spatial, temporal,
+and climatic dimensions of network prediction [@Burkle2011FutPla]. Adopting
+more predictive approaches to complex ecological systems (like networks) will
+establish a positive feedback loop with our understanding of these systems
+[@Houlahan2017PriPre]: the tasks of understanding and predicting are neither
+separate nor opposed [@Maris2017PreEco]; instead, ML tools have the ability
+to capture a lot of our understanding into working assumptions, and comparing
+predictions to empirical data gives us better insights about how much we ignore
+about the systems we model [@Borowiec2021DeeLea]. Although data on species
+interaction networks are currently limited in the size and spatial coverage,
+machine learning approaches have a demonstrated track record of revealing the
 "unreasonable effectiveness" of data [@Halevy2009UnrEff]; we argue that with
 a clear roadmap guiding the use of these methods, the task of predicting
 the structure of species interaction networks will become more attainable.
