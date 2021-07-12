@@ -529,7 +529,7 @@ Precision-Recall) (e.g. ROC-AUC in @tbl:validation).
 
 ## Networks and interactions as predictable objects
 
-### Interactions from, and exist within, networks
+### Interactions form, and exist within, networks
 
 Interactions between species can be conceptualised in a multitude of ways
 (mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric,
