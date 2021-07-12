@@ -589,7 +589,7 @@ data at the species level or trophic group, depending on data availability
 
 Ecological networks are quite sparse, and larger networks tend to get sparser
 [@MacDonald2020RevLin]; in other words, although networks are composed of a
-set of species pairs in interactions, they are also former of a much larger
+set of species pairs in interactions, they also form a much larger
 set of species pairs that do not interact. If we aim to predict the structure
 of networks from the "bottom-up"--- by considering each pairwise combination of
 $S$ different species---we are left with $S^2$ interaction values to estimate,
