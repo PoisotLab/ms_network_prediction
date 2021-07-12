@@ -563,12 +563,12 @@ in the original dataset are indeed true negatives [@Jordano2016ChaEco;
 the false omission/discovery being artificially worse, and specifically
 decrease our confidence in predicted interactions.
 
-In response to the general problem of biases in classifiers, many metrics
-have been proposed to measure binary-classifiers [see @tbl:validation;
-@Gu2009EvaMea; @Drummond2006CosCur] and are indicative of how well the model
-performs with regards to some aspect of accuracy, sensitivity, specificity
-and/or precision. Ultimately the choice of metric will depend on the
-intended use of the model: there is not a single definition of "success",
+In response to the general problem of biases in classifiers, many
+metrics have been proposed to measure binary-classifiers [@Gu2009EvaMea;
+@Drummond2006CosCur] and are indicative of how well the model performs
+with regards to some aspect of accuracy, sensitivity, specificity and/or
+precision [@tbl:validation]. Ultimately the choice of metric will depend on
+the intended use of the model: there is not a single definition of "success",
 but rather different interpretation of what sources of error are acceptable
 for a given application.
 
@@ -592,7 +592,7 @@ for a given application.
 | False Omission Rate       | 0.10  | $\rightarrow 0$ | Expected proportion of missed interactions                    |
 | False Discovery Rate      | 0.33  | $\rightarrow 0$ | Expected proportion of wrongly imputed interactions           |
 
-Table: Overview of the validation statistics applied to the case study,
+: Overview of the validation statistics applied to the case study,
 alongside the criteria indicating a successful classifier and a guide to
 interpretation of the values. Taken together, these validation measures
 indicate that the model performs well, especially considering that it is
