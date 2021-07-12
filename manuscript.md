@@ -92,7 +92,7 @@ enormous potential in finding this structure [@Desjardins-Proulx2019ArtInt],
 and have the potential to be used together with mechanistic models in order
 to make prediction of ecological dynamics more robust [@Rackauckas2020UniDif].
 
-## Interactions vary in occurrence and intensity
+## Interaction intensity is more challenging to quantify than interaction occurrence
 
 Species interaction networks can also be used as a means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative
@@ -116,8 +116,34 @@ understanding flow in modules within networks can aid in understanding the
 organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
 cascading effects of perturbations [@Gaiarsa2019IntStr].
 
-Much like quantifying the occurrence of an interaction, quantifying interaction
-_strength_ in the field is challenging. However, in some contexts, interaction
+In some systems, quantifying interaction strength is relatively
+straightforward; this includes a lot of host-parasite systems. For example,
+freshwater cyprinid fish can be divided in micro-habitats (fins, skin,
+digestive system, gill subsections) and the parasites counted in each of
+these micro-habitats, giving within-host resolution [@Simkova2002AbuRel];
+marine sparids and labrids have similarly been studied this way, see notably
+[@Sasal1999ComStr; @Desdevises2006DetPar; @Morand2002InvPat]. In some cases,
+within-host assessments of interaction strengths can reveal macro-ecological
+events, like in the conservatism of micro-habitat use in amphibian hosts
+by helminths [@Badets2011CorEar]. Even ectoparasites can provide reliable
+assessments of interaction strength; for example, when rodent hosts
+are minimally disturbed during capture, fine combing of their fur will
+result in exhaustive ectoparasites inventories [@Hadfield2014TalTwo;
+@Karbowiak2019ComImm; @Matthee2020DivDis; @Sanchez2014PosCoo;
+@Dickinson2020SamSca]. Parasites have the desirable property of usually
+remaining intact within their host during the interaction, as opposed to
+prey items as can be recovered through *e.g.* gut content analysis or stable
+isotopes [@Macias-Hernandez2018MolGut; @Schmid-Araya2016TroPos]. As network
+ecology is starting to explore the use of predictive models, leading up
+to forecasting, we argue that host-parasite systems can provide data that
+are reliable and trustworthy enough that they can become the foundations
+for methodological development and benchmark studies, thereby providing
+more information about host-parasite systems and supporting the technical
+development of the field.
+
+Yet in most situations, much like quantifying the occurrence of an interaction,
+quantifying interaction _strength_ in the field is challenging in the majority
+of systems, and one must often rely on proxies. In some contexts, interaction
 strength can be estimated via functional foraging [@Portalier2019MecPre],
 where the primary basis for inferring interaction is foraging behaviour like
 searching, capture and handling times. In food-webs, metabolic based models
@@ -144,19 +170,30 @@ potential of these approaches will be magnified with increased data access. We
 then provide a non-exhaustive primer on the literature on interaction
 prediction, and identify the tools and methods most suited for the future
 of interaction network prediction models, covering the spatial, temporal,
-and climatic dimensions of network prediction [@Burkle2011FutPla]. Adopting
-more predictive approaches to complex ecological systems (like networks) will
-establish a positive feedback loop with our understanding of these systems
-[@Houlahan2017PriPre]: the tasks of understanding and predicting are neither
-separate nor opposed [@Maris2017PreEco]; instead, ML tools have the ability
-to capture a lot of our understanding into working assumptions, and comparing
-predictions to empirical data gives us better insights about how much we ignore
-about the systems we model [@Borowiec2021DeeLea]. Although data on species
-interaction networks are currently limited in the size and spatial coverage,
-machine learning approaches have a demonstrated track record of revealing the
-"unreasonable effectiveness" of data [@Halevy2009UnrEff]; we argue that with
-a clear roadmap guiding the use of these methods, the task of predicting
-the structure of species interaction networks will become more attainable.
+and climatic dimensions of network prediction [@Burkle2011FutPla]. Both the
+case study and primer are largely geared towards binary (interactions are
+either present or absent) networks; there are limitations in data and tools
+that make it a more reasonable approach. First, most ecological networks do
+not have estimates of interactions strength, and especially not estimates
+that are independent from relative abundances. Second, the methodological
+toolkit to analyse the structure of networks is far more developed for
+binary interactions [@Delmas2018AnaEco], meaning that the predictions of
+binary interactions can be more readily interpreted.
+
+Adopting more predictive approaches to complex ecological systems (like
+networks) will establish a positive feedback loop with our understanding of
+these systems [@Houlahan2017PriPre]: the tasks of understanding and predicting
+are neither separate nor opposed [@Maris2017PreEco]; instead, ML tools have
+the ability to capture a lot of our understanding into working assumptions,
+and comparing predictions to empirical data gives us better insights about how
+much we ignore about the systems we model [see for example @Borowiec2021DeeLea,
+who provide an overview of deep learning techniques and concepts for the entire
+eco/evo field]. Although data on species interaction networks are currently
+limited in the size and spatial coverage, machine learning approaches have
+a demonstrated track record of revealing the "unreasonable effectiveness"
+of data [@Halevy2009UnrEff]; we argue that with a clear roadmap guiding
+the use of these methods, the task of predicting the structure of species
+interaction networks will become more attainable.
 
 # A case study: deep learning of spatially sparse host-parasite interactions
 
@@ -545,15 +582,15 @@ the model to be wrong: the model predicts an interaction which does not exist
 exist (a _false negative_ (FN)).
 
 A naïve initial approach to measure how well a model does is _accuracy_,
-i.e. the proportion of values it got correct. However, consider what we
-know about interaction networks: they are often very sparse, with connectance
-usually below a third. If we build a model that always guesses there will
-be no interaction between two species, it will be correct in the majority of
-cases because the majority of potential interactions in a network typically
-do not exist. Therefore this "empty-matrix" model would always have an
-_accuracy_ of $1-C$, where $C$ is the observed connectance, which would
-almost always be greater than 50%. Understanding model performance within
-sensitivity-specificity space may be more informative, where sensitivity
+i.e. the proportion of values it got correct. However, consider what we know
+about interaction networks: they are often very sparse, with connectance
+usually below a third [@Cohen1990ComFoo]. If we build a model that always
+guesses there will be no interaction between two species, it will be correct
+in the majority of cases because the majority of potential interactions in
+a network typically do not exist. Therefore this "empty-matrix" model would
+always have an _accuracy_ of $1-C$, where $C$ is the observed connectance,
+which would almost always be greater than 50%. Understanding model performance
+within sensitivity-specificity space may be more informative, where sensitivity
 evaluates how good the model is at predicting true interactions (True Positive
 Rate) and specificity refers to the prediction of true "non-interactions"
 (True Negative Rate). It must be noted that in ecological networks, there
@@ -599,8 +636,8 @@ indicate that the model performs well, especially considering that it is
 trained from a small volume of data. {#tbl:validation}
 
 In the machine learning literature, a common way of visualising
-this extensive list of possible metrics is through the use of
-ROC (receiver-operating-characteristic; False Positive Rate on the
+this extensive list of possible metrics is through the use of ROC
+(receiver-operating-characteristic; False Positive Rate on the
 x-axis, and True Positive Rate on the y-axis) and PR (precision-recall;
 True-Positive-Rate on the x-axis, Positive-predictive-value on the y-axis)
 curves (see @fig:example). These curves are generated by considering a
@@ -608,7 +645,13 @@ continuum of thresholds of classifier acceptance, and computing the values
 of ROC/PR metrics for each value of the threshold. The area-under-the-curve
 (AUC) is then used as a validation metric and are typically called AUC-ROC
 (Area-Under-the-Curve Receiver-Operator-Curve) and AUC-PR (Area-Under-the-Curve
-Precision-Recall) (e.g. ROC-AUC in @tbl:validation).
+Precision-Recall) (e.g. ROC-AUC in @tbl:validation). These measures have
+the unstated assumption that the training and testing set are "correct",
+or at least correct enough that the number of true/false positive/negatives
+are meaningful; although should this assumption be true, there would be no
+need for any predictive approach -- but it is a well established fact that
+machine learning systems are resilient to even relatively high uncertainties
+in the data [@Halevy2009UnrEff].
 
 ## Networks and interactions as predictable objects
 
