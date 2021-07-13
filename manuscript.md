@@ -57,7 +57,7 @@ type of interaction we wish to predict [@Gibb2021DatPro].
 Interactions between species are conceptualised in a multitude of ways
 (mutualistic vs. antagonistic, strong vs. weak, symmetric vs. asymmetric, direct
 vs. indirect) [@Jordano2016ChaEco; @Morales-Castilla2015InfBio]. What is common
-among definitions of species interaction is that *at least* one of the species
+among definitions of species interactions is that *at least* one of the species
 is affected by the presence of another [@Morales-Castilla2015InfBio]. Networks
 can be used to represent a variety of interaction types, including: *unipartite
 networks*: where each species can be linked to other species (often food webs),
@@ -65,45 +65,21 @@ networks*: where each species can be linked to other species (often food webs),
 occur between species in each pool (typically used for pairwise interactions;
 e.g. hosts and parasites), and *k-partite networks,*: which expand to more than
 two discrete sets of interacting species (e.g., some parasitoid webs, seed
-dispersal networks, and pollination networks [@Pocock2012RobRes]).
-
-Species interaction networks can also be used as a means to quantify and
-understand _interaction strength_. Interaction strength, unlike the qualitative
-presence or absence of an interaction, is a continuous measurement which
-attempts to quantify the effect of one species on another. This results in
-weighted networks representing different patterns of 'flows' between nodes
--- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
-strength can generally be divided into two main categories (as suggested by
-@Berlow2004IntStr): 1) the strength of an interaction between individuals of
-each species, or 2) the effect that changes in one species population has on
-the dynamics of the other species. It can be measured as the effect over a
-period of time (in the units of biomass or energy flux [@Barnes2018EneFlu;
-@Brown2004MetThe]) or the relative importance of one species on another
-[@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
-observation is that networks are often composed of many weak interactions
-and few strong interactions [@Berlow2004IntStr]. The distribution of
-interaction strength within a network effects its stability [@Neutel2002StaRea;
-@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and
-serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
-understanding flow in modules within networks can aid in understanding the
-organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
-cascading effects of perturbations [@Gaiarsa2019IntStr].
-
-Methods for predicting interactions between species exist, but at the moment are
-difficult to generalise as they are typically based around a single mechanism at
-a single scale: position in the trophic niche [@Gravel2013InfFoo;
-@Petchey2008SizFor], phylogenetic distance [@Pomeranz2018InfPre;
-@Elmasri2020HieBay], functional trait matching [@Bartomeus2016ComFra],
-interaction frequency [@Weinstein2017ComTra; @Vazquez2005IntFre], or other
-network properties [@Terry2020FinMis; @Stock2017LinFil]. Species interaction
-networks are the product of ecological and evolutionary mechanisms interacting
-across spatial, temporal and organisational scales. The interwoven nature of
-these processes imposes structure on biodiversity data which is invisible when
-examined only through the lens of a single scale. Machine learning (ML) methods
-have enormous potential to find this structure in this data
-[@Desjardins-Proulx2019ArtInt], and have the potential to be used together with
-mechanistic models in order to make prediction of ecological dynamics more
-robust [@Rackauckas2020UniDif].
+dispersal networks, and pollination networks [@Pocock2012RobRes]). Methods for
+predicting interactions between species exist, but at the moment are difficult
+to generalise as they are typically based around a single mechanism at a single
+scale: position in the trophic niche [@Gravel2013InfFoo; @Petchey2008SizFor],
+phylogenetic distance [@Pomeranz2018InfPre; @Elmasri2020HieBay], functional
+trait matching [@Bartomeus2016ComFra], interaction frequency
+[@Weinstein2017ComTra; @Vazquez2005IntFre], or other network properties
+[@Terry2020FinMis; @Stock2017LinFil]. Species interaction networks are the
+product of ecological and evolutionary mechanisms interacting across spatial,
+temporal and organisational scales. The interwoven nature of these processes
+imposes structure on biodiversity data which is invisible when examined only
+through the lens of a single scale. Machine learning (ML) methods have enormous
+potential to find this structure in this data [@Desjardins-Proulx2019ArtInt],
+and have the potential to be used together with mechanistic models in order to
+make prediction of ecological dynamics more robust [@Rackauckas2020UniDif].
 
 Here we use a case study to show how machine-learning models (specifically
 a deep neural network) can enable prediction of species interactions: we
@@ -702,6 +678,28 @@ little or no interaction data.
 
 
 ## How do we quantify interaction strength?
+
+Species interaction networks can also be used as a means to quantify and
+understand _interaction strength_. Interaction strength, unlike the qualitative
+presence or absence of an interaction, is a continuous measurement which
+attempts to quantify the effect of one species on another. This results in
+weighted networks representing different patterns of 'flows' between nodes
+-- which can be modelled in a variety of ways [@Borrett2019WalPar]. Interaction
+strength can generally be divided into two main categories (as suggested by
+@Berlow2004IntStr): 1) the strength of an interaction between individuals of
+each species, or 2) the effect that changes in one species population has on
+the dynamics of the other species. It can be measured as the effect over a
+period of time (in the units of biomass or energy flux [@Barnes2018EneFlu;
+@Brown2004MetThe]) or the relative importance of one species on another
+[@Heleno2014EcoNet; @Berlow2004IntStr; @Wootton2005MeaInt]. One recurring
+observation is that networks are often composed of many weak interactions
+and few strong interactions [@Berlow2004IntStr]. The distribution of
+interaction strength within a network effects its stability [@Neutel2002StaRea;
+@Ruiter1995EnePat] and functioning [@Duffy2002BioEco; @Montoya2003FooWeb], and
+serves to benefit multi-species models [@Wootton2005MeaInt]. Alternatively,
+understanding flow in modules within networks can aid in understanding the
+organisation of networks [@Farage2021IdeFlo; @Montoya2002SmaWor] or the
+cascading effects of perturbations [@Gaiarsa2019IntStr].
 
 In some systems, quantifying interaction strength is relatively
 straightforward; this includes a lot of host-parasite systems. For example,
