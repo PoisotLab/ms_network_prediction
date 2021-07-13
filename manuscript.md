@@ -1002,7 +1002,7 @@ when developing any forecast. Finally, ensemble models are not guaranteed
 to give more accurate results: for example, @Becker2020PreWil noted that
 the ensemble model outperforms the best-in-class models, which should be
 taken as an indication that careful model building and selection is of the
-utmost importance when dealing with a problem as complex as the prediction
+utmost importance when dealing with a problem as complex as the prediction 
 of species interactions.
 
 # Conclusion: why should we predict species interaction networks?
