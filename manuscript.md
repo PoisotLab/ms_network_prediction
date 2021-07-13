@@ -677,7 +677,7 @@ breakthrough is needed to extend these models to species for which there is
 little or no interaction data.
 
 
-## How do we quantify interaction strength?
+### How do we quantify interaction strength?
 
 Species interaction networks can also be used as a means to quantify and
 understand _interaction strength_. Interaction strength, unlike the qualitative
