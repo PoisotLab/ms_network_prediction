@@ -9,8 +9,8 @@ organisms interact with one-another and with their environment, either directly
 or indirectly. Interactions between individuals, populations, and species,
 are assembled in networks of varying complexity, that drive ecological and
 evolutionary dynamics, and maintain coexistence, diversity and ecosystem
-functioning [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. A
-knowledge of the structure of these species interactions networks underpin
+functioning [@Delmas2018AnaEco; @Landi2018ComSta; @Albrecht2018PlaAni]. 
+Knowledge of the structure of these species interactions networks underpins
 our understanding of numerous ecological processes [@Pascual2006EcoNet;
 @Heleno2014EcoNet]. Yet, even this basic knowledge of species interactions
 (like being able to list them, or guess which ones may exist) remains one
@@ -47,9 +47,9 @@ approaches have been used for the prediction of risk and dynamics of dengue
 [@Zhao2020MacLea], Chagas disease [@Rengifo-Correa2017UndTra], Rickettsiosis
 [@Morand2020DisEco], Leishmaniasis [@Stephens2009UsiBio], and a myriad
 infectious diseases in livestock and wildlife [@Craft2015InfDis]. Additionally,
-prediction of interaction networks is a growing imperative for next-generation
+the prediction of interaction networks is a growing imperative for next-generation
 biodiversity monitoring, requiring a conceptual framework and a flexible
-set of tools to predict interactions that is explicitly spatial and
+set of tools to predict interactions that are explicitly spatial and
 temporal in perspective [@Edwards2021TroLan; @Magioli2021DefLea;
 @Zhang2021PlaBre]. Developing better models for prediction of these
 interactions will rely on integration of data from many sources, and the
