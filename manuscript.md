@@ -604,7 +604,7 @@ In response to the general problem of biases in classifiers, many
 metrics have been proposed to measure binary-classifiers [@Gu2009EvaMea;
 @Drummond2006CosCur] and are indicative of how well the model performs
 with regards to some aspect of accuracy, sensitivity, specificity and/or
-precision [@tbl:validation]. Ultimately the choice of metric will depend on
+precision (@tbl:validation). Ultimately the choice of metric will depend on
 the intended use of the model: there is not a single definition of "success",
 but rather different interpretation of what sources of error are acceptable
 for a given application.
@@ -782,7 +782,7 @@ multidimensional nature of "stability" and "feasibility" (e.g. resilience
 to environmental change vs extinctions) [@Dominguez-Garcia2019UnvDim] and how
 different disturbances propagate across levels of biological organisation
 [@Kefi2019AdvOur; @Gravel2016StaCom]. Recent approaches such as structural
-stability [@Saavedra2017StrApp; @Ferrera2016EffCom] allow to think of
+stability [@Saavedra2017StrApp; @Ferrera2016EffCom] allow us to think of
 network feasibility in rigorous mathematical terms, which may end up as
 usable parameters to penalise network predictions.
 
@@ -1020,7 +1020,7 @@ Grinnellian niche [@Gravel2019BriElt]. Further, the ability to reliably
 predict and forecast species interactions would inform conservation efforts
 for protecting species, communities, and ecosystems. Integration of species
 interactions into the assessment of vulnerability to climate change is a
-needed methodological advance [@Foden2016IucSsc]. International panels draw
+needed methodological advancement [@Foden2016IucSsc]. International panels draw
 on models to establish scientific consensus [@Araujo2019StaDis], and they can
 be improved through more effective prediction of species distributions and
 interactions [@Syfert2014UsiSpe]. Further, recent studies argue for a shift
