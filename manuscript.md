@@ -100,10 +100,9 @@ strength, and particularly not estimates that are independent from relative
 abundances. Second, the methodological toolkit to analyse the structure of
 networks is far more developed for binary interactions [@Delmas2018AnaEco],
 meaning that the predictions of binary interactions can be more readily
-interpreted.predictions of binary interactions can be more readily
 interpreted.
 
-We contest adopting a more predictive approaches to complex ecological systems
+We argue that adopting a more predictive approach to complex ecological systems
 (like networks) will establish a positive feedback loop with our understanding
 of these systems [@Houlahan2017PriPre]: the tasks of understanding and
 predicting are neither separate nor opposed [@Maris2017PreEco]; instead, ML
@@ -111,12 +110,12 @@ tools have the ability to capture a lot of our understanding into working
 assumptions, and comparing predictions to empirical data gives us better
 insights about how much we ignore about the systems we model [see for example
 @Borowiec2021DeeLea, who provide an overview of deep learning techniques and
-concepts ecology and evolution]. Although data on species interaction
+concepts in ecology and evolution]. Although data on species interaction
 networks are currently limited in the size and spatial coverage, machine
 learning approaches have a demonstrated track record of revealing the
 "unreasonable effectiveness" of data [@Halevy2009UnrEff]; we argue that with a
-clear roadmap guiding the use of these methods, the task of predicting the
-structure of species interaction networks will become more attainable.
+clear roadmap guiding the use of these methods, the task of predicting
+species interaction networks will become more attainable.
 
 # A case study: deep learning of spatially sparse host-parasite interactions
 
@@ -124,9 +123,9 @@ The premise of this manuscript is that we can predict interactions between
 species. In this section we provide a proof-of-concept, where we use data
 from @Hadfield2014TalTwo describing 51 host-parasite networks sampled across
 space. In this data, as in most spatially distributed ecological networks,
-not all species co-occur across sites. As a direct consequence, there are pairs
+not all species co-occur across sites. As a direct consequence there are pairs
 of species that may or may not be able to interact for which we have no data;
-there, are, further, pairs of species that may interact, but have only been
+furthermore there are pairs of species that may interact, but have only been
 documented in a single location where the interaction was not detected. In
 short, there are ecological reasons to believe that a number of negative
 associations in the metaweb [*sensu* @Dunne2006NetStr] are false negatives.
@@ -184,7 +183,7 @@ predict species interactions. Panels A and B represent, respectively, the ROC
 curve and the precision-recall curve, with the best classifier (according to
 Youden's J) represented by a black dot. The expected performance of a neutral
 "random-guessing" classifier is shown with a dashed line. Panel C shows the
-imputed usin t-distributed stochastic neighbour embedding (tSNE) embedding, and
+imputed using t-distributed stochastic neighbour embedding (tSNE), and
 the colours of nodes are the cluster to which they are assigned based on a
 $k$-means clustering of the tSNE output. Empirical interactions are shown in
 purple, and imputed interactions in grey. ](figures/figure1.png){#fig:example}
@@ -206,7 +205,7 @@ or in substitution to latent variables derived from observed interactions.
 
 Here we present a conceptual roadmap (@fig:conceptual) which shows a conceptual
 path from data to prediction of species interaction networks, incorporating
-several modeling frameworks. We envisage this roadmap to be one conceptual path
+several modelling frameworks. We envisage this roadmap to be one conceptual path
 toward incorporating space in to our prediction of interaction networks, and
 developing spatially explicit models of networks and their properties. In the
 following sections we discuss the challenges and opportunities for this path
@@ -415,8 +414,8 @@ where the aim is to predict new values of the output $y$ given an input $x$
 and our estimate value of $\theta$ [@Stouffer2019AllEco]. Because the forward
 problem relies on an estimate of $\theta$, then, the problem of inference is
 nested within the forward problem (@fig:models): working towards a predictive
-view of ecological networks will necessarily give us the tools to further
-our understanding.
+view of ecological networks will give us the needed tools to further
+our understanding of them.
 
 ![The nested nature of developing predictive and forecasting models, showcases
 the _forward problem_ and how this relies on a hierarchical structure of the
@@ -445,10 +444,10 @@ or removing the covariance structure using a Whitening approach. Then, when a
 model is fitted (synonymous with parameter inference or the inverse problem, see
 @fig:models), a fitting algorithm attempts to estimate the values of $\theta$
 that minimises the mean value of loss function $L(\hat{y},y)$ for all labels
-$\hat{y}$ in the provided data $Y$. In a Bayesian approach, this typically rely
+$\hat{y}$ in the provided data $Y$. In a Bayesian approach, this typically relys
 on drawing candidate parameter values from priors and applying some form of
 sampling to generate a posterior estimate of parameters, $P(\theta | \hat{x},
-\hat{y})$. In the training of neural network, this usually involves some form of
+\hat{y})$. In the training of neural networks, this usually involves some form of
 error back-propagation across the edges in order to tune their weights, and the
 biases of each nodes.
 
@@ -574,7 +573,7 @@ in the data [@Halevy2009UnrEff].
 
 Ecological networks are quite sparse, and larger networks tend to get sparser
 [@MacDonald2020RevLin]; in other words, although networks are composed of a
-set of species pairs in interactions, they also form a much larger
+set of interactions between species pairs, they also form a much larger
 set of species pairs that do not interact. If we aim to predict the structure
 of networks from the "bottom-up"--- by considering each pairwise combination of
 $S$ different species---we are left with $S^2$ interaction values to estimate,
