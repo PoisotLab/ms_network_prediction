@@ -449,8 +449,8 @@ edges in order to tune their weights, and the biases of each nodes.
 ### How do we validate a predictive model?
 
 After we fit a model, we inevitably want to see how "good" (meaning, "fit for
-purpose") it is. This process can be divided into two parts: 1) model selection,
-where the modeller chooses from a set of possible models and 2) model
+purpose") it is. This process can be divided into two parts: (i)) model selection,
+where the modeller chooses from a set of possible models and (ii) model
 assessment, where the modeller determines the performance characteristics of the
 chosen model [@Hastie2009EleSta].
 
