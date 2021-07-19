@@ -343,7 +343,7 @@ promise in ecology and environmental science (see @Christin2019AppDee for an
 overview). Moreover, ongoing developments in deep learning are aimed at
 improvement in low-data regimes and with unbalanced datasets
 [@Antoniou2018DatAug; @Chawla2010DatMin]. Considering the current biases in
-network ecology [@Poisot2020EnvBia] and the scarcity of data of species
+network ecology [@Poisot2021GloKno] and the scarcity of data of species
 interactions, the prediction of ecological networks will undoubtedly benefit
 from these improvements. Machine learning methods are emerging as the new
 standard in computational ecology in general [@Olden2008MacLea;
