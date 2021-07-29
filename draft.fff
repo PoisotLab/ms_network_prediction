@@ -1,0 +1,46 @@
+\begin{figure}
+\hypertarget{fig:example}{%
+\centering
+\includegraphics{figures/figure1.png}
+\caption{Proof-of-Concept: An empirical metaweb (from Hadfield et al.
+2014), i.e.~a list of known possible interactions within a species pool,
+is converted into latent features using probabilistic PCA, then used to
+train a deep neural network to predict species interactions. Panels A
+and B represent, respectively, the ROC curve and the precision-recall
+curve, with the best classifier (according to Youden's J) represented by
+a black dot. The expected performance of a neutral ``random-guessing''
+classifier is shown with a dashed line. Panel C shows the imputed using
+t-distributed stochastic neighbour embedding (tSNE), and the colours of
+nodes are the cluster to which they are assigned based on a \(k\)-means
+clustering of the tSNE output. Empirical interactions are shown in
+purple, and imputed interactions in grey.}\label{fig:example}
+}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\hypertarget{fig:conceptual}{%
+\centering
+\includegraphics{figures/concept_v6.png}
+\caption{A conceptual roadmap highlighting key areas for the prediction
+of ecological networks. Starting with the input of data from multiple
+sources, followed by a modelling framework for ecological networks and
+the landscape, which are then ultimately combined to allow for the
+prediction of spatially explicit networks.}\label{fig:conceptual}
+}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\hypertarget{fig:models}{%
+\centering
+\includegraphics{figures/forecasting_v4.png}
+\caption{The nested nature of developing predictive and forecasting
+models, showcases the \emph{forward problem} and how this relies on a
+hierarchical structure of the modelling process. The choice of a
+specific modelling technique and framework, as well as the data retained
+to be part of this model, proceeds directly from our assumptions about
+which ecological mechanisms are important in shaping both extant and
+future data.}\label{fig:models}
+}
+\end{figure}
